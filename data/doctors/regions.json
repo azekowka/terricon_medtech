@@ -2,91 +2,91 @@
   {
     "slug": "almaty",
     "name": "Алматы",
-    "count": 630
+    "count": 7439
   },
   {
     "slug": "astana",
     "name": "Астана",
-    "count": 613
+    "count": 3503
   },
   {
     "slug": "shymkent",
     "name": "Шымкент",
-    "count": 514
+    "count": 2491
   },
   {
     "slug": "karaganda",
     "name": "Караганда",
-    "count": 595
+    "count": 3218
   },
   {
     "slug": "aktobe",
     "name": "Актобе",
-    "count": 507
+    "count": 2126
   },
   {
     "slug": "taraz",
     "name": "Тараз",
-    "count": 498
+    "count": 1952
   },
   {
     "slug": "pavlodar",
     "name": "Павлодар",
-    "count": 524
+    "count": 2090
   },
   {
     "slug": "ust-kamenogorsk",
     "name": "Усть-Каменогорск",
-    "count": 274
+    "count": 369
   },
   {
     "slug": "semey",
     "name": "Семей",
-    "count": 541
+    "count": 3375
   },
   {
     "slug": "kostanay",
     "name": "Костанай",
-    "count": 424
+    "count": 1425
   },
   {
     "slug": "kyzylorda",
     "name": "Кызылорда",
-    "count": 455
+    "count": 1608
   },
   {
     "slug": "uralsk",
     "name": "Уральск",
-    "count": 441
+    "count": 1348
   },
   {
     "slug": "petropavlovsk",
     "name": "Петропавловск",
-    "count": 368
+    "count": 986
   },
   {
     "slug": "aktau",
     "name": "Актау",
-    "count": 432
+    "count": 1330
   },
   {
     "slug": "kokshetau",
     "name": "Кокшетау",
-    "count": 413
+    "count": 1301
   },
   {
     "slug": "taldykorgan",
     "name": "Талдыкорган",
-    "count": 400
+    "count": 2690
   },
   {
     "slug": "turkestan",
     "name": "Туркестан",
-    "count": 450
+    "count": 3078
   },
   {
     "slug": "ekibastuz",
     "name": "Экибастуз",
-    "count": 109
+    "count": 138
   }
 ]

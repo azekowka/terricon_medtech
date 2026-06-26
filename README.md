@@ -154,6 +154,9 @@ python -m pytest        # пайплайн нормализации, дедуп,
 | GET | `/api/admin/parse-logs` · `/api/admin/stats` | журнал и метрики |
 | GET/POST | `/api/admin/unmatched` · `…/{id}/resolve` | очередь ручной разметки |
 | POST/GET | `/api/subscriptions` | подписки на цену |
+| GET | `/api/doctors/meta` | регионы + специализации (для клона iDoctor /doctors) |
+| GET | `/api/doctors?region=&specialty=&sort=…` | каталог врачей с фильтрами + пагинация |
+| GET | `/api/doctors/{id}` | карточка врача (клиники, график, заболевания) |
 
 ---
 

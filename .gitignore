@@ -28,3 +28,5 @@ _tz_text.txt
 _spravochnik.xlsx
 _idoctor/
 data/doctors/doctors_v1_backup.json
+# full scraped doctor dataset is large (~50MB for 40k) — regenerate via scripts/scrape_idoctor_api.py
+data/doctors/doctors.json

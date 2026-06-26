@@ -2,226 +2,401 @@
  {
   "alias": "terapevt",
   "name": "Терапевт",
-  "count": 547
- },
- {
-  "alias": "khirurg",
-  "name": "Хирург",
-  "count": 466
- },
- {
-  "alias": "nevrolog",
-  "name": "Невролог (Невропатолог)",
-  "count": 390
- },
- {
-  "alias": "pediatr",
-  "name": "Педиатр",
-  "count": 387
- },
- {
-  "alias": "anesteziolog",
-  "name": "Анестезиолог",
-  "count": 353
+  "count": 4572
  },
  {
   "alias": "akusher-ginekolog",
   "name": "Акушер-гинеколог",
-  "count": 341
- },
- {
-  "alias": "uzi-spetsialist",
-  "name": "Узист",
-  "count": 330
- },
- {
-  "alias": "kardiolog",
-  "name": "Кардиолог",
-  "count": 312
- },
- {
-  "alias": "vop-vrach-obshchei-praktiki",
-  "name": "ВОП (врач общей практики)",
-  "count": 299
- },
- {
-  "alias": "onkolog",
-  "name": "Онколог",
-  "count": 296
+  "count": 3520
  },
  {
   "alias": "stomatolog",
   "name": "Стоматолог",
-  "count": 294
+  "count": 2494
  },
  {
-  "alias": "lor-otorinolaringolog",
-  "name": "ЛОР (отоларинголог)",
-  "count": 289
+  "alias": "khirurg",
+  "name": "Хирург",
+  "count": 2454
  },
  {
-  "alias": "endokrinolog",
-  "name": "Эндокринолог",
-  "count": 287
+  "alias": "pediatr",
+  "name": "Педиатр",
+  "count": 2231
+ },
+ {
+  "alias": "uzi-spetsialist",
+  "name": "Узист",
+  "count": 1894
+ },
+ {
+  "alias": "anesteziolog",
+  "name": "Анестезиолог",
+  "count": 1866
  },
  {
   "alias": "reanimatolog",
   "name": "Реаниматолог",
-  "count": 279
+  "count": 1767
  },
  {
-  "alias": "infektsionist",
-  "name": "Инфекционист",
-  "count": 276
+  "alias": "nevrolog",
+  "name": "Невролог (Невропатолог)",
+  "count": 1718
+ },
+ {
+  "alias": "vop-vrach-obshchei-praktiki",
+  "name": "ВОП (врач общей практики)",
+  "count": 1603
+ },
+ {
+  "alias": "kardiolog",
+  "name": "Кардиолог",
+  "count": 1227
  },
  {
   "alias": "oftalmolog-okulist",
   "name": "Офтальмолог (окулист)",
-  "count": 271
- },
- {
-  "alias": "travmatologiya-i-ortopediya",
-  "name": "Травматолог-ортопед",
-  "count": 269
+  "count": 1120
  },
  {
   "alias": "rentgenolog",
   "name": "Рентгенолог",
-  "count": 264
+  "count": 1086
  },
  {
-  "alias": "ginekolog",
-  "name": "Гинеколог",
-  "count": 263
+  "alias": "lor-otorinolaringolog",
+  "name": "ЛОР (отоларинголог)",
+  "count": 969
+ },
+ {
+  "alias": "endokrinolog",
+  "name": "Эндокринолог",
+  "count": 814
+ },
+ {
+  "alias": "travmatologiya-i-ortopediya",
+  "name": "Травматолог-ортопед",
+  "count": 787
+ },
+ {
+  "alias": "infektsionist",
+  "name": "Инфекционист",
+  "count": 770
+ },
+ {
+  "alias": "neonatolog",
+  "name": "Неонатолог",
+  "count": 754
+ },
+ {
+  "alias": "ftiziatr",
+  "name": "Фтизиатр",
+  "count": 741
+ },
+ {
+  "alias": "epidemiolog",
+  "name": "Эпидемиолог",
+  "count": 719
+ },
+ {
+  "alias": "onkolog",
+  "name": "Онколог",
+  "count": 644
  },
  {
   "alias": "psikhiatr",
   "name": "Психиатр",
-  "count": 263
+  "count": 589
  },
  {
-  "alias": "narkolog",
-  "name": "Нарколог",
-  "count": 263
+  "alias": "laborant",
+  "name": "Лаборант",
+  "count": 585
  },
  {
-  "alias": "dermatovenerolog",
-  "name": "Дерматовенеролог",
-  "count": 261
+  "alias": "skoraya-i-neotlozhnaya-meditsinskaya-pomoshch",
+  "name": "Скорая и неотложная медицинская помощь",
+  "count": 556
+ },
+ {
+  "alias": "ginekolog",
+  "name": "Гинеколог",
+  "count": 532
  },
  {
   "alias": "gastroenterolog",
   "name": "Гастроэнтеролог",
-  "count": 241
+  "count": 479
  },
  {
-  "alias": "dermatolog",
-  "name": "Дерматолог",
-  "count": 237
- },
- {
-  "alias": "mammolog",
-  "name": "Маммолог",
-  "count": 237
- },
- {
-  "alias": "urolog-androlog",
-  "name": "Уролог-андролог",
-  "count": 228
+  "alias": "narkolog",
+  "name": "Нарколог",
+  "count": 475
  },
  {
   "alias": "diagnost",
   "name": "Диагност",
-  "count": 216
+  "count": 464
  },
  {
-  "alias": "fizioterapevt",
-  "name": "Физиотерапевт",
-  "count": 213
+  "alias": "dermatovenerolog",
+  "name": "Дерматовенеролог",
+  "count": 461
  },
  {
-  "alias": "nefrolog",
-  "name": "Нефролог",
-  "count": 202
+  "alias": "endoskopist",
+  "name": "Эндоскопист",
+  "count": 443
  },
  {
-  "alias": "detskiy-nevrolog",
-  "name": "Детский невролог",
-  "count": 192
+  "alias": "dermatolog",
+  "name": "Дерматолог",
+  "count": 409
  },
  {
-  "alias": "psikhoterapevt",
-  "name": "Психотерапевт",
-  "count": 185
+  "alias": "mammolog",
+  "name": "Маммолог",
+  "count": 383
  },
  {
-  "alias": "reabilitolog",
-  "name": "Реабилитолог",
-  "count": 182
- },
- {
-  "alias": "neyrokhirurg",
-  "name": "Нейрохирург",
-  "count": 174
- },
- {
-  "alias": "revmatolog",
-  "name": "Ревматолог",
-  "count": 170
- },
- {
-  "alias": "urolog",
-  "name": "Уролог",
-  "count": 169
- },
- {
-  "alias": "pulmonolog",
-  "name": "Пульмонолог",
-  "count": 155
- },
- {
-  "alias": "travmatolog",
-  "name": "Травматолог",
-  "count": 140
+  "alias": "urolog-androlog",
+  "name": "Уролог-андролог",
+  "count": 364
  },
  {
   "alias": "stomatolog-terapevt",
   "name": "Стоматолог-терапевт",
-  "count": 121
+  "count": 353
  },
  {
-  "alias": "allergolog-immunolog",
-  "name": "Аллерголог-иммунолог",
-  "count": 120
+  "alias": "fizioterapevt",
+  "name": "Физиотерапевт",
+  "count": 349
  },
  {
-  "alias": "psikholog",
-  "name": "Психолог",
-  "count": 116
+  "alias": "nefrolog",
+  "name": "Нефролог",
+  "count": 327
+ },
+ {
+  "alias": "urolog",
+  "name": "Уролог",
+  "count": 301
+ },
+ {
+  "alias": "transfuziolog",
+  "name": "Трансфузиолог",
+  "count": 299
+ },
+ {
+  "alias": "detskiy-nevrolog",
+  "name": "Детский невролог",
+  "count": 291
+ },
+ {
+  "alias": "revmatolog",
+  "name": "Ревматолог",
+  "count": 270
+ },
+ {
+  "alias": "stomatolog-khirurg",
+  "name": "Стоматолог-хирург",
+  "count": 264
+ },
+ {
+  "alias": "reabilitolog",
+  "name": "Реабилитолог",
+  "count": 262
+ },
+ {
+  "alias": "pulmonolog",
+  "name": "Пульмонолог",
+  "count": 257
+ },
+ {
+  "alias": "spetsialist-luchevoy-diagnostiki",
+  "name": "Специалист лучевой диагностики",
+  "count": 249
+ },
+ {
+  "alias": "detskyi-anesteziolog",
+  "name": "Детский анестезиолог",
+  "count": 237
+ },
+ {
+  "alias": "psikhoterapevt",
+  "name": "Психотерапевт",
+  "count": 231
+ },
+ {
+  "alias": "travmatolog",
+  "name": "Травматолог",
+  "count": 227
+ },
+ {
+  "alias": "detskyi-khirurg",
+  "name": "Детский хирург",
+  "count": 210
+ },
+ {
+  "alias": "neyrokhirurg",
+  "name": "Нейрохирург",
+  "count": 210
+ },
+ {
+  "alias": "pediatr-infekcionist",
+  "name": "Педиатр-инфекционист",
+  "count": 207
  },
  {
   "alias": "ortoped",
   "name": "Ортопед",
-  "count": 113
+  "count": 206
  },
  {
-  "alias": "gematolog",
-  "name": "Гематолог",
-  "count": 104
+  "alias": "296-patanatom",
+  "name": "Паталогоанатом",
+  "count": 197
  },
  {
-  "alias": "akusher",
-  "name": "Акушер",
-  "count": 103
+  "alias": "psikholog",
+  "name": "Психолог",
+  "count": 183
+ },
+ {
+  "alias": "detskyi-lor-otolaringolog",
+  "name": "Детский ЛОР (Отоларинголог)",
+  "count": 182
+ },
+ {
+  "alias": "angiokhirurg",
+  "name": "Ангиохирург (сосудистый хирург)",
+  "count": 174
+ },
+ {
+  "alias": "298-sudmedekspert",
+  "name": "Судмедэксперт",
+  "count": 172
+ },
+ {
+  "alias": "khirurg-onkolog",
+  "name": "Хирург-онколог",
+  "count": 162
+ },
+ {
+  "alias": "kompyuternaya-i-magnitno-rezonansnaya-tomografiya",
+  "name": "Компьютерная и магнитно-резонансная томография",
+  "count": 158
  },
  {
   "alias": "proktolog",
   "name": "Проктолог",
-  "count": 98
+  "count": 152
+ },
+ {
+  "alias": "304-stomatolog-ortoped",
+  "name": "Стоматолог-ортопед",
+  "count": 142
+ },
+ {
+  "alias": "profpatolog",
+  "name": "Профпатолог",
+  "count": 141
+ },
+ {
+  "alias": "allergolog-immunolog",
+  "name": "Аллерголог-иммунолог",
+  "count": 140
+ },
+ {
+  "alias": "kardiokhirurg",
+  "name": "Кардиохирург",
+  "count": 137
  },
  {
   "alias": "allergolog",
   "name": "Аллерголог",
+  "count": 136
+ },
+ {
+  "alias": "dermotokosmetolog",
+  "name": "Дерматокосметолог",
+  "count": 130
+ },
+ {
+  "alias": "defektolog",
+  "name": "Дефектолог",
+  "count": 129
+ },
+ {
+  "alias": "androlog",
+  "name": "Андролог",
+  "count": 128
+ },
+ {
+  "alias": "kosmetolog",
+  "name": "Косметолог",
+  "count": 127
+ },
+ {
+  "alias": "vrach-lfk",
+  "name": "Врач ЛФК",
+  "count": 118
+ },
+ {
+  "alias": "spetsialist-funktsionalnoy-diagnostiki",
+  "name": "Специалист функциональной диагностики",
+  "count": 117
+ },
+ {
+  "alias": "303-interventsionnyiy-kardiolog",
+  "name": "Интервенционный кардиолог",
+  "count": 117
+ },
+ {
+  "alias": "akusher",
+  "name": "Акушер",
+  "count": 114
+ },
+ {
+  "alias": "gematolog",
+  "name": "Гематолог",
+  "count": 114
+ },
+ {
+  "alias": "detskyi-kardiolog",
+  "name": "Детский кардиолог",
+  "count": 110
+ },
+ {
+  "alias": "stomatolog-ortodont",
+  "name": "Стоматолог-ортодонт",
+  "count": 109
+ },
+ {
+  "alias": "massazhist",
+  "name": "Массажист",
+  "count": 103
+ },
+ {
+  "alias": "implantolog",
+  "name": "Стоматолог - имплантолог",
+  "count": 102
+ },
+ {
+  "alias": "detskyi-endokrinolog",
+  "name": "Детский эндокринолог",
+  "count": 101
+ },
+ {
+  "alias": "plasticheskiy-khirurg",
+  "name": "Пластический хирург",
+  "count": 99
+ },
+ {
+  "alias": "venerolog",
+  "name": "Венеролог",
   "count": 96
  },
  {
@@ -230,68 +405,188 @@
   "count": 91
  },
  {
-  "alias": "detskyi-lor-otolaringolog",
-  "name": "Детский ЛОР (Отоларинголог)",
-  "count": 89
+  "alias": "ginekolog-endokrinolog",
+  "name": "Гинеколог-эндокринолог",
+  "count": 88
  },
  {
-  "alias": "androlog",
-  "name": "Андролог",
-  "count": 77
+  "alias": "detskyi-gastroenterolog",
+  "name": "Детский гастроэнтеролог",
+  "count": 87
  },
  {
-  "alias": "detskyi-endokrinolog",
-  "name": "Детский эндокринолог",
-  "count": 73
+  "alias": "detskyi-stomatolog",
+  "name": "Детский стоматолог",
+  "count": 87
  },
  {
-  "alias": "venerolog",
-  "name": "Венеролог",
-  "count": 70
- },
- {
-  "alias": "kosmetolog",
-  "name": "Косметолог",
-  "count": 64
- },
- {
-  "alias": "dermotokosmetolog",
-  "name": "Дерматокосметолог",
-  "count": 61
+  "alias": "radiolog",
+  "name": "Радиолог",
+  "count": 83
  },
  {
   "alias": "detski-ginekolog",
   "name": "Детский гинеколог",
-  "count": 57
+  "count": 80
  },
  {
-  "alias": "ginekolog-endokrinolog",
-  "name": "Гинеколог-эндокринолог",
-  "count": 54
+  "alias": "reproduktolog-eko",
+  "name": "Репродуктолог (лечение бесплодия)",
+  "count": 80
+ },
+ {
+  "alias": "surdolog",
+  "name": "Сурдолог",
+  "count": 79
+ },
+ {
+  "alias": "igloterapevt",
+  "name": "Иглотерапевт",
+  "count": 74
+ },
+ {
+  "alias": "terapiya-podrostkovaya",
+  "name": "Детский терапевт",
+  "count": 73
+ },
+ {
+  "alias": "dietolog",
+  "name": "Диетолог",
+  "count": 72
  },
  {
   "alias": "manualnyy-terapevt",
   "name": "Мануальный терапевт",
-  "count": 47
+  "count": 70
+ },
+ {
+  "alias": "genetik",
+  "name": "Генетик",
+  "count": 68
+ },
+ {
+  "alias": "detskiy-psikholog",
+  "name": "Детский психолог",
+  "count": 55
+ },
+ {
+  "alias": "pediatr-pulmonolog",
+  "name": "Педиатр-пульмонолог",
+  "count": 53
+ },
+ {
+  "alias": "citolog",
+  "name": "Цитолог",
+  "count": 53
+ },
+ {
+  "alias": "torakalnyi-khirurg",
+  "name": "Торакальный хирург",
+  "count": 52
+ },
+ {
+  "alias": "immunolog",
+  "name": "Иммунолог",
+  "count": 52
+ },
+ {
+  "alias": "medsestra-domoy",
+  "name": "Медсестра (Медбрат)",
+  "count": 51
  },
  {
   "alias": "trikholog",
   "name": "Трихолог",
-  "count": 44
+  "count": 50
  },
  {
-  "alias": "endoskopist",
-  "name": "Эндоскопист",
-  "count": 44
+  "alias": "gepatolog",
+  "name": "Гепатолог",
+  "count": 50
+ },
+ {
+  "alias": "toksikologiya",
+  "name": "Токсиколог",
+  "count": 49
+ },
+ {
+  "alias": "ginekolog-onkolog",
+  "name": "Гинеколог-онколог",
+  "count": 48
  },
  {
   "alias": "detskiy-allergolog",
   "name": "Детский аллерголог",
-  "count": 39
+  "count": 47
+ },
+ {
+  "alias": "detskij-nevropatolog",
+  "name": "Детский невропатолог",
+  "count": 47
+ },
+ {
+  "alias": "kineziterapevt",
+  "name": "Кинезитерапевт",
+  "count": 46
+ },
+ {
+  "alias": "allergologiya-i-immunologiya-detskaya",
+  "name": "Детский аллерголог-иммунолог",
+  "count": 46
+ },
+ {
+  "alias": "flebolog",
+  "name": "Флеболог",
+  "count": 45
+ },
+ {
+  "alias": "parazitolog",
+  "name": "Паразитолог",
+  "count": 45
+ },
+ {
+  "alias": "sportivnyy-vrach",
+  "name": "Спортивный врач",
+  "count": 45
+ },
+ {
+  "alias": "chelyustno-litsevaya-khirurgiya",
+  "name": "Челюстно-лицевой хирург",
+  "count": 45
+ },
+ {
+  "alias": "294-detskiy--oftalmolog",
+  "name": "Детский офтальмолог",
+  "count": 44
+ },
+ {
+  "alias": "kombustiolog-ozhogovyi-khirurg",
+  "name": "Комбустиолог (ожоговый хирург)",
+  "count": 43
+ },
+ {
+  "alias": "ortodont",
+  "name": "Ортодонт",
+  "count": 42
+ },
+ {
+  "alias": "anesteziolog-reanimatolog",
+  "name": "Анестезиолог-реаниматолог",
+  "count": 41
+ },
+ {
+  "alias": "osteopat",
+  "name": "Остеопат",
+  "count": 41
  },
  {
   "alias": "273-onkolog-mammolog",
   "name": "Онкомаммолог",
+  "count": 41
+ },
+ {
+  "alias": "epileptolog",
+  "name": "Эпилептолог",
   "count": 38
  },
  {
@@ -300,69 +595,44 @@
   "count": 38
  },
  {
-  "alias": "parazitolog",
-  "name": "Паразитолог",
-  "count": 37
- },
- {
-  "alias": "detskij-nevropatolog",
-  "name": "Детский невропатолог",
-  "count": 37
- },
- {
-  "alias": "kineziterapevt",
-  "name": "Кинезитерапевт",
-  "count": 37
- },
- {
-  "alias": "gepatolog",
-  "name": "Гепатолог",
-  "count": 36
- },
- {
-  "alias": "ftiziatr",
-  "name": "Фтизиатр",
+  "alias": "khirurg-oftalmolog",
+  "name": "Хирург-офтальмолог",
   "count": 35
  },
  {
-  "alias": "detskyi-khirurg",
-  "name": "Детский хирург",
+  "alias": "rentgenkhirurg",
+  "name": "Рентгенхирург",
   "count": 34
  },
  {
-  "alias": "stomatolog-khirurg",
-  "name": "Стоматолог-хирург",
-  "count": 33
- },
- {
-  "alias": "detskyi-gastroenterolog",
-  "name": "Детский гастроэнтеролог",
+  "alias": "detskiy-psikhiatr",
+  "name": "Детский психиатр",
   "count": 32
- },
- {
-  "alias": "304-stomatolog-ortoped",
-  "name": "Стоматолог-ортопед",
-  "count": 30
- },
- {
-  "alias": "khirurg-onkolog",
-  "name": "Хирург-онколог",
-  "count": 30
- },
- {
-  "alias": "spetsialist-luchevoy-diagnostiki",
-  "name": "Специалист лучевой диагностики",
-  "count": 29
- },
- {
-  "alias": "osteopat",
-  "name": "Остеопат",
-  "count": 28
  },
  {
   "alias": "detskyi-dermatolog",
   "name": "Детский дерматолог",
-  "count": 27
+  "count": 32
+ },
+ {
+  "alias": "detskiy-travmatolog",
+  "name": "Детский травматолог",
+  "count": 31
+ },
+ {
+  "alias": "logoped",
+  "name": "Логопед",
+  "count": 29
+ },
+ {
+  "alias": "detskiy-ortoped",
+  "name": "Детский ортопед",
+  "count": 28
+ },
+ {
+  "alias": "khirurg-proktolog",
+  "name": "Хирург-проктолог",
+  "count": 28
  },
  {
   "alias": "dermatovenerologiya-detskaya",
@@ -370,8 +640,23 @@
   "count": 27
  },
  {
+  "alias": "301-semeynyiy-psiholog",
+  "name": "Семейный психолог",
+  "count": 26
+ },
+ {
   "alias": "detskyi-urolog",
   "name": "Детский уролог",
+  "count": 26
+ },
+ {
+  "alias": "detskiy-revmatolog",
+  "name": "Детский ревматолог",
+  "count": 26
+ },
+ {
+  "alias": "detskyi-akusher-ginekolog",
+  "name": "Детский акушер-гинеколог",
   "count": 26
  },
  {
@@ -380,33 +665,13 @@
   "count": 26
  },
  {
-  "alias": "profpatolog",
-  "name": "Профпатолог",
-  "count": 26
- },
- {
   "alias": "269-vertebrolog",
   "name": "Вертебролог",
   "count": 24
  },
  {
-  "alias": "neonatolog",
-  "name": "Неонатолог",
-  "count": 24
- },
- {
-  "alias": "vrach-lfk",
-  "name": "Врач ЛФК",
-  "count": 24
- },
- {
-  "alias": "pediatr-infekcionist",
-  "name": "Педиатр-инфекционист",
-  "count": 23
- },
- {
-  "alias": "transfuziolog",
-  "name": "Трансфузиолог",
+  "alias": "meditsinskaya-reabilitologiya-detskaya",
+  "name": "Детский реабилитолог",
   "count": 23
  },
  {
@@ -415,368 +680,343 @@
   "count": 22
  },
  {
-  "alias": "massazhist",
-  "name": "Массажист",
-  "count": 20
- },
- {
-  "alias": "angiokhirurg",
-  "name": "Ангиохирург (сосудистый хирург)",
-  "count": 19
- },
- {
-  "alias": "plasticheskiy-khirurg",
-  "name": "Пластический хирург",
-  "count": 19
- },
- {
-  "alias": "294-detskiy--oftalmolog",
-  "name": "Детский офтальмолог",
-  "count": 18
- },
- {
-  "alias": "detskyi-kardiolog",
-  "name": "Детский кардиолог",
-  "count": 18
- },
- {
-  "alias": "immunolog",
-  "name": "Иммунолог",
-  "count": 18
- },
- {
-  "alias": "sportivnyy-vrach",
-  "name": "Спортивный врач",
-  "count": 17
- },
- {
-  "alias": "301-semeynyiy-psiholog",
-  "name": "Семейный психолог",
-  "count": 17
- },
- {
-  "alias": "spetsialist-funktsionalnoy-diagnostiki",
-  "name": "Специалист функциональной диагностики",
-  "count": 17
- },
- {
-  "alias": "igloterapevt",
-  "name": "Иглотерапевт",
-  "count": 17
- },
- {
-  "alias": "allergologiya-i-immunologiya-detskaya",
-  "name": "Детский аллерголог-иммунолог",
-  "count": 16
- },
- {
-  "alias": "detskiy-revmatolog",
-  "name": "Детский ревматолог",
-  "count": 16
- },
- {
-  "alias": "meditsinskaya-reabilitologiya-detskaya",
-  "name": "Детский реабилитолог",
-  "count": 15
- },
- {
-  "alias": "reproduktolog-eko",
-  "name": "Репродуктолог (лечение бесплодия)",
-  "count": 15
- },
- {
-  "alias": "epileptolog",
-  "name": "Эпилептолог",
-  "count": 15
- },
- {
-  "alias": "stomatolog-ortodont",
-  "name": "Стоматолог-ортодонт",
-  "count": 15
- },
- {
-  "alias": "detskiy-ortoped",
-  "name": "Детский ортопед",
-  "count": 15
- },
- {
-  "alias": "implantolog",
-  "name": "Стоматолог - имплантолог",
-  "count": 14
- },
- {
-  "alias": "302-podrostkovyiy-psiholog",
-  "name": "Подростковый психолог",
-  "count": 13
- },
- {
-  "alias": "epidemiolog",
-  "name": "Эпидемиолог",
-  "count": 13
- },
- {
-  "alias": "ginekolog-onkolog",
-  "name": "Гинеколог-онколог",
-  "count": 13
- },
- {
-  "alias": "detskiy-travmatolog",
-  "name": "Детский травматолог",
-  "count": 13
- },
- {
-  "alias": "surdolog",
-  "name": "Сурдолог",
-  "count": 12
- },
- {
-  "alias": "detskyi-stomatolog",
-  "name": "Детский стоматолог",
-  "count": 12
- },
- {
-  "alias": "detskiy-psikholog",
-  "name": "Детский психолог",
-  "count": 11
- },
- {
-  "alias": "ortodont",
-  "name": "Ортодонт",
-  "count": 10
- },
- {
-  "alias": "radiolog",
-  "name": "Радиолог",
-  "count": 10
- },
- {
-  "alias": "detskyi-anesteziolog",
-  "name": "Детский анестезиолог",
-  "count": 10
- },
- {
-  "alias": "detskyi-akusher-ginekolog",
-  "name": "Детский акушер-гинеколог",
-  "count": 10
- },
- {
-  "alias": "detskiy-pulmonolog",
-  "name": "Детский пульмонолог",
-  "count": 9
- },
- {
-  "alias": "laborant",
-  "name": "Лаборант",
-  "count": 9
- },
- {
-  "alias": "pediatr-pulmonolog",
-  "name": "Педиатр-пульмонолог",
-  "count": 9
- },
- {
-  "alias": "dietolog",
-  "name": "Диетолог",
-  "count": 9
- },
- {
-  "alias": "303-interventsionnyiy-kardiolog",
-  "name": "Интервенционный кардиолог",
-  "count": 9
- },
- {
-  "alias": "detskiy-onkolog",
-  "name": "Детский онколог",
-  "count": 9
- },
- {
-  "alias": "urologiya-i-andrologiya-detskaya",
-  "name": "Детский уролог-андролог",
-  "count": 8
- },
- {
-  "alias": "kompyuternaya-i-magnitno-rezonansnaya-tomografiya",
-  "name": "Компьютерная и магнитно-резонансная томография",
-  "count": 8
- },
- {
-  "alias": "kombustiolog-ozhogovyi-khirurg",
-  "name": "Комбустиолог (ожоговый хирург)",
-  "count": 7
- },
- {
-  "alias": "meditsinskaya-psikhologiya",
-  "name": "Клинический психолог",
-  "count": 7
- },
- {
-  "alias": "khirurg-proktolog",
-  "name": "Хирург-проктолог",
-  "count": 7
- },
- {
-  "alias": "neyrokhirurgiya-detskaya",
-  "name": "Детский нейрохирург",
-  "count": 7
- },
- {
-  "alias": "chelyustno-litsevaya-khirurgiya",
-  "name": "Челюстно-лицевой хирург",
-  "count": 6
- },
- {
-  "alias": "refleksoterapevt",
-  "name": "Рефлексотерапевт",
-  "count": 6
- },
- {
-  "alias": "akusher-ginekolog-reproduktolog",
-  "name": "Акушер-гинеколог-репродуктолог",
-  "count": 6
- },
- {
-  "alias": "aritmolog",
-  "name": "Аритмолог",
-  "count": 5
- },
- {
-  "alias": "dermatolog-trikholog",
-  "name": "Дерматолог-трихолог",
-  "count": 5
- },
- {
-  "alias": "flebolog",
-  "name": "Флеболог",
-  "count": 5
- },
- {
-  "alias": "rentgenkhirurg",
-  "name": "Рентгенхирург",
-  "count": 5
- },
- {
-  "alias": "lor-otolaringolog-khirurg",
-  "name": "ЛОР (Отоларинголог)-хирург",
-  "count": 5
- },
- {
-  "alias": "instructor-lfk",
-  "name": "Инструктор ЛФК",
-  "count": 5
- },
- {
-  "alias": "nutritsiolog",
-  "name": "Нутрициолог",
-  "count": 5
- },
- {
-  "alias": "detskiy-psikhiatr",
-  "name": "Детский психиатр",
-  "count": 5
- },
- {
-  "alias": "akusher-ginekolog-khirurg",
-  "name": "Акушер-гинеколог-хирург",
-  "count": 5
- },
- {
   "alias": "ginekolog-khirurg",
   "name": "Гинеколог-хирург",
-  "count": 5
- },
- {
-  "alias": "iglorefleksoterapevt",
-  "name": "Иглорефлексотерапевт",
-  "count": 5
- },
- {
-  "alias": "detskyi-androlog",
-  "name": "Детский андролог",
-  "count": 5
- },
- {
-  "alias": "296-patanatom",
-  "name": "Паталогоанатом",
-  "count": 5
- },
- {
-  "alias": "khirurg-urolog",
-  "name": "Хирург-уролог",
-  "count": 4
- },
- {
-  "alias": "anesteziolog-reanimatolog",
-  "name": "Анестезиолог-реаниматолог",
-  "count": 4
- },
- {
-  "alias": "terapiya-podrostkovaya",
-  "name": "Детский терапевт",
-  "count": 4
- },
- {
-  "alias": "pediatr-gastroenterolog",
-  "name": "Педиатр-гастроэнтеролог",
-  "count": 4
- },
- {
-  "alias": "torakalnyi-khirurg",
-  "name": "Торакальный хирург",
-  "count": 4
- },
- {
-  "alias": "khirurg-ortoped",
-  "name": "Хирург-ортопед",
-  "count": 4
- },
- {
-  "alias": "khirurg-oftalmolog",
-  "name": "Хирург-офтальмолог",
-  "count": 4
- },
- {
-  "alias": "transplantolog",
-  "name": "Трансплантолог",
-  "count": 4
+  "count": 22
  },
  {
   "alias": "perfuziolog",
   "name": "Перфузиолог",
-  "count": 4
+  "count": 22
+ },
+ {
+  "alias": "neyrokhirurgiya-detskaya",
+  "name": "Детский нейрохирург",
+  "count": 22
+ },
+ {
+  "alias": "meditsinskaya-psikhologiya",
+  "name": "Клинический психолог",
+  "count": 21
+ },
+ {
+  "alias": "felydsher-fiziokabineta",
+  "name": "Фельдшер",
+  "count": 20
+ },
+ {
+  "alias": "lor-otolaringolog-khirurg",
+  "name": "ЛОР (Отоларинголог)-хирург",
+  "count": 19
+ },
+ {
+  "alias": "302-podrostkovyiy-psiholog",
+  "name": "Подростковый психолог",
+  "count": 18
+ },
+ {
+  "alias": "akusher-ginekolog-reproduktolog",
+  "name": "Акушер-гинеколог-репродуктолог",
+  "count": 17
+ },
+ {
+  "alias": "urologiya-i-andrologiya-detskaya",
+  "name": "Детский уролог-андролог",
+  "count": 17
+ },
+ {
+  "alias": "aritmolog",
+  "name": "Аритмолог",
+  "count": 16
+ },
+ {
+  "alias": "khirurg-ortoped",
+  "name": "Хирург-ортопед",
+  "count": 16
+ },
+ {
+  "alias": "iglorefleksoterapevt",
+  "name": "Иглорефлексотерапевт",
+  "count": 16
+ },
+ {
+  "alias": "abdominalnaya-khirurgiya",
+  "name": "Абдоминальный хирург",
+  "count": 16
+ },
+ {
+  "alias": "embriolog",
+  "name": "Эмбриолог",
+  "count": 16
+ },
+ {
+  "alias": "detskiy-pulmonolog",
+  "name": "Детский пульмонолог",
+  "count": 14
  },
  {
   "alias": "stomatolog-protezist",
   "name": "Стоматолог-протезист",
-  "count": 4
- },
- {
-  "alias": "integrativnyy-vrach",
-  "name": "Интегративный врач",
-  "count": 3
- },
- {
-  "alias": "genetik",
-  "name": "Генетик",
-  "count": 3
- },
- {
-  "alias": "ginekolog-urolog",
-  "name": "Гинеколог-уролог (урогинеколог)",
-  "count": 3
+  "count": 14
  },
  {
   "alias": "podolog",
   "name": "Подолог",
-  "count": 3
+  "count": 13
+ },
+ {
+  "alias": "stomatolog-restavrator",
+  "name": "Стоматолог-реставратор",
+  "count": 13
+ },
+ {
+  "alias": "detskiy-onkolog",
+  "name": "Детский онколог",
+  "count": 13
+ },
+ {
+  "alias": "pediatr-neonatolog",
+  "name": "Педиатр-неонатолог",
+  "count": 12
+ },
+ {
+  "alias": "logoped-defektolog",
+  "name": "Логопед-дефектолог",
+  "count": 12
+ },
+ {
+  "alias": "limfolog",
+  "name": "Лимфолог",
+  "count": 12
+ },
+ {
+  "alias": "nutritsiolog",
+  "name": "Нутрициолог",
+  "count": 12
  },
  {
   "alias": "koloproktolog",
   "name": "Колопроктолог",
-  "count": 3
+  "count": 12
+ },
+ {
+  "alias": "vrach-skoroy-pomoshchi",
+  "name": "Врач скорой помощи",
+  "count": 12
+ },
+ {
+  "alias": "khirurg-urolog",
+  "name": "Хирург-уролог",
+  "count": 11
+ },
+ {
+  "alias": "dermatolog-trikholog",
+  "name": "Дерматолог-трихолог",
+  "count": 11
+ },
+ {
+  "alias": "detskyi-khirurg-urolog",
+  "name": "Детский хирург-уролог",
+  "count": 11
+ },
+ {
+  "alias": "instructor-lfk",
+  "name": "Инструктор ЛФК",
+  "count": 10
+ },
+ {
+  "alias": "lazerolog",
+  "name": "Лазеролог",
+  "count": 10
+ },
+ {
+  "alias": "khirurg-endoskopist",
+  "name": "Хирург-эндоскопист",
+  "count": 10
+ },
+ {
+  "alias": "akusher-ginekolog-khirurg",
+  "name": "Акушер-гинеколог-хирург",
+  "count": 9
+ },
+ {
+  "alias": "stomatolog-gigienist",
+  "name": "Стоматолог-гигиенист",
+  "count": 9
+ },
+ {
+  "alias": "detskyi-khirurg-ortoped",
+  "name": "Детский хирург-ортопед",
+  "count": 9
+ },
+ {
+  "alias": "patologicheskaya-anatomiya-detskaya",
+  "name": "Детский паталогоанатом",
+  "count": 9
+ },
+ {
+  "alias": "transplantolog",
+  "name": "Трансплантолог",
+  "count": 8
+ },
+ {
+  "alias": "refleksoterapevt",
+  "name": "Рефлексотерапевт",
+  "count": 8
+ },
+ {
+  "alias": "pediatr-gastroenterolog",
+  "name": "Педиатр-гастроэнтеролог",
+  "count": 8
+ },
+ {
+  "alias": "ginekolog-reproduktolog",
+  "name": "Гинеколог-репродуктолог",
+  "count": 8
+ },
+ {
+  "alias": "dermatolog-onkolog",
+  "name": "Дерматолог-онколог",
+  "count": 7
+ },
+ {
+  "alias": "kardiolog-terapevt",
+  "name": "Кардиолог-терапевт",
+  "count": 7
+ },
+ {
+  "alias": "integrativnyy-vrach",
+  "name": "Интегративный врач",
+  "count": 6
  },
  {
   "alias": "khirurg-travmatolog",
   "name": "Хирург-травматолог",
+  "count": 6
+ },
+ {
+  "alias": "revmo-kardiolog",
+  "name": "Кардиолог - ревматолог",
+  "count": 6
+ },
+ {
+  "alias": "detskyi-androlog",
+  "name": "Детский андролог",
+  "count": 6
+ },
+ {
+  "alias": "otonevrolog",
+  "name": "Отоневролог",
+  "count": 5
+ },
+ {
+  "alias": "logoped-psikholog",
+  "name": "Логопед-психолог",
+  "count": 5
+ },
+ {
+  "alias": "khirurg-mammolog",
+  "name": "Хирург-маммолог",
+  "count": 5
+ },
+ {
+  "alias": "lor-otolaringolog-surdolog",
+  "name": "ЛОР (Отоларинголог)-сурдолог",
+  "count": 5
+ },
+ {
+  "alias": "ginekolog-urolog",
+  "name": "Гинеколог-уролог (урогинеколог)",
+  "count": 5
+ },
+ {
+  "alias": "urolog-khirurg",
+  "name": "Уролог-хирург",
+  "count": 5
+ },
+ {
+  "alias": "allergolog-pulmonolog",
+  "name": "Аллерголог-пульмонолог",
+  "count": 5
+ },
+ {
+  "alias": "gomeopat",
+  "name": "Гомеопат",
+  "count": 5
+ },
+ {
+  "alias": "addiktolog",
+  "name": "Аддиктолог",
+  "count": 4
+ },
+ {
+  "alias": "dermatolog-allergolog",
+  "name": "Дерматолог-аллерголог",
+  "count": 4
+ },
+ {
+  "alias": "300-bariatricheskiy-hirurg",
+  "name": "Бариатрический хирург",
+  "count": 4
+ },
+ {
+  "alias": "logoped-reabilitolog",
+  "name": "Логопед-реабилитолог",
+  "count": 4
+ },
+ {
+  "alias": "logoped-afaziolog",
+  "name": "Логопед-афазиолог",
+  "count": 4
+ },
+ {
+  "alias": "neirofiziolog",
+  "name": "Нейрофизиолог",
+  "count": 4
+ },
+ {
+  "alias": "netraditsionnaya-terapiya",
+  "name": "Врач альтернативной медицины",
+  "count": 4
+ },
+ {
+  "alias": "androlog-reproduktolog",
+  "name": "Андролог-репродуктолог",
+  "count": 4
+ },
+ {
+  "alias": "detskaya-narkologiya",
+  "name": "Детский нарколог",
+  "count": 4
+ },
+ {
+  "alias": "gastroenterolog-endoskopist",
+  "name": "Гастроэнтеролог-эндоскопист",
+  "count": 3
+ },
+ {
+  "alias": "ortodont-gnatolog",
+  "name": "Ортодонт-гнатолог",
+  "count": 3
+ },
+ {
+  "alias": "280-kardiolog-aritmolog",
+  "name": "Кардиолог-аритмолог",
+  "count": 3
+ },
+ {
+  "alias": "284-optometrist",
+  "name": "Оптометрист",
+  "count": 3
+ },
+ {
+  "alias": "dermatolog-khirurg",
+  "name": "Дерматолог-хирург",
+  "count": 3
+ },
+ {
+  "alias": "surdoakustik",
+  "name": "Сурдоакустик",
   "count": 3
  },
  {
@@ -785,83 +1025,48 @@
   "count": 3
  },
  {
-  "alias": "limfolog",
-  "name": "Лимфолог",
-  "count": 3
- },
- {
   "alias": "detskiy-parazitolog",
   "name": "Детский паразитолог",
   "count": 3
  },
  {
-  "alias": "khirurg-mammolog",
-  "name": "Хирург-маммолог",
+  "alias": "dermatolog-urolog",
+  "name": "Дерматолог-уролог",
   "count": 3
  },
  {
-  "alias": "stomatolog-gigienist",
-  "name": "Стоматолог-гигиенист",
+  "alias": "gnoynyy-khirurg",
+  "name": "Гнойный хирург",
   "count": 3
  },
  {
-  "alias": "androlog-reproduktolog",
-  "name": "Андролог-репродуктолог",
-  "count": 3
- },
- {
-  "alias": "detskaya-narkologiya",
-  "name": "Детский нарколог",
-  "count": 3
- },
- {
-  "alias": "khirurg-endoskopist",
-  "name": "Хирург-эндоскопист",
-  "count": 3
- },
- {
-  "alias": "kardiokhirurg",
-  "name": "Кардиохирург",
-  "count": 3
- },
- {
-  "alias": "allergolog-pulmonolog",
-  "name": "Аллерголог-пульмонолог",
+  "alias": "reabilitolog-poslerodovoe-vosstanovlenie",
+  "name": "Реабилитолог (послеродовое восстановление)",
   "count": 2
  },
  {
-  "alias": "pediatr-neonatolog",
-  "name": "Педиатр-неонатолог",
+  "alias": "nevrolog-poslerodovoe-vosstanovlenie",
+  "name": "Невролог (послеродовое восстановление)",
   "count": 2
  },
  {
-  "alias": "lor-otolaringolog-surdolog",
-  "name": "ЛОР (Отоларинголог)-сурдолог",
+  "alias": "lor-otolaringolog-onkolog",
+  "name": "ЛОР (Отоларинголог)-онколог",
   "count": 2
  },
  {
-  "alias": "lazerolog",
-  "name": "Лазеролог",
+  "alias": "foniatr",
+  "name": "Фониатр",
   "count": 2
  },
  {
-  "alias": "addiktolog",
-  "name": "Аддиктолог",
+  "alias": "somnolog",
+  "name": "Сомнолог",
   "count": 2
  },
  {
-  "alias": "logoped-defektolog",
-  "name": "Логопед-дефектолог",
-  "count": 2
- },
- {
-  "alias": "revmo-kardiolog",
-  "name": "Кардиолог - ревматолог",
-  "count": 2
- },
- {
-  "alias": "otonevrolog",
-  "name": "Отоневролог",
+  "alias": "lor-otolaringolog-reflektolog",
+  "name": "ЛОР (Отоларинголог)-рефлектолог",
   "count": 2
  },
  {
@@ -870,58 +1075,43 @@
   "count": 2
  },
  {
-  "alias": "detskyi-khirurg-urolog",
-  "name": "Детский хирург-уролог",
+  "alias": "dermatolog-mikolog",
+  "name": "Дерматолог-миколог",
   "count": 2
  },
  {
-  "alias": "dermatolog-allergolog",
-  "name": "Дерматолог-аллерголог",
+  "alias": "ginekolog-infekcionist",
+  "name": "Гинеколог-инфекционист",
   "count": 2
  },
  {
-  "alias": "dermatolog-onkolog",
-  "name": "Дерматолог-онколог",
+  "alias": "299-patologoanatom",
+  "name": "Патологоанатом",
   "count": 2
  },
  {
-  "alias": "dermatolog-urolog",
-  "name": "Дерматолог-уролог",
+  "alias": "mikrokhirurg",
+  "name": "Микрохирург",
   "count": 2
  },
  {
-  "alias": "abdominalnaya-khirurgiya",
-  "name": "Абдоминальный хирург",
+  "alias": "citogenetik",
+  "name": "Цитогенетик",
   "count": 2
  },
  {
-  "alias": "netraditsionnaya-terapiya",
-  "name": "Врач альтернативной медицины",
+  "alias": "kardiolog-revmatolog",
+  "name": "Кардиолог-ревматолог",
   "count": 2
  },
  {
-  "alias": "skoraya-i-neotlozhnaya-meditsinskaya-pomoshch",
-  "name": "Скорая и неотложная медицинская помощь",
+  "alias": "maloinvazivnyy-khirurg",
+  "name": "Малоинвазивный хирург",
   "count": 2
  },
  {
-  "alias": "logoped",
-  "name": "Логопед",
-  "count": 2
- },
- {
-  "alias": "reabilitolog-poslerodovoe-vosstanovlenie",
-  "name": "Реабилитолог (послеродовое восстановление)",
-  "count": 1
- },
- {
-  "alias": "nevrolog-poslerodovoe-vosstanovlenie",
-  "name": "Невролог (послеродовое восстановление)",
-  "count": 1
- },
- {
-  "alias": "logoped-psikholog",
-  "name": "Логопед-психолог",
+  "alias": "serdechno-sosudistyy-khirurg",
+  "name": "Сердечно-сосудистый хирург",
   "count": 1
  },
  {
@@ -930,43 +1120,23 @@
   "count": 1
  },
  {
-  "alias": "urolog-khirurg",
-  "name": "Уролог-хирург",
+  "alias": "androlog-endokrinolog",
+  "name": "Андролог-эндокринолог",
   "count": 1
  },
  {
-  "alias": "lor-otolaringolog-onkolog",
-  "name": "ЛОР (Отоларинголог)-онколог",
+  "alias": "endokrinolog-khirurg",
+  "name": "Эндокринолог-хирург",
   "count": 1
  },
  {
-  "alias": "somnolog",
-  "name": "Сомнолог",
+  "alias": "khirurg-ginekolog",
+  "name": "Хирург-гинеколог",
   "count": 1
  },
  {
-  "alias": "lor-otolaringolog-reflektolog",
-  "name": "ЛОР (Отоларинголог)-рефлектолог",
-  "count": 1
- },
- {
-  "alias": "gomeopat",
-  "name": "Гомеопат",
-  "count": 1
- },
- {
-  "alias": "ginekolog-infekcionist",
-  "name": "Гинеколог-инфекционист",
-  "count": 1
- },
- {
-  "alias": "kardiolog-terapevt",
-  "name": "Кардиолог-терапевт",
-  "count": 1
- },
- {
-  "alias": "ortodont-gnatolog",
-  "name": "Ортодонт-гнатолог",
+  "alias": "vrach-preventivnoy-meditsiny",
+  "name": "Врач превентивной медицины",
   "count": 1
  },
  {
@@ -985,18 +1155,8 @@
   "count": 1
  },
  {
-  "alias": "citogenetik",
-  "name": "Цитогенетик",
-  "count": 1
- },
- {
   "alias": "iv-terapevt",
   "name": "IV - терапевт",
-  "count": 1
- },
- {
-  "alias": "284-optometrist",
-  "name": "Оптометрист",
   "count": 1
  },
  {
@@ -1005,23 +1165,13 @@
   "count": 1
  },
  {
-  "alias": "298-sudmedekspert",
-  "name": "Судмедэксперт",
+  "alias": "gastroenterolog-khirurg",
+  "name": "Гастроэнтеролог-хирург",
   "count": 1
  },
  {
-  "alias": "toksikologiya",
-  "name": "Токсиколог",
-  "count": 1
- },
- {
-  "alias": "dermatolog-ginekolog",
-  "name": "Дерматолог-гинеколог",
-  "count": 1
- },
- {
-  "alias": "dermatolog-mikolog",
-  "name": "Дерматолог-миколог",
+  "alias": "kardiorevmatolog",
+  "name": "Кардиоревматолог",
   "count": 1
  },
  {
@@ -1030,13 +1180,8 @@
   "count": 1
  },
  {
-  "alias": "stomatolog-restavrator",
-  "name": "Стоматолог-реставратор",
-  "count": 1
- },
- {
-  "alias": "detskyi-khirurg-ortoped",
-  "name": "Детский хирург-ортопед",
+  "alias": "dermatolog-ginekolog",
+  "name": "Дерматолог-гинеколог",
   "count": 1
  }
 ]
