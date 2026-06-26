@@ -25,3 +25,6 @@ pnpm-debug.log*
 # working artifacts from setup
 _tz.docx
 _tz_text.txt
+_spravochnik.xlsx
+_idoctor/
+data/doctors/doctors_v1_backup.json

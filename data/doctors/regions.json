@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "almaty",
+    "name": "Алматы",
+    "count": 630
+  },
+  {
+    "slug": "astana",
+    "name": "Астана",
+    "count": 613
+  },
+  {
+    "slug": "shymkent",
+    "name": "Шымкент",
+    "count": 514
+  },
+  {
+    "slug": "karaganda",
+    "name": "Караганда",
+    "count": 595
+  },
+  {
+    "slug": "aktobe",
+    "name": "Актобе",
+    "count": 507
+  },
+  {
+    "slug": "taraz",
+    "name": "Тараз",
+    "count": 498
+  },
+  {
+    "slug": "pavlodar",
+    "name": "Павлодар",
+    "count": 524
+  },
+  {
+    "slug": "ust-kamenogorsk",
+    "name": "Усть-Каменогорск",
+    "count": 274
+  },
+  {
+    "slug": "semey",
+    "name": "Семей",
+    "count": 541
+  },
+  {
+    "slug": "kostanay",
+    "name": "Костанай",
+    "count": 424
+  },
+  {
+    "slug": "kyzylorda",
+    "name": "Кызылорда",
+    "count": 455
+  },
+  {
+    "slug": "uralsk",
+    "name": "Уральск",
+    "count": 441
+  },
+  {
+    "slug": "petropavlovsk",
+    "name": "Петропавловск",
+    "count": 368
+  },
+  {
+    "slug": "aktau",
+    "name": "Актау",
+    "count": 432
+  },
+  {
+    "slug": "kokshetau",
+    "name": "Кокшетау",
+    "count": 413
+  },
+  {
+    "slug": "taldykorgan",
+    "name": "Талдыкорган",
+    "count": 400
+  },
+  {
+    "slug": "turkestan",
+    "name": "Туркестан",
+    "count": 450
+  },
+  {
+    "slug": "ekibastuz",
+    "name": "Экибастуз",
+    "count": 109
+  }
+]

@@ -189,6 +189,42 @@ class ParseLog(Base):
     finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
 
 
+class Doctor(Base):
+    """A doctor scraped from idoctor.kz (for the /doctors clone)."""
+
+    __tablename__ = "doctors"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=False)
+    alias: Mapped[str] = mapped_column(String(255), default="")
+    name: Mapped[str] = mapped_column(String(255), index=True)
+    avatar: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    reviews: Mapped[int] = mapped_column(Integer, default=0)
+    experience_years: Mapped[int | None] = mapped_column(Integer, nullable=True, index=True)
+    rating: Mapped[float | None] = mapped_column(Float, nullable=True, index=True)
+    verified: Mapped[bool] = mapped_column(Boolean, default=False)
+    partner: Mapped[bool] = mapped_column(Boolean, default=False)
+    top: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
+    category: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    accepts_children: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
+    age_min: Mapped[str | None] = mapped_column(String(8), nullable=True)
+    age_max: Mapped[str | None] = mapped_column(String(8), nullable=True)
+    region: Mapped[str] = mapped_column(String(48), index=True)
+    city: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    min_price: Mapped[float | None] = mapped_column(Float, nullable=True, index=True)
+    online_booking: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
+    primary_specialty: Mapped[str | None] = mapped_column(String(128), nullable=True, index=True)
+    # comma-wrapped alias list (",nevrolog,kardiolog,") for LIKE filtering
+    spec_aliases: Mapped[str] = mapped_column(Text, default=",")
+    specialties: Mapped[list] = mapped_column(JSON, default=list)
+    clinics: Mapped[list] = mapped_column(JSON, default=list)
+    diseases: Mapped[list] = mapped_column(JSON, default=list)
+    profile_url: Mapped[str | None] = mapped_column(String(512), nullable=True)
+
+    __table_args__ = (
+        Index("ix_doctor_region_spec", "region", "primary_specialty"),
+    )
+
+
 class Subscription(Base):
     """User subscription to a service/clinic price (TZ 3.4)."""
 

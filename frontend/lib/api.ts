@@ -1,6 +1,9 @@
 import type {
   ClinicCard,
   ClinicListItem,
+  DoctorDetail,
+  DoctorsMeta,
+  DoctorsResult,
   HistorySeries,
   Meta,
   SearchResult,
@@ -54,4 +57,8 @@ export const api = {
     post<any>(`/api/admin/unmatched/${id}/resolve`, body),
   subscribe: (body: { email: string; service_id: string; clinic_id?: string; target_price_kzt?: number }) =>
     post<any>("/api/subscriptions", body),
+  // doctors (idoctor clone)
+  doctorsMeta: () => get<DoctorsMeta>("/api/doctors/meta"),
+  doctors: (params: Record<string, any>) => get<DoctorsResult>("/api/doctors", params),
+  doctor: (id: number) => get<DoctorDetail>(`/api/doctors/${id}`),
 };

@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Activity, GitCompareArrows, Map, Settings } from "lucide-react";
+import { Activity, GitCompareArrows, Map, Settings, Stethoscope } from "lucide-react";
 
 const NAV = [
   { href: "/", label: "Поиск", icon: Activity },
+  { href: "/doctors", label: "Врачи", icon: Stethoscope },
   { href: "/compare", label: "Сравнение", icon: GitCompareArrows },
   { href: "/map", label: "Карта", icon: Map },
   { href: "/admin", label: "Админ", icon: Settings },

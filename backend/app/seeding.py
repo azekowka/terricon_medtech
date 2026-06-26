@@ -117,10 +117,19 @@ def seed_database(db: Session, include_live: bool = False) -> dict:
 
 def bootstrap_if_empty(db: Session) -> dict | None:
     """On first boot, ensure the dictionary is loaded and seed data exists."""
+    from .doctors_loader import load_doctors
+    from .models import Doctor
+
     n_services = db.query(Service).count()
     if n_services == 0:
         load_dictionary(db)
     n_prices = db.query(Price).count()
+    result = None
     if n_prices == 0:
-        return seed_database(db, include_live=False)
-    return None
+        result = seed_database(db, include_live=False)
+    # load scraped doctors (idoctor clone) if present and table empty
+    if db.query(Doctor).count() == 0:
+        n_doctors = load_doctors(db)
+        if n_doctors:
+            result = {**(result or {}), "doctors_loaded": n_doctors}
+    return result

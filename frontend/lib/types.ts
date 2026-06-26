@@ -106,6 +106,73 @@ export interface ClinicCard extends ClinicListItem {
   }[];
 }
 
+// ---- Doctors (idoctor clone) ----
+export interface DoctorRegion {
+  slug: string;
+  name: string;
+  count: number;
+}
+export interface DoctorSpecialty {
+  alias: string;
+  name: string;
+  count: number;
+}
+export interface DoctorsMeta {
+  regions: DoctorRegion[];
+  specialties: DoctorSpecialty[];
+  total: number;
+}
+export interface DoctorClinic {
+  name?: string;
+  short?: string;
+  address?: string;
+  price?: number | null;
+  price_discount?: number | null;
+  discount?: number | null;
+  online_booking?: boolean;
+  lat?: string;
+  lng?: string;
+  schedule?: { day: string; start: string | null; end: string | null; work: boolean; h24?: boolean }[];
+}
+export interface DoctorCard {
+  id: number;
+  name: string;
+  avatar: string | null;
+  specialties: { name: string; alias: string }[];
+  primary_specialty: string | null;
+  experience_years: number | null;
+  category: string | null;
+  accepts_children: boolean;
+  age_min: string | null;
+  age_max: string | null;
+  rating: number | null;
+  reviews: number;
+  verified: boolean;
+  top: boolean;
+  min_price: number | null;
+  online_booking: boolean;
+  city: string | null;
+  region: string;
+  clinics_count: number;
+  clinic: DoctorClinic | null;
+}
+export interface DoctorsResult {
+  total: number;
+  page: number;
+  page_size: number;
+  pages: number;
+  region: string | null;
+  region_name: string | null;
+  doctors: DoctorCard[];
+}
+export interface DoctorDetail extends DoctorCard {
+  alias: string;
+  partner: boolean;
+  clinics: DoctorClinic[];
+  diseases: string[];
+  profile_url: string | null;
+}
+
 export interface HistorySeries {
   service_id: string | null;
   clinic_id: string | null;
