@@ -1,0 +1,27 @@
+# ---- Python / backend ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+*.db
+*.sqlite3
+.env
+
+# ---- Node / frontend ----
+node_modules/
+.next/
+out/
+.env.local
+npm-debug.log*
+pnpm-debug.log*
+
+# ---- misc ----
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# working artifacts from setup
+_tz.docx
+_tz_text.txt

@@ -1,0 +1,47 @@
+{
+  "gorpoliklinika_astana.pdf": {
+    "clinic_name": "Городская поликлиника №1",
+    "source": "gorpolik_astana",
+    "city": "Астана",
+    "address": "ул. Бейбітшілік, 12",
+    "phone": "+7 7172 31 0001",
+    "working_hours": "Пн–Пт 08:00–18:00, Сб 09:00–14:00",
+    "website": "https://gp1.astana.kz",
+    "rating": 4.2,
+    "has_online_booking": false,
+    "lat": 51.171,
+    "lng": 71.428,
+    "format": "pdf",
+    "rows": 35
+  },
+  "obldiagcentr_shymkent.xlsx": {
+    "clinic_name": "Областной диагностический центр",
+    "source": "odc_shymkent",
+    "city": "Шымкент",
+    "address": "пр. Республики, 5",
+    "phone": "+7 7252 40 0002",
+    "working_hours": "Пн–Сб 08:00–17:00",
+    "website": "https://odc.shymkent.kz",
+    "rating": 4.3,
+    "has_online_booking": true,
+    "lat": 42.318,
+    "lng": 69.601,
+    "format": "xlsx",
+    "rows": 32
+  },
+  "crb_aktobe.docx": {
+    "clinic_name": "Центральная районная больница",
+    "source": "crb_aktobe",
+    "city": "Актобе",
+    "address": "ул. Маресьева, 70",
+    "phone": "+7 7132 22 0003",
+    "working_hours": "Пн–Пт 08:00–17:00",
+    "website": "https://crb.aktobe.kz",
+    "rating": 4.0,
+    "has_online_booking": false,
+    "lat": 50.279,
+    "lng": 57.207,
+    "format": "docx",
+    "rows": 28
+  }
+}

@@ -1,0 +1,379 @@
+[
+  {
+    "name": "KDL Olymp — Абая",
+    "source": "kdl",
+    "city": "Алматы",
+    "address": "пр. Абая, 109В",
+    "phone": "+7 727 344 0066",
+    "working_hours": "Пн–Сб 07:00–19:00, Вс 08:00–14:00",
+    "website": "https://www.kdlolymp.kz",
+    "profile": "lab",
+    "categories": [
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 1.05,
+    "rating": 4.6,
+    "has_online_booking": true,
+    "lat": 43.23305,
+    "lng": 76.89105
+  },
+  {
+    "name": "KDL Olymp — Достык",
+    "source": "kdl",
+    "city": "Астана",
+    "address": "пр. Достык, 5",
+    "phone": "+7 7172 76 5050",
+    "working_hours": "Пн–Сб 07:30–18:00, Вс 08:00–13:00",
+    "website": "https://www.kdlolymp.kz",
+    "profile": "lab",
+    "categories": [
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 1.08,
+    "rating": 4.5,
+    "has_online_booking": true,
+    "lat": 51.1713,
+    "lng": 71.4506
+  },
+  {
+    "name": "KDL Olymp — Тауке хана",
+    "source": "kdl",
+    "city": "Шымкент",
+    "address": "пр. Тауке хана, 80",
+    "phone": "+7 7252 99 1010",
+    "working_hours": "Пн–Сб 07:30–18:00",
+    "website": "https://www.kdlolymp.kz",
+    "profile": "lab",
+    "categories": [
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 0.92,
+    "rating": 4.4,
+    "has_online_booking": true,
+    "lat": 42.32415,
+    "lng": 69.59415
+  },
+  {
+    "name": "KDL Olymp — Бокенбай",
+    "source": "kdl",
+    "city": "Актобе",
+    "address": "ул. Братьев Жубановых, 289",
+    "phone": "+7 7132 70 2020",
+    "working_hours": "Пн–Сб 08:00–17:00",
+    "website": "https://www.kdlolymp.kz",
+    "profile": "lab",
+    "categories": [
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 0.9,
+    "rating": 4.3,
+    "has_online_booking": true,
+    "lat": 50.283,
+    "lng": 57.1499
+  },
+  {
+    "name": "Invitro — Сатпаева",
+    "source": "invitro",
+    "city": "Алматы",
+    "address": "ул. Сатпаева, 90/22",
+    "phone": "+7 727 312 1212",
+    "working_hours": "Пн–Пт 07:00–19:00, Сб–Вс 08:00–15:00",
+    "website": "https://invitro.kz",
+    "profile": "lab",
+    "categories": [
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 1.12,
+    "rating": 4.5,
+    "has_online_booking": true,
+    "lat": 43.25465,
+    "lng": 76.89645
+  },
+  {
+    "name": "Invitro — Кабанбай батыра",
+    "source": "invitro",
+    "city": "Астана",
+    "address": "ул. Кабанбай батыра, 42",
+    "phone": "+7 7172 73 1414",
+    "working_hours": "Пн–Пт 07:00–19:00, Сб 08:00–14:00",
+    "website": "https://invitro.kz",
+    "profile": "lab",
+    "categories": [
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 1.15,
+    "rating": 4.4,
+    "has_online_booking": true,
+    "lat": 51.1479,
+    "lng": 71.456
+  },
+  {
+    "name": "Invitro — Республики",
+    "source": "invitro",
+    "city": "Караганда",
+    "address": "пр. Республики, 32",
+    "phone": "+7 7212 41 1616",
+    "working_hours": "Пн–Сб 07:30–18:00",
+    "website": "https://invitro.kz",
+    "profile": "lab",
+    "categories": [
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 0.98,
+    "rating": 4.3,
+    "has_online_booking": true,
+    "lat": 49.80875,
+    "lng": 73.11885
+  },
+  {
+    "name": "Helix — Розыбакиева",
+    "source": "helix",
+    "city": "Алматы",
+    "address": "ул. Розыбакиева, 247А",
+    "phone": "+7 727 351 8080",
+    "working_hours": "Пн–Сб 07:30–18:30, Вс 09:00–14:00",
+    "website": "https://helix.kz",
+    "profile": "lab",
+    "categories": [
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 1.0,
+    "rating": 4.4,
+    "has_online_booking": true,
+    "lat": 43.2596,
+    "lng": 76.878
+  },
+  {
+    "name": "Helix — Туран",
+    "source": "helix",
+    "city": "Астана",
+    "address": "пр. Туран, 37",
+    "phone": "+7 7172 64 8080",
+    "working_hours": "Пн–Сб 07:30–18:00",
+    "website": "https://helix.kz",
+    "profile": "lab",
+    "categories": [
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 1.03,
+    "rating": 4.3,
+    "has_online_booking": true,
+    "lat": 51.15285,
+    "lng": 71.48255
+  },
+  {
+    "name": "Helix — Назарбаева",
+    "source": "helix",
+    "city": "Павлодар",
+    "address": "ул. Кутузова, 204",
+    "phone": "+7 7182 55 8080",
+    "working_hours": "Пн–Сб 08:00–17:00",
+    "website": "https://helix.kz",
+    "profile": "lab",
+    "categories": [
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 0.93,
+    "rating": 4.2,
+    "has_online_booking": false,
+    "lat": 52.2963,
+    "lng": 76.9584
+  },
+  {
+    "name": "Медцентр Olymp — Гагарина",
+    "source": "olymp",
+    "city": "Алматы",
+    "address": "пр. Гагарина, 177Б",
+    "phone": "+7 727 390 4040",
+    "working_hours": "Пн–Сб 08:00–20:00",
+    "website": "https://olymp.kz",
+    "profile": "diagnostic",
+    "categories": [
+      "diagnostic",
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 1.06,
+    "rating": 4.5,
+    "has_online_booking": true,
+    "lat": 43.21955,
+    "lng": 76.90455
+  },
+  {
+    "name": "Медцентр Olymp — Сарыарка",
+    "source": "olymp",
+    "city": "Астана",
+    "address": "пр. Сарыарка, 31",
+    "phone": "+7 7172 57 4040",
+    "working_hours": "Пн–Сб 08:00–19:00",
+    "website": "https://olymp.kz",
+    "profile": "diagnostic",
+    "categories": [
+      "diagnostic",
+      "laboratory",
+      "procedure"
+    ],
+    "price_factor": 1.09,
+    "rating": 4.4,
+    "has_online_booking": true,
+    "lat": 51.1578,
+    "lng": 71.4641
+  },
+  {
+    "name": "МЕДЭЛ — Клиника на Жандосова",
+    "source": "medel",
+    "city": "Алматы",
+    "address": "ул. Жандосова, 98",
+    "phone": "+7 727 258 2525",
+    "working_hours": "Пн–Сб 08:00–20:00, Вс 09:00–15:00",
+    "website": "https://medel.kz",
+    "profile": "multiprofile",
+    "categories": [
+      "doctor",
+      "laboratory",
+      "diagnostic",
+      "procedure"
+    ],
+    "price_factor": 1.1,
+    "rating": 4.6,
+    "has_online_booking": true,
+    "lat": 43.25285,
+    "lng": 76.90725
+  },
+  {
+    "name": "МЕДЭЛ — Филиал Тимирязева",
+    "source": "medel",
+    "city": "Алматы",
+    "address": "ул. Тимирязева, 42",
+    "phone": "+7 727 258 2526",
+    "working_hours": "Пн–Сб 08:00–19:00",
+    "website": "https://medel.kz",
+    "profile": "multiprofile",
+    "categories": [
+      "doctor",
+      "laboratory",
+      "diagnostic",
+      "procedure"
+    ],
+    "price_factor": 1.07,
+    "rating": 4.5,
+    "has_online_booking": true,
+    "lat": 43.2245,
+    "lng": 76.8861
+  },
+  {
+    "name": "Медицинский центр МЦК",
+    "source": "mck",
+    "city": "Шымкент",
+    "address": "ул. Байтурсынова, 25",
+    "phone": "+7 7252 53 3030",
+    "working_hours": "Пн–Сб 08:00–18:00",
+    "website": "https://mck.kz",
+    "profile": "multiprofile",
+    "categories": [
+      "doctor",
+      "laboratory",
+      "diagnostic",
+      "procedure"
+    ],
+    "price_factor": 0.94,
+    "rating": 4.3,
+    "has_online_booking": true,
+    "lat": 42.34395,
+    "lng": 69.61035
+  },
+  {
+    "name": "МЦК — Филиал Север",
+    "source": "mck",
+    "city": "Шымкент",
+    "address": "мкр. Север, 18",
+    "phone": "+7 7252 53 3031",
+    "working_hours": "Пн–Сб 08:00–17:00",
+    "website": "https://mck.kz",
+    "profile": "multiprofile",
+    "categories": [
+      "doctor",
+      "laboratory",
+      "diagnostic",
+      "procedure"
+    ],
+    "price_factor": 0.91,
+    "rating": 4.1,
+    "has_online_booking": false,
+    "lat": 42.3606,
+    "lng": 69.5892
+  },
+  {
+    "name": "Аксай — Областная клиника",
+    "source": "aksai",
+    "city": "Актобе",
+    "address": "пр. Абилкайыр хана, 40",
+    "phone": "+7 7132 56 1717",
+    "working_hours": "Пн–Сб 08:00–18:00",
+    "website": "https://aksai-clinic.kz",
+    "profile": "multiprofile",
+    "categories": [
+      "doctor",
+      "laboratory",
+      "diagnostic",
+      "procedure"
+    ],
+    "price_factor": 0.88,
+    "rating": 4.2,
+    "has_online_booking": false,
+    "lat": 50.27445,
+    "lng": 57.14495
+  },
+  {
+    "name": "Аксай — Городская поликлиника",
+    "source": "aksai",
+    "city": "Караганда",
+    "address": "ул. Ерубаева, 54",
+    "phone": "+7 7212 42 1818",
+    "working_hours": "Пн–Пт 08:00–17:00, Сб 09:00–14:00",
+    "website": "https://aksai-clinic.kz",
+    "profile": "multiprofile",
+    "categories": [
+      "doctor",
+      "laboratory",
+      "diagnostic",
+      "procedure"
+    ],
+    "price_factor": 0.86,
+    "rating": 4.0,
+    "has_online_booking": false,
+    "lat": 49.8119,
+    "lng": 73.1112
+  },
+  {
+    "name": "Аксай — Медцентр Павлодар",
+    "source": "aksai",
+    "city": "Павлодар",
+    "address": "ул. Лермонтова, 96",
+    "phone": "+7 7182 60 1919",
+    "working_hours": "Пн–Сб 08:00–17:00",
+    "website": "https://aksai-clinic.kz",
+    "profile": "multiprofile",
+    "categories": [
+      "doctor",
+      "laboratory",
+      "diagnostic",
+      "procedure"
+    ],
+    "price_factor": 0.85,
+    "rating": 4.1,
+    "has_online_booking": false,
+    "lat": 52.26615,
+    "lng": 76.94805
+  }
+]
