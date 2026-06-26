@@ -12,7 +12,7 @@
     "lat": 51.171,
     "lng": 71.428,
     "format": "pdf",
-    "rows": 35
+    "rows": 44
   },
   "obldiagcentr_shymkent.xlsx": {
     "clinic_name": "Областной диагностический центр",
@@ -27,7 +27,7 @@
     "lat": 42.318,
     "lng": 69.601,
     "format": "xlsx",
-    "rows": 32
+    "rows": 30
   },
   "crb_aktobe.docx": {
     "clinic_name": "Центральная районная больница",
@@ -42,6 +42,6 @@
     "lat": 50.279,
     "lng": 57.207,
     "format": "docx",
-    "rows": 28
+    "rows": 44
   }
 }

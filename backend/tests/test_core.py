@@ -86,19 +86,16 @@ def test_file_extractors():
 def test_synonym_dedup_collapses_one_clinic(seeded_db):
     """Two synonym spellings of one service at one clinic -> a single Price row."""
     from app.models import Clinic
-    from app.parsers.base import RawRecord
-    from app.parsers.pipeline import _ClinicCache, run_source
     from app.normalization import build_normalizer_from_db
+    from app.parsers.pipeline import _dedup_key
 
     db = seeded_db
     clinic = db.query(Clinic).first()
     n = build_normalizer_from_db(db)
-    # both resolve to the same canonical service
-    m1 = n.match("ОАК")
-    m2 = n.match("клинический анализ крови")
+    # "Прием терапевта" and its synonym "Консультация терапевта" resolve to one service
+    m1 = n.match("Прием терапевта")
+    m2 = n.match("Консультация терапевта")
     assert m1.service_id and m1.service_id == m2.service_id
-
-    from app.parsers.pipeline import _dedup_key
 
     k1 = _dedup_key(clinic.id, m1.service_id, "kdl")
     k2 = _dedup_key(clinic.id, m2.service_id, "kdl")
@@ -125,10 +122,10 @@ def test_dedup_on_rerun(seeded_db):
 
 def test_autocomplete_and_search(seeded_db):
     db = seeded_db
-    hits = autocomplete(db, "кров")
-    assert any("кров" in h["name"].lower() for h in hits)
+    hits = autocomplete(db, "терапевт")
+    assert any("терапевт" in h["name"].lower() for h in hits)
 
-    sid = next(h["id"] for h in autocomplete(db, "ОАК") if "ОАК" in h["name"])
+    sid = next(h["id"] for h in autocomplete(db, "Прием терапевта") if "терапевт" in h["name"].lower())
     res = search_offers(db, SearchParams(service_id=sid, sort="price_asc"))
     offers = res["offers"]
     assert len(offers) >= 3
@@ -141,5 +138,6 @@ def test_autocomplete_and_search(seeded_db):
 
 def test_search_city_filter(seeded_db):
     db = seeded_db
-    res = search_offers(db, SearchParams(q="общий анализ крови", city="Алматы"))
+    res = search_offers(db, SearchParams(q="Прием терапевта", city="Алматы"))
+    assert res["offers"]  # has results
     assert all(o["city"] == "Алматы" for o in res["offers"])

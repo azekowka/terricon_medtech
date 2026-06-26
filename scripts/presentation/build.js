@@ -56,7 +56,7 @@ s.addText("Сравнение цен на медицинские услуги в
 s.addText("«Aviasales для медицины»: один поиск вместо десятков сайтов клиник —\nанализы, приёмы врачей и диагностика по лучшей цене рядом с вами.", {
   x: 0.9, y: 4.45, w: 9.4, h: 1.0, fontFace: BODY, fontSize: 16, color: "C9D6D6",
 });
-const stats = [["911", "цен"], ["22", "клиники"], ["6", "городов"], ["10", "источников"]];
+const stats = [["1230", "услуг"], ["1602", "цены"], ["22", "клиники"], ["10", "источников"]];
 stats.forEach((st, i) => {
   const x = 0.9 + i * 2.35;
   s.addText(st[0], { x, y: 5.75, w: 2.1, h: 0.6, fontFace: HEAD, fontSize: 34, bold: true, color: C.mint });
@@ -150,9 +150,9 @@ syn.forEach((t, i) => {
 s.addText("▶", { x: 5.35, y: 2.4, w: 0.8, h: 1.4, align: "center", valign: "middle", fontFace: BODY, fontSize: 26, color: C.mint });
 s.addShape("roundRect", { x: 6.3, y: 2.25, w: 6.3, h: 1.5, rectRadius: 0.12, fill: { color: C.mint } });
 s.addText("Общий анализ крови (ОАК)", { x: 6.5, y: 2.4, w: 5.9, h: 0.7, fontFace: HEAD, fontSize: 21, bold: true, color: C.dark });
-s.addText("одна каноническая услуга · категория: Лаборатория", { x: 6.5, y: 3.05, w: 5.9, h: 0.5, fontFace: BODY, fontSize: 13, color: "0B3B38" });
+s.addText("одна позиция официального справочника (1230 услуг)", { x: 6.5, y: 3.05, w: 5.9, h: 0.5, fontFace: BODY, fontSize: 13, color: "0B3B38" });
 // stat callouts
-const k = [["99%", "названий привязано\nавтоматически"], ["exact + fuzzy", "точное совпадение\n→ rapidfuzz ≥ 86"], ["unmatched", "очередь ручной\nразметки + дообучение"]];
+const k = [["99%", "названий привязано\nавтоматически"], ["1230 / 122", "услуг в справочнике\n· специальности"], ["unmatched", "очередь ручной\nразметки + дообучение"]];
 k.forEach((c, i) => {
   const x = 0.7 + i * 4.1;
   s.addText(c[0], { x, y: 4.55, w: 3.8, h: 0.8, fontFace: HEAD, fontSize: 30, bold: true, color: C.mint });
@@ -190,7 +190,7 @@ s.background = { color: C.white };
 s.addText("Данные, охват и стек", {
   x: 0.6, y: 0.45, w: 12, h: 0.7, fontFace: HEAD, fontSize: 34, bold: true, color: C.ink,
 });
-const big = [["911", "актуальных цен"], ["22", "клиники"], ["6", "городов"], ["69", "услуг"], ["10", "источников"], ["99%", "нормализовано"]];
+const big = [["1602", "актуальных цен"], ["22", "клиники"], ["6", "городов"], ["1230", "услуг (справочник)"], ["10", "источников"], ["99%", "нормализовано"]];
 big.forEach((b, i) => {
   const col = i % 3, row = Math.floor(i / 3);
   const x = 0.6 + col * 4.15, y = 1.5 + row * 1.45;

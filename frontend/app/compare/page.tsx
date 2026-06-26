@@ -21,7 +21,7 @@ function CompareContent() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    api.services().then(setServices).catch(() => {});
+    api.services({ sort: "popular", limit: 12 }).then(setServices).catch(() => {});
   }, []);
 
   useEffect(() => {

@@ -72,6 +72,7 @@ def autocomplete(db: Session, q: str, limit: int = 10) -> list[dict]:
             "code": s.code,
             "name": s.name,
             "category": s.category,
+            "specialty": s.specialty,
             "offers_count": counts.get(s.id, 0),
         }
         for _, _, s in scored[:limit]
@@ -206,6 +207,8 @@ def search_offers(db: Session, p: SearchParams) -> dict:
                 "code": service.code,
                 "name": service.name,
                 "category": service.category,
+                "specialty": service.specialty,
+                "tarif_code": service.tarif_code,
                 "duration_days": service.duration_days,
             }
             if service

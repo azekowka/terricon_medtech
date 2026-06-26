@@ -126,7 +126,9 @@ function SearchContent() {
           </div>
           <p className="mt-1 text-sm text-slate-500">
             {loading ? "Загрузка…" : `Найдено ${stats?.count ?? 0} предложений`}
+            {result?.service?.specialty && ` · ${result.service.specialty}`}
             {result?.service?.duration_days != null && ` · срок ${result.service.duration_days} дн.`}
+            {result?.service?.tarif_code && ` · код ${result.service.tarif_code}`}
           </p>
         </div>
         {stats && stats.count > 0 && (

@@ -18,7 +18,7 @@ export default function AdminPage() {
       api.stats(),
       api.parseLogs(),
       api.unmatched(),
-      api.services(),
+      api.services({ limit: 2000 }),
     ]);
     setStats(s);
     setLogs(l);

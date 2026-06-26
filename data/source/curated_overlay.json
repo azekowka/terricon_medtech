@@ -1,0 +1,955 @@
+[
+  {
+    "code": "oak",
+    "name": "Общий анализ крови (ОАК)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "ОАК",
+      "общий анализ крови",
+      "клинический анализ крови",
+      "CBC",
+      "общий анализ крови с лейкоформулой",
+      "ОАК с лейкоцитарной формулой",
+      "анализ крови общий",
+      "гемограмма"
+    ],
+    "base_price_kzt": 2200,
+    "duration_days": 1
+  },
+  {
+    "code": "oam",
+    "name": "Общий анализ мочи (ОАМ)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "ОАМ",
+      "общий анализ мочи",
+      "анализ мочи общий",
+      "общеклинический анализ мочи",
+      "urinalysis"
+    ],
+    "base_price_kzt": 1500,
+    "duration_days": 1
+  },
+  {
+    "code": "biochem",
+    "name": "Биохимический анализ крови (расширенный)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "биохимия крови",
+      "биохимический анализ крови",
+      "биохимический профиль",
+      "расширенная биохимия"
+    ],
+    "base_price_kzt": 9800,
+    "duration_days": 1
+  },
+  {
+    "code": "glucose",
+    "name": "Глюкоза крови",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "глюкоза",
+      "сахар крови",
+      "глюкоза в крови",
+      "сахар в крови",
+      "glucose"
+    ],
+    "base_price_kzt": 1300,
+    "duration_days": 1
+  },
+  {
+    "code": "hba1c",
+    "name": "Гликированный гемоглобин (HbA1c)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "HbA1c",
+      "гликированный гемоглобин",
+      "гликозилированный гемоглобин",
+      "гликогемоглобин"
+    ],
+    "base_price_kzt": 4200,
+    "duration_days": 1
+  },
+  {
+    "code": "lipid",
+    "name": "Липидный профиль",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "липидограмма",
+      "липидный профиль",
+      "липидный спектр",
+      "холестериновый профиль"
+    ],
+    "base_price_kzt": 5600,
+    "duration_days": 1
+  },
+  {
+    "code": "chol",
+    "name": "Холестерин общий",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "холестерин",
+      "общий холестерин",
+      "холестерин общий",
+      "cholesterol"
+    ],
+    "base_price_kzt": 1400,
+    "duration_days": 1
+  },
+  {
+    "code": "alt",
+    "name": "АЛТ (аланинаминотрансфераза)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "АЛТ",
+      "аланинаминотрансфераза",
+      "ALT",
+      "АлАТ"
+    ],
+    "base_price_kzt": 1300,
+    "duration_days": 1
+  },
+  {
+    "code": "ast",
+    "name": "АСТ (аспартатаминотрансфераза)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "АСТ",
+      "аспартатаминотрансфераза",
+      "AST",
+      "АсАТ"
+    ],
+    "base_price_kzt": 1300,
+    "duration_days": 1
+  },
+  {
+    "code": "bili",
+    "name": "Билирубин общий",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "билирубин",
+      "билирубин общий",
+      "общий билирубин"
+    ],
+    "base_price_kzt": 1300,
+    "duration_days": 1
+  },
+  {
+    "code": "creat",
+    "name": "Креатинин",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "креатинин",
+      "creatinine",
+      "креатинин в крови"
+    ],
+    "base_price_kzt": 1300,
+    "duration_days": 1
+  },
+  {
+    "code": "urea",
+    "name": "Мочевина",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "мочевина",
+      "urea",
+      "мочевина в крови"
+    ],
+    "base_price_kzt": 1300,
+    "duration_days": 1
+  },
+  {
+    "code": "coag",
+    "name": "Коагулограмма",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "коагулограмма",
+      "гемостазиограмма",
+      "коагуло",
+      "свёртываемость крови"
+    ],
+    "base_price_kzt": 5400,
+    "duration_days": 1
+  },
+  {
+    "code": "crp",
+    "name": "С-реактивный белок (СРБ)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "СРБ",
+      "С-реактивный белок",
+      "C-реактивный белок",
+      "CRP",
+      "ц-реактивный белок"
+    ],
+    "base_price_kzt": 2600,
+    "duration_days": 1
+  },
+  {
+    "code": "tsh",
+    "name": "ТТГ (тиреотропный гормон)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "ТТГ",
+      "тиреотропный гормон",
+      "TSH",
+      "тиротропин"
+    ],
+    "base_price_kzt": 3100,
+    "duration_days": 1
+  },
+  {
+    "code": "ft4",
+    "name": "Т4 свободный (свободный тироксин)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "Т4 свободный",
+      "свободный тироксин",
+      "FT4",
+      "тироксин свободный"
+    ],
+    "base_price_kzt": 3100,
+    "duration_days": 1
+  },
+  {
+    "code": "ft3",
+    "name": "Т3 свободный",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "Т3 свободный",
+      "свободный трийодтиронин",
+      "FT3"
+    ],
+    "base_price_kzt": 3100,
+    "duration_days": 1
+  },
+  {
+    "code": "ferritin",
+    "name": "Ферритин",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "ферритин",
+      "ferritin"
+    ],
+    "base_price_kzt": 4300,
+    "duration_days": 1
+  },
+  {
+    "code": "vitd",
+    "name": "Витамин D (25-OH)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "витамин D",
+      "витамин Д",
+      "25-OH витамин D",
+      "25-гидроксивитамин D",
+      "vitamin D",
+      "25(OH)D"
+    ],
+    "base_price_kzt": 8900,
+    "duration_days": 2
+  },
+  {
+    "code": "vitb12",
+    "name": "Витамин B12 (цианокобаламин)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "витамин B12",
+      "витамин В12",
+      "цианокобаламин",
+      "vitamin B12"
+    ],
+    "base_price_kzt": 4600,
+    "duration_days": 2
+  },
+  {
+    "code": "iron",
+    "name": "Железо сыворотки",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "железо",
+      "сывороточное железо",
+      "железо сыворотки",
+      "iron",
+      "Fe"
+    ],
+    "base_price_kzt": 1900,
+    "duration_days": 1
+  },
+  {
+    "code": "covid_pcr",
+    "name": "ПЦР на COVID-19 (SARS-CoV-2)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "ПЦР COVID-19",
+      "ПЦР на коронавирус",
+      "SARS-CoV-2 ПЦР",
+      "ковид ПЦР",
+      "RT-PCR COVID"
+    ],
+    "base_price_kzt": 9500,
+    "duration_days": 1
+  },
+  {
+    "code": "covid_igg",
+    "name": "Антитела к COVID-19 IgG",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "антитела COVID IgG",
+      "IgG к коронавирусу",
+      "антитела к ковид"
+    ],
+    "base_price_kzt": 5200,
+    "duration_days": 2
+  },
+  {
+    "code": "hiv",
+    "name": "ВИЧ (антитела и антиген)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "ВИЧ",
+      "анализ на ВИЧ",
+      "HIV",
+      "антитела к ВИЧ",
+      "ВИЧ 1/2"
+    ],
+    "base_price_kzt": 3200,
+    "duration_days": 1
+  },
+  {
+    "code": "hbsag",
+    "name": "Гепатит B (HBsAg)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "HBsAg",
+      "гепатит B",
+      "гепатит В",
+      "австралийский антиген"
+    ],
+    "base_price_kzt": 2800,
+    "duration_days": 1
+  },
+  {
+    "code": "hcv",
+    "name": "Гепатит C (anti-HCV)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "anti-HCV",
+      "гепатит C",
+      "гепатит С",
+      "антитела к гепатиту C"
+    ],
+    "base_price_kzt": 3000,
+    "duration_days": 1
+  },
+  {
+    "code": "psa",
+    "name": "ПСА общий (онкомаркёр простаты)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "ПСА",
+      "ПСА общий",
+      "PSA",
+      "простатический специфический антиген"
+    ],
+    "base_price_kzt": 3600,
+    "duration_days": 1
+  },
+  {
+    "code": "testo",
+    "name": "Тестостерон общий",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "тестостерон",
+      "тестостерон общий",
+      "testosterone"
+    ],
+    "base_price_kzt": 3300,
+    "duration_days": 1
+  },
+  {
+    "code": "prolactin",
+    "name": "Пролактин",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "пролактин",
+      "prolactin"
+    ],
+    "base_price_kzt": 3300,
+    "duration_days": 1
+  },
+  {
+    "code": "blood_group",
+    "name": "Группа крови и резус-фактор",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "группа крови",
+      "резус-фактор",
+      "определение группы крови",
+      "группа крови и резус"
+    ],
+    "base_price_kzt": 2400,
+    "duration_days": 1
+  },
+  {
+    "code": "ddimer",
+    "name": "Д-димер",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "Д-димер",
+      "D-димер",
+      "D-dimer"
+    ],
+    "base_price_kzt": 5400,
+    "duration_days": 1
+  },
+  {
+    "code": "smear_flora",
+    "name": "Мазок на флору (гинекологический)",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "мазок на флору",
+      "гинекологический мазок",
+      "мазок на степень чистоты"
+    ],
+    "base_price_kzt": 2300,
+    "duration_days": 1
+  },
+  {
+    "code": "spermogram",
+    "name": "Спермограмма",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "спермограмма",
+      "анализ спермы",
+      "spermogram"
+    ],
+    "base_price_kzt": 7200,
+    "duration_days": 1
+  },
+  {
+    "code": "occult_blood",
+    "name": "Кал на скрытую кровь",
+    "category": "laboratory",
+    "category_label": "Лаборатория",
+    "synonyms": [
+      "кал на скрытую кровь",
+      "анализ кала на скрытую кровь",
+      "тест на скрытую кровь"
+    ],
+    "base_price_kzt": 2100,
+    "duration_days": 1
+  },
+  {
+    "code": "doc_therapist",
+    "name": "Приём терапевта",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём терапевта",
+      "консультация терапевта",
+      "терапевт",
+      "приём врача-терапевта",
+      "осмотр терапевта"
+    ],
+    "base_price_kzt": 6000,
+    "duration_days": null
+  },
+  {
+    "code": "doc_cardio",
+    "name": "Приём кардиолога",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём кардиолога",
+      "консультация кардиолога",
+      "кардиолог"
+    ],
+    "base_price_kzt": 8000,
+    "duration_days": null
+  },
+  {
+    "code": "doc_neuro",
+    "name": "Приём невролога",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём невролога",
+      "консультация невролога",
+      "невролог",
+      "невропатолог"
+    ],
+    "base_price_kzt": 8000,
+    "duration_days": null
+  },
+  {
+    "code": "doc_gyn",
+    "name": "Приём гинеколога",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём гинеколога",
+      "консультация гинеколога",
+      "гинеколог",
+      "приём акушера-гинеколога"
+    ],
+    "base_price_kzt": 7500,
+    "duration_days": null
+  },
+  {
+    "code": "doc_uro",
+    "name": "Приём уролога",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём уролога",
+      "консультация уролога",
+      "уролог"
+    ],
+    "base_price_kzt": 7500,
+    "duration_days": null
+  },
+  {
+    "code": "doc_endo",
+    "name": "Приём эндокринолога",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём эндокринолога",
+      "консультация эндокринолога",
+      "эндокринолог"
+    ],
+    "base_price_kzt": 8000,
+    "duration_days": null
+  },
+  {
+    "code": "doc_gastro",
+    "name": "Приём гастроэнтеролога",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём гастроэнтеролога",
+      "консультация гастроэнтеролога",
+      "гастроэнтеролог"
+    ],
+    "base_price_kzt": 8000,
+    "duration_days": null
+  },
+  {
+    "code": "doc_derma",
+    "name": "Приём дерматолога",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём дерматолога",
+      "консультация дерматолога",
+      "дерматолог",
+      "дерматовенеролог"
+    ],
+    "base_price_kzt": 7000,
+    "duration_days": null
+  },
+  {
+    "code": "doc_ophtha",
+    "name": "Приём офтальмолога",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём офтальмолога",
+      "консультация офтальмолога",
+      "офтальмолог",
+      "окулист"
+    ],
+    "base_price_kzt": 7000,
+    "duration_days": null
+  },
+  {
+    "code": "doc_ent",
+    "name": "Приём отоларинголога (ЛОР)",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём ЛОР",
+      "ЛОР",
+      "отоларинголог",
+      "приём отоларинголога",
+      "консультация ЛОР-врача"
+    ],
+    "base_price_kzt": 7000,
+    "duration_days": null
+  },
+  {
+    "code": "doc_surgeon",
+    "name": "Приём хирурга",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём хирурга",
+      "консультация хирурга",
+      "хирург"
+    ],
+    "base_price_kzt": 7000,
+    "duration_days": null
+  },
+  {
+    "code": "doc_pediatr",
+    "name": "Приём педиатра",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём педиатра",
+      "консультация педиатра",
+      "педиатр",
+      "детский врач"
+    ],
+    "base_price_kzt": 6500,
+    "duration_days": null
+  },
+  {
+    "code": "doc_trauma",
+    "name": "Приём травматолога-ортопеда",
+    "category": "doctor",
+    "category_label": "Приём врача",
+    "synonyms": [
+      "приём травматолога",
+      "травматолог-ортопед",
+      "ортопед",
+      "травматолог"
+    ],
+    "base_price_kzt": 7500,
+    "duration_days": null
+  },
+  {
+    "code": "uzi_abdomen",
+    "name": "УЗИ брюшной полости",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "УЗИ брюшной полости",
+      "УЗИ органов брюшной полости",
+      "УЗИ ОБП",
+      "ультразвуковое исследование брюшной полости"
+    ],
+    "base_price_kzt": 8500,
+    "duration_days": null
+  },
+  {
+    "code": "uzi_pelvis",
+    "name": "УЗИ органов малого таза",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "УЗИ малого таза",
+      "УЗИ ОМТ",
+      "УЗИ органов малого таза"
+    ],
+    "base_price_kzt": 8000,
+    "duration_days": null
+  },
+  {
+    "code": "uzi_thyroid",
+    "name": "УЗИ щитовидной железы",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "УЗИ щитовидной железы",
+      "УЗИ щитовидки",
+      "УЗИ ЩЖ"
+    ],
+    "base_price_kzt": 6500,
+    "duration_days": null
+  },
+  {
+    "code": "uzi_breast",
+    "name": "УЗИ молочных желёз",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "УЗИ молочных желёз",
+      "УЗИ молочных желез",
+      "УЗИ МЖ"
+    ],
+    "base_price_kzt": 7000,
+    "duration_days": null
+  },
+  {
+    "code": "uzi_kidney",
+    "name": "УЗИ почек",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "УЗИ почек",
+      "УЗИ почек и надпочечников"
+    ],
+    "base_price_kzt": 6500,
+    "duration_days": null
+  },
+  {
+    "code": "echo",
+    "name": "ЭхоКГ (УЗИ сердца)",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "ЭхоКГ",
+      "эхокардиография",
+      "УЗИ сердца",
+      "эхо сердца",
+      "Эхо-КГ"
+    ],
+    "base_price_kzt": 11000,
+    "duration_days": null
+  },
+  {
+    "code": "ecg",
+    "name": "ЭКГ (электрокардиография)",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "ЭКГ",
+      "электрокардиография",
+      "кардиограмма",
+      "ЭКГ с расшифровкой",
+      "ECG"
+    ],
+    "base_price_kzt": 3500,
+    "duration_days": null
+  },
+  {
+    "code": "xray_chest",
+    "name": "Рентген грудной клетки",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "рентген грудной клетки",
+      "рентгенография ОГК",
+      "рентген лёгких",
+      "рентгенография органов грудной клетки"
+    ],
+    "base_price_kzt": 4500,
+    "duration_days": null
+  },
+  {
+    "code": "flg",
+    "name": "Флюорография",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "флюорография",
+      "ФЛГ",
+      "флюорография органов грудной клетки"
+    ],
+    "base_price_kzt": 2500,
+    "duration_days": null
+  },
+  {
+    "code": "mri_brain",
+    "name": "МРТ головного мозга",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "МРТ головного мозга",
+      "МРТ ГМ",
+      "магнитно-резонансная томография головного мозга"
+    ],
+    "base_price_kzt": 28000,
+    "duration_days": null
+  },
+  {
+    "code": "mri_lumbar",
+    "name": "МРТ поясничного отдела позвоночника",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "МРТ поясничного отдела",
+      "МРТ пояснично-крестцового отдела",
+      "МРТ поясницы"
+    ],
+    "base_price_kzt": 26000,
+    "duration_days": null
+  },
+  {
+    "code": "ct_chest",
+    "name": "КТ грудной клетки",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "КТ грудной клетки",
+      "компьютерная томография ОГК",
+      "КТ лёгких",
+      "КТ органов грудной клетки"
+    ],
+    "base_price_kzt": 24000,
+    "duration_days": null
+  },
+  {
+    "code": "mammo",
+    "name": "Маммография",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "маммография",
+      "маммограмма",
+      "ММГ"
+    ],
+    "base_price_kzt": 6500,
+    "duration_days": null
+  },
+  {
+    "code": "fgds",
+    "name": "Гастроскопия (ФГДС)",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "ФГДС",
+      "гастроскопия",
+      "эзофагогастродуоденоскопия",
+      "ЭГДС",
+      "фиброгастродуоденоскопия"
+    ],
+    "base_price_kzt": 12000,
+    "duration_days": null
+  },
+  {
+    "code": "colono",
+    "name": "Колоноскопия",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "колоноскопия",
+      "ФКС",
+      "фиброколоноскопия"
+    ],
+    "base_price_kzt": 18000,
+    "duration_days": null
+  },
+  {
+    "code": "holter",
+    "name": "Холтеровское мониторирование ЭКГ",
+    "category": "diagnostic",
+    "category_label": "Диагностика",
+    "synonyms": [
+      "холтер",
+      "Холтер ЭКГ",
+      "суточное мониторирование ЭКГ",
+      "ХМ ЭКГ"
+    ],
+    "base_price_kzt": 9000,
+    "duration_days": null
+  },
+  {
+    "code": "inj_im",
+    "name": "Внутримышечная инъекция",
+    "category": "procedure",
+    "category_label": "Процедура",
+    "synonyms": [
+      "внутримышечная инъекция",
+      "укол внутримышечно",
+      "в/м инъекция",
+      "инъекция внутримышечная"
+    ],
+    "base_price_kzt": 1200,
+    "duration_days": null
+  },
+  {
+    "code": "inj_iv",
+    "name": "Внутривенная инъекция / капельница",
+    "category": "procedure",
+    "category_label": "Процедура",
+    "synonyms": [
+      "внутривенная инъекция",
+      "капельница",
+      "инфузия",
+      "в/в инъекция",
+      "внутривенное капельное вливание"
+    ],
+    "base_price_kzt": 2500,
+    "duration_days": null
+  },
+  {
+    "code": "venipuncture",
+    "name": "Забор крови из вены",
+    "category": "procedure",
+    "category_label": "Процедура",
+    "synonyms": [
+      "забор крови из вены",
+      "взятие крови",
+      "венепункция",
+      "забор венозной крови",
+      "взятие крови из вены"
+    ],
+    "base_price_kzt": 900,
+    "duration_days": null
+  },
+  {
+    "code": "physio",
+    "name": "Физиотерапия (1 сеанс)",
+    "category": "procedure",
+    "category_label": "Процедура",
+    "synonyms": [
+      "физиотерапия",
+      "физиолечение",
+      "сеанс физиотерапии"
+    ],
+    "base_price_kzt": 2800,
+    "duration_days": null
+  },
+  {
+    "code": "massage_back",
+    "name": "Массаж спины (1 сеанс)",
+    "category": "procedure",
+    "category_label": "Процедура",
+    "synonyms": [
+      "массаж спины",
+      "лечебный массаж спины",
+      "массаж спины сеанс"
+    ],
+    "base_price_kzt": 5000,
+    "duration_days": null
+  },
+  {
+    "code": "earwax",
+    "name": "Удаление серной пробки",
+    "category": "procedure",
+    "category_label": "Процедура",
+    "synonyms": [
+      "удаление серной пробки",
+      "промывание серной пробки",
+      "удаление серных пробок"
+    ],
+    "base_price_kzt": 3500,
+    "duration_days": null
+  }
+]

@@ -5,6 +5,7 @@ export interface Suggestion {
   code: string;
   name: string;
   category: Category;
+  specialty?: string;
   offers_count: number;
 }
 
@@ -52,6 +53,8 @@ export interface SearchResult {
     code: string;
     name: string;
     category: Category;
+    specialty?: string;
+    tarif_code?: string;
     duration_days: number | null;
   } | null;
   query: string | null;
@@ -64,6 +67,7 @@ export interface Meta {
   sources: string[];
   categories: { key: Category; label: string }[];
   category_labels: Record<string, string>;
+  services_by_category: Record<string, number>;
   counts: { clinics: number; services: number; active_prices: number; cities: number; sources: number };
   price_range: { min: number | null; max: number | null };
   last_updated: string | null;

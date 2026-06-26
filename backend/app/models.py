@@ -50,6 +50,8 @@ class Service(Base):
     code: Mapped[str] = mapped_column(String(64), unique=True, index=True)
     name: Mapped[str] = mapped_column(String(255), index=True)
     category: Mapped[str] = mapped_column(String(32), index=True)
+    specialty: Mapped[str] = mapped_column(String(128), default="", index=True)
+    tarif_code: Mapped[str] = mapped_column(String(32), default="")
     synonyms: Mapped[list] = mapped_column(JSON, default=list)
     base_price_kzt: Mapped[float | None] = mapped_column(Float, nullable=True)
     duration_days: Mapped[int | None] = mapped_column(Integer, nullable=True)

@@ -18,24 +18,13 @@ from pathlib import Path
 from ..config import settings
 from .base import BaseParser, RawRecord
 
-# Services every applicable clinic should carry so search/compare is rich.
-CORE_BY_CATEGORY = {
-    "laboratory": {"oak", "oam", "glucose", "biochem", "tsh", "vitd"},
-    "doctor": {"doc_therapist", "doc_cardio", "doc_gyn", "doc_neuro"},
-    "diagnostic": {"uzi_abdomen", "ecg", "uzi_thyroid", "flg"},
-    "procedure": {"venipuncture", "inj_im"},
-}
-
-# Coverage probability per profile/category (how much of the catalog they carry).
-COVERAGE = {
-    "lab": {"laboratory": 0.92, "procedure": 0.7},
-    "diagnostic": {"diagnostic": 0.9, "laboratory": 0.45, "procedure": 0.6},
-    "multiprofile": {
-        "doctor": 0.95,
-        "laboratory": 0.6,
-        "diagnostic": 0.7,
-        "procedure": 0.8,
-    },
+# The official reference has 1200+ services, so each clinic offers a realistic
+# CAPPED sample per category (always including the curated "core" common services
+# so search/compare stays rich), rather than the whole catalog.
+CAPS = {
+    "lab": {"laboratory": 55, "procedure": 8},
+    "diagnostic": {"diagnostic": 40, "laboratory": 25, "procedure": 8},
+    "multiprofile": {"doctor": 30, "laboratory": 35, "diagnostic": 25, "procedure": 12},
 }
 
 # Unknown service names per source -> exercise the unmatched queue (TZ 3.2).
@@ -85,17 +74,21 @@ class SeedParser(BaseParser):
         for clinic in clinics:
             factor = clinic["price_factor"]
             cats = clinic["categories"]
-            cov = COVERAGE.get(clinic["profile"], {})
+            caps = CAPS.get(clinic["profile"], {})
             chosen_codes: set[str] = set()
 
             for cat in cats:
-                core = CORE_BY_CATEGORY.get(cat, set())
-                ratio = cov.get(cat, 0.5)
-                for svc in services_by_cat.get(cat, []):
-                    code = svc["code"]
-                    include = code in core or _rng(clinic["name"], code, "pick") < ratio
-                    if include:
-                        chosen_codes.add(code)
+                cap = caps.get(cat, 10)
+                candidates = services_by_cat.get(cat, [])
+                # always include curated "core" services in this category
+                core = [s for s in candidates if s.get("is_core")]
+                for s in core:
+                    chosen_codes.add(s["code"])
+                # fill the rest with a deterministic per-clinic sample
+                rest = [s for s in candidates if not s.get("is_core")]
+                rest.sort(key=lambda s: _rng(clinic["name"], s["code"], "pick"))
+                for s in rest[: max(0, cap - len(core))]:
+                    chosen_codes.add(s["code"])
 
             for code in sorted(chosen_codes):  # deterministic order across runs
                 svc = by_code[code]

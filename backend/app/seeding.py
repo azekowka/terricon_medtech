@@ -76,6 +76,8 @@ def load_dictionary(db: Session) -> int:
             db.add(svc)
         svc.name = it["name"]
         svc.category = it["category"]
+        svc.specialty = it.get("specialty", "")
+        svc.tarif_code = it.get("tarif_code", "")
         svc.synonyms = it["synonyms"]
         svc.base_price_kzt = it.get("base_price_kzt")
         svc.duration_days = it.get("duration_days")

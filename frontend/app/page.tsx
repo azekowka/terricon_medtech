@@ -7,20 +7,21 @@ import { Building2, Clock, MapPin, TrendingDown } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
-async function getData(): Promise<{ meta: Meta | null; services: ServiceItem[] }> {
+async function getData(): Promise<{ meta: Meta | null; popular: ServiceItem[] }> {
   try {
-    const [meta, services] = await Promise.all([api.meta(), api.services()]);
-    return { meta, services };
+    const [meta, popular] = await Promise.all([
+      api.meta(),
+      api.services({ sort: "popular", limit: 12 }),
+    ]);
+    return { meta, popular };
   } catch {
-    return { meta: null, services: [] };
+    return { meta: null, popular: [] };
   }
 }
 
 export default async function HomePage() {
-  const { meta, services } = await getData();
-  const popular = [...services].sort((a, b) => b.offers_count - a.offers_count).slice(0, 12);
-  const byCat: Record<string, ServiceItem[]> = {};
-  for (const s of services) (byCat[s.category] ||= []).push(s);
+  const { meta, popular } = await getData();
+  const byCatCount = meta?.services_by_category || {};
 
   return (
     <div>
@@ -67,7 +68,7 @@ export default async function HomePage() {
                 <span>
                   <span className="block font-semibold text-ink">{c.label}</span>
                   <span className="text-xs text-slate-400">
-                    {(byCat[c.key] || []).length} услуг
+                    {byCatCount[c.key] || 0} услуг
                   </span>
                 </span>
               </Link>

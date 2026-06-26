@@ -133,7 +133,10 @@ export function SearchBar({
                   <span className="text-lg">{cm.emoji}</span>
                   <span>
                     <span className="block font-semibold text-ink">{s.name}</span>
-                    <span className={`chip ${cm.color} mt-0.5`}>{cm.label}</span>
+                    <span className="mt-0.5 flex items-center gap-1.5">
+                      <span className={`chip ${cm.color}`}>{cm.label}</span>
+                      {s.specialty && <span className="text-xs text-slate-400">{s.specialty}</span>}
+                    </span>
                   </span>
                 </span>
                 <span className="shrink-0 text-xs font-medium text-slate-400">

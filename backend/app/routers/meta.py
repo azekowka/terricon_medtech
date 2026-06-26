@@ -29,6 +29,9 @@ def meta(db: Session = Depends(get_db)):
         {"key": k, "label": CATEGORY_LABELS.get(k, k)}
         for (k,) in db.query(Service.category).distinct().order_by(Service.category).all()
     ]
+    services_by_category = dict(
+        db.query(Service.category, func.count(Service.id)).group_by(Service.category).all()
+    )
     n_clinics = db.query(func.count(Clinic.id)).scalar() or 0
     n_services = db.query(func.count(Service.id)).scalar() or 0
     n_prices = db.query(func.count(Price.id)).filter(Price.is_active.is_(True)).scalar() or 0
@@ -41,6 +44,7 @@ def meta(db: Session = Depends(get_db)):
         "sources": sources,
         "categories": categories,
         "category_labels": CATEGORY_LABELS,
+        "services_by_category": services_by_category,
         "counts": {
             "clinics": n_clinics,
             "services": n_services,

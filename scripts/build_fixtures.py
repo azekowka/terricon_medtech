@@ -87,17 +87,21 @@ def _rng(*parts):
     return (int(h[:8], 16) % 1_000_000) / 1_000_000.0
 
 
-def _rows(services_by_cat, cats, factor, clinic_name):
+def _rows(services_by_cat, cats, factor, clinic_name, cap_per_cat=14):
     rows = []
     for cat in cats:
-        for svc in services_by_cat.get(cat, []):
-            if _rng(clinic_name, svc["code"]) < 0.6:
-                base = svc["base_price_kzt"] or 5000
-                price = int(round(base * factor / 50.0) * 50)
-                variants = [svc["name"], *svc["synonyms"]]
-                idx = int(_rng(clinic_name, svc["code"], "v") * len(variants))
-                name = variants[min(idx, len(variants) - 1)]
-                rows.append((name, f"{price:,} ₸".replace(",", " ")))
+        cands = services_by_cat.get(cat, [])
+        core = [s for s in cands if s.get("is_core")]
+        rest = sorted([s for s in cands if not s.get("is_core")],
+                      key=lambda s: _rng(clinic_name, s["code"], "f"))
+        chosen = core + rest[: max(0, cap_per_cat - len(core))]
+        for svc in chosen:
+            base = svc["base_price_kzt"] or 5000
+            price = int(round(base * factor / 50.0) * 50)
+            variants = [svc["name"], *svc["synonyms"]]
+            idx = int(_rng(clinic_name, svc["code"], "v") * len(variants))
+            name = variants[min(idx, len(variants) - 1)]
+            rows.append((name, f"{price:,} ₸".replace(",", " ")))
     return rows
 
 

@@ -25,7 +25,8 @@ def _offer_counts(db: Session) -> dict:
 def list_services(
     category: str | None = None,
     q: str | None = None,
-    limit: int = Query(500, ge=1, le=1000),
+    sort: str = "name",  # name | popular
+    limit: int = Query(2000, ge=1, le=5000),
     db: Session = Depends(get_db),
 ):
     query = db.query(Service)
@@ -34,8 +35,12 @@ def list_services(
     if q:
         like = f"%{q.strip()}%"
         query = query.filter(Service.name.ilike(like))
-    services = query.order_by(Service.category, Service.name).limit(limit).all()
     counts = _offer_counts(db)
+    if sort == "popular":
+        # order by number of active offers (dictionary is small enough to sort in app)
+        services = sorted(query.all(), key=lambda s: counts.get(s.id, 0), reverse=True)[:limit]
+    else:
+        services = query.order_by(Service.category, Service.name).limit(limit).all()
     return [
         {
             "id": s.id,
@@ -43,6 +48,8 @@ def list_services(
             "name": s.name,
             "category": s.category,
             "category_label": CATEGORY_LABELS.get(s.category, s.category),
+            "specialty": s.specialty,
+            "tarif_code": s.tarif_code,
             "synonyms": s.synonyms or [],
             "duration_days": s.duration_days,
             "offers_count": counts.get(s.id, 0),
@@ -72,6 +79,8 @@ def get_service(service_id: str, db: Session = Depends(get_db)):
         "name": s.name,
         "category": s.category,
         "category_label": CATEGORY_LABELS.get(s.category, s.category),
+        "specialty": s.specialty,
+        "tarif_code": s.tarif_code,
         "synonyms": s.synonyms or [],
         "duration_days": s.duration_days,
         "base_price_kzt": s.base_price_kzt,
