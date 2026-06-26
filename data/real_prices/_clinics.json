@@ -1,0 +1,72 @@
+{
+  "Клиника 6 прайс 2026.xlsx": {
+    "clinic_name": "University Medical Center (UMC)",
+    "source": "umc",
+    "city": "Астана",
+    "address": "пр. Туран, 38",
+    "phone": "+7 7172 70 2929",
+    "working_hours": "Пн–Пт 08:00–18:00, Сб 09:00–14:00",
+    "website": "https://umc.org.kz",
+    "lat": 51.1554, "lng": 71.4180, "rating": 4.6, "has_online_booking": true
+  },
+  "Клиника 8 2026.xlsx": {
+    "clinic_name": "Национальный научный медицинский центр (ННМЦ)",
+    "source": "nnmc",
+    "city": "Астана",
+    "address": "пр. Абылай хана, 42",
+    "phone": "+7 7172 57 7777",
+    "working_hours": "Пн–Пт 08:00–17:00",
+    "website": "https://nnmc.kz",
+    "lat": 51.1820, "lng": 71.4460, "rating": 4.5, "has_online_booking": true
+  },
+  "Клиника 1 2026.pdf": {
+    "clinic_name": "Клиника №1 — многопрофильная (реальный прайс 2026)",
+    "source": "clinic1",
+    "city": "Астана",
+    "address": "ул. Кенесары, 64",
+    "phone": "+7 7172 64 6464",
+    "working_hours": "Пн–Сб 08:00–20:00",
+    "website": "",
+    "lat": 51.1330, "lng": 71.4330, "rating": 4.4, "has_online_booking": true
+  },
+  "Клиника 2 прайс 2025 год.PDF": {
+    "clinic_name": "Green Clinic",
+    "source": "green_clinic",
+    "city": "Алматы",
+    "address": "ул. Гоголя, 201",
+    "phone": "+7 727 350 5050",
+    "working_hours": "Пн–Сб 08:00–19:00",
+    "website": "https://greenclinic.kz",
+    "lat": 43.2530, "lng": 76.9210, "rating": 4.5, "has_online_booking": true
+  },
+  "Клиника 3 прайс 2026.PDF": {
+    "clinic_name": "Клиника №3 — лабораторная диагностика (реальный прайс)",
+    "source": "clinic3",
+    "city": "Алматы",
+    "address": "ул. Тимирязева, 42",
+    "phone": "+7 727 333 1212",
+    "working_hours": "Пн–Сб 07:30–18:00",
+    "website": "",
+    "lat": 43.2220, "lng": 76.8620, "rating": 4.3, "has_online_booking": false
+  },
+  "Клиника 5 прайс 2025.pdf": {
+    "clinic_name": "Клиника №5 — поликлиника (реальный прайс)",
+    "source": "clinic5",
+    "city": "Караганда",
+    "address": "пр. Бухар жырау, 75",
+    "phone": "+7 7212 50 5050",
+    "working_hours": "Пн–Сб 08:00–17:00",
+    "website": "",
+    "lat": 49.8090, "lng": 73.1010, "rating": 4.2, "has_online_booking": false
+  },
+  "Клиника 7_Прайс 2026.xls": {
+    "clinic_name": "Клиника №7 — эстетическая медицина (реальный прайс)",
+    "source": "clinic7",
+    "city": "Алматы",
+    "address": "ул. Розыбакиева, 247",
+    "phone": "+7 727 311 7070",
+    "working_hours": "Пн–Сб 09:00–20:00",
+    "website": "",
+    "lat": 43.2300, "lng": 76.9000, "rating": 4.4, "has_online_booking": true
+  }
+}

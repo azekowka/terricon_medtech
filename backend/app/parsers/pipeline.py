@@ -179,13 +179,16 @@ def run_source(db: Session, source: str) -> ParseLog:
             # row (TZ 3.1). Fall back to the raw name only for unmatched records.
             ident = match.service_id or rec.service_name_raw
             key = _dedup_key(clinic.id, ident, rec.source)
+            # Only adopt the dictionary name when we actually MATCHED; otherwise keep
+            # the raw name (match.name may hold a below-threshold suggestion).
+            norm_name = match.name if match.matched else rec.service_name_raw
             price = db.query(Price).filter_by(dedup_key=key).first()
             if price is None:
                 price = Price(
                     clinic_id=clinic.id,
                     service_id=match.service_id,
                     service_name_raw=rec.service_name_raw,
-                    service_name_norm=match.name or rec.service_name_raw,
+                    service_name_norm=norm_name,
                     category=match.category or "",
                     price_kzt=Decimal(str(price_kzt)),
                     # price_kzt is always stored in tenge; USD is converted above,
@@ -212,7 +215,7 @@ def run_source(db: Session, source: str) -> ParseLog:
                 changed = float(price.price_kzt) != float(price_kzt)
                 price.service_id = match.service_id
                 price.service_name_raw = rec.service_name_raw
-                price.service_name_norm = match.name or rec.service_name_raw
+                price.service_name_norm = norm_name
                 price.category = match.category or price.category
                 price.currency = "KZT"
                 price.duration_days = rec.duration_days

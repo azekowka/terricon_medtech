@@ -7,11 +7,13 @@ from __future__ import annotations
 from .base import BaseParser
 from .fixtures import FixtureParser
 from .live import HelixParser, InvitroParser, KdlParser
+from .real_prices import RealPricesParser
 from .seed_source import SeedParser
 
 PARSERS: dict[str, type[BaseParser]] = {
     "seed": SeedParser,
-    "fixtures": FixtureParser,  # PDF/XLSX/DOCX price lists (TZ 3.1 formats)
+    "fixtures": FixtureParser,  # PDF/XLSX/DOCX sample price lists (TZ 3.1 formats)
+    "real": RealPricesParser,   # REAL clinic price lists (PDF/DOCX/XLSX/XLS)
     "kdl": KdlParser,
     "invitro": InvitroParser,
     "helix": HelixParser,

@@ -56,7 +56,7 @@ s.addText("Сравнение цен на медицинские услуги в
 s.addText("«Aviasales для медицины»: один поиск вместо десятков сайтов клиник —\nанализы, приёмы врачей и диагностика по лучшей цене рядом с вами.", {
   x: 0.9, y: 4.45, w: 9.4, h: 1.0, fontFace: BODY, fontSize: 16, color: "C9D6D6",
 });
-const stats = [["1230", "услуг"], ["1602", "цены"], ["22", "клиники"], ["10", "источников"]];
+const stats = [["1230", "услуг"], ["3048", "цен"], ["29", "клиник"], ["17", "источников"]];
 stats.forEach((st, i) => {
   const x = 0.9 + i * 2.35;
   s.addText(st[0], { x, y: 5.75, w: 2.1, h: 0.6, fontFace: HEAD, fontSize: 34, bold: true, color: C.mint });
@@ -105,7 +105,7 @@ s.addText("Архитектура: три слоя данных", {
   x: 0.6, y: 0.45, w: 12, h: 0.7, fontFace: HEAD, fontSize: 34, bold: true, color: C.ink,
 });
 const flow = [
-  ["Источники", "HTML · PDF\nXLSX · DOCX", C.teal],
+  ["Источники", "HTML · PDF\nXLSX/XLS · DOCX", C.teal],
   ["RAW-слой", "raw_prices\n(аудит ≥90 дн.)", C.seafoam],
   ["Нормализация", "справочник\n+ rapidfuzz", C.mint],
   ["Prices", "дедуп\n+ история", C.teal],
@@ -190,7 +190,7 @@ s.background = { color: C.white };
 s.addText("Данные, охват и стек", {
   x: 0.6, y: 0.45, w: 12, h: 0.7, fontFace: HEAD, fontSize: 34, bold: true, color: C.ink,
 });
-const big = [["1602", "актуальных цен"], ["22", "клиники"], ["6", "городов"], ["1230", "услуг (справочник)"], ["10", "источников"], ["99%", "нормализовано"]];
+const big = [["3048", "актуальных цен"], ["29", "клиник"], ["6", "городов"], ["1230", "услуг (справочник)"], ["17", "источников"], ["7", "реальных прайсов"]];
 big.forEach((b, i) => {
   const col = i % 3, row = Math.floor(i / 3);
   const x = 0.6 + col * 4.15, y = 1.5 + row * 1.45;

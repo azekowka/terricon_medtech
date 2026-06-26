@@ -89,8 +89,9 @@ def load_dictionary(db: Session) -> int:
 def seed_database(db: Session, include_live: bool = False) -> dict:
     """Full seed: load dictionary, then run the seed source (and optionally live)."""
     n_services = load_dictionary(db)
-    # seed = curated realistic data; fixtures = real PDF/XLSX/DOCX ingestion (TZ 3.1)
-    sources = ["seed", "fixtures"]
+    # seed = curated realistic data; fixtures = sample PDF/XLSX/DOCX (TZ 3.1);
+    # real = actual clinic price lists supplied for the hackathon
+    sources = ["seed", "fixtures", "real"]
     if include_live:
         from .parsers.registry import LIVE_SOURCES
 
