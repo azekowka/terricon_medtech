@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { BadgeCheck, CalendarCheck, MapPin, Star, Stethoscope } from "lucide-react";
 import type { DoctorCard as Doctor } from "@/lib/types";
 import { formatKzt, pluralRu } from "@/lib/format";
@@ -9,7 +10,8 @@ function patientLabel(d: Doctor): string {
   return "Принимает взрослых";
 }
 
-export function DoctorCard({ doctor, onBook }: { doctor: Doctor; onBook: () => void }) {
+export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) {
+  const href = `/doctors/${doctor.id}`;
   const c = doctor.clinic;
   const specs = doctor.specialties?.map((s) => s.name) || [];
   const specLabel = doctor.primary_specialty || specs[0] || "Врач";
@@ -17,7 +19,7 @@ export function DoctorCard({ doctor, onBook }: { doctor: Doctor; onBook: () => v
   return (
     <div className="card flex flex-col gap-4 p-4 transition hover:shadow-hover sm:flex-row sm:p-5">
       {/* avatar */}
-      <div className="relative shrink-0">
+      <Link href={href} className="relative shrink-0">
         <div className="h-24 w-24 overflow-hidden rounded-2xl bg-slate-100">
           {doctor.avatar ? (
             // eslint-disable-next-line @next/next/no-img-element
@@ -33,13 +35,15 @@ export function DoctorCard({ doctor, onBook }: { doctor: Doctor; onBook: () => v
             <BadgeCheck size={20} className="fill-brand-100" />
           </span>
         )}
-      </div>
+      </Link>
 
       {/* info */}
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-2">
           {doctor.top && <span className="chip bg-amber-100 text-amber-700">ТОП</span>}
-          <h3 className="text-lg font-bold leading-tight text-ink">{doctor.name}</h3>
+          <Link href={href} className="text-lg font-bold leading-tight text-ink hover:text-brand-700">
+            {doctor.name}
+          </Link>
         </div>
         <p className="mt-0.5 font-medium text-brand-700">{specLabel}</p>
         {extra.length > 0 && (
@@ -103,9 +107,9 @@ export function DoctorCard({ doctor, onBook }: { doctor: Doctor; onBook: () => v
             </div>
           )}
         </div>
-        <button onClick={onBook} className="btn-primary w-full">
+        <Link href={href} className="btn-primary w-full">
           Записаться
-        </button>
+        </Link>
       </div>
     </div>
   );

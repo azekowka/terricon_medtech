@@ -219,6 +219,13 @@ class Doctor(Base):
     clinics: Mapped[list] = mapped_column(JSON, default=list)
     diseases: Mapped[list] = mapped_column(JSON, default=list)
     profile_url: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    # full-profile fields (fetched on demand from the doctor page + cached)
+    description: Mapped[str | None] = mapped_column(Text, nullable=True)
+    services: Mapped[list] = mapped_column(JSON, default=list)
+    review_items: Mapped[list] = mapped_column(JSON, default=list)
+    has_comments: Mapped[bool] = mapped_column(Boolean, default=False)
+    online_bookings: Mapped[int] = mapped_column(Integer, default=0)
+    profile_fetched: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
 
     __table_args__ = (
         Index("ix_doctor_region_spec", "region", "primary_specialty"),

@@ -165,11 +165,32 @@ export interface DoctorsResult {
   region_name: string | null;
   doctors: DoctorCard[];
 }
+export interface DoctorReview {
+  author: string;
+  rating: number | string | null;
+  text: string;
+  tags: string[];
+  reply: string | null;
+  created_at: string | null;
+  visit_date: string | null;
+}
+export interface DoctorService {
+  name?: string;
+  price?: number | null;
+  priceWithDiscount?: number | null;
+  [k: string]: any;
+}
 export interface DoctorDetail extends DoctorCard {
   alias: string;
   partner: boolean;
   clinics: DoctorClinic[];
   diseases: string[];
+  description: string | null;
+  services: DoctorService[];
+  reviews_list: DoctorReview[];
+  has_comments: boolean;
+  online_bookings: number;
+  profile_fetched: boolean;
   profile_url: string | null;
 }
 

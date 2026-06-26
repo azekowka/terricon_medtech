@@ -61,4 +61,5 @@ export const api = {
   doctorsMeta: () => get<DoctorsMeta>("/api/doctors/meta"),
   doctors: (params: Record<string, any>) => get<DoctorsResult>("/api/doctors", params),
   doctor: (id: number) => get<DoctorDetail>(`/api/doctors/${id}`),
+  doctorProfile: (id: number) => get<DoctorDetail>(`/api/doctors/${id}/profile`),
 };

@@ -138,16 +138,39 @@ def list_doctors(
     }
 
 
-@router.get("/{doctor_id}")
-def get_doctor(doctor_id: int, db: Session = Depends(get_db)):
-    d = db.get(Doctor, doctor_id)
-    if not d:
-        raise HTTPException(404, "Doctor not found")
+def _full(d: Doctor) -> dict:
     return {
         **_card(d),
         "alias": d.alias,
         "partner": d.partner,
         "clinics": d.clinics or [],
         "diseases": d.diseases or [],
+        "description": d.description,
+        "services": d.services or [],
+        "reviews_list": d.review_items or [],
+        "has_comments": d.has_comments,
+        "online_bookings": d.online_bookings,
+        "profile_fetched": d.profile_fetched,
         "profile_url": d.profile_url,
     }
+
+
+@router.get("/{doctor_id}")
+def get_doctor(doctor_id: int, db: Session = Depends(get_db)):
+    d = db.get(Doctor, doctor_id)
+    if not d:
+        raise HTTPException(404, "Doctor not found")
+    return _full(d)
+
+
+@router.get("/{doctor_id}/profile")
+def get_doctor_profile(doctor_id: int, db: Session = Depends(get_db)):
+    """Full profile — fetched from idoctor's API and cached on first view."""
+    d = db.get(Doctor, doctor_id)
+    if not d:
+        raise HTTPException(404, "Doctor not found")
+    if not d.profile_fetched:
+        from ..doctors_profile import ensure_profile
+
+        ensure_profile(db, d)
+    return _full(d)

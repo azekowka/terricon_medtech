@@ -7,7 +7,6 @@ import type { DoctorCard as Doctor, DoctorsMeta, DoctorsResult } from "@/lib/typ
 import { DoctorCard } from "@/components/doctors/DoctorCard";
 import { DoctorFilters, DocFilterState } from "@/components/doctors/DoctorFilters";
 import { RegionPopup } from "@/components/doctors/RegionPopup";
-import { DoctorModal } from "@/components/doctors/DoctorModal";
 import { pluralRu } from "@/lib/format";
 
 const DEFAULT_FILTERS: DocFilterState = {
@@ -29,7 +28,6 @@ export default function DoctorsPage() {
   const [page, setPage] = useState(1);
   const [result, setResult] = useState<DoctorsResult | null>(null);
   const [loading, setLoading] = useState(true);
-  const [selected, setSelected] = useState<Doctor | null>(null);
 
   // load meta + restore saved region
   useEffect(() => {
@@ -120,7 +118,7 @@ export default function DoctorsPage() {
           ) : result && result.doctors.length > 0 ? (
             <>
               {result.doctors.map((doc) => (
-                <DoctorCard key={doc.id} doctor={doc} onBook={() => setSelected(doc)} />
+                <DoctorCard key={doc.id} doctor={doc} />
               ))}
               {result.pages > 1 && (
                 <Pagination page={result.page} pages={result.pages} onPage={setPage} />
@@ -139,7 +137,6 @@ export default function DoctorsPage() {
       {showPopup && meta && (
         <RegionPopup regions={meta.regions} current={region} onSelect={selectRegion} onClose={() => setShowPopup(false)} />
       )}
-      {selected && <DoctorModal doctor={selected} onClose={() => setSelected(null)} />}
     </div>
   );
 }
