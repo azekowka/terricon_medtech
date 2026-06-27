@@ -10,7 +10,18 @@ from fastapi.middleware.cors import CORSMiddleware
 from . import __version__
 from .config import settings
 from .db import SessionLocal, init_db
-from .routers import admin, clinics, doctors, history, map as map_router, meta, search, services, subscriptions
+from .routers import (
+    admin,
+    assistant,
+    clinics,
+    doctors,
+    history,
+    map as map_router,
+    meta,
+    search,
+    services,
+    subscriptions,
+)
 from .scheduler import shutdown_scheduler, start_scheduler
 from .seeding import bootstrap_if_empty
 
@@ -48,7 +59,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-for r in (meta, search, services, clinics, history, admin, subscriptions, doctors, map_router):
+for r in (meta, search, services, clinics, history, admin, subscriptions, doctors, map_router, assistant):
     app.include_router(r.router)
 
 

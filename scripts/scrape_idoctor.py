@@ -81,11 +81,16 @@ def normalize(raw: dict, region: str) -> dict:
         rating = float(rating) if rating is not None else None
     except (TypeError, ValueError):
         rating = None
+    av = raw.get("avatar")
+    if av and ("no-userpic" in av or "no-photo" in av):
+        av = None
+    elif av and av.startswith("/"):
+        av = "https://idoctor.kz" + av
     return {
         "id": raw.get("id"),
         "alias": raw.get("alias"),
         "name": raw.get("fullName"),
-        "avatar": raw.get("avatar"),
+        "avatar": av,
         "reviews": raw.get("commentsCount"),
         "experience_years": raw.get("workExperience"),
         "rating": rating,

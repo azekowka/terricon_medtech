@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import { Footer } from "@/components/Footer";
+import { ChatWidget } from "@/components/ChatWidget";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], display: "swap" });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <main className="min-h-[calc(100vh-4rem)] pb-16">{children}</main>
           <Footer />
+          <ChatWidget />
         </I18nProvider>
       </body>
     </html>

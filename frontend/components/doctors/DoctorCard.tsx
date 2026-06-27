@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { BadgeCheck, CalendarCheck, MapPin, Star, Stethoscope } from "lucide-react";
+import { BadgeCheck, CalendarCheck, MapPin, Star } from "lucide-react";
 import type { DoctorCard as Doctor } from "@/lib/types";
 import { formatKzt, yearsLabel } from "@/lib/format";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import { DoctorAvatar } from "@/components/DoctorAvatar";
 
 export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) {
   const { t, locale } = useI18n();
@@ -18,16 +19,7 @@ export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) 
     <div className="card flex flex-col gap-4 p-4 transition hover:shadow-hover sm:flex-row sm:p-5">
       {/* avatar */}
       <Link href={href} className="relative shrink-0">
-        <div className="h-24 w-24 overflow-hidden rounded-2xl bg-slate-100">
-          {doctor.avatar ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={doctor.avatar} alt={doctor.name} className="h-full w-full object-cover" loading="lazy" />
-          ) : (
-            <div className="flex h-full w-full items-center justify-center text-slate-300">
-              <Stethoscope size={34} />
-            </div>
-          )}
-        </div>
+        <DoctorAvatar src={doctor.avatar} name={doctor.name} className="h-24 w-24 rounded-2xl" iconSize={34} />
         {doctor.verified && (
           <span className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-white text-brand-600 shadow">
             <BadgeCheck size={20} className="fill-brand-100" />

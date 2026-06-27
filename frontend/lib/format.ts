@@ -1,3 +1,14 @@
+// Doctor avatars from idoctor are often relative ("/images/...") and use a
+// "no-userpic" placeholder — normalize to an absolute URL or null.
+export function doctorAvatar(raw?: string | null): string | null {
+  if (!raw) return null;
+  if (raw.includes("no-userpic") || raw.includes("no-photo") || raw.includes("noavatar")) return null;
+  if (raw.startsWith("http")) return raw;
+  if (raw.startsWith("//")) return "https:" + raw;
+  if (raw.startsWith("/")) return "https://idoctor.kz" + raw;
+  return raw;
+}
+
 export function formatKzt(value: number | null | undefined): string {
   if (value === null || value === undefined) return "—";
   return new Intl.NumberFormat("ru-RU", { maximumFractionDigits: 0 }).format(value) + " ₸";

@@ -9,6 +9,7 @@ import { api } from "@/lib/api";
 import type { DoctorDetail } from "@/lib/types";
 import { formatKzt, yearsLabel } from "@/lib/format";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import { DoctorAvatar } from "@/components/DoctorAvatar";
 
 const DAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
 
@@ -67,14 +68,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
           <div className="card p-6">
             <div className="flex flex-col gap-4 sm:flex-row">
               <div className="relative shrink-0">
-                <div className="h-32 w-32 overflow-hidden rounded-2xl bg-slate-100">
-                  {d.avatar ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={d.avatar} alt={d.name} className="h-full w-full object-cover" />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center text-slate-300"><Stethoscope size={44} /></div>
-                  )}
-                </div>
+                <DoctorAvatar src={d.avatar} name={d.name} className="h-32 w-32 rounded-2xl" iconSize={44} />
                 {d.verified && (
                   <span className="absolute -bottom-1 -right-1 flex h-8 w-8 items-center justify-center rounded-full bg-white text-brand-600 shadow">
                     <BadgeCheck size={26} className="fill-brand-100" />

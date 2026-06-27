@@ -7,6 +7,7 @@ import { api } from "@/lib/api";
 import type { DoctorRecommendation, DoctorRecommendations as Recs } from "@/lib/types";
 import { formatKzt } from "@/lib/format";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import { DoctorAvatar } from "@/components/DoctorAvatar";
 
 const STYLE: Record<string, { icon: any; chip: string; ring: string }> = {
   bestValue: { icon: Gem, chip: "bg-teal-100 text-teal-700", ring: "ring-teal-300" },
@@ -77,12 +78,7 @@ function RecCard({ r, t }: { r: DoctorRecommendation; t: (k: string, v?: any) =>
     >
       <span className={`chip self-start ${st.chip}`}><Icon size={12} /> {t(`rec.${r.type}`)}</span>
       <div className="flex items-center gap-2">
-        <div className="h-11 w-11 shrink-0 overflow-hidden rounded-xl bg-slate-100">
-          {d.avatar && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={d.avatar} alt={d.name} className="h-full w-full object-cover" loading="lazy" />
-          )}
-        </div>
+        <DoctorAvatar src={d.avatar} name={d.name} className="h-11 w-11 shrink-0 rounded-xl" iconSize={18} />
         <div className="min-w-0">
           <div className="truncate text-sm font-bold text-ink">{d.name}</div>
           <div className="truncate text-xs text-slate-500">{d.primary_specialty}</div>

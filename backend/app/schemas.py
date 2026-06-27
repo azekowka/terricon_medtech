@@ -23,6 +23,11 @@ class ResolveUnmatched(BaseModel):
     add_synonym: bool = True
 
 
+class ChatRequest(BaseModel):
+    message: str
+    locale: str = "ru"
+
+
 class ServiceOut(BaseModel):
     id: str
     code: str
