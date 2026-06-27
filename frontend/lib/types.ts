@@ -179,6 +179,30 @@ export interface DoctorRecommendations {
   avg_price: number | null;
 }
 
+// ---- Diseases ("Лечение заболеваний") ----
+export interface DiseaseRef { alias: string; name: string; }
+export interface IllnessCategory {
+  alias: string;
+  name: string;
+  count: number;
+  diseases: DiseaseRef[];
+}
+export interface IllnessCategories {
+  total_diseases: number;
+  categories: IllnessCategory[];
+}
+export interface IllnessDetail {
+  id: number;
+  alias: string;
+  name: string;
+  skills: DiseaseRef[];
+  similar: DiseaseRef[];
+  doctors: DoctorCard[];
+  doctors_total: number;
+  region: string | null;
+  region_name: string | null;
+}
+
 export interface DoctorReview {
   author: string;
   rating: number | string | null;

@@ -1,0 +1,9536 @@
+[
+ {
+  "alias": "manualnyy-terapevt",
+  "name": "Мануальный терапевт",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "2267-distsirkulyatornaya-entsefalopatiya-2-oy-stepeni",
+    "name": "Дисциркуляторная энцефалопатия 2-ой степени"
+   },
+   {
+    "alias": "446-golovnaya-bol-v-viskah",
+    "name": "Головная боль в висках"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "1380-skolioz-u-detey",
+    "name": "Сколиоз у детей"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "1311-zaderjka-psihicheskogo-razvitiya-zpr",
+    "name": "Задержка психического развития (ЗПР)"
+   },
+   {
+    "alias": "1198-kohlearnyiy-nevrit",
+    "name": "Кохлеарный неврит"
+   },
+   {
+    "alias": "1242-shum-v-ushah-shvu",
+    "name": "Шум в ушах (ШВУ)"
+   },
+   {
+    "alias": "448-golovnaya-bol-pri-beremennosti",
+    "name": "Головная боль при беременности"
+   },
+   {
+    "alias": "2153-neyrogennyiy-mochevoy-puzyir",
+    "name": "Нейрогенный мочевой пузырь"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "1295-golovnaya-bol-u-detey",
+    "name": "Головная боль у детей"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "274-rasseyannyiy-skleroz",
+    "name": "Рассеянный склероз"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "165-dorzalgiya",
+    "name": "Дорзалгия"
+   },
+   {
+    "alias": "196-kifoz",
+    "name": "Кифоз"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "501-ankiloz",
+    "name": "Анкилоз"
+   },
+   {
+    "alias": "502-anokopchikovyiy-bolevoy-sindrom-koktsigodiniya",
+    "name": "Анокопчиковый болевой синдром (кокцигодиния)"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   },
+   {
+    "alias": "511-bolezn-behtereva",
+    "name": "Болезнь Бехтерева"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "1988-derealizatsiya",
+    "name": "Дереализация"
+   },
+   {
+    "alias": "1989-dissotsiativnyie-rasstroystva",
+    "name": "Диссоциативные расстройства"
+   },
+   {
+    "alias": "1990-distimiya",
+    "name": "Дистимия"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   }
+  ]
+ },
+ {
+  "alias": "terapevt",
+  "name": "Терапевт",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "446-golovnaya-bol-v-viskah",
+    "name": "Головная боль в висках"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "1242-shum-v-ushah-shvu",
+    "name": "Шум в ушах (ШВУ)"
+   },
+   {
+    "alias": "448-golovnaya-bol-pri-beremennosti",
+    "name": "Головная боль при беременности"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "274-rasseyannyiy-skleroz",
+    "name": "Рассеянный склероз"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "174-diffuznyiy-zob",
+    "name": "Диффузный зоб"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "287-saharnyiy-diabet-ii-tipa",
+    "name": "Сахарный диабет II типа"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "509-atrofiya-myishts",
+    "name": "Атрофия мышц"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1260-anemiya-u-detey",
+    "name": "Анемия у детей"
+   },
+   {
+    "alias": "1266-atopicheskiy-dermatit-u-detey",
+    "name": "Атопический дерматит у детей"
+   },
+   {
+    "alias": "1269-blizorukost-u-detey",
+    "name": "Близорукость у детей"
+   },
+   {
+    "alias": "17-faringit",
+    "name": "Фарингит"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "288-epidemicheskiy-parotit-svinka",
+    "name": "Эпидемический паротит (свинка)"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1183-bolezn-menera",
+    "name": "Болезнь Меньера"
+   },
+   {
+    "alias": "1185-vospalenie-slyunnoy-jelezyi",
+    "name": "Воспаление слюнной железы"
+   },
+   {
+    "alias": "1187-disfagiya",
+    "name": "Дисфагия"
+   },
+   {
+    "alias": "1188-dobrokachestvennyie-opuholi-glotki",
+    "name": "Доброкачественные опухоли глотки"
+   },
+   {
+    "alias": "323-adenovirusnyiy-konyunktivit-ak",
+    "name": "Аденовирусный конъюнктивит (АК)"
+   },
+   {
+    "alias": "325-allergicheskiy-konyunktivit",
+    "name": "Аллергический конъюнктивит"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "27-holetsistit",
+    "name": "Холецистит"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "246-nefrit",
+    "name": "Нефрит"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "934-kamni-v-jelchnom-puzyire",
+    "name": "Камни в желчном пузыре"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   }
+  ]
+ },
+ {
+  "alias": "pediatr",
+  "name": "Педиатр",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "446-golovnaya-bol-v-viskah",
+    "name": "Головная боль в висках"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "1380-skolioz-u-detey",
+    "name": "Сколиоз у детей"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "1336-neyrogennyiy-mochevoy-puzyir-u-detey",
+    "name": "Нейрогенный мочевой пузырь у детей"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "1295-golovnaya-bol-u-detey",
+    "name": "Головная боль у детей"
+   },
+   {
+    "alias": "131-gidrotsefaliya",
+    "name": "Гидроцефалия"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "51-avitaminoz",
+    "name": "Авитаминоз"
+   },
+   {
+    "alias": "173-zob",
+    "name": "Зоб"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "286-saharnyiy-diabet-i-tipa",
+    "name": "Сахарный диабет I типа"
+   },
+   {
+    "alias": "287-saharnyiy-diabet-ii-tipa",
+    "name": "Сахарный диабет II типа"
+   },
+   {
+    "alias": "161-disleksiya",
+    "name": "Дислексия"
+   },
+   {
+    "alias": "1861-fonetiko-fonematicheskoe-nedorazvitie-ffn",
+    "name": "Фонетико-фонематическое недоразвитие (ФФН)"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1260-anemiya-u-detey",
+    "name": "Анемия у детей"
+   },
+   {
+    "alias": "1265-asfiksiya-novorojdennogo-an",
+    "name": "Асфиксия новорожденного (АН)"
+   },
+   {
+    "alias": "1269-blizorukost-u-detey",
+    "name": "Близорукость у детей"
+   },
+   {
+    "alias": "1270-bolezn-kavasaki",
+    "name": "Болезнь Кавасаки"
+   },
+   {
+    "alias": "1271-vnezapnaya-ekzantema",
+    "name": "Внезапная экзантема"
+   },
+   {
+    "alias": "1272-vnutriutrobnyie-infektsii",
+    "name": "Внутриутробные инфекции"
+   },
+   {
+    "alias": "1274-vodyanka-yaichka-u-malchika",
+    "name": "Водянка яичка у мальчика"
+   },
+   {
+    "alias": "1278-galaktozemiya",
+    "name": "Галактоземия"
+   },
+   {
+    "alias": "1281-gelmintozyi-u-detey",
+    "name": "Гельминтозы у детей"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "288-epidemicheskiy-parotit-svinka",
+    "name": "Эпидемический паротит (свинка)"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1187-disfagiya",
+    "name": "Дисфагия"
+   },
+   {
+    "alias": "325-allergicheskiy-konyunktivit",
+    "name": "Аллергический конъюнктивит"
+   },
+   {
+    "alias": "326-allergicheskiy-konyunktivit-u-detey",
+    "name": "Аллергический конъюнктивит у детей"
+   },
+   {
+    "alias": "332-blefarit",
+    "name": "Блефарит"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "293-sindrom-defitsita-vnimaniya-i-giperaktivnosti-sdvg",
+    "name": "Синдром дефицита внимания и гиперактивности (СДВГ)"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "1988-derealizatsiya",
+    "name": "Дереализация"
+   },
+   {
+    "alias": "1989-dissotsiativnyie-rasstroystva",
+    "name": "Диссоциативные расстройства"
+   },
+   {
+    "alias": "246-nefrit",
+    "name": "Нефрит"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "2126-giperaktivnyiy-mochevoy-puzyir",
+    "name": "Гиперактивный мочевой пузырь"
+   },
+   {
+    "alias": "29-tservitsit",
+    "name": "Цервицит"
+   },
+   {
+    "alias": "195-kista",
+    "name": "Киста"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   }
+  ]
+ },
+ {
+  "alias": "nevrolog",
+  "name": "Невролог (Невропатолог)",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "2267-distsirkulyatornaya-entsefalopatiya-2-oy-stepeni",
+    "name": "Дисциркуляторная энцефалопатия 2-ой степени"
+   },
+   {
+    "alias": "446-golovnaya-bol-v-viskah",
+    "name": "Головная боль в висках"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "1380-skolioz-u-detey",
+    "name": "Сколиоз у детей"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "1311-zaderjka-psihicheskogo-razvitiya-zpr",
+    "name": "Задержка психического развития (ЗПР)"
+   },
+   {
+    "alias": "1198-kohlearnyiy-nevrit",
+    "name": "Кохлеарный неврит"
+   },
+   {
+    "alias": "1242-shum-v-ushah-shvu",
+    "name": "Шум в ушах (ШВУ)"
+   },
+   {
+    "alias": "448-golovnaya-bol-pri-beremennosti",
+    "name": "Головная боль при беременности"
+   },
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "2153-neyrogennyiy-mochevoy-puzyir",
+    "name": "Нейрогенный мочевой пузырь"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "1295-golovnaya-bol-u-detey",
+    "name": "Головная боль у детей"
+   },
+   {
+    "alias": "44-epilepsiya",
+    "name": "Эпилепсия"
+   },
+   {
+    "alias": "75-apraksiya",
+    "name": "Апраксия"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "131-gidrotsefaliya",
+    "name": "Гидроцефалия"
+   },
+   {
+    "alias": "136-gipersomniya",
+    "name": "Гиперсомния"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "274-rasseyannyiy-skleroz",
+    "name": "Рассеянный склероз"
+   },
+   {
+    "alias": "431-anomaliya-arnolda-kiari",
+    "name": "Аномалия Арнольда-Киари"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "83-afaziya",
+    "name": "Афазия"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "1856-zaikanie-u-detey",
+    "name": "Заикание у детей"
+   },
+   {
+    "alias": "1858-obschee-nedorazvitie-rechi-onr",
+    "name": "Общее недоразвитие речи (ОНР)"
+   },
+   {
+    "alias": "1861-fonetiko-fonematicheskoe-nedorazvitie-ffn",
+    "name": "Фонетико-фонематическое недоразвитие (ФФН)"
+   },
+   {
+    "alias": "165-dorzalgiya",
+    "name": "Дорзалгия"
+   },
+   {
+    "alias": "196-kifoz",
+    "name": "Кифоз"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "502-anokopchikovyiy-bolevoy-sindrom-koktsigodiniya",
+    "name": "Анокопчиковый болевой синдром (кокцигодиния)"
+   },
+   {
+    "alias": "509-atrofiya-myishts",
+    "name": "Атрофия мышц"
+   },
+   {
+    "alias": "511-bolezn-behtereva",
+    "name": "Болезнь Бехтерева"
+   },
+   {
+    "alias": "1275-vrojdennaya-miopatiya",
+    "name": "Врожденная миопатия"
+   },
+   {
+    "alias": "1183-bolezn-menera",
+    "name": "Болезнь Меньера"
+   },
+   {
+    "alias": "1187-disfagiya",
+    "name": "Дисфагия"
+   },
+   {
+    "alias": "340-glioma-hiazmyi",
+    "name": "Глиома хиазмы"
+   },
+   {
+    "alias": "222-maniakalno-depressivnyiy-psihoz",
+    "name": "Маниакально-депрессивный психоз"
+   },
+   {
+    "alias": "293-sindrom-defitsita-vnimaniya-i-giperaktivnosti-sdvg",
+    "name": "Синдром дефицита внимания и гиперактивности (СДВГ)"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   }
+  ]
+ },
+ {
+  "alias": "vop-vrach-obshchei-praktiki",
+  "name": "ВОП (врач общей практики)",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "1852-dizartriya",
+    "name": "Дизартрия"
+   },
+   {
+    "alias": "446-golovnaya-bol-v-viskah",
+    "name": "Головная боль в висках"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "1295-golovnaya-bol-u-detey",
+    "name": "Головная боль у детей"
+   },
+   {
+    "alias": "136-gipersomniya",
+    "name": "Гиперсомния"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "51-avitaminoz",
+    "name": "Авитаминоз"
+   },
+   {
+    "alias": "173-zob",
+    "name": "Зоб"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "287-saharnyiy-diabet-ii-tipa",
+    "name": "Сахарный диабет II типа"
+   },
+   {
+    "alias": "1811-sindrom-klaynfeltera-sk",
+    "name": "Синдром Клайнфельтера (СК)"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "506-artroz-golenostopnogo-sustava-ags",
+    "name": "Артроз голеностопного сустава (АГС)"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1260-anemiya-u-detey",
+    "name": "Анемия у детей"
+   },
+   {
+    "alias": "1263-artrit-u-detey",
+    "name": "Артрит у детей"
+   },
+   {
+    "alias": "1266-atopicheskiy-dermatit-u-detey",
+    "name": "Атопический дерматит у детей"
+   },
+   {
+    "alias": "1275-vrojdennaya-miopatiya",
+    "name": "Врожденная миопатия"
+   },
+   {
+    "alias": "1281-gelmintozyi-u-detey",
+    "name": "Гельминтозы у детей"
+   },
+   {
+    "alias": "17-faringit",
+    "name": "Фарингит"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "280-atroficheskiy-rinit",
+    "name": "Атрофический ринит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1176-adenoidyi",
+    "name": "Аденоиды"
+   },
+   {
+    "alias": "1185-vospalenie-slyunnoy-jelezyi",
+    "name": "Воспаление слюнной железы"
+   },
+   {
+    "alias": "202-konyunktivit",
+    "name": "Конъюнктивит"
+   },
+   {
+    "alias": "323-adenovirusnyiy-konyunktivit-ak",
+    "name": "Аденовирусный конъюнктивит (АК)"
+   },
+   {
+    "alias": "325-allergicheskiy-konyunktivit",
+    "name": "Аллергический конъюнктивит"
+   },
+   {
+    "alias": "326-allergicheskiy-konyunktivit-u-detey",
+    "name": "Аллергический конъюнктивит у детей"
+   },
+   {
+    "alias": "27-holetsistit",
+    "name": "Холецистит"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   },
+   {
+    "alias": "261-perenoshennaya-beremennost",
+    "name": "Переношенная беременность"
+   },
+   {
+    "alias": "269-predmenstrualnyiy-sindrom-pms",
+    "name": "Предменструальный синдром (ПМС)"
+   }
+  ]
+ },
+ {
+  "alias": "psikholog",
+  "name": "Психолог",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "1852-dizartriya",
+    "name": "Дизартрия"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "1311-zaderjka-psihicheskogo-razvitiya-zpr",
+    "name": "Задержка психического развития (ЗПР)"
+   },
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "75-apraksiya",
+    "name": "Апраксия"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "136-gipersomniya",
+    "name": "Гиперсомния"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "430-agnoziya",
+    "name": "Агнозия"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "83-afaziya",
+    "name": "Афазия"
+   },
+   {
+    "alias": "161-disleksiya",
+    "name": "Дислексия"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "1850-alaliya",
+    "name": "Алалия"
+   },
+   {
+    "alias": "1851-bradilaliya",
+    "name": "Брадилалия"
+   },
+   {
+    "alias": "1853-disgrafiya",
+    "name": "Дисграфия"
+   },
+   {
+    "alias": "1854-dislaliya",
+    "name": "Дислалия"
+   },
+   {
+    "alias": "1858-obschee-nedorazvitie-rechi-onr",
+    "name": "Общее недоразвитие речи (ОНР)"
+   },
+   {
+    "alias": "1859-rinolaliya",
+    "name": "Ринолалия"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "20-fobiya",
+    "name": "Фобия"
+   },
+   {
+    "alias": "36-shizofreniya",
+    "name": "Шизофрения"
+   },
+   {
+    "alias": "64-amneziya",
+    "name": "Амнезия"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "apatiya",
+    "name": "Апатия"
+   },
+   {
+    "alias": "163-dissotsiativnoe-rasstroystvo-lichnosti",
+    "name": "Диссоциативное расстройство личности"
+   },
+   {
+    "alias": "179-igromaniya",
+    "name": "Игромания"
+   },
+   {
+    "alias": "184-internet-zavisimost",
+    "name": "Интернет зависимость"
+   },
+   {
+    "alias": "200-kompleks-nepolnotsennosti",
+    "name": "Комплекс неполноценности"
+   },
+   {
+    "alias": "222-maniakalno-depressivnyiy-psihoz",
+    "name": "Маниакально-депрессивный психоз"
+   },
+   {
+    "alias": "224-maniya-presledovaniya",
+    "name": "Мания преследования"
+   },
+   {
+    "alias": "258-paranoyya",
+    "name": "Паранойя"
+   },
+   {
+    "alias": "293-sindrom-defitsita-vnimaniya-i-giperaktivnosti-sdvg",
+    "name": "Синдром дефицита внимания и гиперактивности (СДВГ)"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1982-bredovoe-rasstroystvo",
+    "name": "Бредовое расстройство"
+   },
+   {
+    "alias": "1983-generalizovannoe-trevojnoe-rasstroystvo",
+    "name": "Генерализованное тревожное расстройство"
+   },
+   {
+    "alias": "1986-depersonalizatsiya",
+    "name": "Деперсонализация"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "1988-derealizatsiya",
+    "name": "Дереализация"
+   },
+   {
+    "alias": "1989-dissotsiativnyie-rasstroystva",
+    "name": "Диссоциативные расстройства"
+   },
+   {
+    "alias": "1990-distimiya",
+    "name": "Дистимия"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "2126-giperaktivnyiy-mochevoy-puzyir",
+    "name": "Гиперактивный мочевой пузырь"
+   },
+   {
+    "alias": "70-anorgazmiya",
+    "name": "Аноргазмия"
+   },
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   }
+  ]
+ },
+ {
+  "alias": "detskiy-nevrolog",
+  "name": "Детский невролог",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "1852-dizartriya",
+    "name": "Дизартрия"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "1311-zaderjka-psihicheskogo-razvitiya-zpr",
+    "name": "Задержка психического развития (ЗПР)"
+   },
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "2153-neyrogennyiy-mochevoy-puzyir",
+    "name": "Нейрогенный мочевой пузырь"
+   },
+   {
+    "alias": "1295-golovnaya-bol-u-detey",
+    "name": "Головная боль у детей"
+   },
+   {
+    "alias": "44-epilepsiya",
+    "name": "Эпилепсия"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "131-gidrotsefaliya",
+    "name": "Гидроцефалия"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "431-anomaliya-arnolda-kiari",
+    "name": "Аномалия Арнольда-Киари"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "83-afaziya",
+    "name": "Афазия"
+   },
+   {
+    "alias": "161-disleksiya",
+    "name": "Дислексия"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "1850-alaliya",
+    "name": "Алалия"
+   },
+   {
+    "alias": "1853-disgrafiya",
+    "name": "Дисграфия"
+   },
+   {
+    "alias": "1854-dislaliya",
+    "name": "Дислалия"
+   },
+   {
+    "alias": "1856-zaikanie-u-detey",
+    "name": "Заикание у детей"
+   },
+   {
+    "alias": "1858-obschee-nedorazvitie-rechi-onr",
+    "name": "Общее недоразвитие речи (ОНР)"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1273-vnutricherepnaya-rodovaya-travma",
+    "name": "Внутричерепная родовая травма"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1183-bolezn-menera",
+    "name": "Болезнь Меньера"
+   },
+   {
+    "alias": "36-shizofreniya",
+    "name": "Шизофрения"
+   },
+   {
+    "alias": "64-amneziya",
+    "name": "Амнезия"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "293-sindrom-defitsita-vnimaniya-i-giperaktivnosti-sdvg",
+    "name": "Синдром дефицита внимания и гиперактивности (СДВГ)"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "1988-derealizatsiya",
+    "name": "Дереализация"
+   },
+   {
+    "alias": "1989-dissotsiativnyie-rasstroystva",
+    "name": "Диссоциативные расстройства"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   }
+  ]
+ },
+ {
+  "alias": "khirurg",
+  "name": "Хирург",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "2202-diabeticheskaya-makroangiopatiya",
+    "name": "Диабетическая макроангиопатия"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "1336-neyrogennyiy-mochevoy-puzyir-u-detey",
+    "name": "Нейрогенный мочевой пузырь у детей"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "44-epilepsiya",
+    "name": "Эпилепсия"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "18-feohromotsitoma",
+    "name": "Феохромоцитома"
+   },
+   {
+    "alias": "134-giperparatireoz",
+    "name": "Гиперпаратиреоз"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "173-zob",
+    "name": "Зоб"
+   },
+   {
+    "alias": "174-diffuznyiy-zob",
+    "name": "Диффузный зоб"
+   },
+   {
+    "alias": "175-kistoznyiy-zob",
+    "name": "Кистозный зоб"
+   },
+   {
+    "alias": "286-saharnyiy-diabet-i-tipa",
+    "name": "Сахарный диабет I типа"
+   },
+   {
+    "alias": "287-saharnyiy-diabet-ii-tipa",
+    "name": "Сахарный диабет II типа"
+   },
+   {
+    "alias": "35-shepelyavost",
+    "name": "Шепелявость"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "272-plantarnyiy-fastsiit",
+    "name": "Плантарный фасциит"
+   },
+   {
+    "alias": "500-abstsess-myagkih-tkaney",
+    "name": "Абсцесс мягких тканей"
+   },
+   {
+    "alias": "501-ankiloz",
+    "name": "Анкилоз"
+   },
+   {
+    "alias": "509-atrofiya-myishts",
+    "name": "Атрофия мышц"
+   },
+   {
+    "alias": "1261-appenditsit-u-detey",
+    "name": "Аппендицит у детей"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1189-zabolevaniya-uha",
+    "name": "Заболевания уха"
+   },
+   {
+    "alias": "1190-zabolevaniya-ushey",
+    "name": "Заболевания ушей"
+   },
+   {
+    "alias": "1191-zaglotochnyiy-abstsess",
+    "name": "Заглоточный абсцесс"
+   },
+   {
+    "alias": "1192-inorodnoe-telo-glotki",
+    "name": "Инородное тело глотки"
+   },
+   {
+    "alias": "27-holetsistit",
+    "name": "Холецистит"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "246-nefrit",
+    "name": "Нефрит"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "934-kamni-v-jelchnom-puzyire",
+    "name": "Камни в желчном пузыре"
+   },
+   {
+    "alias": "2121-amiloidoz-pochek",
+    "name": "Амилоидоз почек"
+   },
+   {
+    "alias": "2125-gidronefroz",
+    "name": "Гидронефроз"
+   },
+   {
+    "alias": "2128-gipospadiya",
+    "name": "Гипоспадия"
+   },
+   {
+    "alias": "2131-divertikul-mochevogo-puzyirya",
+    "name": "Дивертикул мочевого пузыря"
+   },
+   {
+    "alias": "40-endometrioz",
+    "name": "Эндометриоз"
+   },
+   {
+    "alias": "195-kista",
+    "name": "Киста"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   },
+   {
+    "alias": "1193-inorodnoe-telo-gortani",
+    "name": "Инородное тело гортани"
+   }
+  ]
+ },
+ {
+  "alias": "psikhiatr",
+  "name": "Психиатр",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "1311-zaderjka-psihicheskogo-razvitiya-zpr",
+    "name": "Задержка психического развития (ЗПР)"
+   },
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "2153-neyrogennyiy-mochevoy-puzyir",
+    "name": "Нейрогенный мочевой пузырь"
+   },
+   {
+    "alias": "75-apraksiya",
+    "name": "Апраксия"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "136-gipersomniya",
+    "name": "Гиперсомния"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "1851-bradilaliya",
+    "name": "Брадилалия"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "20-fobiya",
+    "name": "Фобия"
+   },
+   {
+    "alias": "36-shizofreniya",
+    "name": "Шизофрения"
+   },
+   {
+    "alias": "64-amneziya",
+    "name": "Амнезия"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "apatiya",
+    "name": "Апатия"
+   },
+   {
+    "alias": "163-dissotsiativnoe-rasstroystvo-lichnosti",
+    "name": "Диссоциативное расстройство личности"
+   },
+   {
+    "alias": "179-igromaniya",
+    "name": "Игромания"
+   },
+   {
+    "alias": "184-internet-zavisimost",
+    "name": "Интернет зависимость"
+   },
+   {
+    "alias": "222-maniakalno-depressivnyiy-psihoz",
+    "name": "Маниакально-депрессивный психоз"
+   },
+   {
+    "alias": "224-maniya-presledovaniya",
+    "name": "Мания преследования"
+   },
+   {
+    "alias": "258-paranoyya",
+    "name": "Паранойя"
+   },
+   {
+    "alias": "293-sindrom-defitsita-vnimaniya-i-giperaktivnosti-sdvg",
+    "name": "Синдром дефицита внимания и гиперактивности (СДВГ)"
+   },
+   {
+    "alias": "1825-alkogolnyiy-gallyutsinoz",
+    "name": "Алкогольный галлюциноз"
+   },
+   {
+    "alias": "1980-agorafobiya",
+    "name": "Агорафобия"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1982-bredovoe-rasstroystvo",
+    "name": "Бредовое расстройство"
+   },
+   {
+    "alias": "1983-generalizovannoe-trevojnoe-rasstroystvo",
+    "name": "Генерализованное тревожное расстройство"
+   },
+   {
+    "alias": "1986-depersonalizatsiya",
+    "name": "Деперсонализация"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "1988-derealizatsiya",
+    "name": "Дереализация"
+   },
+   {
+    "alias": "1989-dissotsiativnyie-rasstroystva",
+    "name": "Диссоциативные расстройства"
+   },
+   {
+    "alias": "1990-distimiya",
+    "name": "Дистимия"
+   },
+   {
+    "alias": "70-anorgazmiya",
+    "name": "Аноргазмия"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   }
+  ]
+ },
+ {
+  "alias": "osteopat",
+  "name": "Остеопат",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "1380-skolioz-u-detey",
+    "name": "Сколиоз у детей"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "1311-zaderjka-psihicheskogo-razvitiya-zpr",
+    "name": "Задержка психического развития (ЗПР)"
+   },
+   {
+    "alias": "448-golovnaya-bol-pri-beremennosti",
+    "name": "Головная боль при беременности"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "44-epilepsiya",
+    "name": "Эпилепсия"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "274-rasseyannyiy-skleroz",
+    "name": "Рассеянный склероз"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "196-kifoz",
+    "name": "Кифоз"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "501-ankiloz",
+    "name": "Анкилоз"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "506-artroz-golenostopnogo-sustava-ags",
+    "name": "Артроз голеностопного сустава (АГС)"
+   },
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "1263-artrit-u-detey",
+    "name": "Артрит у детей"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   }
+  ]
+ },
+ {
+  "alias": "endokrinolog",
+  "name": "Эндокринолог",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "2202-diabeticheskaya-makroangiopatiya",
+    "name": "Диабетическая макроангиопатия"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "451-diabeticheskaya-neyropatiya",
+    "name": "Диабетическая нейропатия"
+   },
+   {
+    "alias": "1295-golovnaya-bol-u-detey",
+    "name": "Головная боль у детей"
+   },
+   {
+    "alias": "44-epilepsiya",
+    "name": "Эпилепсия"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "136-gipersomniya",
+    "name": "Гиперсомния"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "18-feohromotsitoma",
+    "name": "Феохромоцитома"
+   },
+   {
+    "alias": "51-avitaminoz",
+    "name": "Авитаминоз"
+   },
+   {
+    "alias": "84-bazedova-bolezn",
+    "name": "Базедова болезнь"
+   },
+   {
+    "alias": "134-giperparatireoz",
+    "name": "Гиперпаратиреоз"
+   },
+   {
+    "alias": "135-giperprolaktinemiya",
+    "name": "Гиперпролактинемия"
+   },
+   {
+    "alias": "137-gipertireoz",
+    "name": "Гипертиреоз"
+   },
+   {
+    "alias": "139-gipogonadizm",
+    "name": "Гипогонадизм"
+   },
+   {
+    "alias": "141-gipotireoz",
+    "name": "Гипотиреоз"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "173-zob",
+    "name": "Зоб"
+   },
+   {
+    "alias": "174-diffuznyiy-zob",
+    "name": "Диффузный зоб"
+   },
+   {
+    "alias": "175-kistoznyiy-zob",
+    "name": "Кистозный зоб"
+   },
+   {
+    "alias": "176-uzlovoy-zob",
+    "name": "Узловой зоб"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "286-saharnyiy-diabet-i-tipa",
+    "name": "Сахарный диабет I типа"
+   },
+   {
+    "alias": "287-saharnyiy-diabet-ii-tipa",
+    "name": "Сахарный диабет II типа"
+   },
+   {
+    "alias": "1811-sindrom-klaynfeltera-sk",
+    "name": "Синдром Клайнфельтера (СК)"
+   },
+   {
+    "alias": "2188-akromegaliya",
+    "name": "Акромегалия"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "2130-diabeticheskaya-nefropatiya",
+    "name": "Диабетическая нефропатия"
+   },
+   {
+    "alias": "40-endometrioz",
+    "name": "Эндометриоз"
+   },
+   {
+    "alias": "54-adenomioz-tela-matki",
+    "name": "Аденомиоз тела матки"
+   },
+   {
+    "alias": "62-amenoreya",
+    "name": "Аменорея"
+   },
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   },
+   {
+    "alias": "195-kista",
+    "name": "Киста"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   },
+   {
+    "alias": "2191-virilnyiy-sindrom",
+    "name": "Вирильный синдром"
+   }
+  ]
+ },
+ {
+  "alias": "fizioterapevt",
+  "name": "Физиотерапевт",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "2267-distsirkulyatornaya-entsefalopatiya-2-oy-stepeni",
+    "name": "Дисциркуляторная энцефалопатия 2-ой степени"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "2153-neyrogennyiy-mochevoy-puzyir",
+    "name": "Нейрогенный мочевой пузырь"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "165-dorzalgiya",
+    "name": "Дорзалгия"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "502-anokopchikovyiy-bolevoy-sindrom-koktsigodiniya",
+    "name": "Анокопчиковый болевой синдром (кокцигодиния)"
+   },
+   {
+    "alias": "503-anomalii-razvitiya-kolennogo-sustava-arks",
+    "name": "Аномалии развития коленного сустава (АРКС)"
+   },
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   },
+   {
+    "alias": "510-ahondroplaziya",
+    "name": "Ахондроплазия"
+   },
+   {
+    "alias": "1263-artrit-u-detey",
+    "name": "Артрит у детей"
+   },
+   {
+    "alias": "1275-vrojdennaya-miopatiya",
+    "name": "Врожденная миопатия"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "1988-derealizatsiya",
+    "name": "Дереализация"
+   },
+   {
+    "alias": "1989-dissotsiativnyie-rasstroystva",
+    "name": "Диссоциативные расстройства"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   }
+  ]
+ },
+ {
+  "alias": "detskiy-psikhiatr",
+  "name": "Детский психиатр",
+  "diseases": [
+   {
+    "alias": "1852-dizartriya",
+    "name": "Дизартрия"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "1311-zaderjka-psihicheskogo-razvitiya-zpr",
+    "name": "Задержка психического развития (ЗПР)"
+   },
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "1851-bradilaliya",
+    "name": "Брадилалия"
+   },
+   {
+    "alias": "1853-disgrafiya",
+    "name": "Дисграфия"
+   },
+   {
+    "alias": "1858-obschee-nedorazvitie-rechi-onr",
+    "name": "Общее недоразвитие речи (ОНР)"
+   },
+   {
+    "alias": "1859-rinolaliya",
+    "name": "Ринолалия"
+   },
+   {
+    "alias": "1860-tahilaliya",
+    "name": "Тахилалия"
+   },
+   {
+    "alias": "1861-fonetiko-fonematicheskoe-nedorazvitie-ffn",
+    "name": "Фонетико-фонематическое недоразвитие (ФФН)"
+   },
+   {
+    "alias": "20-fobiya",
+    "name": "Фобия"
+   },
+   {
+    "alias": "36-shizofreniya",
+    "name": "Шизофрения"
+   },
+   {
+    "alias": "64-amneziya",
+    "name": "Амнезия"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "163-dissotsiativnoe-rasstroystvo-lichnosti",
+    "name": "Диссоциативное расстройство личности"
+   },
+   {
+    "alias": "179-igromaniya",
+    "name": "Игромания"
+   },
+   {
+    "alias": "200-kompleks-nepolnotsennosti",
+    "name": "Комплекс неполноценности"
+   },
+   {
+    "alias": "222-maniakalno-depressivnyiy-psihoz",
+    "name": "Маниакально-депрессивный психоз"
+   },
+   {
+    "alias": "224-maniya-presledovaniya",
+    "name": "Мания преследования"
+   },
+   {
+    "alias": "258-paranoyya",
+    "name": "Паранойя"
+   },
+   {
+    "alias": "293-sindrom-defitsita-vnimaniya-i-giperaktivnosti-sdvg",
+    "name": "Синдром дефицита внимания и гиперактивности (СДВГ)"
+   },
+   {
+    "alias": "1825-alkogolnyiy-gallyutsinoz",
+    "name": "Алкогольный галлюциноз"
+   },
+   {
+    "alias": "1980-agorafobiya",
+    "name": "Агорафобия"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1982-bredovoe-rasstroystvo",
+    "name": "Бредовое расстройство"
+   },
+   {
+    "alias": "1983-generalizovannoe-trevojnoe-rasstroystvo",
+    "name": "Генерализованное тревожное расстройство"
+   },
+   {
+    "alias": "1986-depersonalizatsiya",
+    "name": "Деперсонализация"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "1988-derealizatsiya",
+    "name": "Дереализация"
+   },
+   {
+    "alias": "1989-dissotsiativnyie-rasstroystva",
+    "name": "Диссоциативные расстройства"
+   },
+   {
+    "alias": "1990-distimiya",
+    "name": "Дистимия"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   }
+  ]
+ },
+ {
+  "alias": "ginekolog",
+  "name": "Гинеколог",
+  "diseases": [
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "448-golovnaya-bol-pri-beremennosti",
+    "name": "Головная боль при беременности"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "135-giperprolaktinemiya",
+    "name": "Гиперпролактинемия"
+   },
+   {
+    "alias": "139-gipogonadizm",
+    "name": "Гипогонадизм"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "286-saharnyiy-diabet-i-tipa",
+    "name": "Сахарный диабет I типа"
+   },
+   {
+    "alias": "287-saharnyiy-diabet-ii-tipa",
+    "name": "Сахарный диабет II типа"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "1272-vnutriutrobnyie-infektsii",
+    "name": "Внутриутробные инфекции"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "29-tservitsit",
+    "name": "Цервицит"
+   },
+   {
+    "alias": "40-endometrioz",
+    "name": "Эндометриоз"
+   },
+   {
+    "alias": "54-adenomioz-tela-matki",
+    "name": "Аденомиоз тела матки"
+   },
+   {
+    "alias": "55-adneksit",
+    "name": "Аднексит"
+   },
+   {
+    "alias": "61-algomenoreya",
+    "name": "Альгоменорея"
+   },
+   {
+    "alias": "62-amenoreya",
+    "name": "Аменорея"
+   },
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   },
+   {
+    "alias": "102-vaginit",
+    "name": "Вагинит"
+   },
+   {
+    "alias": "195-kista",
+    "name": "Киста"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   },
+   {
+    "alias": "250-ooforit",
+    "name": "Оофорит"
+   },
+   {
+    "alias": "261-perenoshennaya-beremennost",
+    "name": "Переношенная беременность"
+   },
+   {
+    "alias": "269-predmenstrualnyiy-sindrom-pms",
+    "name": "Предменструальный синдром (ПМС)"
+   },
+   {
+    "alias": "294-sindrom-istoscheniya-yaichnikov",
+    "name": "Синдром истощения яичников"
+   },
+   {
+    "alias": "1406-adenomioz",
+    "name": "Аденомиоз"
+   },
+   {
+    "alias": "1407-anovulyatornyiy-tsikl",
+    "name": "Ановуляторный цикл"
+   },
+   {
+    "alias": "1408-apopleksiya-yaichnika",
+    "name": "Апоплексия яичника"
+   },
+   {
+    "alias": "1409-atreziya-vlagalischa",
+    "name": "Атрезия влагалища"
+   },
+   {
+    "alias": "1410-atreziya-devstvennoy-plevyi",
+    "name": "Атрезия девственной плевы"
+   },
+   {
+    "alias": "1411-atreziya-matki",
+    "name": "Атрезия матки"
+   },
+   {
+    "alias": "1412-atroficheskiy-vaginit",
+    "name": "Атрофический вагинит"
+   }
+  ]
+ },
+ {
+  "alias": "269-vertebrolog",
+  "name": "Вертебролог",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "2267-distsirkulyatornaya-entsefalopatiya-2-oy-stepeni",
+    "name": "Дисциркуляторная энцефалопатия 2-ой степени"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "1380-skolioz-u-detey",
+    "name": "Сколиоз у детей"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "2153-neyrogennyiy-mochevoy-puzyir",
+    "name": "Нейрогенный мочевой пузырь"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "75-apraksiya",
+    "name": "Апраксия"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "274-rasseyannyiy-skleroz",
+    "name": "Рассеянный склероз"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "165-dorzalgiya",
+    "name": "Дорзалгия"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "502-anokopchikovyiy-bolevoy-sindrom-koktsigodiniya",
+    "name": "Анокопчиковый болевой синдром (кокцигодиния)"
+   },
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   },
+   {
+    "alias": "511-bolezn-behtereva",
+    "name": "Болезнь Бехтерева"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   }
+  ]
+ },
+ {
+  "alias": "oftalmolog-okulist",
+  "name": "Офтальмолог (окулист)",
+  "diseases": [
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "446-golovnaya-bol-v-viskah",
+    "name": "Головная боль в висках"
+   },
+   {
+    "alias": "329-atrofija-zritelynogo-nerva",
+    "name": "Атрофия зрительного нерва"
+   },
+   {
+    "alias": "351-ishemicheskaya-neyropatiya-zritelnogo-nerva",
+    "name": "Ишемическая нейропатия зрительного нерва"
+   },
+   {
+    "alias": "274-rasseyannyiy-skleroz",
+    "name": "Рассеянный склероз"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1264-astigmatizm-u-detey",
+    "name": "Астигматизм у детей"
+   },
+   {
+    "alias": "1269-blizorukost-u-detey",
+    "name": "Близорукость у детей"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "48-yachmen",
+    "name": "Ячмень"
+   },
+   {
+    "alias": "79-astigmatizm",
+    "name": "Астигматизм"
+   },
+   {
+    "alias": "89-blizorukost",
+    "name": "Близорукость"
+   },
+   {
+    "alias": "142-glaukoma",
+    "name": "Глаукома"
+   },
+   {
+    "alias": "194-keratokonus",
+    "name": "Кератоконус"
+   },
+   {
+    "alias": "202-konyunktivit",
+    "name": "Конъюнктивит"
+   },
+   {
+    "alias": "203-kosoglazie",
+    "name": "Косоглазие"
+   },
+   {
+    "alias": "292-sindrom-suhogo-glaza",
+    "name": "Синдром сухого глаза"
+   },
+   {
+    "alias": "323-adenovirusnyiy-konyunktivit-ak",
+    "name": "Аденовирусный конъюнктивит (АК)"
+   },
+   {
+    "alias": "324-allergicheskiy-keratit-ak",
+    "name": "Аллергический кератит (АК)"
+   },
+   {
+    "alias": "325-allergicheskiy-konyunktivit",
+    "name": "Аллергический конъюнктивит"
+   },
+   {
+    "alias": "326-allergicheskiy-konyunktivit-u-detey",
+    "name": "Аллергический конъюнктивит у детей"
+   },
+   {
+    "alias": "327-ambliopiya",
+    "name": "Амблиопия"
+   },
+   {
+    "alias": "328-astenopiya",
+    "name": "Астенопия"
+   },
+   {
+    "alias": "330-belmo",
+    "name": "Бельмо"
+   },
+   {
+    "alias": "331-blennoreya",
+    "name": "Бленнорея"
+   },
+   {
+    "alias": "332-blefarit",
+    "name": "Блефарит"
+   },
+   {
+    "alias": "334-virusnyiy-keratit",
+    "name": "Вирусный кератит"
+   },
+   {
+    "alias": "335-virusnyiy-konyunktivit",
+    "name": "Вирусный конъюнктивит"
+   },
+   {
+    "alias": "336-vnutriglaznoe-davlenie",
+    "name": "Внутриглазное давление"
+   },
+   {
+    "alias": "337-vospalenie-veka",
+    "name": "Воспаление века"
+   },
+   {
+    "alias": "338-gemianopsiya",
+    "name": "Гемианопсия"
+   },
+   {
+    "alias": "339-glioma-zritelnogo-nerva",
+    "name": "Глиома зрительного нерва"
+   },
+   {
+    "alias": "340-glioma-hiazmyi",
+    "name": "Глиома хиазмы"
+   }
+  ]
+ },
+ {
+  "alias": "psikhoterapevt",
+  "name": "Психотерапевт",
+  "diseases": [
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "238-narkolepsiya",
+    "name": "Нарколепсия"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "83-afaziya",
+    "name": "Афазия"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "1851-bradilaliya",
+    "name": "Брадилалия"
+   },
+   {
+    "alias": "20-fobiya",
+    "name": "Фобия"
+   },
+   {
+    "alias": "36-shizofreniya",
+    "name": "Шизофрения"
+   },
+   {
+    "alias": "64-amneziya",
+    "name": "Амнезия"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "apatiya",
+    "name": "Апатия"
+   },
+   {
+    "alias": "163-dissotsiativnoe-rasstroystvo-lichnosti",
+    "name": "Диссоциативное расстройство личности"
+   },
+   {
+    "alias": "179-igromaniya",
+    "name": "Игромания"
+   },
+   {
+    "alias": "184-internet-zavisimost",
+    "name": "Интернет зависимость"
+   },
+   {
+    "alias": "200-kompleks-nepolnotsennosti",
+    "name": "Комплекс неполноценности"
+   },
+   {
+    "alias": "222-maniakalno-depressivnyiy-psihoz",
+    "name": "Маниакально-депрессивный психоз"
+   },
+   {
+    "alias": "224-maniya-presledovaniya",
+    "name": "Мания преследования"
+   },
+   {
+    "alias": "258-paranoyya",
+    "name": "Паранойя"
+   },
+   {
+    "alias": "293-sindrom-defitsita-vnimaniya-i-giperaktivnosti-sdvg",
+    "name": "Синдром дефицита внимания и гиперактивности (СДВГ)"
+   },
+   {
+    "alias": "1825-alkogolnyiy-gallyutsinoz",
+    "name": "Алкогольный галлюциноз"
+   },
+   {
+    "alias": "1980-agorafobiya",
+    "name": "Агорафобия"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1982-bredovoe-rasstroystvo",
+    "name": "Бредовое расстройство"
+   },
+   {
+    "alias": "1983-generalizovannoe-trevojnoe-rasstroystvo",
+    "name": "Генерализованное тревожное расстройство"
+   },
+   {
+    "alias": "1986-depersonalizatsiya",
+    "name": "Деперсонализация"
+   },
+   {
+    "alias": "1990-distimiya",
+    "name": "Дистимия"
+   },
+   {
+    "alias": "2126-giperaktivnyiy-mochevoy-puzyir",
+    "name": "Гиперактивный мочевой пузырь"
+   },
+   {
+    "alias": "70-anorgazmiya",
+    "name": "Аноргазмия"
+   }
+  ]
+ },
+ {
+  "alias": "akusher-ginekolog",
+  "name": "Акушер-гинеколог",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "448-golovnaya-bol-pri-beremennosti",
+    "name": "Головная боль при беременности"
+   },
+   {
+    "alias": "135-giperprolaktinemiya",
+    "name": "Гиперпролактинемия"
+   },
+   {
+    "alias": "139-gipogonadizm",
+    "name": "Гипогонадизм"
+   },
+   {
+    "alias": "1272-vnutriutrobnyie-infektsii",
+    "name": "Внутриутробные инфекции"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "16-ureaplazma",
+    "name": "Уреаплазма"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "29-tservitsit",
+    "name": "Цервицит"
+   },
+   {
+    "alias": "54-adenomioz-tela-matki",
+    "name": "Аденомиоз тела матки"
+   },
+   {
+    "alias": "55-adneksit",
+    "name": "Аднексит"
+   },
+   {
+    "alias": "61-algomenoreya",
+    "name": "Альгоменорея"
+   },
+   {
+    "alias": "62-amenoreya",
+    "name": "Аменорея"
+   },
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   },
+   {
+    "alias": "102-vaginit",
+    "name": "Вагинит"
+   },
+   {
+    "alias": "195-kista",
+    "name": "Киста"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   },
+   {
+    "alias": "250-ooforit",
+    "name": "Оофорит"
+   },
+   {
+    "alias": "261-perenoshennaya-beremennost",
+    "name": "Переношенная беременность"
+   },
+   {
+    "alias": "269-predmenstrualnyiy-sindrom-pms",
+    "name": "Предменструальный синдром (ПМС)"
+   },
+   {
+    "alias": "294-sindrom-istoscheniya-yaichnikov",
+    "name": "Синдром истощения яичников"
+   },
+   {
+    "alias": "1406-adenomioz",
+    "name": "Аденомиоз"
+   },
+   {
+    "alias": "1407-anovulyatornyiy-tsikl",
+    "name": "Ановуляторный цикл"
+   },
+   {
+    "alias": "1408-apopleksiya-yaichnika",
+    "name": "Апоплексия яичника"
+   },
+   {
+    "alias": "1409-atreziya-vlagalischa",
+    "name": "Атрезия влагалища"
+   },
+   {
+    "alias": "1410-atreziya-devstvennoy-plevyi",
+    "name": "Атрезия девственной плевы"
+   },
+   {
+    "alias": "1411-atreziya-matki",
+    "name": "Атрезия матки"
+   },
+   {
+    "alias": "1412-atroficheskiy-vaginit",
+    "name": "Атрофический вагинит"
+   }
+  ]
+ },
+ {
+  "alias": "lor-otorinolaringolog",
+  "name": "ЛОР (отоларинголог)",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "1198-kohlearnyiy-nevrit",
+    "name": "Кохлеарный неврит"
+   },
+   {
+    "alias": "1242-shum-v-ushah-shvu",
+    "name": "Шум в ушах (ШВУ)"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "1277-vrojdennyiy-stridor",
+    "name": "Врожденный стридор"
+   },
+   {
+    "alias": "13-tugouhost",
+    "name": "Тугоухость"
+   },
+   {
+    "alias": "17-faringit",
+    "name": "Фарингит"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "280-atroficheskiy-rinit",
+    "name": "Атрофический ринит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1175-adgezivnyiy-sredniy-otit",
+    "name": "Адгезивный средний отит"
+   },
+   {
+    "alias": "1176-adenoidyi",
+    "name": "Аденоиды"
+   },
+   {
+    "alias": "1177-adenoidyi-u-detey",
+    "name": "Аденоиды у детей"
+   },
+   {
+    "alias": "1180-atreziya-hoan",
+    "name": "Атрезия хоан"
+   },
+   {
+    "alias": "1181-aerootit",
+    "name": "Аэроотит"
+   },
+   {
+    "alias": "1182-aerosinusit",
+    "name": "Аэросинусит"
+   },
+   {
+    "alias": "1183-bolezn-menera",
+    "name": "Болезнь Меньера"
+   },
+   {
+    "alias": "1186-gluhota",
+    "name": "Глухота"
+   },
+   {
+    "alias": "1187-disfagiya",
+    "name": "Дисфагия"
+   },
+   {
+    "alias": "1188-dobrokachestvennyie-opuholi-glotki",
+    "name": "Доброкачественные опухоли глотки"
+   },
+   {
+    "alias": "1189-zabolevaniya-uha",
+    "name": "Заболевания уха"
+   },
+   {
+    "alias": "1190-zabolevaniya-ushey",
+    "name": "Заболевания ушей"
+   },
+   {
+    "alias": "1191-zaglotochnyiy-abstsess",
+    "name": "Заглоточный абсцесс"
+   },
+   {
+    "alias": "1192-inorodnoe-telo-glotki",
+    "name": "Инородное тело глотки"
+   },
+   {
+    "alias": "1193-inorodnoe-telo-gortani",
+    "name": "Инородное тело гортани"
+   }
+  ]
+ },
+ {
+  "alias": "reabilitolog",
+  "name": "Реабилитолог",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "1311-zaderjka-psihicheskogo-razvitiya-zpr",
+    "name": "Задержка психического развития (ЗПР)"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "75-apraksiya",
+    "name": "Апраксия"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "274-rasseyannyiy-skleroz",
+    "name": "Рассеянный склероз"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "196-kifoz",
+    "name": "Кифоз"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "506-artroz-golenostopnogo-sustava-ags",
+    "name": "Артроз голеностопного сустава (АГС)"
+   },
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   },
+   {
+    "alias": "509-atrofiya-myishts",
+    "name": "Атрофия мышц"
+   },
+   {
+    "alias": "510-ahondroplaziya",
+    "name": "Ахондроплазия"
+   },
+   {
+    "alias": "511-bolezn-behtereva",
+    "name": "Болезнь Бехтерева"
+   }
+  ]
+ },
+ {
+  "alias": "kineziterapevt",
+  "name": "Кинезитерапевт",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "2267-distsirkulyatornaya-entsefalopatiya-2-oy-stepeni",
+    "name": "Дисциркуляторная энцефалопатия 2-ой степени"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "274-rasseyannyiy-skleroz",
+    "name": "Рассеянный склероз"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "83-afaziya",
+    "name": "Афазия"
+   },
+   {
+    "alias": "165-dorzalgiya",
+    "name": "Дорзалгия"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "501-ankiloz",
+    "name": "Анкилоз"
+   },
+   {
+    "alias": "502-anokopchikovyiy-bolevoy-sindrom-koktsigodiniya",
+    "name": "Анокопчиковый болевой синдром (кокцигодиния)"
+   },
+   {
+    "alias": "503-anomalii-razvitiya-kolennogo-sustava-arks",
+    "name": "Аномалии развития коленного сустава (АРКС)"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "506-artroz-golenostopnogo-sustava-ags",
+    "name": "Артроз голеностопного сустава (АГС)"
+   },
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   },
+   {
+    "alias": "509-atrofiya-myishts",
+    "name": "Атрофия мышц"
+   },
+   {
+    "alias": "510-ahondroplaziya",
+    "name": "Ахондроплазия"
+   },
+   {
+    "alias": "511-bolezn-behtereva",
+    "name": "Болезнь Бехтерева"
+   },
+   {
+    "alias": "1263-artrit-u-detey",
+    "name": "Артрит у детей"
+   },
+   {
+    "alias": "203-kosoglazie",
+    "name": "Косоглазие"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   }
+  ]
+ },
+ {
+  "alias": "gastroenterolog",
+  "name": "Гастроэнтеролог",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "2189-atrofiya-podjeludochnoy-jelezyi",
+    "name": "Атрофия поджелудочной железы"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1276-vrojdennyiy-pilorostenoz",
+    "name": "Врожденный пилоростеноз"
+   },
+   {
+    "alias": "1279-gastrit-u-detey",
+    "name": "Гастрит у детей"
+   },
+   {
+    "alias": "1280-gastroduodenit-u-detey",
+    "name": "Гастродуоденит у детей"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1187-disfagiya",
+    "name": "Дисфагия"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "27-holetsistit",
+    "name": "Холецистит"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "934-kamni-v-jelchnom-puzyire",
+    "name": "Камни в желчном пузыре"
+   },
+   {
+    "alias": "195-kista",
+    "name": "Киста"
+   }
+  ]
+ },
+ {
+  "alias": "narkolog",
+  "name": "Нарколог",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "238-narkolepsiya",
+    "name": "Нарколепсия"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "179-igromaniya",
+    "name": "Игромания"
+   },
+   {
+    "alias": "184-internet-zavisimost",
+    "name": "Интернет зависимость"
+   },
+   {
+    "alias": "222-maniakalno-depressivnyiy-psihoz",
+    "name": "Маниакально-депрессивный психоз"
+   },
+   {
+    "alias": "258-paranoyya",
+    "name": "Паранойя"
+   },
+   {
+    "alias": "1825-alkogolnyiy-gallyutsinoz",
+    "name": "Алкогольный галлюциноз"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1982-bredovoe-rasstroystvo",
+    "name": "Бредовое расстройство"
+   },
+   {
+    "alias": "1986-depersonalizatsiya",
+    "name": "Деперсонализация"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "1988-derealizatsiya",
+    "name": "Дереализация"
+   },
+   {
+    "alias": "1989-dissotsiativnyie-rasstroystva",
+    "name": "Диссоциативные расстройства"
+   },
+   {
+    "alias": "1990-distimiya",
+    "name": "Дистимия"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   }
+  ]
+ },
+ {
+  "alias": "uzi-spetsialist",
+  "name": "Узист",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "2153-neyrogennyiy-mochevoy-puzyir",
+    "name": "Нейрогенный мочевой пузырь"
+   },
+   {
+    "alias": "1295-golovnaya-bol-u-detey",
+    "name": "Головная боль у детей"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "173-zob",
+    "name": "Зоб"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "934-kamni-v-jelchnom-puzyire",
+    "name": "Камни в желчном пузыре"
+   },
+   {
+    "alias": "2121-amiloidoz-pochek",
+    "name": "Амилоидоз почек"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "29-tservitsit",
+    "name": "Цервицит"
+   },
+   {
+    "alias": "54-adenomioz-tela-matki",
+    "name": "Аденомиоз тела матки"
+   },
+   {
+    "alias": "55-adneksit",
+    "name": "Аднексит"
+   },
+   {
+    "alias": "195-kista",
+    "name": "Киста"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   },
+   {
+    "alias": "261-perenoshennaya-beremennost",
+    "name": "Переношенная беременность"
+   },
+   {
+    "alias": "294-sindrom-istoscheniya-yaichnikov",
+    "name": "Синдром истощения яичников"
+   },
+   {
+    "alias": "1406-adenomioz",
+    "name": "Аденомиоз"
+   },
+   {
+    "alias": "1408-apopleksiya-yaichnika",
+    "name": "Апоплексия яичника"
+   },
+   {
+    "alias": "1411-atreziya-matki",
+    "name": "Атрезия матки"
+   }
+  ]
+ },
+ {
+  "alias": "logoped",
+  "name": "Логопед",
+  "diseases": [
+   {
+    "alias": "1852-dizartriya",
+    "name": "Дизартрия"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "430-agnoziya",
+    "name": "Агнозия"
+   },
+   {
+    "alias": "35-shepelyavost",
+    "name": "Шепелявость"
+   },
+   {
+    "alias": "83-afaziya",
+    "name": "Афазия"
+   },
+   {
+    "alias": "161-disleksiya",
+    "name": "Дислексия"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "192-kartavost",
+    "name": "Картавость"
+   },
+   {
+    "alias": "1850-alaliya",
+    "name": "Алалия"
+   },
+   {
+    "alias": "1851-bradilaliya",
+    "name": "Брадилалия"
+   },
+   {
+    "alias": "1853-disgrafiya",
+    "name": "Дисграфия"
+   },
+   {
+    "alias": "1854-dislaliya",
+    "name": "Дислалия"
+   },
+   {
+    "alias": "1856-zaikanie-u-detey",
+    "name": "Заикание у детей"
+   },
+   {
+    "alias": "1858-obschee-nedorazvitie-rechi-onr",
+    "name": "Общее недоразвитие речи (ОНР)"
+   },
+   {
+    "alias": "1859-rinolaliya",
+    "name": "Ринолалия"
+   },
+   {
+    "alias": "1860-tahilaliya",
+    "name": "Тахилалия"
+   },
+   {
+    "alias": "1861-fonetiko-fonematicheskoe-nedorazvitie-ffn",
+    "name": "Фонетико-фонематическое недоразвитие (ФФН)"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1186-gluhota",
+    "name": "Глухота"
+   },
+   {
+    "alias": "1187-disfagiya",
+    "name": "Дисфагия"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   }
+  ]
+ },
+ {
+  "alias": "ortoped",
+  "name": "Ортопед",
+  "diseases": [
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "196-kifoz",
+    "name": "Кифоз"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "272-plantarnyiy-fastsiit",
+    "name": "Плантарный фасциит"
+   },
+   {
+    "alias": "503-anomalii-razvitiya-kolennogo-sustava-arks",
+    "name": "Аномалии развития коленного сустава (АРКС)"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "506-artroz-golenostopnogo-sustava-ags",
+    "name": "Артроз голеностопного сустава (АГС)"
+   },
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   },
+   {
+    "alias": "509-atrofiya-myishts",
+    "name": "Атрофия мышц"
+   },
+   {
+    "alias": "510-ahondroplaziya",
+    "name": "Ахондроплазия"
+   },
+   {
+    "alias": "511-bolezn-behtereva",
+    "name": "Болезнь Бехтерева"
+   },
+   {
+    "alias": "512-bolezn-blaunta",
+    "name": "Болезнь Блаунта"
+   },
+   {
+    "alias": "1263-artrit-u-detey",
+    "name": "Артрит у детей"
+   },
+   {
+    "alias": "1275-vrojdennaya-miopatiya",
+    "name": "Врожденная миопатия"
+   }
+  ]
+ },
+ {
+  "alias": "igloterapevt",
+  "name": "Иглотерапевт",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "2267-distsirkulyatornaya-entsefalopatiya-2-oy-stepeni",
+    "name": "Дисциркуляторная энцефалопатия 2-ой степени"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "1311-zaderjka-psihicheskogo-razvitiya-zpr",
+    "name": "Задержка психического развития (ЗПР)"
+   },
+   {
+    "alias": "1198-kohlearnyiy-nevrit",
+    "name": "Кохлеарный неврит"
+   },
+   {
+    "alias": "1242-shum-v-ushah-shvu",
+    "name": "Шум в ушах (ШВУ)"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "165-dorzalgiya",
+    "name": "Дорзалгия"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "1273-vnutricherepnaya-rodovaya-travma",
+    "name": "Внутричерепная родовая травма"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "1988-derealizatsiya",
+    "name": "Дереализация"
+   },
+   {
+    "alias": "1989-dissotsiativnyie-rasstroystva",
+    "name": "Диссоциативные расстройства"
+   }
+  ]
+ },
+ {
+  "alias": "neyrokhirurg",
+  "name": "Нейрохирург",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "446-golovnaya-bol-v-viskah",
+    "name": "Головная боль в висках"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "131-gidrotsefaliya",
+    "name": "Гидроцефалия"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "430-agnoziya",
+    "name": "Агнозия"
+   },
+   {
+    "alias": "431-anomaliya-arnolda-kiari",
+    "name": "Аномалия Арнольда-Киари"
+   },
+   {
+    "alias": "196-kifoz",
+    "name": "Кифоз"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "511-bolezn-behtereva",
+    "name": "Болезнь Бехтерева"
+   },
+   {
+    "alias": "1273-vnutricherepnaya-rodovaya-travma",
+    "name": "Внутричерепная родовая травма"
+   },
+   {
+    "alias": "340-glioma-hiazmyi",
+    "name": "Глиома хиазмы"
+   }
+  ]
+ },
+ {
+  "alias": "akusher",
+  "name": "Акушер",
+  "diseases": [
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "448-golovnaya-bol-pri-beremennosti",
+    "name": "Головная боль при беременности"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "135-giperprolaktinemiya",
+    "name": "Гиперпролактинемия"
+   },
+   {
+    "alias": "139-gipogonadizm",
+    "name": "Гипогонадизм"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "29-tservitsit",
+    "name": "Цервицит"
+   },
+   {
+    "alias": "54-adenomioz-tela-matki",
+    "name": "Аденомиоз тела матки"
+   },
+   {
+    "alias": "55-adneksit",
+    "name": "Аднексит"
+   },
+   {
+    "alias": "61-algomenoreya",
+    "name": "Альгоменорея"
+   },
+   {
+    "alias": "62-amenoreya",
+    "name": "Аменорея"
+   },
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   },
+   {
+    "alias": "102-vaginit",
+    "name": "Вагинит"
+   },
+   {
+    "alias": "195-kista",
+    "name": "Киста"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   },
+   {
+    "alias": "250-ooforit",
+    "name": "Оофорит"
+   },
+   {
+    "alias": "261-perenoshennaya-beremennost",
+    "name": "Переношенная беременность"
+   },
+   {
+    "alias": "269-predmenstrualnyiy-sindrom-pms",
+    "name": "Предменструальный синдром (ПМС)"
+   },
+   {
+    "alias": "294-sindrom-istoscheniya-yaichnikov",
+    "name": "Синдром истощения яичников"
+   },
+   {
+    "alias": "1406-adenomioz",
+    "name": "Аденомиоз"
+   },
+   {
+    "alias": "1408-apopleksiya-yaichnika",
+    "name": "Апоплексия яичника"
+   }
+  ]
+ },
+ {
+  "alias": "urolog",
+  "name": "Уролог",
+  "diseases": [
+   {
+    "alias": "2153-neyrogennyiy-mochevoy-puzyir",
+    "name": "Нейрогенный мочевой пузырь"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "1274-vodyanka-yaichka-u-malchika",
+    "name": "Водянка яичка у мальчика"
+   },
+   {
+    "alias": "16-ureaplazma",
+    "name": "Уреаплазма"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "246-nefrit",
+    "name": "Нефрит"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "934-kamni-v-jelchnom-puzyire",
+    "name": "Камни в желчном пузыре"
+   },
+   {
+    "alias": "2121-amiloidoz-pochek",
+    "name": "Амилоидоз почек"
+   },
+   {
+    "alias": "2123-gematuriya",
+    "name": "Гематурия"
+   },
+   {
+    "alias": "2125-gidronefroz",
+    "name": "Гидронефроз"
+   },
+   {
+    "alias": "2126-giperaktivnyiy-mochevoy-puzyir",
+    "name": "Гиперактивный мочевой пузырь"
+   },
+   {
+    "alias": "2128-gipospadiya",
+    "name": "Гипоспадия"
+   },
+   {
+    "alias": "2130-diabeticheskaya-nefropatiya",
+    "name": "Диабетическая нефропатия"
+   },
+   {
+    "alias": "2131-divertikul-mochevogo-puzyirya",
+    "name": "Дивертикул мочевого пузыря"
+   },
+   {
+    "alias": "2132-divertikul-mocheispuskatelnogo-kanala",
+    "name": "Дивертикул мочеиспускательного канала"
+   },
+   {
+    "alias": "2134-distopiya-pochki",
+    "name": "Дистопия почки"
+   },
+   {
+    "alias": "2135-dobrokachestvennyie-opuholi-mochevogo-puzyirya",
+    "name": "Доброкачественные опухоли мочевого пузыря"
+   },
+   {
+    "alias": "195-kista",
+    "name": "Киста"
+   },
+   {
+    "alias": "2136-dobrokachestvennyie-opuholi-uretryi",
+    "name": "Доброкачественные опухоли уретры"
+   }
+  ]
+ },
+ {
+  "alias": "detskyi-endokrinolog",
+  "name": "Детский эндокринолог",
+  "diseases": [
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "18-feohromotsitoma",
+    "name": "Феохромоцитома"
+   },
+   {
+    "alias": "51-avitaminoz",
+    "name": "Авитаминоз"
+   },
+   {
+    "alias": "84-bazedova-bolezn",
+    "name": "Базедова болезнь"
+   },
+   {
+    "alias": "134-giperparatireoz",
+    "name": "Гиперпаратиреоз"
+   },
+   {
+    "alias": "135-giperprolaktinemiya",
+    "name": "Гиперпролактинемия"
+   },
+   {
+    "alias": "137-gipertireoz",
+    "name": "Гипертиреоз"
+   },
+   {
+    "alias": "139-gipogonadizm",
+    "name": "Гипогонадизм"
+   },
+   {
+    "alias": "141-gipotireoz",
+    "name": "Гипотиреоз"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "173-zob",
+    "name": "Зоб"
+   },
+   {
+    "alias": "176-uzlovoy-zob",
+    "name": "Узловой зоб"
+   },
+   {
+    "alias": "286-saharnyiy-diabet-i-tipa",
+    "name": "Сахарный диабет I типа"
+   },
+   {
+    "alias": "287-saharnyiy-diabet-ii-tipa",
+    "name": "Сахарный диабет II типа"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "62-amenoreya",
+    "name": "Аменорея"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   },
+   {
+    "alias": "2191-virilnyiy-sindrom",
+    "name": "Вирильный синдром"
+   }
+  ]
+ },
+ {
+  "alias": "travmatolog",
+  "name": "Травматолог",
+  "diseases": [
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "1380-skolioz-u-detey",
+    "name": "Сколиоз у детей"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "196-kifoz",
+    "name": "Кифоз"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "501-ankiloz",
+    "name": "Анкилоз"
+   },
+   {
+    "alias": "503-anomalii-razvitiya-kolennogo-sustava-arks",
+    "name": "Аномалии развития коленного сустава (АРКС)"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "506-artroz-golenostopnogo-sustava-ags",
+    "name": "Артроз голеностопного сустава (АГС)"
+   },
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   },
+   {
+    "alias": "512-bolezn-blaunta",
+    "name": "Болезнь Блаунта"
+   }
+  ]
+ },
+ {
+  "alias": "onkolog",
+  "name": "Онколог",
+  "diseases": [
+   {
+    "alias": "1445-diffuznaya-mastopatiya",
+    "name": "Диффузная мастопатия"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "18-feohromotsitoma",
+    "name": "Феохромоцитома"
+   },
+   {
+    "alias": "63-amiloidoz",
+    "name": "Амилоидоз"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "2188-akromegaliya",
+    "name": "Акромегалия"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "510-ahondroplaziya",
+    "name": "Ахондроплазия"
+   },
+   {
+    "alias": "1260-anemiya-u-detey",
+    "name": "Анемия у детей"
+   },
+   {
+    "alias": "1282-gemangioma-u-detey",
+    "name": "Гемангиома у детей"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1187-disfagiya",
+    "name": "Дисфагия"
+   },
+   {
+    "alias": "1188-dobrokachestvennyie-opuholi-glotki",
+    "name": "Доброкачественные опухоли глотки"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "2127-gipernefroma-pochki",
+    "name": "Гипернефрома почки"
+   },
+   {
+    "alias": "2131-divertikul-mochevogo-puzyirya",
+    "name": "Дивертикул мочевого пузыря"
+   },
+   {
+    "alias": "2135-dobrokachestvennyie-opuholi-mochevogo-puzyirya",
+    "name": "Доброкачественные опухоли мочевого пузыря"
+   },
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   },
+   {
+    "alias": "2136-dobrokachestvennyie-opuholi-uretryi",
+    "name": "Доброкачественные опухоли уретры"
+   }
+  ]
+ },
+ {
+  "alias": "massazhist",
+  "name": "Массажист",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "446-golovnaya-bol-v-viskah",
+    "name": "Головная боль в висках"
+   },
+   {
+    "alias": "1380-skolioz-u-detey",
+    "name": "Сколиоз у детей"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "75-apraksiya",
+    "name": "Апраксия"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "196-kifoz",
+    "name": "Кифоз"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "506-artroz-golenostopnogo-sustava-ags",
+    "name": "Артроз голеностопного сустава (АГС)"
+   },
+   {
+    "alias": "509-atrofiya-myishts",
+    "name": "Атрофия мышц"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "934-kamni-v-jelchnom-puzyire",
+    "name": "Камни в желчном пузыре"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   }
+  ]
+ },
+ {
+  "alias": "refleksoterapevt",
+  "name": "Рефлексотерапевт",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "2153-neyrogennyiy-mochevoy-puzyir",
+    "name": "Нейрогенный мочевой пузырь"
+   },
+   {
+    "alias": "75-apraksiya",
+    "name": "Апраксия"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "274-rasseyannyiy-skleroz",
+    "name": "Рассеянный склероз"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "83-afaziya",
+    "name": "Афазия"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   }
+  ]
+ },
+ {
+  "alias": "androlog",
+  "name": "Андролог",
+  "diseases": [
+   {
+    "alias": "1336-neyrogennyiy-mochevoy-puzyir-u-detey",
+    "name": "Нейрогенный мочевой пузырь у детей"
+   },
+   {
+    "alias": "2153-neyrogennyiy-mochevoy-puzyir",
+    "name": "Нейрогенный мочевой пузырь"
+   },
+   {
+    "alias": "139-gipogonadizm",
+    "name": "Гипогонадизм"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "1274-vodyanka-yaichka-u-malchika",
+    "name": "Водянка яичка у мальчика"
+   },
+   {
+    "alias": "1277-vrojdennyiy-stridor",
+    "name": "Врожденный стридор"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "246-nefrit",
+    "name": "Нефрит"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "934-kamni-v-jelchnom-puzyire",
+    "name": "Камни в желчном пузыре"
+   },
+   {
+    "alias": "2128-gipospadiya",
+    "name": "Гипоспадия"
+   },
+   {
+    "alias": "2131-divertikul-mochevogo-puzyirya",
+    "name": "Дивертикул мочевого пузыря"
+   },
+   {
+    "alias": "2132-divertikul-mocheispuskatelnogo-kanala",
+    "name": "Дивертикул мочеиспускательного канала"
+   },
+   {
+    "alias": "2135-dobrokachestvennyie-opuholi-mochevogo-puzyirya",
+    "name": "Доброкачественные опухоли мочевого пузыря"
+   },
+   {
+    "alias": "70-anorgazmiya",
+    "name": "Аноргазмия"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   },
+   {
+    "alias": "294-sindrom-istoscheniya-yaichnikov",
+    "name": "Синдром истощения яичников"
+   }
+  ]
+ },
+ {
+  "alias": "294-detskiy--oftalmolog",
+  "name": "Детский офтальмолог",
+  "diseases": [
+   {
+    "alias": "329-atrofija-zritelynogo-nerva",
+    "name": "Атрофия зрительного нерва"
+   },
+   {
+    "alias": "1264-astigmatizm-u-detey",
+    "name": "Астигматизм у детей"
+   },
+   {
+    "alias": "1269-blizorukost-u-detey",
+    "name": "Близорукость у детей"
+   },
+   {
+    "alias": "79-astigmatizm",
+    "name": "Астигматизм"
+   },
+   {
+    "alias": "89-blizorukost",
+    "name": "Близорукость"
+   },
+   {
+    "alias": "142-glaukoma",
+    "name": "Глаукома"
+   },
+   {
+    "alias": "203-kosoglazie",
+    "name": "Косоглазие"
+   },
+   {
+    "alias": "323-adenovirusnyiy-konyunktivit-ak",
+    "name": "Аденовирусный конъюнктивит (АК)"
+   },
+   {
+    "alias": "324-allergicheskiy-keratit-ak",
+    "name": "Аллергический кератит (АК)"
+   },
+   {
+    "alias": "326-allergicheskiy-konyunktivit-u-detey",
+    "name": "Аллергический конъюнктивит у детей"
+   },
+   {
+    "alias": "327-ambliopiya",
+    "name": "Амблиопия"
+   },
+   {
+    "alias": "330-belmo",
+    "name": "Бельмо"
+   },
+   {
+    "alias": "331-blennoreya",
+    "name": "Бленнорея"
+   },
+   {
+    "alias": "332-blefarit",
+    "name": "Блефарит"
+   },
+   {
+    "alias": "334-virusnyiy-keratit",
+    "name": "Вирусный кератит"
+   },
+   {
+    "alias": "335-virusnyiy-konyunktivit",
+    "name": "Вирусный конъюнктивит"
+   },
+   {
+    "alias": "336-vnutriglaznoe-davlenie",
+    "name": "Внутриглазное давление"
+   },
+   {
+    "alias": "337-vospalenie-veka",
+    "name": "Воспаление века"
+   },
+   {
+    "alias": "338-gemianopsiya",
+    "name": "Гемианопсия"
+   },
+   {
+    "alias": "339-glioma-zritelnogo-nerva",
+    "name": "Глиома зрительного нерва"
+   },
+   {
+    "alias": "340-glioma-hiazmyi",
+    "name": "Глиома хиазмы"
+   }
+  ]
+ },
+ {
+  "alias": "allergolog",
+  "name": "Аллерголог",
+  "diseases": [
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "173-zob",
+    "name": "Зоб"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1266-atopicheskiy-dermatit-u-detey",
+    "name": "Атопический дерматит у детей"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "202-konyunktivit",
+    "name": "Конъюнктивит"
+   },
+   {
+    "alias": "325-allergicheskiy-konyunktivit",
+    "name": "Аллергический конъюнктивит"
+   },
+   {
+    "alias": "326-allergicheskiy-konyunktivit-u-detey",
+    "name": "Аллергический конъюнктивит у детей"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   }
+  ]
+ },
+ {
+  "alias": "kardiolog",
+  "name": "Кардиолог",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "136-gipersomniya",
+    "name": "Гиперсомния"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1262-aritmiya-u-detey",
+    "name": "Аритмия у детей"
+   },
+   {
+    "alias": "1270-bolezn-kavasaki",
+    "name": "Болезнь Кавасаки"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   }
+  ]
+ },
+ {
+  "alias": "travmatologiya-i-ortopediya",
+  "name": "Травматолог-ортопед",
+  "diseases": [
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "1380-skolioz-u-detey",
+    "name": "Сколиоз у детей"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "196-kifoz",
+    "name": "Кифоз"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "272-plantarnyiy-fastsiit",
+    "name": "Плантарный фасциит"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "501-ankiloz",
+    "name": "Анкилоз"
+   },
+   {
+    "alias": "503-anomalii-razvitiya-kolennogo-sustava-arks",
+    "name": "Аномалии развития коленного сустава (АРКС)"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "506-artroz-golenostopnogo-sustava-ags",
+    "name": "Артроз голеностопного сустава (АГС)"
+   },
+   {
+    "alias": "512-bolezn-blaunta",
+    "name": "Болезнь Блаунта"
+   }
+  ]
+ },
+ {
+  "alias": "meditsinskaya-psikhologiya",
+  "name": "Клинический психолог",
+  "diseases": [
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "1850-alaliya",
+    "name": "Алалия"
+   },
+   {
+    "alias": "1851-bradilaliya",
+    "name": "Брадилалия"
+   },
+   {
+    "alias": "20-fobiya",
+    "name": "Фобия"
+   },
+   {
+    "alias": "36-shizofreniya",
+    "name": "Шизофрения"
+   },
+   {
+    "alias": "apatiya",
+    "name": "Апатия"
+   },
+   {
+    "alias": "163-dissotsiativnoe-rasstroystvo-lichnosti",
+    "name": "Диссоциативное расстройство личности"
+   },
+   {
+    "alias": "179-igromaniya",
+    "name": "Игромания"
+   },
+   {
+    "alias": "184-internet-zavisimost",
+    "name": "Интернет зависимость"
+   },
+   {
+    "alias": "222-maniakalno-depressivnyiy-psihoz",
+    "name": "Маниакально-депрессивный психоз"
+   },
+   {
+    "alias": "224-maniya-presledovaniya",
+    "name": "Мания преследования"
+   },
+   {
+    "alias": "258-paranoyya",
+    "name": "Паранойя"
+   },
+   {
+    "alias": "293-sindrom-defitsita-vnimaniya-i-giperaktivnosti-sdvg",
+    "name": "Синдром дефицита внимания и гиперактивности (СДВГ)"
+   },
+   {
+    "alias": "1825-alkogolnyiy-gallyutsinoz",
+    "name": "Алкогольный галлюциноз"
+   },
+   {
+    "alias": "1980-agorafobiya",
+    "name": "Агорафобия"
+   },
+   {
+    "alias": "1982-bredovoe-rasstroystvo",
+    "name": "Бредовое расстройство"
+   },
+   {
+    "alias": "1983-generalizovannoe-trevojnoe-rasstroystvo",
+    "name": "Генерализованное тревожное расстройство"
+   },
+   {
+    "alias": "1986-depersonalizatsiya",
+    "name": "Деперсонализация"
+   }
+  ]
+ },
+ {
+  "alias": "neirofiziolog",
+  "name": "Нейрофизиолог",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "2267-distsirkulyatornaya-entsefalopatiya-2-oy-stepeni",
+    "name": "Дисциркуляторная энцефалопатия 2-ой степени"
+   },
+   {
+    "alias": "446-golovnaya-bol-v-viskah",
+    "name": "Головная боль в висках"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "451-diabeticheskaya-neyropatiya",
+    "name": "Диабетическая нейропатия"
+   },
+   {
+    "alias": "448-golovnaya-bol-pri-beremennosti",
+    "name": "Головная боль при беременности"
+   },
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "1295-golovnaya-bol-u-detey",
+    "name": "Головная боль у детей"
+   },
+   {
+    "alias": "430-agnoziya",
+    "name": "Агнозия"
+   },
+   {
+    "alias": "431-anomaliya-arnolda-kiari",
+    "name": "Аномалия Арнольда-Киари"
+   },
+   {
+    "alias": "165-dorzalgiya",
+    "name": "Дорзалгия"
+   },
+   {
+    "alias": "1273-vnutricherepnaya-rodovaya-travma",
+    "name": "Внутричерепная родовая травма"
+   },
+   {
+    "alias": "293-sindrom-defitsita-vnimaniya-i-giperaktivnosti-sdvg",
+    "name": "Синдром дефицита внимания и гиперактивности (СДВГ)"
+   },
+   {
+    "alias": "1980-agorafobiya",
+    "name": "Агорафобия"
+   },
+   {
+    "alias": "1986-depersonalizatsiya",
+    "name": "Деперсонализация"
+   }
+  ]
+ },
+ {
+  "alias": "detskiy-psikholog",
+  "name": "Детский психолог",
+  "diseases": [
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "75-apraksiya",
+    "name": "Апраксия"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "83-afaziya",
+    "name": "Афазия"
+   },
+   {
+    "alias": "161-disleksiya",
+    "name": "Дислексия"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "1851-bradilaliya",
+    "name": "Брадилалия"
+   },
+   {
+    "alias": "1853-disgrafiya",
+    "name": "Дисграфия"
+   },
+   {
+    "alias": "1858-obschee-nedorazvitie-rechi-onr",
+    "name": "Общее недоразвитие речи (ОНР)"
+   },
+   {
+    "alias": "1861-fonetiko-fonematicheskoe-nedorazvitie-ffn",
+    "name": "Фонетико-фонематическое недоразвитие (ФФН)"
+   },
+   {
+    "alias": "20-fobiya",
+    "name": "Фобия"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "apatiya",
+    "name": "Апатия"
+   },
+   {
+    "alias": "1982-bredovoe-rasstroystvo",
+    "name": "Бредовое расстройство"
+   },
+   {
+    "alias": "1983-generalizovannoe-trevojnoe-rasstroystvo",
+    "name": "Генерализованное тревожное расстройство"
+   },
+   {
+    "alias": "1990-distimiya",
+    "name": "Дистимия"
+   },
+   {
+    "alias": "2126-giperaktivnyiy-mochevoy-puzyir",
+    "name": "Гиперактивный мочевой пузырь"
+   }
+  ]
+ },
+ {
+  "alias": "nefrolog",
+  "name": "Нефролог",
+  "diseases": [
+   {
+    "alias": "476-osteohondroz-pozvonochnika",
+    "name": "Остеохондроз позвоночника"
+   },
+   {
+    "alias": "437-bolezn-vilsona-konovalova",
+    "name": "Болезнь Вильсона-Коновалова"
+   },
+   {
+    "alias": "134-giperparatireoz",
+    "name": "Гиперпаратиреоз"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "144-glomerulonefrit",
+    "name": "Гломерулонефрит"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "246-nefrit",
+    "name": "Нефрит"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "2121-amiloidoz-pochek",
+    "name": "Амилоидоз почек"
+   },
+   {
+    "alias": "2123-gematuriya",
+    "name": "Гематурия"
+   },
+   {
+    "alias": "2125-gidronefroz",
+    "name": "Гидронефроз"
+   },
+   {
+    "alias": "2127-gipernefroma-pochki",
+    "name": "Гипернефрома почки"
+   },
+   {
+    "alias": "2130-diabeticheskaya-nefropatiya",
+    "name": "Диабетическая нефропатия"
+   },
+   {
+    "alias": "2133-dismetabolicheskaya-nefropatiya-u-detey",
+    "name": "Дисметаболическая нефропатия у детей"
+   },
+   {
+    "alias": "2134-distopiya-pochki",
+    "name": "Дистопия почки"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   }
+  ]
+ },
+ {
+  "alias": "ginekolog-endokrinolog",
+  "name": "Гинеколог-эндокринолог",
+  "diseases": [
+   {
+    "alias": "135-giperprolaktinemiya",
+    "name": "Гиперпролактинемия"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "29-tservitsit",
+    "name": "Цервицит"
+   },
+   {
+    "alias": "40-endometrioz",
+    "name": "Эндометриоз"
+   },
+   {
+    "alias": "55-adneksit",
+    "name": "Аднексит"
+   },
+   {
+    "alias": "61-algomenoreya",
+    "name": "Альгоменорея"
+   },
+   {
+    "alias": "62-amenoreya",
+    "name": "Аменорея"
+   },
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   },
+   {
+    "alias": "102-vaginit",
+    "name": "Вагинит"
+   },
+   {
+    "alias": "195-kista",
+    "name": "Киста"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   },
+   {
+    "alias": "294-sindrom-istoscheniya-yaichnikov",
+    "name": "Синдром истощения яичников"
+   },
+   {
+    "alias": "1406-adenomioz",
+    "name": "Аденомиоз"
+   },
+   {
+    "alias": "1407-anovulyatornyiy-tsikl",
+    "name": "Ановуляторный цикл"
+   },
+   {
+    "alias": "1408-apopleksiya-yaichnika",
+    "name": "Апоплексия яичника"
+   }
+  ]
+ },
+ {
+  "alias": "vrach-lfk",
+  "name": "Врач ЛФК",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "1380-skolioz-u-detey",
+    "name": "Сколиоз у детей"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "485-sindrom-zapyastnogo-kanala",
+    "name": "Синдром запястного канала"
+   },
+   {
+    "alias": "75-apraksiya",
+    "name": "Апраксия"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "196-kifoz",
+    "name": "Кифоз"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "506-artroz-golenostopnogo-sustava-ags",
+    "name": "Артроз голеностопного сустава (АГС)"
+   },
+   {
+    "alias": "509-atrofiya-myishts",
+    "name": "Атрофия мышц"
+   },
+   {
+    "alias": "510-ahondroplaziya",
+    "name": "Ахондроплазия"
+   },
+   {
+    "alias": "511-bolezn-behtereva",
+    "name": "Болезнь Бехтерева"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   }
+  ]
+ },
+ {
+  "alias": "gomeopat",
+  "name": "Гомеопат",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "40-endometrioz",
+    "name": "Эндометриоз"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   }
+  ]
+ },
+ {
+  "alias": "dietolog",
+  "name": "Диетолог",
+  "diseases": [
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "44-epilepsiya",
+    "name": "Эпилепсия"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "1279-gastrit-u-detey",
+    "name": "Гастрит у детей"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   }
+  ]
+ },
+ {
+  "alias": "detskyi-lor-otolaringolog",
+  "name": "Детский ЛОР (Отоларинголог)",
+  "diseases": [
+   {
+    "alias": "1198-kohlearnyiy-nevrit",
+    "name": "Кохлеарный неврит"
+   },
+   {
+    "alias": "13-tugouhost",
+    "name": "Тугоухость"
+   },
+   {
+    "alias": "17-faringit",
+    "name": "Фарингит"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "280-atroficheskiy-rinit",
+    "name": "Атрофический ринит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1175-adgezivnyiy-sredniy-otit",
+    "name": "Адгезивный средний отит"
+   },
+   {
+    "alias": "1176-adenoidyi",
+    "name": "Аденоиды"
+   },
+   {
+    "alias": "1177-adenoidyi-u-detey",
+    "name": "Аденоиды у детей"
+   },
+   {
+    "alias": "1180-atreziya-hoan",
+    "name": "Атрезия хоан"
+   },
+   {
+    "alias": "1181-aerootit",
+    "name": "Аэроотит"
+   },
+   {
+    "alias": "1182-aerosinusit",
+    "name": "Аэросинусит"
+   },
+   {
+    "alias": "1183-bolezn-menera",
+    "name": "Болезнь Меньера"
+   },
+   {
+    "alias": "1186-gluhota",
+    "name": "Глухота"
+   },
+   {
+    "alias": "1192-inorodnoe-telo-glotki",
+    "name": "Инородное тело глотки"
+   },
+   {
+    "alias": "1193-inorodnoe-telo-gortani",
+    "name": "Инородное тело гортани"
+   }
+  ]
+ },
+ {
+  "alias": "302-podrostkovyiy-psiholog",
+  "name": "Подростковый психолог",
+  "diseases": [
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "20-fobiya",
+    "name": "Фобия"
+   },
+   {
+    "alias": "apatiya",
+    "name": "Апатия"
+   },
+   {
+    "alias": "163-dissotsiativnoe-rasstroystvo-lichnosti",
+    "name": "Диссоциативное расстройство личности"
+   },
+   {
+    "alias": "200-kompleks-nepolnotsennosti",
+    "name": "Комплекс неполноценности"
+   },
+   {
+    "alias": "222-maniakalno-depressivnyiy-psihoz",
+    "name": "Маниакально-депрессивный психоз"
+   },
+   {
+    "alias": "224-maniya-presledovaniya",
+    "name": "Мания преследования"
+   },
+   {
+    "alias": "258-paranoyya",
+    "name": "Паранойя"
+   },
+   {
+    "alias": "293-sindrom-defitsita-vnimaniya-i-giperaktivnosti-sdvg",
+    "name": "Синдром дефицита внимания и гиперактивности (СДВГ)"
+   },
+   {
+    "alias": "1825-alkogolnyiy-gallyutsinoz",
+    "name": "Алкогольный галлюциноз"
+   },
+   {
+    "alias": "1980-agorafobiya",
+    "name": "Агорафобия"
+   },
+   {
+    "alias": "1982-bredovoe-rasstroystvo",
+    "name": "Бредовое расстройство"
+   },
+   {
+    "alias": "1983-generalizovannoe-trevojnoe-rasstroystvo",
+    "name": "Генерализованное тревожное расстройство"
+   },
+   {
+    "alias": "1986-depersonalizatsiya",
+    "name": "Деперсонализация"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   }
+  ]
+ },
+ {
+  "alias": "dermatolog",
+  "name": "Дерматолог",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "1266-atopicheskiy-dermatit-u-detey",
+    "name": "Атопический дерматит у детей"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "202-konyunktivit",
+    "name": "Конъюнктивит"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "16-ureaplazma",
+    "name": "Уреаплазма"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "40-endometrioz",
+    "name": "Эндометриоз"
+   }
+  ]
+ },
+ {
+  "alias": "anesteziolog-reanimatolog",
+  "name": "Анестезиолог-реаниматолог",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "36-shizofreniya",
+    "name": "Шизофрения"
+   },
+   {
+    "alias": "179-igromaniya",
+    "name": "Игромания"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   }
+  ]
+ },
+ {
+  "alias": "genetik",
+  "name": "Генетик",
+  "diseases": [
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "437-bolezn-vilsona-konovalova",
+    "name": "Болезнь Вильсона-Коновалова"
+   },
+   {
+    "alias": "18-feohromotsitoma",
+    "name": "Феохромоцитома"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "1811-sindrom-klaynfeltera-sk",
+    "name": "Синдром Клайнфельтера (СК)"
+   },
+   {
+    "alias": "2188-akromegaliya",
+    "name": "Акромегалия"
+   },
+   {
+    "alias": "510-ahondroplaziya",
+    "name": "Ахондроплазия"
+   },
+   {
+    "alias": "1275-vrojdennaya-miopatiya",
+    "name": "Врожденная миопатия"
+   },
+   {
+    "alias": "1278-galaktozemiya",
+    "name": "Галактоземия"
+   },
+   {
+    "alias": "293-sindrom-defitsita-vnimaniya-i-giperaktivnosti-sdvg",
+    "name": "Синдром дефицита внимания и гиперактивности (СДВГ)"
+   },
+   {
+    "alias": "2128-gipospadiya",
+    "name": "Гипоспадия"
+   },
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   }
+  ]
+ },
+ {
+  "alias": "gematolog",
+  "name": "Гематолог",
+  "diseases": [
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "437-bolezn-vilsona-konovalova",
+    "name": "Болезнь Вильсона-Коновалова"
+   },
+   {
+    "alias": "63-amiloidoz",
+    "name": "Амилоидоз"
+   },
+   {
+    "alias": "133-giperkaltsiemiya",
+    "name": "Гиперкальциемия"
+   },
+   {
+    "alias": "139-gipogonadizm",
+    "name": "Гипогонадизм"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "1260-anemiya-u-detey",
+    "name": "Анемия у детей"
+   },
+   {
+    "alias": "1270-bolezn-kavasaki",
+    "name": "Болезнь Кавасаки"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "2123-gematuriya",
+    "name": "Гематурия"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   }
+  ]
+ },
+ {
+  "alias": "khirurg-oftalmolog",
+  "name": "Хирург-офтальмолог",
+  "diseases": [
+   {
+    "alias": "329-atrofija-zritelynogo-nerva",
+    "name": "Атрофия зрительного нерва"
+   },
+   {
+    "alias": "351-ishemicheskaya-neyropatiya-zritelnogo-nerva",
+    "name": "Ишемическая нейропатия зрительного нерва"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "1264-astigmatizm-u-detey",
+    "name": "Астигматизм у детей"
+   },
+   {
+    "alias": "48-yachmen",
+    "name": "Ячмень"
+   },
+   {
+    "alias": "79-astigmatizm",
+    "name": "Астигматизм"
+   },
+   {
+    "alias": "89-blizorukost",
+    "name": "Близорукость"
+   },
+   {
+    "alias": "202-konyunktivit",
+    "name": "Конъюнктивит"
+   },
+   {
+    "alias": "203-kosoglazie",
+    "name": "Косоглазие"
+   },
+   {
+    "alias": "327-ambliopiya",
+    "name": "Амблиопия"
+   },
+   {
+    "alias": "328-astenopiya",
+    "name": "Астенопия"
+   },
+   {
+    "alias": "330-belmo",
+    "name": "Бельмо"
+   },
+   {
+    "alias": "332-blefarit",
+    "name": "Блефарит"
+   },
+   {
+    "alias": "339-glioma-zritelnogo-nerva",
+    "name": "Глиома зрительного нерва"
+   }
+  ]
+ },
+ {
+  "alias": "301-semeynyiy-psiholog",
+  "name": "Семейный психолог",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "1311-zaderjka-psihicheskogo-razvitiya-zpr",
+    "name": "Задержка психического развития (ЗПР)"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "1856-zaikanie-u-detey",
+    "name": "Заикание у детей"
+   },
+   {
+    "alias": "20-fobiya",
+    "name": "Фобия"
+   },
+   {
+    "alias": "apatiya",
+    "name": "Апатия"
+   },
+   {
+    "alias": "200-kompleks-nepolnotsennosti",
+    "name": "Комплекс неполноценности"
+   },
+   {
+    "alias": "222-maniakalno-depressivnyiy-psihoz",
+    "name": "Маниакально-депрессивный психоз"
+   },
+   {
+    "alias": "1983-generalizovannoe-trevojnoe-rasstroystvo",
+    "name": "Генерализованное тревожное расстройство"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "1989-dissotsiativnyie-rasstroystva",
+    "name": "Диссоциативные расстройства"
+   }
+  ]
+ },
+ {
+  "alias": "epileptolog",
+  "name": "Эпилептолог",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "44-epilepsiya",
+    "name": "Эпилепсия"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "435-bessonnitsa",
+    "name": "Бессонница"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   },
+   {
+    "alias": "83-afaziya",
+    "name": "Афазия"
+   },
+   {
+    "alias": "64-amneziya",
+    "name": "Амнезия"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   }
+  ]
+ },
+ {
+  "alias": "instructor-lfk",
+  "name": "Инструктор ЛФК",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "1852-dizartriya",
+    "name": "Дизартрия"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "448-golovnaya-bol-pri-beremennosti",
+    "name": "Головная боль при беременности"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "254-osteohondroz-kresttsovyiy",
+    "name": "Остеохондроз крестцовый"
+   },
+   {
+    "alias": "255-osteohondroz-poyasnichnyiy",
+    "name": "Остеохондроз поясничный"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   }
+  ]
+ },
+ {
+  "alias": "logoped-defektolog",
+  "name": "Логопед-дефектолог",
+  "diseases": [
+   {
+    "alias": "1852-dizartriya",
+    "name": "Дизартрия"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "430-agnoziya",
+    "name": "Агнозия"
+   },
+   {
+    "alias": "83-afaziya",
+    "name": "Афазия"
+   },
+   {
+    "alias": "161-disleksiya",
+    "name": "Дислексия"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "192-kartavost",
+    "name": "Картавость"
+   },
+   {
+    "alias": "1850-alaliya",
+    "name": "Алалия"
+   },
+   {
+    "alias": "1851-bradilaliya",
+    "name": "Брадилалия"
+   },
+   {
+    "alias": "1858-obschee-nedorazvitie-rechi-onr",
+    "name": "Общее недоразвитие речи (ОНР)"
+   },
+   {
+    "alias": "1861-fonetiko-fonematicheskoe-nedorazvitie-ffn",
+    "name": "Фонетико-фонематическое недоразвитие (ФФН)"
+   },
+   {
+    "alias": "1186-gluhota",
+    "name": "Глухота"
+   }
+  ]
+ },
+ {
+  "alias": "defektolog",
+  "name": "Дефектолог",
+  "diseases": [
+   {
+    "alias": "1852-dizartriya",
+    "name": "Дизартрия"
+   },
+   {
+    "alias": "1855-zaderjka-rechevogo-razvitiya",
+    "name": "Задержка речевого развития"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "83-afaziya",
+    "name": "Афазия"
+   },
+   {
+    "alias": "161-disleksiya",
+    "name": "Дислексия"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "192-kartavost",
+    "name": "Картавость"
+   },
+   {
+    "alias": "1853-disgrafiya",
+    "name": "Дисграфия"
+   },
+   {
+    "alias": "1854-dislaliya",
+    "name": "Дислалия"
+   },
+   {
+    "alias": "1858-obschee-nedorazvitie-rechi-onr",
+    "name": "Общее недоразвитие речи (ОНР)"
+   },
+   {
+    "alias": "1859-rinolaliya",
+    "name": "Ринолалия"
+   },
+   {
+    "alias": "1860-tahilaliya",
+    "name": "Тахилалия"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   }
+  ]
+ },
+ {
+  "alias": "detskyi-khirurg",
+  "name": "Детский хирург",
+  "diseases": [
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "500-abstsess-myagkih-tkaney",
+    "name": "Абсцесс мягких тканей"
+   },
+   {
+    "alias": "1261-appenditsit-u-detey",
+    "name": "Аппендицит у детей"
+   },
+   {
+    "alias": "1277-vrojdennyiy-stridor",
+    "name": "Врожденный стридор"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "2125-gidronefroz",
+    "name": "Гидронефроз"
+   }
+  ]
+ },
+ {
+  "alias": "detski-ginekolog",
+  "name": "Детский гинеколог",
+  "diseases": [
+   {
+    "alias": "139-gipogonadizm",
+    "name": "Гипогонадизм"
+   },
+   {
+    "alias": "40-endometrioz",
+    "name": "Эндометриоз"
+   },
+   {
+    "alias": "55-adneksit",
+    "name": "Аднексит"
+   },
+   {
+    "alias": "61-algomenoreya",
+    "name": "Альгоменорея"
+   },
+   {
+    "alias": "62-amenoreya",
+    "name": "Аменорея"
+   },
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   },
+   {
+    "alias": "102-vaginit",
+    "name": "Вагинит"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   },
+   {
+    "alias": "250-ooforit",
+    "name": "Оофорит"
+   },
+   {
+    "alias": "269-predmenstrualnyiy-sindrom-pms",
+    "name": "Предменструальный синдром (ПМС)"
+   },
+   {
+    "alias": "1406-adenomioz",
+    "name": "Аденомиоз"
+   }
+  ]
+ },
+ {
+  "alias": "urolog-androlog",
+  "name": "Уролог-андролог",
+  "diseases": [
+   {
+    "alias": "139-gipogonadizm",
+    "name": "Гипогонадизм"
+   },
+   {
+    "alias": "16-ureaplazma",
+    "name": "Уреаплазма"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "246-nefrit",
+    "name": "Нефрит"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "2126-giperaktivnyiy-mochevoy-puzyir",
+    "name": "Гиперактивный мочевой пузырь"
+   },
+   {
+    "alias": "2128-gipospadiya",
+    "name": "Гипоспадия"
+   },
+   {
+    "alias": "2131-divertikul-mochevogo-puzyirya",
+    "name": "Дивертикул мочевого пузыря"
+   },
+   {
+    "alias": "2132-divertikul-mocheispuskatelnogo-kanala",
+    "name": "Дивертикул мочеиспускательного канала"
+   },
+   {
+    "alias": "2135-dobrokachestvennyie-opuholi-mochevogo-puzyirya",
+    "name": "Доброкачественные опухоли мочевого пузыря"
+   },
+   {
+    "alias": "2136-dobrokachestvennyie-opuholi-uretryi",
+    "name": "Доброкачественные опухоли уретры"
+   }
+  ]
+ },
+ {
+  "alias": "rentgenolog",
+  "name": "Рентгенолог",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "431-anomaliya-arnolda-kiari",
+    "name": "Аномалия Арнольда-Киари"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "40-endometrioz",
+    "name": "Эндометриоз"
+   }
+  ]
+ },
+ {
+  "alias": "angiokhirurg",
+  "name": "Ангиохирург (сосудистый хирург)",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "2202-diabeticheskaya-makroangiopatiya",
+    "name": "Диабетическая макроангиопатия"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "451-diabeticheskaya-neyropatiya",
+    "name": "Диабетическая нейропатия"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "287-saharnyiy-diabet-ii-tipa",
+    "name": "Сахарный диабет II типа"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "1261-appenditsit-u-detey",
+    "name": "Аппендицит у детей"
+   },
+   {
+    "alias": "1262-aritmiya-u-detey",
+    "name": "Аритмия у детей"
+   },
+   {
+    "alias": "1282-gemangioma-u-detey",
+    "name": "Гемангиома у детей"
+   }
+  ]
+ },
+ {
+  "alias": "neonatolog",
+  "name": "Неонатолог",
+  "diseases": [
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "44-epilepsiya",
+    "name": "Эпилепсия"
+   },
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "51-avitaminoz",
+    "name": "Авитаминоз"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1260-anemiya-u-detey",
+    "name": "Анемия у детей"
+   },
+   {
+    "alias": "1265-asfiksiya-novorojdennogo-an",
+    "name": "Асфиксия новорожденного (АН)"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "288-epidemicheskiy-parotit-svinka",
+    "name": "Эпидемический паротит (свинка)"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   }
+  ]
+ },
+ {
+  "alias": "detskyi-urolog",
+  "name": "Детский уролог",
+  "diseases": [
+   {
+    "alias": "1336-neyrogennyiy-mochevoy-puzyir-u-detey",
+    "name": "Нейрогенный мочевой пузырь у детей"
+   },
+   {
+    "alias": "2153-neyrogennyiy-mochevoy-puzyir",
+    "name": "Нейрогенный мочевой пузырь"
+   },
+   {
+    "alias": "1268-balanopostit-u-malchikov",
+    "name": "Баланопостит у мальчиков"
+   },
+   {
+    "alias": "1274-vodyanka-yaichka-u-malchika",
+    "name": "Водянка яичка у мальчика"
+   },
+   {
+    "alias": "1277-vrojdennyiy-stridor",
+    "name": "Врожденный стридор"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "2125-gidronefroz",
+    "name": "Гидронефроз"
+   },
+   {
+    "alias": "2126-giperaktivnyiy-mochevoy-puzyir",
+    "name": "Гиперактивный мочевой пузырь"
+   },
+   {
+    "alias": "2128-gipospadiya",
+    "name": "Гипоспадия"
+   },
+   {
+    "alias": "2131-divertikul-mochevogo-puzyirya",
+    "name": "Дивертикул мочевого пузыря"
+   }
+  ]
+ },
+ {
+  "alias": "revmatolog",
+  "name": "Ревматолог",
+  "diseases": [
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "506-artroz-golenostopnogo-sustava-ags",
+    "name": "Артроз голеностопного сустава (АГС)"
+   },
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   },
+   {
+    "alias": "511-bolezn-behtereva",
+    "name": "Болезнь Бехтерева"
+   },
+   {
+    "alias": "1263-artrit-u-detey",
+    "name": "Артрит у детей"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   }
+  ]
+ },
+ {
+  "alias": "iglorefleksoterapevt",
+  "name": "Иглорефлексотерапевт",
+  "diseases": [
+   {
+    "alias": "242-nevralgiya-sedalischnogo-nerva",
+    "name": "Невралгия седалищного нерва"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "75-apraksiya",
+    "name": "Апраксия"
+   },
+   {
+    "alias": "90-bolezn-altsgeymera",
+    "name": "Болезнь Альцгеймера"
+   },
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "171-zaikanie",
+    "name": "Заикание"
+   },
+   {
+    "alias": "509-atrofiya-myishts",
+    "name": "Атрофия мышц"
+   }
+  ]
+ },
+ {
+  "alias": "vrach-skoroy-pomoshchi",
+  "name": "Врач скорой помощи",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "454-distsirkulyatornaya-entsefalopatiya",
+    "name": "Дисциркуляторная энцефалопатия"
+   },
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "243-nevroz",
+    "name": "Невроз"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "179-igromaniya",
+    "name": "Игромания"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   }
+  ]
+ },
+ {
+  "alias": "akusher-ginekolog-reproduktolog",
+  "name": "Акушер-гинеколог-репродуктолог",
+  "diseases": [
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "7-toksikoz-beremennyih",
+    "name": "Токсикоз беременных"
+   },
+   {
+    "alias": "54-adenomioz-tela-matki",
+    "name": "Аденомиоз тела матки"
+   },
+   {
+    "alias": "62-amenoreya",
+    "name": "Аменорея"
+   },
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   },
+   {
+    "alias": "1407-anovulyatornyiy-tsikl",
+    "name": "Ановуляторный цикл"
+   },
+   {
+    "alias": "1408-apopleksiya-yaichnika",
+    "name": "Апоплексия яичника"
+   }
+  ]
+ },
+ {
+  "alias": "detskyi-gastroenterolog",
+  "name": "Детский гастроэнтеролог",
+  "diseases": [
+   {
+    "alias": "2189-atrofiya-podjeludochnoy-jelezyi",
+    "name": "Атрофия поджелудочной железы"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1276-vrojdennyiy-pilorostenoz",
+    "name": "Врожденный пилоростеноз"
+   },
+   {
+    "alias": "1279-gastrit-u-detey",
+    "name": "Гастрит у детей"
+   },
+   {
+    "alias": "1280-gastroduodenit-u-detey",
+    "name": "Гастродуоденит у детей"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "27-holetsistit",
+    "name": "Холецистит"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   }
+  ]
+ },
+ {
+  "alias": "gepatolog",
+  "name": "Гепатолог",
+  "diseases": [
+   {
+    "alias": "446-golovnaya-bol-v-viskah",
+    "name": "Головная боль в висках"
+   },
+   {
+    "alias": "447-golovnaya-bol-v-zatyilke",
+    "name": "Головная боль в затылке"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "241-nevralgiya",
+    "name": "Невралгия"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "437-bolezn-vilsona-konovalova",
+    "name": "Болезнь Вильсона-Коновалова"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "1987-depressiya",
+    "name": "Депрессия"
+   },
+   {
+    "alias": "934-kamni-v-jelchnom-puzyire",
+    "name": "Камни в желчном пузыре"
+   }
+  ]
+ },
+ {
+  "alias": "detskyi-khirurg-urolog",
+  "name": "Детский хирург-уролог",
+  "diseases": [
+   {
+    "alias": "1336-neyrogennyiy-mochevoy-puzyir-u-detey",
+    "name": "Нейрогенный мочевой пузырь у детей"
+   },
+   {
+    "alias": "173-zob",
+    "name": "Зоб"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "934-kamni-v-jelchnom-puzyire",
+    "name": "Камни в желчном пузыре"
+   },
+   {
+    "alias": "2126-giperaktivnyiy-mochevoy-puzyir",
+    "name": "Гиперактивный мочевой пузырь"
+   },
+   {
+    "alias": "2128-gipospadiya",
+    "name": "Гипоспадия"
+   },
+   {
+    "alias": "2131-divertikul-mochevogo-puzyirya",
+    "name": "Дивертикул мочевого пузыря"
+   },
+   {
+    "alias": "2132-divertikul-mocheispuskatelnogo-kanala",
+    "name": "Дивертикул мочеиспускательного канала"
+   }
+  ]
+ },
+ {
+  "alias": "sportivnyy-vrach",
+  "name": "Спортивный врач",
+  "diseases": [
+   {
+    "alias": "445-golovnaya-bol",
+    "name": "Головная боль"
+   },
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "272-plantarnyiy-fastsiit",
+    "name": "Плантарный фасциит"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   }
+  ]
+ },
+ {
+  "alias": "detskij-nevropatolog",
+  "name": "Детский невропатолог",
+  "diseases": [
+   {
+    "alias": "1311-zaderjka-psihicheskogo-razvitiya-zpr",
+    "name": "Задержка психического развития (ЗПР)"
+   },
+   {
+    "alias": "1984-giperaktivnost",
+    "name": "Гиперактивность"
+   },
+   {
+    "alias": "75-apraksiya",
+    "name": "Апраксия"
+   },
+   {
+    "alias": "82-autizm",
+    "name": "Аутизм"
+   },
+   {
+    "alias": "131-gidrotsefaliya",
+    "name": "Гидроцефалия"
+   },
+   {
+    "alias": "149-dementsiya",
+    "name": "Деменция"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "1273-vnutricherepnaya-rodovaya-travma",
+    "name": "Внутричерепная родовая травма"
+   }
+  ]
+ },
+ {
+  "alias": "infektsionist",
+  "name": "Инфекционист",
+  "diseases": [
+   {
+    "alias": "63-amiloidoz",
+    "name": "Амилоидоз"
+   },
+   {
+    "alias": "286-saharnyiy-diabet-i-tipa",
+    "name": "Сахарный диабет I типа"
+   },
+   {
+    "alias": "287-saharnyiy-diabet-ii-tipa",
+    "name": "Сахарный диабет II типа"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1281-gelmintozyi-u-detey",
+    "name": "Гельминтозы у детей"
+   },
+   {
+    "alias": "288-epidemicheskiy-parotit-svinka",
+    "name": "Эпидемический паротит (свинка)"
+   },
+   {
+    "alias": "323-adenovirusnyiy-konyunktivit-ak",
+    "name": "Аденовирусный конъюнктивит (АК)"
+   },
+   {
+    "alias": "246-nefrit",
+    "name": "Нефрит"
+   }
+  ]
+ },
+ {
+  "alias": "venerolog",
+  "name": "Венеролог",
+  "diseases": [
+   {
+    "alias": "1268-balanopostit-u-malchikov",
+    "name": "Баланопостит у мальчиков"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "16-ureaplazma",
+    "name": "Уреаплазма"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   },
+   {
+    "alias": "55-adneksit",
+    "name": "Аднексит"
+   },
+   {
+    "alias": "102-vaginit",
+    "name": "Вагинит"
+   },
+   {
+    "alias": "197-klimaks",
+    "name": "Климакс"
+   }
+  ]
+ },
+ {
+  "alias": "plasticheskiy-khirurg",
+  "name": "Пластический хирург",
+  "diseases": [
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "196-kifoz",
+    "name": "Кифоз"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "500-abstsess-myagkih-tkaney",
+    "name": "Абсцесс мягких тканей"
+   },
+   {
+    "alias": "1192-inorodnoe-telo-glotki",
+    "name": "Инородное тело глотки"
+   },
+   {
+    "alias": "934-kamni-v-jelchnom-puzyire",
+    "name": "Камни в желчном пузыре"
+   }
+  ]
+ },
+ {
+  "alias": "immunolog",
+  "name": "Иммунолог",
+  "diseases": [
+   {
+    "alias": "5-tireoidit",
+    "name": "Тиреоидит"
+   },
+   {
+    "alias": "63-amiloidoz",
+    "name": "Амилоидоз"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "280-atroficheskiy-rinit",
+    "name": "Атрофический ринит"
+   },
+   {
+    "alias": "48-yachmen",
+    "name": "Ячмень"
+   },
+   {
+    "alias": "325-allergicheskiy-konyunktivit",
+    "name": "Аллергический конъюнктивит"
+   }
+  ]
+ },
+ {
+  "alias": "endoskopist",
+  "name": "Эндоскопист",
+  "diseases": [
+   {
+    "alias": "173-zob",
+    "name": "Зоб"
+   },
+   {
+    "alias": "286-saharnyiy-diabet-i-tipa",
+    "name": "Сахарный диабет I типа"
+   },
+   {
+    "alias": "287-saharnyiy-diabet-ii-tipa",
+    "name": "Сахарный диабет II типа"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "1276-vrojdennyiy-pilorostenoz",
+    "name": "Врожденный пилоростеноз"
+   },
+   {
+    "alias": "1280-gastroduodenit-u-detey",
+    "name": "Гастродуоденит у детей"
+   },
+   {
+    "alias": "1189-zabolevaniya-uha",
+    "name": "Заболевания уха"
+   }
+  ]
+ },
+ {
+  "alias": "anesteziolog",
+  "name": "Анестезиолог",
+  "diseases": [
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "1189-zabolevaniya-uha",
+    "name": "Заболевания уха"
+   },
+   {
+    "alias": "48-yachmen",
+    "name": "Ячмень"
+   },
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "246-nefrit",
+    "name": "Нефрит"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   }
+  ]
+ },
+ {
+  "alias": "surdolog",
+  "name": "Сурдолог",
+  "diseases": [
+   {
+    "alias": "1861-fonetiko-fonematicheskoe-nedorazvitie-ffn",
+    "name": "Фонетико-фонематическое недоразвитие (ФФН)"
+   },
+   {
+    "alias": "13-tugouhost",
+    "name": "Тугоухость"
+   },
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1186-gluhota",
+    "name": "Глухота"
+   },
+   {
+    "alias": "1189-zabolevaniya-uha",
+    "name": "Заболевания уха"
+   }
+  ]
+ },
+ {
+  "alias": "spetsialist-funktsionalnoy-diagnostiki",
+  "name": "Специалист функциональной диагностики",
+  "diseases": [
+   {
+    "alias": "165-dorzalgiya",
+    "name": "Дорзалгия"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "503-anomalii-razvitiya-kolennogo-sustava-arks",
+    "name": "Аномалии развития коленного сустава (АРКС)"
+   },
+   {
+    "alias": "1262-aritmiya-u-detey",
+    "name": "Аритмия у детей"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "2123-gematuriya",
+    "name": "Гематурия"
+   }
+  ]
+ },
+ {
+  "alias": "detskiy-ortoped",
+  "name": "Детский ортопед",
+  "diseases": [
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1263-artrit-u-detey",
+    "name": "Артрит у детей"
+   },
+   {
+    "alias": "1277-vrojdennyiy-stridor",
+    "name": "Врожденный стридор"
+   },
+   {
+    "alias": "248-nefroptoz",
+    "name": "Нефроптоз"
+   }
+  ]
+ },
+ {
+  "alias": "ginekolog-onkolog",
+  "name": "Гинеколог-онколог",
+  "diseases": [
+   {
+    "alias": "29-tservitsit",
+    "name": "Цервицит"
+   },
+   {
+    "alias": "40-endometrioz",
+    "name": "Эндометриоз"
+   },
+   {
+    "alias": "55-adneksit",
+    "name": "Аднексит"
+   },
+   {
+    "alias": "61-algomenoreya",
+    "name": "Альгоменорея"
+   },
+   {
+    "alias": "1406-adenomioz",
+    "name": "Аденомиоз"
+   },
+   {
+    "alias": "1408-apopleksiya-yaichnika",
+    "name": "Апоплексия яичника"
+   },
+   {
+    "alias": "1409-atreziya-vlagalischa",
+    "name": "Атрезия влагалища"
+   }
+  ]
+ },
+ {
+  "alias": "pulmonolog",
+  "name": "Пульмонолог",
+  "diseases": [
+   {
+    "alias": "303-skolioz",
+    "name": "Сколиоз"
+   },
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "253-osteoporoz",
+    "name": "Остеопороз"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   }
+  ]
+ },
+ {
+  "alias": "reproduktolog-eko",
+  "name": "Репродуктолог (лечение бесплодия)",
+  "diseases": [
+   {
+    "alias": "448-golovnaya-bol-pri-beremennosti",
+    "name": "Головная боль при беременности"
+   },
+   {
+    "alias": "273-radikulit",
+    "name": "Радикулит"
+   },
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   },
+   {
+    "alias": "1412-atroficheskiy-vaginit",
+    "name": "Атрофический вагинит"
+   }
+  ]
+ },
+ {
+  "alias": "allergolog-immunolog",
+  "name": "Аллерголог-иммунолог",
+  "diseases": [
+   {
+    "alias": "1266-atopicheskiy-dermatit-u-detey",
+    "name": "Атопический дерматит у детей"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "202-konyunktivit",
+    "name": "Конъюнктивит"
+   },
+   {
+    "alias": "325-allergicheskiy-konyunktivit",
+    "name": "Аллергический конъюнктивит"
+   },
+   {
+    "alias": "326-allergicheskiy-konyunktivit-u-detey",
+    "name": "Аллергический конъюнктивит у детей"
+   }
+  ]
+ },
+ {
+  "alias": "maloinvazivnyy-khirurg",
+  "name": "Малоинвазивный хирург",
+  "diseases": [
+   {
+    "alias": "230-migren",
+    "name": "Мигрень"
+   },
+   {
+    "alias": "18-feohromotsitoma",
+    "name": "Феохромоцитома"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "1261-appenditsit-u-detey",
+    "name": "Аппендицит у детей"
+   }
+  ]
+ },
+ {
+  "alias": "nutritsiolog",
+  "name": "Нутрициолог",
+  "diseases": [
+   {
+    "alias": "451-diabeticheskaya-neyropatiya",
+    "name": "Диабетическая нейропатия"
+   },
+   {
+    "alias": "101-bulimiya",
+    "name": "Булимия"
+   },
+   {
+    "alias": "1279-gastrit-u-detey",
+    "name": "Гастрит у детей"
+   },
+   {
+    "alias": "71-anoreksiya",
+    "name": "Анорексия"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   }
+  ]
+ },
+ {
+  "alias": "neyrokhirurgiya-detskaya",
+  "name": "Детский нейрохирург",
+  "diseases": [
+   {
+    "alias": "1295-golovnaya-bol-u-detey",
+    "name": "Головная боль у детей"
+   },
+   {
+    "alias": "131-gidrotsefaliya",
+    "name": "Гидроцефалия"
+   },
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   },
+   {
+    "alias": "1273-vnutricherepnaya-rodovaya-travma",
+    "name": "Внутричерепная родовая травма"
+   }
+  ]
+ },
+ {
+  "alias": "reanimatolog",
+  "name": "Реаниматолог",
+  "diseases": [
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   },
+   {
+    "alias": "1265-asfiksiya-novorojdennogo-an",
+    "name": "Асфиксия новорожденного (АН)"
+   },
+   {
+    "alias": "1273-vnutricherepnaya-rodovaya-travma",
+    "name": "Внутричерепная родовая травма"
+   },
+   {
+    "alias": "48-yachmen",
+    "name": "Ячмень"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   }
+  ]
+ },
+ {
+  "alias": "logoped-psikholog",
+  "name": "Логопед-психолог",
+  "diseases": [
+   {
+    "alias": "430-agnoziya",
+    "name": "Агнозия"
+   },
+   {
+    "alias": "1850-alaliya",
+    "name": "Алалия"
+   },
+   {
+    "alias": "1851-bradilaliya",
+    "name": "Брадилалия"
+   },
+   {
+    "alias": "1861-fonetiko-fonematicheskoe-nedorazvitie-ffn",
+    "name": "Фонетико-фонематическое недоразвитие (ФФН)"
+   },
+   {
+    "alias": "1186-gluhota",
+    "name": "Глухота"
+   }
+  ]
+ },
+ {
+  "alias": "detskyi-kardiolog",
+  "name": "Детский кардиолог",
+  "diseases": [
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   },
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "1270-bolezn-kavasaki",
+    "name": "Болезнь Кавасаки"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   }
+  ]
+ },
+ {
+  "alias": "pediatr-infekcionist",
+  "name": "Педиатр-инфекционист",
+  "diseases": [
+   {
+    "alias": "1271-vnezapnaya-ekzantema",
+    "name": "Внезапная экзантема"
+   },
+   {
+    "alias": "1278-galaktozemiya",
+    "name": "Галактоземия"
+   },
+   {
+    "alias": "1281-gelmintozyi-u-detey",
+    "name": "Гельминтозы у детей"
+   },
+   {
+    "alias": "288-epidemicheskiy-parotit-svinka",
+    "name": "Эпидемический паротит (свинка)"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   }
+  ]
+ },
+ {
+  "alias": "lor-otolaringolog-khirurg",
+  "name": "ЛОР (Отоларинголог)-хирург",
+  "diseases": [
+   {
+    "alias": "280-atroficheskiy-rinit",
+    "name": "Атрофический ринит"
+   },
+   {
+    "alias": "1175-adgezivnyiy-sredniy-otit",
+    "name": "Адгезивный средний отит"
+   },
+   {
+    "alias": "1176-adenoidyi",
+    "name": "Аденоиды"
+   },
+   {
+    "alias": "1177-adenoidyi-u-detey",
+    "name": "Аденоиды у детей"
+   },
+   {
+    "alias": "1180-atreziya-hoan",
+    "name": "Атрезия хоан"
+   }
+  ]
+ },
+ {
+  "alias": "urolog-nefrolog",
+  "name": "Уролог-нефролог",
+  "diseases": [
+   {
+    "alias": "144-glomerulonefrit",
+    "name": "Гломерулонефрит"
+   },
+   {
+    "alias": "2121-amiloidoz-pochek",
+    "name": "Амилоидоз почек"
+   },
+   {
+    "alias": "2123-gematuriya",
+    "name": "Гематурия"
+   },
+   {
+    "alias": "2125-gidronefroz",
+    "name": "Гидронефроз"
+   },
+   {
+    "alias": "2127-gipernefroma-pochki",
+    "name": "Гипернефрома почки"
+   }
+  ]
+ },
+ {
+  "alias": "urolog-khirurg",
+  "name": "Уролог-хирург",
+  "diseases": [
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   },
+   {
+    "alias": "2125-gidronefroz",
+    "name": "Гидронефроз"
+   },
+   {
+    "alias": "2128-gipospadiya",
+    "name": "Гипоспадия"
+   }
+  ]
+ },
+ {
+  "alias": "ginekolog-khirurg",
+  "name": "Гинеколог-хирург",
+  "diseases": [
+   {
+    "alias": "1408-apopleksiya-yaichnika",
+    "name": "Апоплексия яичника"
+   },
+   {
+    "alias": "1409-atreziya-vlagalischa",
+    "name": "Атрезия влагалища"
+   },
+   {
+    "alias": "1410-atreziya-devstvennoy-plevyi",
+    "name": "Атрезия девственной плевы"
+   },
+   {
+    "alias": "1411-atreziya-matki",
+    "name": "Атрезия матки"
+   },
+   {
+    "alias": "1412-atroficheskiy-vaginit",
+    "name": "Атрофический вагинит"
+   }
+  ]
+ },
+ {
+  "alias": "chelyustno-litsevaya-khirurgiya",
+  "name": "Челюстно-лицевой хирург",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "500-abstsess-myagkih-tkaney",
+    "name": "Абсцесс мягких тканей"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1190-zabolevaniya-ushey",
+    "name": "Заболевания ушей"
+   }
+  ]
+ },
+ {
+  "alias": "mammolog",
+  "name": "Маммолог",
+  "diseases": [
+   {
+    "alias": "1445-diffuznaya-mastopatiya",
+    "name": "Диффузная мастопатия"
+   },
+   {
+    "alias": "135-giperprolaktinemiya",
+    "name": "Гиперпролактинемия"
+   },
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "195-kista",
+    "name": "Киста"
+   }
+  ]
+ },
+ {
+  "alias": "khirurg-ortoped",
+  "name": "Хирург-ортопед",
+  "diseases": [
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   }
+  ]
+ },
+ {
+  "alias": "gastroenterolog-khirurg",
+  "name": "Гастроэнтеролог-хирург",
+  "diseases": [
+   {
+    "alias": "2189-atrofiya-podjeludochnoy-jelezyi",
+    "name": "Атрофия поджелудочной железы"
+   },
+   {
+    "alias": "1261-appenditsit-u-detey",
+    "name": "Аппендицит у детей"
+   },
+   {
+    "alias": "1276-vrojdennyiy-pilorostenoz",
+    "name": "Врожденный пилоростеноз"
+   },
+   {
+    "alias": "27-holetsistit",
+    "name": "Холецистит"
+   }
+  ]
+ },
+ {
+  "alias": "gastroenterolog-endoskopist",
+  "name": "Гастроэнтеролог-эндоскопист",
+  "diseases": [
+   {
+    "alias": "2189-atrofiya-podjeludochnoy-jelezyi",
+    "name": "Атрофия поджелудочной железы"
+   },
+   {
+    "alias": "1276-vrojdennyiy-pilorostenoz",
+    "name": "Врожденный пилоростеноз"
+   },
+   {
+    "alias": "1279-gastrit-u-detey",
+    "name": "Гастрит у детей"
+   },
+   {
+    "alias": "1280-gastroduodenit-u-detey",
+    "name": "Гастродуоденит у детей"
+   }
+  ]
+ },
+ {
+  "alias": "pediatr-pulmonolog",
+  "name": "Педиатр-пульмонолог",
+  "diseases": [
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   },
+   {
+    "alias": "1981-asteniya",
+    "name": "Астения"
+   }
+  ]
+ },
+ {
+  "alias": "pediatr-neonatolog",
+  "name": "Педиатр-неонатолог",
+  "diseases": [
+   {
+    "alias": "1265-asfiksiya-novorojdennogo-an",
+    "name": "Асфиксия новорожденного (АН)"
+   },
+   {
+    "alias": "1271-vnezapnaya-ekzantema",
+    "name": "Внезапная экзантема"
+   },
+   {
+    "alias": "1272-vnutriutrobnyie-infektsii",
+    "name": "Внутриутробные инфекции"
+   },
+   {
+    "alias": "1278-galaktozemiya",
+    "name": "Галактоземия"
+   }
+  ]
+ },
+ {
+  "alias": "venerolog-ginekolog",
+  "name": "Венеролог-гинеколог",
+  "diseases": [
+   {
+    "alias": "1268-balanopostit-u-malchikov",
+    "name": "Баланопостит у мальчиков"
+   },
+   {
+    "alias": "16-ureaplazma",
+    "name": "Уреаплазма"
+   },
+   {
+    "alias": "102-vaginit",
+    "name": "Вагинит"
+   },
+   {
+    "alias": "1412-atroficheskiy-vaginit",
+    "name": "Атрофический вагинит"
+   }
+  ]
+ },
+ {
+  "alias": "khirurg-urolog",
+  "name": "Хирург-уролог",
+  "diseases": [
+   {
+    "alias": "2131-divertikul-mochevogo-puzyirya",
+    "name": "Дивертикул мочевого пузыря"
+   },
+   {
+    "alias": "2134-distopiya-pochki",
+    "name": "Дистопия почки"
+   },
+   {
+    "alias": "2135-dobrokachestvennyie-opuholi-mochevogo-puzyirya",
+    "name": "Доброкачественные опухоли мочевого пузыря"
+   },
+   {
+    "alias": "2136-dobrokachestvennyie-opuholi-uretryi",
+    "name": "Доброкачественные опухоли уретры"
+   }
+  ]
+ },
+ {
+  "alias": "stomatolog",
+  "name": "Стоматолог",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   },
+   {
+    "alias": "1185-vospalenie-slyunnoy-jelezyi",
+    "name": "Воспаление слюнной железы"
+   }
+  ]
+ },
+ {
+  "alias": "flebolog",
+  "name": "Флеболог",
+  "diseases": [
+   {
+    "alias": "2202-diabeticheskaya-makroangiopatiya",
+    "name": "Диабетическая макроангиопатия"
+   },
+   {
+    "alias": "1811-sindrom-klaynfeltera-sk",
+    "name": "Синдром Клайнфельтера (СК)"
+   },
+   {
+    "alias": "247-nevyinashivanie-beremennosti",
+    "name": "Невынашивание  беременности"
+   }
+  ]
+ },
+ {
+  "alias": "diagnost",
+  "name": "Диагност",
+  "diseases": [
+   {
+    "alias": "480-perinatalnaya-entsefalopatiya",
+    "name": "Перинатальная энцефалопатия"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   }
+  ]
+ },
+ {
+  "alias": "logoped-reabilitolog",
+  "name": "Логопед-реабилитолог",
+  "diseases": [
+   {
+    "alias": "430-agnoziya",
+    "name": "Агнозия"
+   },
+   {
+    "alias": "1861-fonetiko-fonematicheskoe-nedorazvitie-ffn",
+    "name": "Фонетико-фонематическое недоразвитие (ФФН)"
+   },
+   {
+    "alias": "1186-gluhota",
+    "name": "Глухота"
+   }
+  ]
+ },
+ {
+  "alias": "proktolog",
+  "name": "Проктолог",
+  "diseases": [
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "272-plantarnyiy-fastsiit",
+    "name": "Плантарный фасциит"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   }
+  ]
+ },
+ {
+  "alias": "podolog",
+  "name": "Подолог",
+  "diseases": [
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   },
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   }
+  ]
+ },
+ {
+  "alias": "radiolog",
+  "name": "Радиолог",
+  "diseases": [
+   {
+    "alias": "174-diffuznyiy-zob",
+    "name": "Диффузный зоб"
+   },
+   {
+    "alias": "252-osteoartroz",
+    "name": "Остеоартроз"
+   },
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   }
+  ]
+ },
+ {
+  "alias": "lor-otolaringolog-surdolog",
+  "name": "ЛОР (Отоларинголог)-сурдолог",
+  "diseases": [
+   {
+    "alias": "1861-fonetiko-fonematicheskoe-nedorazvitie-ffn",
+    "name": "Фонетико-фонематическое недоразвитие (ФФН)"
+   },
+   {
+    "alias": "13-tugouhost",
+    "name": "Тугоухость"
+   },
+   {
+    "alias": "1186-gluhota",
+    "name": "Глухота"
+   }
+  ]
+ },
+ {
+  "alias": "surdoakustik",
+  "name": "Сурдоакустик",
+  "diseases": [
+   {
+    "alias": "1861-fonetiko-fonematicheskoe-nedorazvitie-ffn",
+    "name": "Фонетико-фонематическое недоразвитие (ФФН)"
+   },
+   {
+    "alias": "13-tugouhost",
+    "name": "Тугоухость"
+   },
+   {
+    "alias": "1186-gluhota",
+    "name": "Глухота"
+   }
+  ]
+ },
+ {
+  "alias": "detskiy-travmatolog",
+  "name": "Детский травматолог",
+  "diseases": [
+   {
+    "alias": "204-kosolapost",
+    "name": "Косолапость"
+   },
+   {
+    "alias": "208-krivosheya",
+    "name": "Кривошея"
+   },
+   {
+    "alias": "268-ploskostopie",
+    "name": "Плоскостопие"
+   }
+  ]
+ },
+ {
+  "alias": "meditsinskaya-reabilitologiya-detskaya",
+  "name": "Детский реабилитолог",
+  "diseases": [
+   {
+    "alias": "475-osteohondroz",
+    "name": "Остеохондроз"
+   },
+   {
+    "alias": "505-artroz",
+    "name": "Артроз"
+   },
+   {
+    "alias": "1273-vnutricherepnaya-rodovaya-travma",
+    "name": "Внутричерепная родовая травма"
+   }
+  ]
+ },
+ {
+  "alias": "spetsialist-luchevoy-diagnostiki",
+  "name": "Специалист лучевой диагностики",
+  "diseases": [
+   {
+    "alias": "503-anomalii-razvitiya-kolennogo-sustava-arks",
+    "name": "Аномалии развития коленного сустава (АРКС)"
+   },
+   {
+    "alias": "2121-amiloidoz-pochek",
+    "name": "Амилоидоз почек"
+   },
+   {
+    "alias": "40-endometrioz",
+    "name": "Эндометриоз"
+   }
+  ]
+ },
+ {
+  "alias": "detskiy-revmatolog",
+  "name": "Детский ревматолог",
+  "diseases": [
+   {
+    "alias": "507-artropatiya",
+    "name": "Артропатия"
+   },
+   {
+    "alias": "511-bolezn-behtereva",
+    "name": "Болезнь Бехтерева"
+   },
+   {
+    "alias": "1263-artrit-u-detey",
+    "name": "Артрит у детей"
+   }
+  ]
+ },
+ {
+  "alias": "detskiy-allergolog",
+  "name": "Детский аллерголог",
+  "diseases": [
+   {
+    "alias": "160-disbakterioz",
+    "name": "Дисбактериоз"
+   },
+   {
+    "alias": "275-rahit",
+    "name": "Рахит"
+   },
+   {
+    "alias": "278-rinit",
+    "name": "Ринит"
+   }
+  ]
+ },
+ {
+  "alias": "ginekolog-urolog",
+  "name": "Гинеколог-уролог (урогинеколог)",
+  "diseases": [
+   {
+    "alias": "1268-balanopostit-u-malchikov",
+    "name": "Баланопостит у мальчиков"
+   },
+   {
+    "alias": "2126-giperaktivnyiy-mochevoy-puzyir",
+    "name": "Гиперактивный мочевой пузырь"
+   },
+   {
+    "alias": "102-vaginit",
+    "name": "Вагинит"
+   }
+  ]
+ },
+ {
+  "alias": "venerolog-urolog",
+  "name": "Венеролог-уролог",
+  "diseases": [
+   {
+    "alias": "1268-balanopostit-u-malchikov",
+    "name": "Баланопостит у мальчиков"
+   },
+   {
+    "alias": "16-ureaplazma",
+    "name": "Уреаплазма"
+   },
+   {
+    "alias": "2125-gidronefroz",
+    "name": "Гидронефроз"
+   }
+  ]
+ },
+ {
+  "alias": "dermatolog-mikolog",
+  "name": "Дерматолог-миколог",
+  "diseases": [
+   {
+    "alias": "237-mochekamennaya-bolezn",
+    "name": "Мочекаменная болезнь"
+   },
+   {
+    "alias": "244-nederjanie-mochi",
+    "name": "Недержание мочи"
+   },
+   {
+    "alias": "265-pielonefrit",
+    "name": "Пиелонефрит"
+   }
+  ]
+ },
+ {
+  "alias": "akusher-ginekolog-khirurg",
+  "name": "Акушер-гинеколог-хирург",
+  "diseases": [
+   {
+    "alias": "54-adenomioz-tela-matki",
+    "name": "Аденомиоз тела матки"
+   },
+   {
+    "alias": "1409-atreziya-vlagalischa",
+    "name": "Атрезия влагалища"
+   },
+   {
+    "alias": "1410-atreziya-devstvennoy-plevyi",
+    "name": "Атрезия девственной плевы"
+   }
+  ]
+ },
+ {
+  "alias": "ginekolog-reproduktolog",
+  "name": "Гинеколог-репродуктолог",
+  "diseases": [
+   {
+    "alias": "62-amenoreya",
+    "name": "Аменорея"
+   },
+   {
+    "alias": "1407-anovulyatornyiy-tsikl",
+    "name": "Ановуляторный цикл"
+   },
+   {
+    "alias": "1408-apopleksiya-yaichnika",
+    "name": "Апоплексия яичника"
+   }
+  ]
+ },
+ {
+  "alias": "implantolog",
+  "name": "Стоматолог - имплантолог",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   },
+   {
+    "alias": "298-sinusit",
+    "name": "Синусит"
+   }
+  ]
+ },
+ {
+  "alias": "otonevrolog",
+  "name": "Отоневролог",
+  "diseases": [
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   },
+   {
+    "alias": "436-bokovoy-amiotroficheskiy-skleroz",
+    "name": "Боковой амиотрофический склероз"
+   }
+  ]
+ },
+ {
+  "alias": "logoped-afaziolog",
+  "name": "Логопед-афазиолог",
+  "diseases": [
+   {
+    "alias": "430-agnoziya",
+    "name": "Агнозия"
+   },
+   {
+    "alias": "1851-bradilaliya",
+    "name": "Брадилалия"
+   }
+  ]
+ },
+ {
+  "alias": "detskiy-gematolog",
+  "name": "Детский гематолог",
+  "diseases": [
+   {
+    "alias": "133-giperkaltsiemiya",
+    "name": "Гиперкальциемия"
+   },
+   {
+    "alias": "1270-bolezn-kavasaki",
+    "name": "Болезнь Кавасаки"
+   }
+  ]
+ },
+ {
+  "alias": "kardiokhirurg",
+  "name": "Кардиохирург",
+  "diseases": [
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   }
+  ]
+ },
+ {
+  "alias": "268-spinalnyiy-hirurg",
+  "name": "Спинальный хирург",
+  "diseases": [
+   {
+    "alias": "165-dorzalgiya",
+    "name": "Дорзалгия"
+   },
+   {
+    "alias": "227-gryija-mejpozvonochnyih-diskov",
+    "name": "Грыжа межпозвоночных дисков"
+   }
+  ]
+ },
+ {
+  "alias": "torakalnyi-khirurg",
+  "name": "Торакальный хирург",
+  "diseases": [
+   {
+    "alias": "1261-appenditsit-u-detey",
+    "name": "Аппендицит у детей"
+   },
+   {
+    "alias": "1277-vrojdennyiy-stridor",
+    "name": "Врожденный стридор"
+   }
+  ]
+ },
+ {
+  "alias": "dermatovenerolog",
+  "name": "Дерматовенеролог",
+  "diseases": [
+   {
+    "alias": "1266-atopicheskiy-dermatit-u-detey",
+    "name": "Атопический дерматит у детей"
+   },
+   {
+    "alias": "40-endometrioz",
+    "name": "Эндометриоз"
+   }
+  ]
+ },
+ {
+  "alias": "seksolog",
+  "name": "Сексолог (сексопатолог)",
+  "diseases": [
+   {
+    "alias": "70-anorgazmiya",
+    "name": "Аноргазмия"
+   },
+   {
+    "alias": "240-narushenie-menstrualnogo-tsikla",
+    "name": "Нарушение менструального цикла"
+   }
+  ]
+ },
+ {
+  "alias": "ginekolog-infekcionist",
+  "name": "Гинеколог-инфекционист",
+  "diseases": [
+   {
+    "alias": "102-vaginit",
+    "name": "Вагинит"
+   },
+   {
+    "alias": "1412-atroficheskiy-vaginit",
+    "name": "Атрофический вагинит"
+   }
+  ]
+ },
+ {
+  "alias": "stomatolog-khirurg",
+  "name": "Стоматолог-хирург",
+  "diseases": [
+   {
+    "alias": "466-nevralgiya-troynichnogo-nerva",
+    "name": "Невралгия тройничного нерва"
+   }
+  ]
+ },
+ {
+  "alias": "rentgenkhirurg",
+  "name": "Рентгенхирург",
+  "diseases": [
+   {
+    "alias": "2202-diabeticheskaya-makroangiopatiya",
+    "name": "Диабетическая макроангиопатия"
+   }
+  ]
+ },
+ {
+  "alias": "profpatolog",
+  "name": "Профпатолог",
+  "diseases": [
+   {
+    "alias": "93-bolezn-parkinsona",
+    "name": "Болезнь Паркинсона"
+   }
+  ]
+ },
+ {
+  "alias": "limfolog",
+  "name": "Лимфолог",
+  "diseases": [
+   {
+    "alias": "183-insult",
+    "name": "Инсульт"
+   }
+  ]
+ },
+ {
+  "alias": "khirurg-endokrinolog",
+  "name": "Хирург-эндокринолог",
+  "diseases": [
+   {
+    "alias": "134-giperparatireoz",
+    "name": "Гиперпаратиреоз"
+   }
+  ]
+ },
+ {
+  "alias": "gnoynyy-khirurg",
+  "name": "Гнойный хирург",
+  "diseases": [
+   {
+    "alias": "156-diabeticheskaya-stopa",
+    "name": "Диабетическая стопа"
+   }
+  ]
+ },
+ {
+  "alias": "298-sudmedekspert",
+  "name": "Судмедэксперт",
+  "diseases": [
+   {
+    "alias": "173-zob",
+    "name": "Зоб"
+   }
+  ]
+ },
+ {
+  "alias": "ftiziatr",
+  "name": "Фтизиатр",
+  "diseases": [
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   }
+  ]
+ },
+ {
+  "alias": "transfuziolog",
+  "name": "Трансфузиолог",
+  "diseases": [
+   {
+    "alias": "285-saharnyiy-diabet",
+    "name": "Сахарный диабет"
+   }
+  ]
+ },
+ {
+  "alias": "foniatr",
+  "name": "Фониатр",
+  "diseases": [
+   {
+    "alias": "35-shepelyavost",
+    "name": "Шепелявость"
+   }
+  ]
+ },
+ {
+  "alias": "laborant",
+  "name": "Лаборант",
+  "diseases": [
+   {
+    "alias": "1858-obschee-nedorazvitie-rechi-onr",
+    "name": "Общее недоразвитие речи (ОНР)"
+   }
+  ]
+ },
+ {
+  "alias": "dermatolog-onkolog",
+  "name": "Дерматолог-онколог",
+  "diseases": [
+   {
+    "alias": "500-abstsess-myagkih-tkaney",
+    "name": "Абсцесс мягких тканей"
+   }
+  ]
+ },
+ {
+  "alias": "aritmolog",
+  "name": "Аритмолог",
+  "diseases": [
+   {
+    "alias": "1262-aritmiya-u-detey",
+    "name": "Аритмия у детей"
+   }
+  ]
+ },
+ {
+  "alias": "280-kardiolog-aritmolog",
+  "name": "Кардиолог-аритмолог",
+  "diseases": [
+   {
+    "alias": "1262-aritmiya-u-detey",
+    "name": "Аритмия у детей"
+   }
+  ]
+ },
+ {
+  "alias": "dermotokosmetolog",
+  "name": "Дерматокосметолог",
+  "diseases": [
+   {
+    "alias": "1266-atopicheskiy-dermatit-u-detey",
+    "name": "Атопический дерматит у детей"
+   }
+  ]
+ },
+ {
+  "alias": "detskyi-dermatolog",
+  "name": "Детский дерматолог",
+  "diseases": [
+   {
+    "alias": "1266-atopicheskiy-dermatit-u-detey",
+    "name": "Атопический дерматит у детей"
+   }
+  ]
+ },
+ {
+  "alias": "allergologiya-i-immunologiya-detskaya",
+  "name": "Детский аллерголог-иммунолог",
+  "diseases": [
+   {
+    "alias": "1266-atopicheskiy-dermatit-u-detey",
+    "name": "Атопический дерматит у детей"
+   }
+  ]
+ },
+ {
+  "alias": "revmo-kardiolog",
+  "name": "Кардиолог - ревматолог",
+  "diseases": [
+   {
+    "alias": "1270-bolezn-kavasaki",
+    "name": "Болезнь Кавасаки"
+   }
+  ]
+ },
+ {
+  "alias": "terapiya-podrostkovaya",
+  "name": "Детский терапевт",
+  "diseases": [
+   {
+    "alias": "1270-bolezn-kavasaki",
+    "name": "Болезнь Кавасаки"
+   }
+  ]
+ },
+ {
+  "alias": "detskyi-androlog",
+  "name": "Детский андролог",
+  "diseases": [
+   {
+    "alias": "1274-vodyanka-yaichka-u-malchika",
+    "name": "Водянка яичка у мальчика"
+   }
+  ]
+ },
+ {
+  "alias": "khirurg-endoskopist",
+  "name": "Хирург-эндоскопист",
+  "diseases": [
+   {
+    "alias": "1276-vrojdennyiy-pilorostenoz",
+    "name": "Врожденный пилоростеноз"
+   }
+  ]
+ },
+ {
+  "alias": "pediatr-gastroenterolog",
+  "name": "Педиатр-гастроэнтеролог",
+  "diseases": [
+   {
+    "alias": "1278-galaktozemiya",
+    "name": "Галактоземия"
+   }
+  ]
+ },
+ {
+  "alias": "parazitolog",
+  "name": "Паразитолог",
+  "diseases": [
+   {
+    "alias": "1281-gelmintozyi-u-detey",
+    "name": "Гельминтозы у детей"
+   }
+  ]
+ },
+ {
+  "alias": "khirurg-onkolog",
+  "name": "Хирург-онколог",
+  "diseases": [
+   {
+    "alias": "1282-gemangioma-u-detey",
+    "name": "Гемангиома у детей"
+   }
+  ]
+ },
+ {
+  "alias": "epidemiolog",
+  "name": "Эпидемиолог",
+  "diseases": [
+   {
+    "alias": "256-otit",
+    "name": "Отит"
+   }
+  ]
+ },
+ {
+  "alias": "lor-otolaringolog-onkolog",
+  "name": "ЛОР (Отоларинголог)-онколог",
+  "diseases": [
+   {
+    "alias": "280-atroficheskiy-rinit",
+    "name": "Атрофический ринит"
+   }
+  ]
+ },
+ {
+  "alias": "stomatolog-terapevt",
+  "name": "Стоматолог-терапевт",
+  "diseases": [
+   {
+    "alias": "1185-vospalenie-slyunnoy-jelezyi",
+    "name": "Воспаление слюнной железы"
+   }
+  ]
+ },
+ {
+  "alias": "detskyi-stomatolog",
+  "name": "Детский стоматолог",
+  "diseases": [
+   {
+    "alias": "1185-vospalenie-slyunnoy-jelezyi",
+    "name": "Воспаление слюнной железы"
+   }
+  ]
+ },
+ {
+  "alias": "urologiya-i-andrologiya-detskaya",
+  "name": "Детский уролог-андролог",
+  "diseases": [
+   {
+    "alias": "2126-giperaktivnyiy-mochevoy-puzyir",
+    "name": "Гиперактивный мочевой пузырь"
+   }
+  ]
+ },
+ {
+  "alias": "transplantolog",
+  "name": "Трансплантолог",
+  "diseases": [
+   {
+    "alias": "2135-dobrokachestvennyie-opuholi-mochevogo-puzyirya",
+    "name": "Доброкачественные опухоли мочевого пузыря"
+   }
+  ]
+ },
+ {
+  "alias": "embriolog",
+  "name": "Эмбриолог",
+  "diseases": [
+   {
+    "alias": "87-besplodie-u-jenschin",
+    "name": "Бесплодие у женщин"
+   }
+  ]
+ }
+]

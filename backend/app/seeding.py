@@ -132,4 +132,12 @@ def bootstrap_if_empty(db: Session) -> dict | None:
         n_doctors = load_doctors(db)
         if n_doctors:
             result = {**(result or {}), "doctors_loaded": n_doctors}
+    # load the disease catalog ("Лечение заболеваний")
+    from .illness_loader import load_illnesses
+    from .models import Illness
+
+    if db.query(Illness).count() == 0:
+        n_ill = load_illnesses(db)
+        if n_ill:
+            result = {**(result or {}), "illnesses_loaded": n_ill}
     return result

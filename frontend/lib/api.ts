@@ -66,6 +66,11 @@ export const api = {
   doctorRecommendations: (params: Record<string, any>) =>
     get<DoctorRecs>("/api/doctors/recommendations", params),
   mapCities: () => get<{ cities: any[] }>("/api/map/cities"),
+  illnessCategories: () => get<import("./types").IllnessCategories>("/api/illnesses/categories"),
+  illnesses: (params?: Record<string, any>) =>
+    get<{ alias: string; name: string; primary_skill: string | null }[]>("/api/illnesses", params),
+  illness: (alias: string, region?: string) =>
+    get<import("./types").IllnessDetail>(`/api/illnesses/${alias}`, region ? { region } : undefined),
   assistantChat: (message: string, locale: string, history: { role: string; text: string }[] = []) =>
     post<{ reply: string; actions: { label: string; href: string }[] }>("/api/assistant/chat", {
       message,

@@ -16,6 +16,7 @@ from .routers import (
     clinics,
     doctors,
     history,
+    illnesses,
     map as map_router,
     meta,
     search,
@@ -59,7 +60,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-for r in (meta, search, services, clinics, history, admin, subscriptions, doctors, map_router, assistant):
+for r in (meta, search, services, clinics, history, admin, subscriptions, doctors, map_router, assistant, illnesses):
     app.include_router(r.router)
 
 

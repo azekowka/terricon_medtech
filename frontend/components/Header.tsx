@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Activity, GitCompareArrows, Map, Settings, Stethoscope } from "lucide-react";
+import { Activity, GitCompareArrows, HeartPulse, Map, Settings, Stethoscope } from "lucide-react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const NAV = [
   { href: "/", key: "nav.search", icon: Activity },
   { href: "/doctors", key: "nav.doctors", icon: Stethoscope },
+  { href: "/lechenie", key: "nav.lechenie", icon: HeartPulse },
   { href: "/compare", key: "nav.compare", icon: GitCompareArrows },
   { href: "/map", key: "nav.map", icon: Map },
   { href: "/admin", key: "nav.admin", icon: Settings },

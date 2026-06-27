@@ -232,6 +232,21 @@ class Doctor(Base):
     )
 
 
+class Illness(Base):
+    """A disease in the "Лечение заболеваний" catalog (from idoctor)."""
+
+    __tablename__ = "illnesses"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=False)
+    alias: Mapped[str] = mapped_column(String(255), unique=True, index=True)
+    name: Mapped[str] = mapped_column(String(255), index=True)
+    skills: Mapped[list] = mapped_column(JSON, default=list)        # [{alias,name}] treating specialties
+    similar: Mapped[list] = mapped_column(JSON, default=list)       # [alias, …] related diseases
+    spec_aliases: Mapped[str] = mapped_column(Text, default=",")    # ",a,b," for filtering
+    primary_skill: Mapped[str | None] = mapped_column(String(128), nullable=True)
+    primary_skill_alias: Mapped[str | None] = mapped_column(String(64), nullable=True, index=True)
+
+
 class Subscription(Base):
     """User subscription to a service/clinic price (TZ 3.4)."""
 
