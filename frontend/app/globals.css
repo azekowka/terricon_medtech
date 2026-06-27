@@ -11,6 +11,9 @@ body {
   background: var(--bg);
   color: #0f172a;
   -webkit-font-smoothing: antialiased;
+  /* Aviasales font stack (Stapel -> Inter); see tailwind.config fontFamily.sans */
+  font-family: Stapel, -apple-system, BlinkMacSystemFont, var(--font-inter), Inter, Roboto,
+    Helvetica, Arial, sans-serif;
 }
 
 @layer components {

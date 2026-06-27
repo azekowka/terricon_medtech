@@ -6,7 +6,9 @@ import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import { Footer } from "@/components/Footer";
 import { ChatWidget } from "@/components/ChatWidget";
 
-const inter = Inter({ subsets: ["latin", "cyrillic"], display: "swap" });
+// Inter — same typeface Aviasales uses (its Stapel falls back to Inter). Exposed
+// as a CSS variable so the global font stack can mirror Aviasales' exact stack.
+const inter = Inter({ subsets: ["latin", "cyrillic"], display: "swap", variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "MedServicePrice.kz — сравнение цен на медуслуги в Казахстане",
@@ -16,8 +18,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ru">
-      <body className={inter.className}>
+    <html lang="ru" className={inter.variable}>
+      <body>
         <I18nProvider>
           <Header />
           <main className="min-h-[calc(100vh-4rem)] pb-16">{children}</main>

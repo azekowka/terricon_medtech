@@ -27,7 +27,19 @@ const config: Config = {
         ink: "#0f172a",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+        // Aviasales font stack (Stapel is proprietary -> falls back to Inter, which
+        // is the typeface they actually use). Inter is loaded via next/font.
+        sans: [
+          "Stapel",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "var(--font-inter)",
+          "Inter",
+          "Roboto",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
       },
       boxShadow: {
         card: "0 1px 3px rgba(15,23,42,0.08), 0 1px 2px rgba(15,23,42,0.04)",

@@ -4,6 +4,22 @@
 
 ## [Unreleased]
 
+### Changed
+- **Шрифт — как у Aviasales**: подключён Inter через `next/font` (тот же шрифт, что
+  использует Aviasales; их фирменный Stapel проприетарный → fallback на Inter).
+  Глобальный стек шрифтов приведён к точному стеку Aviasales:
+  `Stapel, -apple-system, BlinkMacSystemFont, Inter, Roboto, Helvetica, Arial, sans-serif`
+  (`tailwind.config.ts` → `fontFamily.sans`, `globals.css`, CSS-переменная `--font-inter`).
+- **Селектор города на странице болезни** заменён нативного `<select>` на
+  shadcn-style комбобокс (`components/CitySelect.tsx`): кнопка-триггер (MapPin +
+  ChevronsUpDown), всплывающая панель с галочками (Check), счётчиками врачей,
+  поиском (при >8 пунктов), закрытием по клику вне/Escape. Переиспользуемый компонент.
+
+### Fixed
+- **Гонка запросов при смене города на странице болезни**: дефолтный запрос (Алматы)
+  мог перезаписать ответ для сохранённого города (Шымкент показывал 236 вместо 23).
+  Добавлен guard отмены (`active`) в effect — всегда побеждает последний выбранный город.
+
 ## [0.9.0] — Раздел «Лечение заболеваний»
 
 ### Added

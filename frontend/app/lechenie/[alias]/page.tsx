@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, HeartPulse, MapPin, Stethoscope } from "lucide-react";
+import { ArrowLeft, HeartPulse, Stethoscope } from "lucide-react";
 import { api } from "@/lib/api";
 import type { DoctorRegion, IllnessDetail } from "@/lib/types";
 import { DoctorCard } from "@/components/doctors/DoctorCard";
+import { CitySelect } from "@/components/CitySelect";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { pluralRu } from "@/lib/format";
 
@@ -32,8 +33,16 @@ export default function IllnessPage({ params }: { params: { alias: string } }) {
   }
 
   useEffect(() => {
+    let active = true;
     setLoading(true);
-    api.illness(alias, region || undefined).then(setD).catch(() => setD(null)).finally(() => setLoading(false));
+    api
+      .illness(alias, region || undefined)
+      .then((r) => active && setD(r))
+      .catch(() => active && setD(null))
+      .finally(() => active && setLoading(false));
+    return () => {
+      active = false; // ignore stale responses so the latest city always wins
+    };
   }, [alias, region]);
 
   if (loading && !d) {
@@ -90,21 +99,13 @@ export default function IllnessPage({ params }: { params: { alias: string } }) {
               ({d.doctors_total} {pluralRu(d.doctors_total, ["врач", "врача", "врачей"])})
             </span>
           </h2>
-          <div className="relative">
-            <MapPin size={15} className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
-            <select
-              value={region}
-              onChange={(e) => changeCity(e.target.value)}
-              className="input w-full py-2 pl-9 sm:w-56"
-            >
-              <option value="">{t("search.allCities")}</option>
-              {regions.map((r) => (
-                <option key={r.slug} value={r.slug}>
-                  {r.name} ({r.count})
-                </option>
-              ))}
-            </select>
-          </div>
+          <CitySelect
+            className="w-full sm:w-56"
+            value={region}
+            onChange={changeCity}
+            allLabel={t("search.allCities")}
+            options={regions.map((r) => ({ value: r.slug, label: r.name, count: r.count }))}
+          />
         </div>
         {d.doctors.length > 0 ? (
           <div className={`space-y-3 transition ${loading ? "pointer-events-none opacity-50" : ""}`}>
