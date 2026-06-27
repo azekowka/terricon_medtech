@@ -1,9 +1,9 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { CalendarCheck, ExternalLink, Star } from "lucide-react";
+import { CalendarCheck, ExternalLink, Search, Star } from "lucide-react";
 import { api } from "@/lib/api";
 import type { HistorySeries, SearchResult, ServiceItem } from "@/lib/types";
 import { SearchBar } from "@/components/SearchBar";
@@ -19,10 +19,74 @@ function CompareContent() {
   const [history, setHistory] = useState<HistorySeries | null>(null);
   const [services, setServices] = useState<ServiceItem[]>([]);
   const [loading, setLoading] = useState(false);
+  const [q, setQ] = useState("");
+  const [cat, setCat] = useState("");
 
   useEffect(() => {
-    api.services({ sort: "popular", limit: 12 }).then(setServices).catch(() => {});
+    // all services that actually have clinic prices to compare
+    api.services({ limit: 2000 }).then((all) => setServices(all.filter((s) => s.offers_count > 0))).catch(() => {});
   }, []);
+
+  const catCounts = useMemo(() => {
+    const m: Record<string, number> = {};
+    for (const s of services) m[s.category] = (m[s.category] || 0) + 1;
+    return m;
+  }, [services]);
+
+  const filteredServices = useMemo(() => {
+    const nq = q.trim().toLowerCase();
+    return services
+      .filter((s) => (!cat || s.category === cat) && (!nq || s.name.toLowerCase().includes(nq)))
+      .sort((a, b) => b.offers_count - a.offers_count);
+  }, [services, q, cat]);
+
+  // ---- results filters + sorting (client-side over the offers for one service) ----
+  const [fCity, setFCity] = useState("");
+  const [fSource, setFSource] = useState("");
+  const [fPriceMax, setFPriceMax] = useState("");
+  const [fRatingMin, setFRatingMin] = useState("");
+  const [fOnline, setFOnline] = useState(false);
+  const [sortField, setSortField] = useState<"price" | "rating" | "updated" | "city" | "source">("price");
+  const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
+
+  const rawOffers = result?.offers || [];
+  const offerCities = useMemo(() => [...new Set(rawOffers.map((o) => o.city))].sort(), [rawOffers]);
+  const offerSources = useMemo(() => [...new Set(rawOffers.map((o) => o.source))].sort(), [rawOffers]);
+
+  const displayOffers = useMemo(() => {
+    let list = rawOffers.filter(
+      (o) =>
+        (!fCity || o.city === fCity) &&
+        (!fSource || o.source === fSource) &&
+        (!fPriceMax || o.price_kzt <= Number(fPriceMax)) &&
+        (!fRatingMin || (o.rating ?? 0) >= Number(fRatingMin)) &&
+        (!fOnline || o.has_online_booking),
+    );
+    const dir = sortDir === "asc" ? 1 : -1;
+    list = [...list].sort((a, b) => {
+      switch (sortField) {
+        case "rating":
+          return ((a.rating ?? -1) - (b.rating ?? -1)) * dir;
+        case "updated":
+          return (new Date(a.parsed_at).getTime() - new Date(b.parsed_at).getTime()) * dir;
+        case "city":
+          return a.city.localeCompare(b.city) * dir;
+        case "source":
+          return a.source.localeCompare(b.source) * dir;
+        default:
+          return (a.price_kzt - b.price_kzt) * dir;
+      }
+    });
+    return list;
+  }, [rawOffers, fCity, fSource, fPriceMax, fRatingMin, fOnline, sortField, sortDir]);
+
+  function toggleSort(field: typeof sortField) {
+    if (sortField === field) setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+    else {
+      setSortField(field);
+      setSortDir(field === "rating" || field === "updated" ? "desc" : "asc");
+    }
+  }
 
   useEffect(() => {
     if (!serviceId) return;
@@ -39,29 +103,85 @@ function CompareContent() {
   }, [serviceId, clinicIds]);
 
   if (!serviceId) {
+    const CATS = [
+      { key: "", label: "Все" },
+      { key: "laboratory", label: "Лаборатория" },
+      { key: "doctor", label: "Приём врача" },
+      { key: "diagnostic", label: "Диагностика" },
+      { key: "procedure", label: "Процедура" },
+    ];
     return (
       <div className="container-page pt-8">
         <h1 className="text-2xl font-extrabold text-ink">Сравнение цен</h1>
-        <p className="mt-2 text-slate-500">Выберите услугу, чтобы сравнить предложения клиник.</p>
+        <p className="mt-2 text-slate-500">
+          Выберите услугу, чтобы сравнить цены клиник. Доступно{" "}
+          <b className="text-ink">{services.length}</b> услуг с ценами.
+        </p>
         <div className="mt-5 max-w-2xl">
           <SearchBar size="md" />
         </div>
-        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {services.slice(0, 9).map((s) => {
+
+        {/* category filter */}
+        <div className="mt-6 flex flex-wrap gap-2">
+          {CATS.map((c) => {
+            const cm = c.key ? categoryMeta(c.key) : null;
+            const count = c.key ? catCounts[c.key] || 0 : services.length;
+            return (
+              <button
+                key={c.key}
+                onClick={() => setCat(c.key)}
+                className={`chip text-sm ${cat === c.key ? "bg-brand-600 text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
+              >
+                {cm ? cm.emoji + " " : ""}{c.label} <span className="opacity-70">{count}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* in-list search */}
+        <div className="relative mt-4 max-w-md">
+          <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+          <input
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="Фильтр по названию услуги…"
+            className="input pl-10"
+          />
+        </div>
+
+        <p className="mt-3 text-sm text-slate-400">Найдено: {filteredServices.length}</p>
+        <div className="mt-2 grid max-h-[60vh] gap-2 overflow-y-auto pr-1 sm:grid-cols-2 lg:grid-cols-3">
+          {filteredServices.slice(0, 400).map((s) => {
             const cm = categoryMeta(s.category);
             return (
-              <Link key={s.id} href={`/compare?service_id=${s.id}`} className="card flex items-center gap-3 p-4 hover:shadow-hover">
-                <span className="text-xl">{cm.emoji}</span>
-                <span className="font-semibold text-ink">{s.name}</span>
+              <Link
+                key={s.id}
+                href={`/compare?service_id=${s.id}`}
+                className="card flex items-center justify-between gap-3 p-3.5 hover:-translate-y-0.5 hover:shadow-hover"
+              >
+                <span className="flex min-w-0 items-center gap-3">
+                  <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-base ${cm.color}`}>{cm.emoji}</span>
+                  <span className="truncate font-semibold text-ink">{s.name}</span>
+                </span>
+                <span className="shrink-0 rounded-md bg-slate-50 px-2 py-1 text-xs font-semibold text-slate-500">
+                  {s.offers_count}
+                </span>
               </Link>
             );
           })}
         </div>
+        {filteredServices.length > 400 && (
+          <p className="mt-3 text-center text-sm text-slate-400">
+            Показаны первые 400 — уточните поиск или категорию
+          </p>
+        )}
       </div>
     );
   }
 
-  const offers = result?.offers || [];
+  const cheapest = displayOffers.length ? Math.min(...displayOffers.map((o) => o.price_kzt)) : null;
+  const hasFilters = fCity || fSource || fPriceMax || fRatingMin || fOnline;
+  const arrow = (f: typeof sortField) => (sortField === f ? (sortDir === "asc" ? " ↑" : " ↓") : "");
 
   return (
     <div className="container-page pt-6">
@@ -73,62 +193,123 @@ function CompareContent() {
         Сравнение: {result?.service?.name || "услуга"}
       </h1>
       <p className="mt-1 text-sm text-slate-500">
-        {loading ? "Загрузка…" : `${offers.length} клиник · разница цен до ${formatKzt(
-          (result?.stats?.max_price || 0) - (result?.stats?.min_price || 0),
-        )}`}
+        {loading
+          ? "Загрузка…"
+          : `Показано ${displayOffers.length} из ${rawOffers.length} · разница цен до ${formatKzt(
+              (result?.stats?.max_price || 0) - (result?.stats?.min_price || 0),
+            )}`}
       </p>
 
-      {/* Comparison table */}
-      <div className="mt-5 overflow-x-auto">
-        <table className="w-full min-w-[760px] border-separate border-spacing-0 text-sm">
+      {/* Filters */}
+      <div className="mt-4 flex flex-wrap items-end gap-3 rounded-2xl border border-slate-100 bg-white p-3 shadow-card">
+        <Field label="Город">
+          <select className="input py-2" value={fCity} onChange={(e) => setFCity(e.target.value)}>
+            <option value="">Все города</option>
+            {offerCities.map((c) => (
+              <option key={c} value={c}>{c}</option>
+            ))}
+          </select>
+        </Field>
+        <Field label="Источник">
+          <select className="input py-2" value={fSource} onChange={(e) => setFSource(e.target.value)}>
+            <option value="">Все</option>
+            {offerSources.map((s) => (
+              <option key={s} value={s}>{s}</option>
+            ))}
+          </select>
+        </Field>
+        <Field label="Цена до, ₸">
+          <input
+            type="number"
+            className="input w-32 py-2"
+            placeholder="напр. 5000"
+            value={fPriceMax}
+            onChange={(e) => setFPriceMax(e.target.value)}
+          />
+        </Field>
+        <Field label="Рейтинг от">
+          <select className="input py-2" value={fRatingMin} onChange={(e) => setFRatingMin(e.target.value)}>
+            <option value="">Любой</option>
+            <option value="4">4.0 ★</option>
+            <option value="4.3">4.3 ★</option>
+            <option value="4.5">4.5 ★</option>
+          </select>
+        </Field>
+        <label className="flex cursor-pointer items-center gap-2 rounded-xl bg-slate-50 px-3 py-2.5 text-sm font-medium text-slate-700">
+          <input type="checkbox" checked={fOnline} onChange={(e) => setFOnline(e.target.checked)} className="h-4 w-4" />
+          Онлайн-запись
+        </label>
+        {hasFilters && (
+          <button
+            onClick={() => { setFCity(""); setFSource(""); setFPriceMax(""); setFRatingMin(""); setFOnline(false); }}
+            className="btn-ghost py-2"
+          >
+            Сбросить
+          </button>
+        )}
+      </div>
+
+      {/* Comparison table (sortable headers) */}
+      <div className="mt-4 overflow-x-auto">
+        <table className="w-full min-w-[820px] border-separate border-spacing-0 text-sm">
           <thead>
             <tr className="text-left text-xs uppercase tracking-wide text-slate-400">
               <th className="sticky left-0 bg-[var(--bg)] px-3 py-2">Клиника</th>
-              <th className="px-3 py-2">Цена</th>
-              <th className="px-3 py-2">Город</th>
-              <th className="px-3 py-2">Рейтинг</th>
+              <SortableTh label={`Цена${arrow("price")}`} onClick={() => toggleSort("price")} active={sortField === "price"} />
+              <SortableTh label={`Город${arrow("city")}`} onClick={() => toggleSort("city")} active={sortField === "city"} />
+              <SortableTh label={`Рейтинг${arrow("rating")}`} onClick={() => toggleSort("rating")} active={sortField === "rating"} />
               <th className="px-3 py-2">Онлайн-запись</th>
-              <th className="px-3 py-2">Обновлено</th>
-              <th className="px-3 py-2">Источник</th>
+              <SortableTh label={`Обновлено${arrow("updated")}`} onClick={() => toggleSort("updated")} active={sortField === "updated"} />
+              <SortableTh label={`Источник${arrow("source")}`} onClick={() => toggleSort("source")} active={sortField === "source"} />
               <th className="px-3 py-2"></th>
             </tr>
           </thead>
           <tbody>
-            {offers.map((o) => (
-              <tr key={o.price_id} className={`bg-white ${o.is_cheapest ? "ring-2 ring-teal-300" : ""}`}>
-                <td className="sticky left-0 bg-white px-3 py-3 font-semibold text-ink">
-                  <Link href={`/clinics/${o.clinic_id}`} className="hover:text-brand-700">
-                    {o.clinic_name}
-                  </Link>
-                  {o.is_cheapest && <span className="ml-2 chip bg-teal-100 text-teal-700">дешевле всех</span>}
-                </td>
-                <td className="px-3 py-3 text-lg font-bold text-ink">{formatKzt(o.price_kzt)}</td>
-                <td className="px-3 py-3 text-slate-600">{o.city}</td>
-                <td className="px-3 py-3">
-                  {o.rating != null ? (
-                    <span className="inline-flex items-center gap-1 text-amber-600">
-                      <Star size={13} className="fill-amber-400 text-amber-400" /> {o.rating.toFixed(1)}
-                    </span>
-                  ) : (
-                    "—"
-                  )}
-                </td>
-                <td className="px-3 py-3">
-                  {o.has_online_booking ? (
-                    <CalendarCheck size={16} className="text-emerald-600" />
-                  ) : (
-                    <span className="text-slate-300">—</span>
-                  )}
-                </td>
-                <td className="px-3 py-3 text-slate-500">{relativeDays(o.parsed_at)}</td>
-                <td className="px-3 py-3 text-slate-500">{o.source}</td>
-                <td className="px-3 py-3">
-                  <a href={o.source_url || o.website} target="_blank" rel="noopener noreferrer" className="btn-outline px-2.5 py-1.5">
-                    <ExternalLink size={14} />
-                  </a>
+            {displayOffers.map((o) => {
+              const isCheapest = o.price_kzt === cheapest;
+              return (
+                <tr key={o.price_id} className={`bg-white ${isCheapest ? "ring-2 ring-teal-300" : ""}`}>
+                  <td className="sticky left-0 bg-white px-3 py-3 font-semibold text-ink">
+                    <Link href={`/clinics/${o.clinic_id}`} className="hover:text-brand-700">
+                      {o.clinic_name}
+                    </Link>
+                    {isCheapest && <span className="ml-2 chip bg-teal-100 text-teal-700">дешевле всех</span>}
+                  </td>
+                  <td className="px-3 py-3 text-lg font-bold text-ink">{formatKzt(o.price_kzt)}</td>
+                  <td className="px-3 py-3 text-slate-600">{o.city}</td>
+                  <td className="px-3 py-3">
+                    {o.rating != null ? (
+                      <span className="inline-flex items-center gap-1 text-amber-600">
+                        <Star size={13} className="fill-amber-400 text-amber-400" /> {o.rating.toFixed(1)}
+                      </span>
+                    ) : (
+                      "—"
+                    )}
+                  </td>
+                  <td className="px-3 py-3">
+                    {o.has_online_booking ? (
+                      <CalendarCheck size={16} className="text-emerald-600" />
+                    ) : (
+                      <span className="text-slate-300">—</span>
+                    )}
+                  </td>
+                  <td className="px-3 py-3 text-slate-500">{relativeDays(o.parsed_at)}</td>
+                  <td className="px-3 py-3 text-slate-500">{o.source}</td>
+                  <td className="px-3 py-3">
+                    <a href={o.source_url || o.website} target="_blank" rel="noopener noreferrer" className="btn-outline px-2.5 py-1.5">
+                      <ExternalLink size={14} />
+                    </a>
+                  </td>
+                </tr>
+              );
+            })}
+            {displayOffers.length === 0 && (
+              <tr>
+                <td colSpan={8} className="px-3 py-10 text-center text-slate-400">
+                  Нет предложений по выбранным фильтрам
                 </td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>
@@ -139,6 +320,28 @@ function CompareContent() {
         {history ? <PriceHistoryChart data={history} /> : <p className="text-slate-400">Загрузка…</p>}
       </div>
     </div>
+  );
+}
+
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <label className="mb-1 block text-[11px] font-semibold uppercase tracking-wide text-slate-400">{label}</label>
+      {children}
+    </div>
+  );
+}
+
+function SortableTh({ label, onClick, active }: { label: string; onClick: () => void; active: boolean }) {
+  return (
+    <th className="px-3 py-2">
+      <button
+        onClick={onClick}
+        className={`-mx-1 rounded px-1 uppercase transition hover:text-brand-600 ${active ? "text-brand-600" : ""}`}
+      >
+        {label}
+      </button>
+    </th>
   );
 }
 
