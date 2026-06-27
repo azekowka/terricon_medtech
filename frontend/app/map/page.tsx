@@ -6,6 +6,7 @@ import { X } from "lucide-react";
 import { api } from "@/lib/api";
 import type { MapCity } from "@/components/CityPriceMap";
 import type { ClinicListItem } from "@/lib/types";
+import { CitySelect } from "@/components/CitySelect";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 
 const CityPriceMap = dynamic(() => import("@/components/CityPriceMap"), {
@@ -31,6 +32,12 @@ export default function MapPage() {
     () => (selCity ? clinics.filter((c) => c.city === selCity.name).length : clinics.length),
     [clinics, selCity],
   );
+  // clinic counts per city for the selector (matches the clinic dots on the map)
+  const cityOptions = useMemo(() => {
+    const byCity = new Map<string, number>();
+    for (const c of clinics) byCity.set(c.city, (byCity.get(c.city) || 0) + 1);
+    return cities.map((c) => ({ value: c.slug, label: c.name, count: byCity.get(c.name) }));
+  }, [cities, clinics]);
 
   return (
     <div className="container-page pt-6">
@@ -52,16 +59,13 @@ export default function MapPage() {
               <b className="text-teal-700">{new Intl.NumberFormat("ru-RU").format(cheapest)} ₸</b>
             </div>
           )}
-          <select
-            className="input sm:w-52"
+          <CitySelect
+            className="w-full sm:w-56"
             value={selected || ""}
-            onChange={(e) => setSelected(e.target.value || null)}
-          >
-            <option value="">{t("search.allCities")}</option>
-            {cities.map((c) => (
-              <option key={c.slug} value={c.slug}>{c.name}</option>
-            ))}
-          </select>
+            onChange={(v) => setSelected(v || null)}
+            allLabel={t("search.allCities")}
+            options={cityOptions}
+          />
           {selCity && (
             <button onClick={() => setSelected(null)} className="btn-outline px-2.5 py-2" title={t("search.allCities")}>
               <X size={16} />

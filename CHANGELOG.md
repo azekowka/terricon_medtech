@@ -10,10 +10,11 @@
   Глобальный стек шрифтов приведён к точному стеку Aviasales:
   `Stapel, -apple-system, BlinkMacSystemFont, Inter, Roboto, Helvetica, Arial, sans-serif`
   (`tailwind.config.ts` → `fontFamily.sans`, `globals.css`, CSS-переменная `--font-inter`).
-- **Селектор города на странице болезни** заменён нативного `<select>` на
-  shadcn-style комбобокс (`components/CitySelect.tsx`): кнопка-триггер (MapPin +
-  ChevronsUpDown), всплывающая панель с галочками (Check), счётчиками врачей,
-  поиском (при >8 пунктов), закрытием по клику вне/Escape. Переиспользуемый компонент.
+- **Селектор города** (страница болезни `/lechenie/[alias]` и карта `/map`) заменён
+  с нативного `<select>` на shadcn-style комбобокс (`components/CitySelect.tsx`):
+  кнопка-триггер (MapPin + ChevronsUpDown), всплывающая панель с галочками (Check),
+  счётчиками (врачи — на странице болезни, клиники — на карте), поиском (при >8
+  пунктов), закрытием по клику вне/Escape. Переиспользуемый компонент.
 
 ### Fixed
 - **Гонка запросов при смене города на странице болезни**: дефолтный запрос (Алматы)
