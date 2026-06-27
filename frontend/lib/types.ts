@@ -165,6 +165,20 @@ export interface DoctorsResult {
   region_name: string | null;
   doctors: DoctorCard[];
 }
+export interface DoctorRecommendation {
+  type: "bestValue" | "cheapest" | "topRated" | "popular" | "experienced";
+  doctor: DoctorCard;
+  below_avg_pct: number;
+  cheaper_than_avg: number;
+  rating: number | null;
+  reviews: number;
+  experience: number | null;
+}
+export interface DoctorRecommendations {
+  items: DoctorRecommendation[];
+  avg_price: number | null;
+}
+
 export interface DoctorReview {
   author: string;
   rating: number | string | null;

@@ -9,6 +9,18 @@ export function formatDate(iso: string | null | undefined): string {
   return d.toLocaleDateString("ru-RU", { day: "2-digit", month: "short", year: "numeric" });
 }
 
+export function yearsLabel(n: number, locale: string): string {
+  if (locale === "kk") return "жыл";
+  if (locale === "en") return n === 1 ? "year" : "years";
+  return pluralRu(n, ["год", "года", "лет"]);
+}
+
+export function reviewsLabel(n: number, locale: string): string {
+  if (locale === "kk") return "пікір";
+  if (locale === "en") return n === 1 ? "review" : "reviews";
+  return pluralRu(n, ["отзыв", "отзыва", "отзывов"]);
+}
+
 export function pluralRu(n: number, forms: [string, string, string]): string {
   const mod10 = n % 10;
   const mod100 = n % 100;

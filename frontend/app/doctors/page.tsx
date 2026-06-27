@@ -7,7 +7,9 @@ import type { DoctorCard as Doctor, DoctorsMeta, DoctorsResult } from "@/lib/typ
 import { DoctorCard } from "@/components/doctors/DoctorCard";
 import { DoctorFilters, DocFilterState } from "@/components/doctors/DoctorFilters";
 import { RegionPopup } from "@/components/doctors/RegionPopup";
+import { DoctorRecommendations } from "@/components/doctors/DoctorRecommendations";
 import { pluralRu } from "@/lib/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 const DEFAULT_FILTERS: DocFilterState = {
   specialty: "",
@@ -21,6 +23,7 @@ const DEFAULT_FILTERS: DocFilterState = {
 };
 
 export default function DoctorsPage() {
+  const { t } = useI18n();
   const [meta, setMeta] = useState<DoctorsMeta | null>(null);
   const [region, setRegion] = useState<string>("almaty");
   const [showPopup, setShowPopup] = useState(false);
@@ -29,12 +32,17 @@ export default function DoctorsPage() {
   const [result, setResult] = useState<DoctorsResult | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // load meta + restore saved region
+  // load meta + restore region (URL ?region= wins, then saved, then default)
   useEffect(() => {
+    const urlRegion =
+      typeof window !== "undefined" ? new URLSearchParams(window.location.search).get("region") : null;
     const saved = typeof window !== "undefined" ? localStorage.getItem("doctor_region") : null;
     api.doctorsMeta().then((m) => {
       setMeta(m);
-      if (saved && m.regions.some((r) => r.slug === saved)) setRegion(saved);
+      if (urlRegion && m.regions.some((r) => r.slug === urlRegion)) {
+        setRegion(urlRegion);
+        try { localStorage.setItem("doctor_region", urlRegion); } catch {}
+      } else if (saved && m.regions.some((r) => r.slug === saved)) setRegion(saved);
       else if (m.regions.length && !m.regions.some((r) => r.slug === "almaty")) setRegion(m.regions[0].slug);
     });
   }, []);
@@ -90,18 +98,18 @@ export default function DoctorsPage() {
       {/* header */}
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-2xl font-extrabold text-ink sm:text-3xl">Врачи-специалисты в {regionName}</h1>
+          <h1 className="text-2xl font-extrabold text-ink sm:text-3xl">{t("doctors.title", { city: regionName })}</h1>
           <p className="mt-1 text-sm text-slate-500">
-            {loading ? "Загрузка…" : (
+            {loading ? t("common.loading") : (
               <>
-                {result?.total ?? 0} {pluralRu(result?.total ?? 0, ["врач", "врача", "врачей"])}
-                {filters.specialty ? " по фильтру" : ` · ${regionCount} в городе`}
+                {t("doctors.foundN", { n: result?.total ?? 0 })}
+                {filters.specialty ? ` ${t("doctors.byFilter")}` : ` · ${t("doctors.inCity", { n: regionCount })}`}
               </>
             )}
           </p>
         </div>
         <button onClick={() => setShowPopup(true)} className="btn-outline self-start">
-          <MapPin size={16} /> {regionName} <span className="text-slate-400">· сменить</span>
+          <MapPin size={16} /> {regionName} <span className="text-slate-400">· {t("common.change")}</span>
         </button>
       </div>
 
@@ -111,6 +119,7 @@ export default function DoctorsPage() {
         </aside>
 
         <section className="space-y-3 pb-10">
+          <DoctorRecommendations region={region} specialty={filters.specialty} />
           {loading ? (
             <div className="flex items-center justify-center py-24 text-slate-400">
               <Loader2 className="animate-spin" />
@@ -127,8 +136,8 @@ export default function DoctorsPage() {
           ) : (
             <div className="card flex flex-col items-center gap-2 p-12 text-center text-slate-500">
               <Users size={32} className="text-slate-300" />
-              <p className="text-lg font-semibold text-ink">Врачи не найдены</p>
-              <p className="text-sm">Измените фильтры или выберите другой город.</p>
+              <p className="text-lg font-semibold text-ink">{t("doctors.notFound")}</p>
+              <p className="text-sm">{t("doctors.notFoundHint")}</p>
             </div>
           )}
         </section>

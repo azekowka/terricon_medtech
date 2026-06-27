@@ -7,7 +7,8 @@ import {
 } from "lucide-react";
 import { api } from "@/lib/api";
 import type { DoctorDetail } from "@/lib/types";
-import { formatKzt, pluralRu } from "@/lib/format";
+import { formatKzt, yearsLabel } from "@/lib/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 const DAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
 
@@ -22,6 +23,7 @@ function ratingNum(r: number | string | null): number | null {
 }
 
 export default function DoctorProfilePage({ params }: { params: { id: string } }) {
+  const { t, locale } = useI18n();
   const { id } = params;
   const [d, setD] = useState<DoctorDetail | null>(null);
   const [loading, setLoading] = useState(true);
@@ -36,15 +38,15 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
     return (
       <div className="container-page flex flex-col items-center gap-3 py-32 text-slate-400">
         <Stethoscope className="animate-pulse" size={36} />
-        <p>Загружаем профиль врача…</p>
+        <p>{t("profile.loading")}</p>
       </div>
     );
   }
   if (!d) {
     return (
       <div className="container-page py-28 text-center">
-        <p className="text-xl font-bold text-ink">Врач не найден</p>
-        <Link href="/doctors" className="btn-primary mt-6">К списку врачей</Link>
+        <p className="text-xl font-bold text-ink">{t("profile.notFound")}</p>
+        <Link href="/doctors" className="btn-primary mt-6">{t("profile.toList")}</Link>
       </div>
     );
   }
@@ -55,7 +57,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
   return (
     <div className="container-page pt-6">
       <Link href="/doctors" className="mb-4 inline-flex items-center gap-1 text-sm text-slate-500 hover:text-brand-700">
-        <ArrowLeft size={16} /> К списку врачей
+        <ArrowLeft size={16} /> {t("profile.toList")}
       </Link>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_340px]">
@@ -82,17 +84,17 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-2">
                   {d.top && <span className="chip bg-amber-100 text-amber-700">ТОП</span>}
-                  {d.verified && <span className="chip bg-brand-50 text-brand-700"><BadgeCheck size={12} /> Проверен</span>}
+                  {d.verified && <span className="chip bg-brand-50 text-brand-700"><BadgeCheck size={12} /> {t("profile.verified")}</span>}
                   <h1 className="text-2xl font-extrabold text-ink">{d.name}</h1>
                 </div>
                 <p className="mt-1 font-semibold text-brand-700">{specs.join(" · ") || "Врач"}</p>
                 <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-slate-500">
                   {d.experience_years != null && (
-                    <span>Стаж {d.experience_years} {pluralRu(d.experience_years, ["год", "года", "лет"])}</span>
+                    <span>{t("doc.experience")} {d.experience_years} {yearsLabel(d.experience_years, locale)}</span>
                   )}
                   {d.category && <span>• {d.category}</span>}
                   <span className="chip bg-emerald-50 text-emerald-700">
-                    {d.accepts_children ? "Принимает детей и взрослых" : "Принимает взрослых"}
+                    {d.accepts_children ? t("doc.acceptsKids") : t("doc.acceptsAdults")}
                   </span>
                 </div>
                 <div className="mt-2 flex flex-wrap items-center gap-3 text-sm">
@@ -102,10 +104,10 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
                     </span>
                   )}
                   {reviews.length > 0 && (
-                    <span className="text-slate-500">{reviews.length} {pluralRu(reviews.length, ["отзыв", "отзыва", "отзывов"])}</span>
+                    <span className="text-slate-500">{reviews.length} {t("doc.reviews")}</span>
                   )}
                   {d.online_bookings > 0 && (
-                    <span className="text-slate-400">· {d.online_bookings} записей онлайн</span>
+                    <span className="text-slate-400">· {d.online_bookings} {t("doc.online").toLowerCase()}</span>
                   )}
                 </div>
               </div>
@@ -114,7 +116,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
 
           {/* about */}
           {d.description && (
-            <Section title="О враче">
+            <Section title={t("profile.about")}>
               <div
                 className="prose prose-sm max-w-none text-slate-700 [&_p]:my-1.5 [&_strong]:text-ink [&_ul]:list-disc [&_ul]:pl-5"
                 dangerouslySetInnerHTML={{ __html: sanitize(d.description) }}
@@ -124,7 +126,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
 
           {/* diseases */}
           {d.diseases?.length > 0 && (
-            <Section title="Лечение заболеваний">
+            <Section title={t("profile.diseases")}>
               <div className="flex flex-wrap gap-1.5">
                 {d.diseases.map((x) => <span key={x} className="chip bg-slate-100 text-slate-600">{x}</span>)}
               </div>
@@ -133,7 +135,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
 
           {/* services */}
           {d.services?.length > 0 && (
-            <Section title={`Услуги (${d.services.length})`}>
+            <Section title={`${t("profile.services")} (${d.services.length})`}>
               <ul className="divide-y divide-slate-100">
                 {d.services.slice(0, 40).map((s, i) => (
                   <li key={i} className="flex items-center justify-between gap-3 py-2.5 text-sm">
@@ -148,7 +150,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
           )}
 
           {/* clinics */}
-          <Section title={`Где принимает (${d.clinics?.length || 0})`}>
+          <Section title={`${t("profile.whereReceives")} (${d.clinics?.length || 0})`}>
             <div className="space-y-3">
               {(d.clinics || []).map((c, i) => (
                 <div key={i} className="rounded-xl border border-slate-100 p-3">
@@ -174,7 +176,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
                     {c.online_booking && <span className="chip bg-emerald-50 text-emerald-700"><CalendarCheck size={12} /> Онлайн-запись</span>}
                     {c.lat && c.lng && (
                       <a href={`https://2gis.kz/geo/${c.lng},${c.lat}`} target="_blank" rel="noopener noreferrer" className="chip bg-slate-100 text-slate-600">
-                        <MapPin size={12} /> На карте
+                        <MapPin size={12} /> {t("profile.onMap")}
                       </a>
                     )}
                   </div>
@@ -197,7 +199,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
 
           {/* reviews */}
           {reviews.length > 0 && (
-            <Section title={`Отзывы (${reviews.length})`}>
+            <Section title={`${t("profile.reviews")} (${reviews.length})`}>
               <div className="space-y-3">
                 {reviews.map((r, i) => {
                   const rn = ratingNum(r.rating);
@@ -210,7 +212,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
                           </span>
                           <div>
                             <div className="text-sm font-semibold text-ink">{r.author}</div>
-                            {r.visit_date && <div className="text-xs text-slate-400">Приём: {r.visit_date}</div>}
+                            {r.visit_date && <div className="text-xs text-slate-400">{t("profile.visit")}: {r.visit_date}</div>}
                           </div>
                         </div>
                         {rn != null && (
@@ -231,7 +233,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
                       )}
                       {r.reply && (
                         <div className="mt-2 rounded-lg bg-slate-50 p-2.5 text-sm text-slate-600">
-                          <span className="font-semibold text-slate-700">Ответ клиники:</span> {r.reply}
+                          <span className="font-semibold text-slate-700">{t("profile.clinicReply")}:</span> {r.reply}
                         </div>
                       )}
                     </div>
@@ -245,26 +247,26 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
         {/* sticky booking sidebar */}
         <aside>
           <div className="card sticky top-20 p-5">
-            <div className="text-sm text-slate-500">Стоимость приёма</div>
+            <div className="text-sm text-slate-500">{t("profile.price")}</div>
             <div className="mt-1 text-3xl font-extrabold text-ink">
               {d.clinic?.price_discount || d.clinic?.price || d.min_price
                 ? formatKzt(d.clinic?.price_discount || d.clinic?.price || d.min_price)
-                : "по запросу"}
+                : t("profile.byRequest")}
             </div>
             {d.clinic?.discount ? (
               <span className="chip mt-1 bg-teal-100 text-teal-700">-{d.clinic.discount}% от MedService</span>
             ) : null}
             {booked ? (
               <div className="mt-4 flex items-center gap-2 rounded-xl bg-emerald-50 p-3 font-semibold text-emerald-700">
-                <Check size={18} /> Заявка отправлена!
+                <Check size={18} /> {t("profile.sent")}
               </div>
             ) : (
               <button onClick={() => setBooked(true)} className="btn-primary mt-4 w-full">
-                Записаться на приём
+                {t("common.bookAppt")}
               </button>
             )}
             <p className="mt-3 text-center text-xs text-slate-400">
-              {d.online_bookings > 0 ? `${d.online_bookings} человек уже записались` : "Бесплатная запись"}
+              {d.online_bookings > 0 ? t("profile.bookedCount", { n: d.online_bookings }) : t("profile.freeBooking")}
             </p>
           </div>
         </aside>

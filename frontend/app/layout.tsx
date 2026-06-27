@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import "leaflet/dist/leaflet.css";
 import { Header } from "@/components/Header";
+import { I18nProvider } from "@/lib/i18n/I18nProvider";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], display: "swap" });
 
@@ -16,14 +17,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ru">
       <body className={inter.className}>
-        <Header />
-        <main className="min-h-[calc(100vh-4rem)] pb-16">{children}</main>
-        <footer className="border-t border-slate-200 bg-white">
-          <div className="container-page flex flex-col gap-2 py-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-            <p>© 2025 MedServicePrice.kz — MVP, хакатон. Данные из открытых источников.</p>
-            <p className="text-slate-400">Сравнение цен на медицинские услуги · Казахстан</p>
-          </div>
-        </footer>
+        <I18nProvider>
+          <Header />
+          <main className="min-h-[calc(100vh-4rem)] pb-16">{children}</main>
+          <Footer />
+        </I18nProvider>
       </body>
     </html>
   );

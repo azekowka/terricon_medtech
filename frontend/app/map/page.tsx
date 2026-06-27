@@ -2,60 +2,85 @@
 
 import { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
+import { X } from "lucide-react";
 import { api } from "@/lib/api";
-import type { ClinicListItem, Meta } from "@/lib/types";
+import type { MapCity } from "@/components/CityPriceMap";
+import type { ClinicListItem } from "@/lib/types";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
-const ClinicsMap = dynamic(() => import("@/components/ClinicsMap"), {
+const CityPriceMap = dynamic(() => import("@/components/CityPriceMap"), {
   ssr: false,
   loading: () => <div className="h-full w-full animate-pulse bg-slate-100" />,
 });
 
-const CITY_CENTERS: Record<string, [number, number]> = {
-  Алматы: [43.238, 76.889],
-  Астана: [51.16, 71.47],
-  Шымкент: [42.34, 69.59],
-  Актобе: [50.28, 57.17],
-  Караганда: [49.8, 73.11],
-  Павлодар: [52.29, 76.97],
-};
-
 export default function MapPage() {
+  const { t } = useI18n();
+  const [cities, setCities] = useState<MapCity[]>([]);
   const [clinics, setClinics] = useState<ClinicListItem[]>([]);
-  const [meta, setMeta] = useState<Meta | null>(null);
-  const [city, setCity] = useState("");
+  const [selected, setSelected] = useState<string | null>(null);
 
   useEffect(() => {
-    api.meta().then(setMeta).catch(() => {});
+    api.mapCities().then((d) => setCities(d.cities as MapCity[])).catch(() => setCities([]));
+    api.clinics().then(setClinics).catch(() => setClinics([]));
   }, []);
 
-  useEffect(() => {
-    api.clinics(city ? { city } : undefined).then(setClinics).catch(() => setClinics([]));
-  }, [city]);
-
-  const center: [number, number] = useMemo(
-    () => (city && CITY_CENTERS[city] ? CITY_CENTERS[city] : [48.0, 68.0]),
-    [city],
+  const cheapest = cities.length ? Math.min(...cities.map((c) => c.min_price)) : 0;
+  const cheapestCity = cities.find((c) => c.min_price === cheapest);
+  const selCity = cities.find((c) => c.slug === selected);
+  const clinicsInSel = useMemo(
+    () => (selCity ? clinics.filter((c) => c.city === selCity.name).length : clinics.length),
+    [clinics, selCity],
   );
 
   return (
     <div className="container-page pt-6">
-      <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-2xl font-extrabold text-ink">Клиники на карте</h1>
-          <p className="text-sm text-slate-500">{clinics.length} клиник · нажмите на маркер для подробностей</p>
+          <h1 className="text-2xl font-extrabold text-ink">{t("map.title")}</h1>
+          <p className="text-sm text-slate-500">
+            {selCity
+              ? `${selCity.name} · ${clinicsInSel} ${t("home.clinicsCount")}`
+              : t("map.subtitle")}
+          </p>
         </div>
-        <select className="input sm:w-56" value={city} onChange={(e) => setCity(e.target.value)}>
-          <option value="">Весь Казахстан</option>
-          {meta?.cities.map((c) => (
-            <option key={c} value={c}>
-              {c}
-            </option>
-          ))}
-        </select>
+        <div className="flex items-center gap-2">
+          {!selCity && cheapestCity && (
+            <div className="hidden rounded-xl bg-teal-50 px-3 py-2 text-sm sm:block">
+              <span className="text-slate-500">{t("map.cheapestIn")} </span>
+              <b className="text-teal-700">{cheapestCity.name}</b>
+              <span className="text-slate-500"> — {t("common.from")} </span>
+              <b className="text-teal-700">{new Intl.NumberFormat("ru-RU").format(cheapest)} ₸</b>
+            </div>
+          )}
+          <select
+            className="input sm:w-52"
+            value={selected || ""}
+            onChange={(e) => setSelected(e.target.value || null)}
+          >
+            <option value="">{t("search.allCities")}</option>
+            {cities.map((c) => (
+              <option key={c.slug} value={c.slug}>{c.name}</option>
+            ))}
+          </select>
+          {selCity && (
+            <button onClick={() => setSelected(null)} className="btn-outline px-2.5 py-2" title={t("search.allCities")}>
+              <X size={16} />
+            </button>
+          )}
+        </div>
       </div>
-      <div className="card h-[70vh] overflow-hidden p-0">
-        {/* key forces a remount so react-leaflet re-centers on city change */}
-        <ClinicsMap key={city || "all"} clinics={clinics} center={center} />
+      <div className="card relative h-[72vh] overflow-hidden p-0">
+        <CityPriceMap cities={cities} clinics={clinics} selected={selected} onSelect={(s) => setSelected(s)} />
+      </div>
+      <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-xs text-slate-500">
+        <span className="inline-flex items-center gap-1.5">
+          <span className="inline-block rounded bg-white px-1.5 py-0.5 text-[10px] font-bold shadow">{t("common.from")} ₸</span>
+          {t("map.bubbleHint")}
+        </span>
+        <span className="inline-flex items-center gap-1.5">
+          <span className="inline-block h-3 w-3 rounded-full border-2 border-white bg-brand-600 shadow" />
+          {t("map.clinicHint")}
+        </span>
       </div>
     </div>
   );

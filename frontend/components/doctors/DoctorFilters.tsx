@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { SlidersHorizontal } from "lucide-react";
 import type { DoctorSpecialty } from "@/lib/types";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 export interface DocFilterState {
   specialty: string;
@@ -15,12 +16,12 @@ export interface DocFilterState {
   sort: string;
 }
 
-export const DOC_SORTS = [
-  { key: "rating", label: "По рейтингу" },
-  { key: "price_asc", label: "Сначала дешевле" },
-  { key: "price_desc", label: "Сначала дороже" },
-  { key: "experience", label: "По стажу" },
-  { key: "reviews", label: "По отзывам" },
+const SORT_KEYS = [
+  { key: "rating", tk: "doctors.sort.rating" },
+  { key: "price_asc", tk: "doctors.sort.priceAsc" },
+  { key: "price_desc", tk: "doctors.sort.priceDesc" },
+  { key: "experience", tk: "doctors.sort.experience" },
+  { key: "reviews", tk: "doctors.sort.reviews" },
 ];
 
 export function DoctorFilters({
@@ -32,6 +33,7 @@ export function DoctorFilters({
   state: DocFilterState;
   onChange: (patch: Partial<DocFilterState>) => void;
 }) {
+  const { t } = useI18n();
   const [specQuery, setSpecQuery] = useState("");
   const visibleSpecs = specialties
     .filter((s) => s.name.toLowerCase().includes(specQuery.trim().toLowerCase()))
@@ -40,23 +42,23 @@ export function DoctorFilters({
   return (
     <div className="card sticky top-20 space-y-4 p-5">
       <div className="flex items-center gap-2 font-bold text-ink">
-        <SlidersHorizontal size={18} /> Фильтры
+        <SlidersHorizontal size={18} /> {t("search.filters")}
       </div>
 
       <div>
-        <label className="label">Сортировка</label>
+        <label className="label">{t("search.sort")}</label>
         <select className="input" value={state.sort} onChange={(e) => onChange({ sort: e.target.value })}>
-          {DOC_SORTS.map((s) => (
-            <option key={s.key} value={s.key}>{s.label}</option>
+          {SORT_KEYS.map((s) => (
+            <option key={s.key} value={s.key}>{t(s.tk)}</option>
           ))}
         </select>
       </div>
 
       <div>
-        <label className="label">Специализация</label>
+        <label className="label">{t("doctors.specialty")}</label>
         <input
           className="input mb-2"
-          placeholder="Поиск специализации…"
+          placeholder={t("doctors.searchSpecialty")}
           value={specQuery}
           onChange={(e) => setSpecQuery(e.target.value)}
         />
@@ -67,7 +69,7 @@ export function DoctorFilters({
               !state.specialty ? "bg-brand-50 font-semibold text-brand-700" : "text-slate-600 hover:bg-slate-100"
             }`}
           >
-            Все специализации
+            {t("doctors.allSpecialties")}
           </button>
           {visibleSpecs.map((s) => (
             <button
@@ -85,39 +87,39 @@ export function DoctorFilters({
       </div>
 
       <div>
-        <label className="label">Цена приёма до, ₸</label>
+        <label className="label">{t("doctors.priceUpTo")}</label>
         <input
           type="number"
           className="input"
-          placeholder="например, 10000"
+          placeholder="10000"
           value={state.price_max}
           onChange={(e) => onChange({ price_max: e.target.value })}
         />
       </div>
 
       <div>
-        <label className="label">Рейтинг от</label>
+        <label className="label">{t("search.minRating")}</label>
         <select className="input" value={state.rating_min} onChange={(e) => onChange({ rating_min: e.target.value })}>
-          <option value="">Любой</option>
-          <option value="4">от 4.0 ★</option>
-          <option value="4.5">от 4.5 ★</option>
-          <option value="4.8">от 4.8 ★</option>
+          <option value="">{t("search.anyRating")}</option>
+          <option value="4">{t("common.from")} 4.0 ★</option>
+          <option value="4.5">{t("common.from")} 4.5 ★</option>
+          <option value="4.8">{t("common.from")} 4.8 ★</option>
         </select>
       </div>
 
       <div>
-        <label className="label">Стаж от, лет</label>
+        <label className="label">{t("doctors.expFrom")}</label>
         <select className="input" value={state.experience_min} onChange={(e) => onChange({ experience_min: e.target.value })}>
-          <option value="">Любой</option>
-          <option value="5">от 5 лет</option>
-          <option value="10">от 10 лет</option>
-          <option value="20">от 20 лет</option>
+          <option value="">{t("search.anyRating")}</option>
+          <option value="5">{t("common.from")} 5</option>
+          <option value="10">{t("common.from")} 10</option>
+          <option value="20">{t("common.from")} 20</option>
         </select>
       </div>
 
-      <Toggle label="Принимает детей" checked={state.accepts_children} onChange={(v) => onChange({ accepts_children: v })} />
-      <Toggle label="Онлайн-запись" checked={state.online_booking} onChange={(v) => onChange({ online_booking: v })} />
-      <Toggle label="Проверенные врачи" checked={state.verified} onChange={(v) => onChange({ verified: v })} />
+      <Toggle label={t("doctors.acceptsChildren")} checked={state.accepts_children} onChange={(v) => onChange({ accepts_children: v })} />
+      <Toggle label={t("search.online")} checked={state.online_booking} onChange={(v) => onChange({ online_booking: v })} />
+      <Toggle label={t("doctors.verifiedOnly")} checked={state.verified} onChange={(v) => onChange({ verified: v })} />
     </div>
   );
 }

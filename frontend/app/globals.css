@@ -49,6 +49,97 @@ body {
   z-index: 0;
 }
 
+/* Aviasales-style price bubbles for the MapLibre map */
+.price-bubble {
+  position: relative;
+  background: #fff;
+  border-radius: 11px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.16);
+  padding: 5px 11px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.price-bubble:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.28);
+  z-index: 20;
+}
+.price-bubble::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #fff;
+}
+.price-bubble .pb-name {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.15;
+  color: #0f172a;
+}
+.price-bubble .pb-price {
+  font-size: 12px;
+  line-height: 1.2;
+  color: #64748b;
+}
+.price-bubble.pb-best {
+  background: #0e7c7b;
+}
+.price-bubble.pb-best::after {
+  border-top-color: #0e7c7b;
+}
+.price-bubble.pb-best .pb-name,
+.price-bubble.pb-best .pb-price {
+  color: #fff;
+}
+.price-bubble.pb-active {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+/* clinic markers (dots) */
+.clinic-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.4);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+.clinic-dot:hover {
+  transform: scale(1.25);
+}
+.clinic-pop {
+  font-family: inherit;
+  min-width: 180px;
+}
+.clinic-pop .cp-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+.clinic-pop .cp-meta {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 2px;
+}
+.clinic-pop .cp-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+}
+.maplibregl-ctrl-attrib { font-size: 9px; opacity: 0.6; }
+
 /* subtle scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { MapPin, Search, X } from "lucide-react";
 import type { DoctorRegion } from "@/lib/types";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 export function RegionPopup({
   regions,
@@ -15,6 +16,7 @@ export function RegionPopup({
   onSelect: (slug: string) => void;
   onClose: () => void;
 }) {
+  const { t } = useI18n();
   const [q, setQ] = useState("");
   const filtered = regions.filter((r) => r.name.toLowerCase().includes(q.trim().toLowerCase()));
   return (
@@ -22,7 +24,7 @@ export function RegionPopup({
       <div className="card w-full max-w-2xl p-6" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between">
           <h2 className="flex items-center gap-2 text-xl font-bold text-ink">
-            <MapPin className="text-brand-600" size={22} /> Выберите город
+            <MapPin className="text-brand-600" size={22} /> {t("doctors.selectCity")}
           </h2>
           <button onClick={onClose} className="text-slate-400 hover:text-slate-700">
             <X size={22} />
@@ -34,7 +36,7 @@ export function RegionPopup({
             autoFocus
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Поиск города…"
+            placeholder={t("doctors.searchCity")}
             className="input pl-10"
           />
         </div>
@@ -52,7 +54,7 @@ export function RegionPopup({
             </button>
           ))}
           {filtered.length === 0 && (
-            <p className="col-span-full py-6 text-center text-sm text-slate-400">Город не найден</p>
+            <p className="col-span-full py-6 text-center text-sm text-slate-400">{t("doctors.cityNotFound")}</p>
           )}
         </div>
       </div>

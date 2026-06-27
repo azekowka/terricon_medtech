@@ -138,6 +138,77 @@ def list_doctors(
     }
 
 
+@router.get("/recommendations")
+def recommendations(
+    region: str | None = None,
+    specialty: str | None = None,
+    exclude: int | None = None,
+    db: Session = Depends(get_db),
+):
+    """Aggregator-style "best deals": a few genuinely advantageous picks
+    (best value, cheapest with good rating, top rated) with computed reasons —
+    like Aviasales/Trip.com smart suggestions."""
+    q = db.query(Doctor).filter(Doctor.min_price.isnot(None), Doctor.rating.isnot(None))
+    if region:
+        q = q.filter(Doctor.region == region)
+    if specialty:
+        q = q.filter(Doctor.spec_aliases.like(f"%,{specialty},%"))
+    if exclude:
+        q = q.filter(Doctor.id != exclude)
+    # pool: well-rated, priced doctors (cap for performance)
+    pool = q.order_by(Doctor.rating.desc()).limit(400).all()
+    pool = [d for d in pool if d.min_price and d.min_price > 0]
+    if len(pool) < 3:
+        return {"items": [], "avg_price": None}
+
+    prices = [float(d.min_price) for d in pool]
+    avg = sum(prices) / len(prices)
+
+    picks: list[tuple[str, Doctor]] = []
+    used: set[int] = set()
+
+    def take(label, doc):
+        if doc and doc.id not in used:
+            used.add(doc.id)
+            picks.append((label, doc))
+
+    # 1. Best value: high rating AND below-average price (maximize rating, then cheapest)
+    value = [d for d in pool if (d.rating or 0) >= 4.3 and float(d.min_price) <= avg]
+    value.sort(key=lambda d: (-(d.rating or 0), float(d.min_price)))
+    take("bestValue", value[0] if value else None)
+
+    # 2. Cheapest with a solid rating
+    cheap = sorted([d for d in pool if (d.rating or 0) >= 4.0 and d.id not in used],
+                   key=lambda d: float(d.min_price))
+    take("cheapest", cheap[0] if cheap else None)
+
+    # 3. Top rated (with enough reviews) — quality pick
+    top = sorted([d for d in pool if d.id not in used and (d.reviews or 0) >= 10],
+                 key=lambda d: (-(d.rating or 0), -(d.reviews or 0)))
+    take("topRated", top[0] if top else None)
+
+    # 4. fallback popular if we still have < 3
+    if len(picks) < 3:
+        pop = sorted([d for d in pool if d.id not in used],
+                     key=lambda d: -(d.reviews or 0))
+        take("popular", pop[0] if pop else None)
+
+    items = []
+    for label, d in picks[:3]:
+        price = float(d.min_price)
+        below_pct = round((avg - price) / avg * 100) if avg else 0
+        items.append({
+            "type": label,
+            "doctor": _card(d),
+            "below_avg_pct": max(0, below_pct),
+            "cheaper_than_avg": max(0, round(avg - price)),
+            "rating": d.rating,
+            "reviews": d.reviews,
+            "experience": d.experience_years,
+        })
+    return {"items": items, "avg_price": round(avg)}
+
+
 def _full(d: Doctor) -> dict:
     return {
         **_card(d),

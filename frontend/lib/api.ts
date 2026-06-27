@@ -2,6 +2,7 @@ import type {
   ClinicCard,
   ClinicListItem,
   DoctorDetail,
+  DoctorRecommendations as DoctorRecs,
   DoctorsMeta,
   DoctorsResult,
   HistorySeries,
@@ -62,4 +63,7 @@ export const api = {
   doctors: (params: Record<string, any>) => get<DoctorsResult>("/api/doctors", params),
   doctor: (id: number) => get<DoctorDetail>(`/api/doctors/${id}`),
   doctorProfile: (id: number) => get<DoctorDetail>(`/api/doctors/${id}/profile`),
+  doctorRecommendations: (params: Record<string, any>) =>
+    get<DoctorRecs>("/api/doctors/recommendations", params),
+  mapCities: () => get<{ cities: any[] }>("/api/map/cities"),
 };

@@ -6,6 +6,7 @@ import { Search, Loader2 } from "lucide-react";
 import { api } from "@/lib/api";
 import type { Suggestion } from "@/lib/types";
 import { categoryMeta } from "@/lib/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 export function SearchBar({
   size = "lg",
@@ -15,6 +16,7 @@ export function SearchBar({
   initialValue?: string;
 }) {
   const router = useRouter();
+  const { t } = useI18n();
   const [value, setValue] = useState(initialValue);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [open, setOpen] = useState(false);
@@ -108,11 +110,11 @@ export function SearchBar({
           }}
           onFocus={() => suggestions.length && setOpen(true)}
           onKeyDown={onKeyDown}
-          placeholder="Например: общий анализ крови, УЗИ, приём терапевта…"
+          placeholder={t("home.searchPlaceholder")}
           className={`w-full rounded-2xl border border-slate-200 bg-white pl-12 pr-28 ${pad} font-medium shadow-card outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-100`}
         />
         <button onClick={submitFree} className="btn-primary absolute right-2 top-1/2 -translate-y-1/2">
-          {loading ? <Loader2 className="animate-spin" size={16} /> : "Найти"}
+          {loading ? <Loader2 className="animate-spin" size={16} /> : t("common.find")}
         </button>
       </div>
 

@@ -1,33 +1,38 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import { useMemo } from "react";
+import { useEffect, useRef } from "react";
+import maplibregl from "maplibre-gl";
+import "maplibre-gl/dist/maplibre-gl.css";
 
-const MapContainer = dynamic(() => import("react-leaflet").then((m) => m.MapContainer), { ssr: false });
-const TileLayer = dynamic(() => import("react-leaflet").then((m) => m.TileLayer), { ssr: false });
-const Marker = dynamic(() => import("react-leaflet").then((m) => m.Marker), { ssr: false });
+const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
+const STYLE_URL = MAPBOX_TOKEN
+  ? `https://api.mapbox.com/styles/v1/mapbox/light-v11?access_token=${MAPBOX_TOKEN}`
+  : "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json";
 
 export function ClinicMiniMap({ lat, lng, name }: { lat: number; lng: number; name: string }) {
-  const icon = useMemo(() => {
-    if (typeof window === "undefined") return undefined;
-    const L = require("leaflet");
-    return L.divIcon({
-      className: "",
-      html: `<div style="background:#2563eb;width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,.3)"></div>`,
-      iconSize: [18, 18],
-      iconAnchor: [9, 18],
-    });
-  }, []);
+  const ref = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<maplibregl.Map | null>(null);
 
-  return (
-    <div className="h-56 w-full overflow-hidden rounded-2xl">
-      <MapContainer center={[lat, lng]} zoom={14} scrollWheelZoom={false} style={{ height: "100%", width: "100%" }}>
-        <TileLayer
-          attribution='&copy; OpenStreetMap'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {icon && <Marker position={[lat, lng]} icon={icon} />}
-      </MapContainer>
-    </div>
-  );
+  useEffect(() => {
+    if (!ref.current || mapRef.current) return;
+    const map = new maplibregl.Map({
+      container: ref.current,
+      style: STYLE_URL as any,
+      center: [lng, lat],
+      zoom: 13,
+      attributionControl: false,
+    });
+    mapRef.current = map;
+    const el = document.createElement("div");
+    el.style.cssText =
+      "width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);" +
+      "background:#2563eb;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3)";
+    new maplibregl.Marker({ element: el, anchor: "bottom" }).setLngLat([lng, lat]).addTo(map);
+    return () => {
+      map.remove();
+      mapRef.current = null;
+    };
+  }, [lat, lng]);
+
+  return <div ref={ref} className="h-56 w-full overflow-hidden rounded-2xl" title={name} />;
 }

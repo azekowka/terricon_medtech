@@ -3,15 +3,13 @@
 import Link from "next/link";
 import { BadgeCheck, CalendarCheck, MapPin, Star, Stethoscope } from "lucide-react";
 import type { DoctorCard as Doctor } from "@/lib/types";
-import { formatKzt, pluralRu } from "@/lib/format";
-
-function patientLabel(d: Doctor): string {
-  if (d.accepts_children) return "Принимает детей и взрослых";
-  return "Принимает взрослых";
-}
+import { formatKzt, yearsLabel } from "@/lib/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) {
+  const { t, locale } = useI18n();
   const href = `/doctors/${doctor.id}`;
+  const patientLabel = doctor.accepts_children ? t("doc.acceptsKids") : t("doc.acceptsAdults");
   const c = doctor.clinic;
   const specs = doctor.specialties?.map((s) => s.name) || [];
   const specLabel = doctor.primary_specialty || specs[0] || "Врач";
@@ -52,12 +50,12 @@ export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) 
 
         <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-500">
           {doctor.experience_years != null && (
-            <span>Стаж {doctor.experience_years} {pluralRu(doctor.experience_years, ["год", "года", "лет"])}</span>
+            <span>{t("doc.experience")} {doctor.experience_years} {yearsLabel(doctor.experience_years, locale)}</span>
           )}
           {doctor.category && <span className="text-slate-400">• {doctor.category}</span>}
         </div>
         <div className="mt-1.5 flex flex-wrap items-center gap-2">
-          <span className="chip bg-emerald-50 text-emerald-700">{patientLabel(doctor)}</span>
+          <span className="chip bg-emerald-50 text-emerald-700">{patientLabel}</span>
           {doctor.rating != null && (
             <span className="chip bg-amber-50 text-amber-700">
               <Star size={12} className="fill-amber-400 text-amber-400" /> {doctor.rating.toFixed(2)}
@@ -65,7 +63,7 @@ export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) 
           )}
           {doctor.reviews > 0 && (
             <span className="text-xs text-slate-400">
-              {doctor.reviews} {pluralRu(doctor.reviews, ["отзыв", "отзыва", "отзывов"])}
+              {doctor.reviews} {t("doc.reviews")}
             </span>
           )}
         </div>
@@ -80,7 +78,7 @@ export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) 
             )}
             {doctor.clinics_count > 1 && (
               <div className="mt-0.5 text-xs font-medium text-brand-600">
-                и ещё {doctor.clinics_count - 1} {pluralRu(doctor.clinics_count - 1, ["клиника", "клиники", "клиник"])}
+                {t("doc.moreClinics", { n: doctor.clinics_count - 1 })}
               </div>
             )}
           </div>
@@ -91,7 +89,7 @@ export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) 
       <div className="flex shrink-0 flex-col items-stretch justify-center gap-2 border-t border-slate-100 pt-3 sm:w-44 sm:border-l sm:border-t-0 sm:pl-4 sm:pt-0">
         {c?.online_booking && (
           <span className="chip self-start bg-emerald-50 text-emerald-700">
-            <CalendarCheck size={12} /> Онлайн-запись
+            <CalendarCheck size={12} /> {t("doc.online")}
           </span>
         )}
         <div className="text-right sm:text-left">
@@ -99,7 +97,7 @@ export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) 
             <>
               <div className="text-sm text-slate-400 line-through">{formatKzt(c.price)}</div>
               <div className="text-2xl font-extrabold text-ink">{formatKzt(c.price_discount)}</div>
-              <span className="chip mt-1 bg-teal-100 text-teal-700">-{c.discount}% от MedService</span>
+              <span className="chip mt-1 bg-teal-100 text-teal-700">-{c.discount}% {t("doc.discount")}</span>
             </>
           ) : (
             <div className="text-2xl font-extrabold text-ink">
@@ -108,7 +106,7 @@ export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) 
           )}
         </div>
         <Link href={href} className="btn-primary w-full">
-          Записаться
+          {t("common.book")}
         </Link>
       </div>
     </div>
