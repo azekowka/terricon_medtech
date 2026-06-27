@@ -66,6 +66,10 @@ export const api = {
   doctorRecommendations: (params: Record<string, any>) =>
     get<DoctorRecs>("/api/doctors/recommendations", params),
   mapCities: () => get<{ cities: any[] }>("/api/map/cities"),
-  assistantChat: (message: string, locale: string) =>
-    post<{ reply: string; actions: { label: string; href: string }[] }>("/api/assistant/chat", { message, locale }),
+  assistantChat: (message: string, locale: string, history: { role: string; text: string }[] = []) =>
+    post<{ reply: string; actions: { label: string; href: string }[] }>("/api/assistant/chat", {
+      message,
+      locale,
+      history,
+    }),
 };

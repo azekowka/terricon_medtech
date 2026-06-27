@@ -40,14 +40,15 @@ export function ChatWidget() {
   async function send(text: string) {
     const q = text.trim();
     if (!q || loading) return;
+    const history = messages.map((m) => ({ role: m.role, text: m.text }));
     setInput("");
     setMessages((m) => [...m, { role: "user", text: q }]);
     setLoading(true);
     try {
-      const res = await api.assistantChat(q, locale);
+      const res = await api.assistantChat(q, locale, history);
       setMessages((m) => [...m, { role: "bot", text: res.reply, actions: res.actions }]);
     } catch {
-      setMessages((m) => [...m, { role: "bot", text: "⚠️ " + t("common.notFound") }]);
+      setMessages((m) => [...m, { role: "bot", text: "⚠️ " + t("chat.error") }]);
     } finally {
       setLoading(false);
     }

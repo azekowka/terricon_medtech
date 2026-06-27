@@ -37,6 +37,11 @@ class Settings(BaseSettings):
     enable_scheduler: bool = False
     scheduler_cron_hour: int = 3  # 03:00 daily
 
+    # OpenAI (chat assistant). If empty, the assistant uses the deterministic engine.
+    openai_api_key: str = ""
+    openai_model: str = "gpt-4o-mini"
+    openai_base_url: str = "https://api.openai.com/v1"
+
     @property
     def data_path(self) -> Path:
         return Path(self.data_dir)

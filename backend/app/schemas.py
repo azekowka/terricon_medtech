@@ -23,9 +23,15 @@ class ResolveUnmatched(BaseModel):
     add_synonym: bool = True
 
 
+class ChatTurn(BaseModel):
+    role: str  # "user" | "bot"
+    text: str
+
+
 class ChatRequest(BaseModel):
     message: str
     locale: str = "ru"
+    history: list[ChatTurn] = []
 
 
 class ServiceOut(BaseModel):
