@@ -109,7 +109,7 @@ export default function DoctorsPage() {
           </p>
         </div>
         <button onClick={() => setShowPopup(true)} className="btn-outline self-start">
-          <MapPin size={16} /> {regionName} <span className="text-slate-400">· {t("common.change")}</span>
+          <MapPin size={16} /> {regionName}
         </button>
       </div>
 

@@ -40,7 +40,7 @@ export function DoctorFilters({
     .slice(0, specQuery ? 40 : 30);
 
   return (
-    <div className="card sticky top-20 space-y-4 p-5">
+    <div className="card sticky top-20 max-h-[calc(100vh-6rem)] space-y-4 overflow-y-auto p-5">
       <div className="flex items-center gap-2 font-bold text-ink">
         <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 text-slate-600">
           <SlidersHorizontal size={16} strokeWidth={1.75} />
