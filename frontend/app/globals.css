@@ -152,6 +152,20 @@ h3 {
 }
 .maplibregl-ctrl-attrib { font-size: 9px; opacity: 0.6; }
 
+/* infinite logo marquee (components/core/infinite-slider) */
+@keyframes marquee-x {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee-x 28s linear infinite;
+  will-change: transform;
+}
+.infinite-slider:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 /* subtle scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

@@ -1,8 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Building2, Check, Clock, GitCompareArrows, MapPin, RefreshCcw, ShieldCheck, TrendingDown } from "lucide-react";
+import {
+  Building2, Check, Clock, Dna, Droplet, GitCompareArrows, HeartPulse, MapPin,
+  Plus, RefreshCcw, ShieldCheck, Stethoscope, TrendingDown, type LucideIcon,
+} from "lucide-react";
 import { SearchBar } from "@/components/SearchBar";
+import { InfiniteSlider } from "@/components/core/infinite-slider";
 import { categoryMeta, formatDate } from "@/lib/format";
 import type { Meta, ServiceItem } from "@/lib/types";
 import { useI18n } from "@/lib/i18n/I18nProvider";
@@ -66,6 +70,21 @@ export function HomeView({ meta, popular }: { meta: Meta | null; popular: Servic
           })}
         </section>
 
+        {/* Partners — infinite logo marquee */}
+        <section className="mt-12">
+          <h2 className="mb-4 text-xl font-bold tracking-tight text-ink">{t("home.partners")}</h2>
+          <InfiniteSlider
+            gap={44}
+            reverse
+            duration={30}
+            className="py-1 [mask-image:linear-gradient(to_right,transparent,#000_56px,#000_calc(100%-56px),transparent)]"
+          >
+            {PARTNERS.map((p) => (
+              <PartnerLogo key={p.name} {...p} />
+            ))}
+          </InfiniteSlider>
+        </section>
+
         {/* Popular services */}
         <section className="mt-12">
           <div className="mb-4 flex items-end justify-between">
@@ -112,6 +131,28 @@ export function HomeView({ meta, popular }: { meta: Meta | null; popular: Servic
           </div>
         </section>
       </div>
+    </div>
+  );
+}
+
+// Partner clinics/labs scraped into the dataset (brand sources).
+const PARTNERS: { name: string; color: string; icon: LucideIcon }[] = [
+  { name: "KDL Olymp", color: "#e11d48", icon: Droplet },
+  { name: "Invitro", color: "#16a34a", icon: Droplet },
+  { name: "Helix", color: "#1a73f0", icon: Dna },
+  { name: "Olymp", color: "#0d9488", icon: HeartPulse },
+  { name: "МЕДЭЛ", color: "#4f46e5", icon: Plus },
+  { name: "МЦК", color: "#ea580c", icon: Stethoscope },
+  { name: "Аксай", color: "#0284c7", icon: Building2 },
+];
+
+function PartnerLogo({ name, color, icon: Icon }: { name: string; color: string; icon: LucideIcon }) {
+  return (
+    <div className="flex select-none items-center gap-2.5 opacity-60 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-white" style={{ backgroundColor: color }}>
+        <Icon size={18} strokeWidth={2} />
+      </span>
+      <span className="whitespace-nowrap text-lg font-bold tracking-tight text-slate-600">{name}</span>
     </div>
   );
 }
