@@ -48,7 +48,7 @@ export function ChatWidget() {
       const res = await api.assistantChat(q, locale, history);
       setMessages((m) => [...m, { role: "bot", text: res.reply, actions: res.actions }]);
     } catch {
-      setMessages((m) => [...m, { role: "bot", text: "⚠️ " + t("chat.error") }]);
+      setMessages((m) => [...m, { role: "bot", text: t("chat.error") }]);
     } finally {
       setLoading(false);
     }
@@ -79,19 +79,19 @@ export function ChatWidget() {
 
       {/* panel */}
       {open && (
-        <div className="fixed bottom-5 right-5 z-50 flex h-[560px] max-h-[85vh] w-[380px] max-w-[calc(100vw-2.5rem)] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-hover">
+        <div className="fixed bottom-5 right-5 z-50 flex h-[560px] max-h-[85vh] w-[380px] max-w-[calc(100vw-2.5rem)] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-pop">
           {/* header */}
-          <div className="flex items-center justify-between bg-gradient-to-r from-brand-600 to-teal-600 px-4 py-3 text-white">
+          <div className="flex items-center justify-between bg-brand-600 px-4 py-3 text-white">
             <div className="flex items-center gap-2.5">
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
-                <Bot size={20} />
+                <Bot size={20} strokeWidth={1.75} />
               </span>
               <div>
                 <div className="text-sm font-bold leading-tight">{t("chat.title")}</div>
                 <div className="text-xs text-brand-50">{t("chat.subtitle")}</div>
               </div>
             </div>
-            <button onClick={() => setOpen(false)} className="rounded-lg p-1 hover:bg-white/15" aria-label="close">
+            <button onClick={() => setOpen(false)} className="rounded-lg p-1 transition hover:bg-white/15" aria-label="close">
               <X size={20} />
             </button>
           </div>
@@ -179,7 +179,7 @@ export function ChatWidget() {
               onKeyDown={onKeyDown}
               rows={1}
               placeholder={t("chat.placeholder")}
-              className="max-h-24 flex-1 resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
+              className="max-h-24 flex-1 resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/15"
             />
             <button
               onClick={() => send(input)}

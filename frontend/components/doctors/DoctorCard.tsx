@@ -16,7 +16,7 @@ export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) 
   const specLabel = doctor.primary_specialty || specs[0] || "Врач";
   const extra = specs.length > 1 ? specs.slice(1, 3) : [];
   return (
-    <div className="card flex flex-col gap-4 p-4 transition hover:shadow-hover sm:flex-row sm:p-5">
+    <div className="card flex flex-col gap-4 p-4 transition duration-200 hover:-translate-y-0.5 hover:shadow-hover sm:flex-row sm:p-5">
       {/* avatar */}
       <Link href={href} className="relative shrink-0">
         <DoctorAvatar src={doctor.avatar} name={doctor.name} className="h-24 w-24 rounded-2xl" iconSize={34} />
@@ -30,7 +30,7 @@ export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) 
       {/* info */}
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-2">
-          {doctor.top && <span className="chip bg-amber-100 text-amber-700">ТОП</span>}
+          {doctor.top && <span className="chip bg-amber-50 text-amber-700">ТОП</span>}
           <Link href={href} className="text-lg font-bold leading-tight text-ink hover:text-brand-700">
             {doctor.name}
           </Link>
@@ -88,11 +88,11 @@ export function DoctorCard({ doctor }: { doctor: Doctor; onBook?: () => void }) 
           {c?.discount ? (
             <>
               <div className="text-sm text-slate-400 line-through">{formatKzt(c.price)}</div>
-              <div className="text-2xl font-extrabold text-ink">{formatKzt(c.price_discount)}</div>
-              <span className="chip mt-1 bg-teal-100 text-teal-700">-{c.discount}% {t("doc.discount")}</span>
+              <div className="text-2xl font-bold tracking-tight text-ink">{formatKzt(c.price_discount)}</div>
+              <span className="chip mt-1 bg-teal-50 text-teal-700">-{c.discount}% {t("doc.discount")}</span>
             </>
           ) : (
-            <div className="text-2xl font-extrabold text-ink">
+            <div className="text-2xl font-bold tracking-tight text-ink">
               {c?.price ? formatKzt(c.price) : doctor.min_price ? formatKzt(doctor.min_price) : "—"}
             </div>
           )}

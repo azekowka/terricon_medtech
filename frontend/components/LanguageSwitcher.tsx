@@ -32,7 +32,7 @@ export function LanguageSwitcher() {
         <ChevronDown size={14} className={`transition ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
-        <div className="absolute right-0 z-50 mt-1 w-40 overflow-hidden rounded-xl border border-slate-100 bg-white shadow-hover">
+        <div className="absolute right-0 z-50 mt-1.5 w-40 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-pop">
           {LOCALES.map((l) => (
             <button
               key={l.code}

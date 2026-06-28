@@ -21,13 +21,19 @@ export function RegionPopup({
   const filtered = regions.filter((r) => r.name.toLowerCase().includes(q.trim().toLowerCase()));
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center bg-ink/40 p-4 pt-20" onClick={onClose}>
-      <div className="card w-full max-w-2xl p-6" onClick={(e) => e.stopPropagation()}>
+      <div className="card w-full max-w-2xl p-6 shadow-pop" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between">
-          <h2 className="flex items-center gap-2 text-xl font-bold text-ink">
-            <MapPin className="text-brand-600" size={22} /> {t("doctors.selectCity")}
+          <h2 className="flex items-center gap-2.5 text-xl font-bold tracking-tight text-ink">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+              <MapPin size={18} strokeWidth={1.75} />
+            </span>
+            {t("doctors.selectCity")}
           </h2>
-          <button onClick={onClose} className="text-slate-400 hover:text-slate-700">
-            <X size={22} />
+          <button
+            onClick={onClose}
+            className="flex h-9 w-9 items-center justify-center rounded-xl text-slate-400 transition hover:bg-slate-100 hover:text-slate-700"
+          >
+            <X size={18} strokeWidth={1.75} />
           </button>
         </div>
         <div className="relative mt-4">

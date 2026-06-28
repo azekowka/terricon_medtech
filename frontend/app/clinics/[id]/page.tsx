@@ -79,10 +79,11 @@ export default async function ClinicPage({ params }: { params: { id: string } })
             </h2>
             {Object.entries(grouped).map(([cat, items]) => {
               const cm = categoryMeta(cat);
+              const Icon = cm.icon;
               return (
                 <div key={cat} className="card overflow-hidden">
-                  <div className={`flex items-center gap-2 px-5 py-3 text-sm font-bold ${cm.color}`}>
-                    <span>{cm.emoji}</span> {cm.label}
+                  <div className={`flex items-center gap-2 px-5 py-3 text-sm font-semibold ${cm.color}`}>
+                    <Icon size={16} strokeWidth={1.9} /> {cm.label}
                     <span className="ml-auto font-medium opacity-70">{items.length}</span>
                   </div>
                   <ul className="divide-y divide-slate-100">

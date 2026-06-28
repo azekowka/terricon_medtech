@@ -40,7 +40,10 @@ export function Filters({
   return (
     <div className="card sticky top-20 space-y-4 p-5">
       <div className="flex items-center gap-2 font-bold text-ink">
-        <SlidersHorizontal size={18} /> Фильтры
+        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 text-slate-600">
+          <SlidersHorizontal size={16} strokeWidth={1.75} />
+        </span>
+        Фильтры
       </div>
 
       <div>
@@ -112,28 +115,28 @@ export function Filters({
         </select>
       </div>
 
-      <label className="flex cursor-pointer items-center justify-between rounded-xl bg-slate-50 px-3 py-2.5 text-sm font-medium text-slate-700">
+      <label className="flex cursor-pointer items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-100">
         Только с онлайн-записью
         <input
           type="checkbox"
           checked={state.online_booking}
           onChange={(e) => onChange({ online_booking: e.target.checked })}
-          className="h-4 w-4"
+          className="h-4 w-4 accent-brand-600"
         />
       </label>
 
-      <label className="flex cursor-pointer items-center justify-between rounded-xl bg-slate-50 px-3 py-2.5 text-sm font-medium text-slate-700">
+      <label className="flex cursor-pointer items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-100">
         Показывать устаревшие (&gt;30 дн.)
         <input
           type="checkbox"
           checked={state.include_stale}
           onChange={(e) => onChange({ include_stale: e.target.checked })}
-          className="h-4 w-4"
+          className="h-4 w-4 accent-brand-600"
         />
       </label>
 
       <button onClick={onLocate} className={`btn w-full ${geoEnabled ? "btn-ghost" : "btn-outline"}`}>
-        <Navigation size={16} /> {geoEnabled ? "Геолокация включена" : "Рядом со мной"}
+        <Navigation size={16} strokeWidth={1.75} /> {geoEnabled ? "Геолокация включена" : "Рядом со мной"}
       </button>
     </div>
   );

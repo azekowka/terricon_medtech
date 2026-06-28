@@ -104,6 +104,7 @@ function SearchContent() {
   const title = result?.service?.name || nameParam || q || "Результаты поиска";
   const stats = result?.stats;
   const cm = result?.service ? categoryMeta(result.service.category) : null;
+  const CatIcon = cm?.icon;
 
   const goCompare = () => {
     if (!result?.service) return;
@@ -121,8 +122,12 @@ function SearchContent() {
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <div className="flex items-center gap-2">
-            {cm && <span className={`chip ${cm.color}`}>{cm.emoji} {cm.label}</span>}
-            <h1 className="text-2xl font-extrabold text-ink">{title}</h1>
+            {cm && CatIcon && (
+              <span className={`chip ${cm.chip}`}>
+                <CatIcon size={12} strokeWidth={2} /> {cm.label}
+              </span>
+            )}
+            <h1 className="text-2xl font-bold tracking-tight text-ink">{title}</h1>
           </div>
           <p className="mt-1 text-sm text-slate-500">
             {loading ? "Загрузка…" : `Найдено ${stats?.count ?? 0} предложений`}

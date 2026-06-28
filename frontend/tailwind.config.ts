@@ -42,12 +42,17 @@ const config: Config = {
         ],
       },
       boxShadow: {
-        card: "0 1px 3px rgba(15,23,42,0.08), 0 1px 2px rgba(15,23,42,0.04)",
-        hover: "0 8px 24px rgba(37,99,235,0.12)",
+        // soft, neutral, diffuse — Aviasales-style depth, not a coloured glow
+        card: "0 1px 2px rgba(16,24,40,0.05), 0 1px 3px rgba(16,24,40,0.03)",
+        hover: "0 10px 28px -10px rgba(16,24,40,0.16)",
+        pop: "0 16px 40px -12px rgba(16,24,40,0.18)",
       },
       borderRadius: {
         xl: "0.875rem",
         "2xl": "1.125rem",
+      },
+      letterSpacing: {
+        tighter: "-0.02em",
       },
     },
   },

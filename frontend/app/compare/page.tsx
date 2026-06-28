@@ -162,15 +162,14 @@ function CompareContent() {
         {/* category filter */}
         <div className="mt-6 flex flex-wrap gap-2">
           {CATS.map((c) => {
-            const cm = c.key ? categoryMeta(c.key) : null;
             const count = c.key ? catCounts[c.key] || 0 : services.length;
             return (
               <button
                 key={c.key}
                 onClick={() => setCat(c.key)}
-                className={`chip text-sm ${cat === c.key ? "bg-brand-600 text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
+                className={`chip text-sm transition ${cat === c.key ? "bg-brand-600 text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
               >
-                {cm ? cm.emoji + " " : ""}{c.label} <span className="opacity-70">{count}</span>
+                {c.label} <span className="opacity-60">{count}</span>
               </button>
             );
           })}
@@ -191,14 +190,17 @@ function CompareContent() {
         <div className="mt-2 grid max-h-[60vh] gap-2 overflow-y-auto pr-1 sm:grid-cols-2 lg:grid-cols-3">
           {filteredServices.slice(0, 400).map((s) => {
             const cm = categoryMeta(s.category);
+            const Icon = cm.icon;
             return (
               <Link
                 key={s.id}
                 href={`/compare?service_id=${s.id}`}
-                className="card flex items-center justify-between gap-3 p-3.5 hover:-translate-y-0.5 hover:shadow-hover"
+                className="card flex items-center justify-between gap-3 p-3.5 transition duration-200 hover:-translate-y-0.5 hover:shadow-hover"
               >
                 <span className="flex min-w-0 items-center gap-3">
-                  <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-base ${cm.color}`}>{cm.emoji}</span>
+                  <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${cm.color}`}>
+                    <Icon size={16} strokeWidth={1.75} />
+                  </span>
                   <span className="truncate font-semibold text-ink">{s.name}</span>
                 </span>
                 <span className="shrink-0 rounded-md bg-slate-50 px-2 py-1 text-xs font-semibold text-slate-500">

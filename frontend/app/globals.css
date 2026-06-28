@@ -11,9 +11,18 @@ body {
   background: var(--bg);
   color: #0f172a;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   /* Aviasales font stack (Stapel -> Inter); see tailwind.config fontFamily.sans */
   font-family: Stapel, -apple-system, BlinkMacSystemFont, var(--font-inter), Inter, Roboto,
     Helvetica, Arial, sans-serif;
+}
+
+/* tighter, more confident headings (away from the generic default look) */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
 }
 
 @layer components {
@@ -21,25 +30,25 @@ body {
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
   }
   .card {
-    @apply rounded-2xl bg-white shadow-card border border-slate-100;
+    @apply rounded-2xl bg-white shadow-card border border-slate-200/70;
   }
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-[background-color,border-color,color,transform] duration-150 active:scale-[0.98];
   }
   .btn-primary {
-    @apply btn bg-brand-600 text-white hover:bg-brand-700 active:bg-brand-800 disabled:opacity-50;
+    @apply btn bg-brand-600 text-white shadow-sm hover:bg-brand-700 active:bg-brand-800 disabled:opacity-50 disabled:active:scale-100;
   }
   .btn-ghost {
     @apply btn bg-slate-100 text-slate-700 hover:bg-slate-200;
   }
   .btn-outline {
-    @apply btn border border-slate-200 bg-white text-slate-700 hover:border-brand-300 hover:text-brand-700;
+    @apply btn border border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50;
   }
   .chip {
-    @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium;
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium;
   }
   .input {
-    @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100;
+    @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/15;
   }
   .label {
     @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500;

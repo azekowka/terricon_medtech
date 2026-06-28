@@ -56,7 +56,7 @@ export default function IllnessPage({ params }: { params: { alias: string } }) {
   if (!d) {
     return (
       <div className="container-page py-28 text-center">
-        <p className="text-xl font-bold text-ink">{t("lech.notFound")}</p>
+        <p className="text-xl font-bold tracking-tight text-ink">{t("lech.notFound")}</p>
         <Link href="/lechenie" className="btn-primary mt-6">{t("lech.toCatalog")}</Link>
       </div>
     );
@@ -70,18 +70,18 @@ export default function IllnessPage({ params }: { params: { alias: string } }) {
 
       {/* header */}
       <div className="card p-6">
-        <div className="flex items-start gap-3">
+        <div className="flex items-start gap-3.5">
           <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-rose-100 text-rose-600">
-            <HeartPulse size={24} />
+            <HeartPulse size={24} strokeWidth={1.75} />
           </span>
           <div>
-            <h1 className="text-2xl font-extrabold text-ink">{d.name}</h1>
+            <h1 className="text-2xl font-bold tracking-tight text-ink">{d.name}</h1>
             {d.skills.length > 0 && (
               <div className="mt-2 flex flex-wrap items-center gap-1.5">
                 <span className="text-sm text-slate-500">{t("lech.treatedBy")}:</span>
                 {d.skills.map((s) => (
                   <span key={s.alias} className="chip bg-brand-50 text-brand-700">
-                    <Stethoscope size={12} /> {s.name}
+                    <Stethoscope size={12} strokeWidth={2} /> {s.name}
                   </span>
                 ))}
               </div>
@@ -124,7 +124,7 @@ export default function IllnessPage({ params }: { params: { alias: string } }) {
           <h2 className="mb-3 text-lg font-bold text-ink">{t("lech.related")}</h2>
           <div className="flex flex-wrap gap-2">
             {d.similar.map((s) => (
-              <Link key={s.alias} href={`/lechenie/${s.alias}`} className="chip bg-slate-100 text-slate-600 hover:bg-brand-50 hover:text-brand-700">
+              <Link key={s.alias} href={`/lechenie/${s.alias}`} className="chip bg-slate-100 text-slate-600 transition duration-200 hover:bg-brand-50 hover:text-brand-700">
                 {s.name}
               </Link>
             ))}

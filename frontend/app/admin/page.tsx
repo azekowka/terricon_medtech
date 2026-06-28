@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Database, Loader2, Play, RefreshCw, Tags } from "lucide-react";
+import { CheckCircle2, Database, Loader2, Play, RefreshCw, Tags } from "lucide-react";
 import { api } from "@/lib/api";
 import type { ServiceItem } from "@/lib/types";
 
@@ -52,8 +52,8 @@ export default function AdminPage() {
     <div className="container-page pt-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-extrabold text-ink">Панель администратора</h1>
-          <p className="text-sm text-slate-500">Сбор данных, журнал парсинга и нормализация справочника</p>
+          <h1 className="text-2xl font-bold tracking-tight text-ink">Панель администратора</h1>
+          <p className="mt-1 text-sm text-slate-500">Сбор данных, журнал парсинга и нормализация справочника</p>
         </div>
         <button onClick={() => refresh()} className="btn-outline">
           <RefreshCw size={16} /> Обновить
@@ -73,7 +73,9 @@ export default function AdminPage() {
       {/* Parse controls */}
       <div className="card mt-6 p-5">
         <div className="flex flex-wrap items-center gap-3">
-          <Database size={18} className="text-brand-600" />
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+            <Database size={18} strokeWidth={1.75} />
+          </span>
           <span className="font-bold text-ink">Запуск парсинга</span>
           <div className="ml-auto flex gap-2">
             <button onClick={() => runParse(false)} disabled={running} className="btn-primary">
@@ -90,7 +92,7 @@ export default function AdminPage() {
               <div key={r.id} className="flex items-center justify-between">
                 <span className="font-medium text-ink">
                   {r.source}{" "}
-                  <span className={`chip ${r.status === "success" ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-700"}`}>
+                  <span className={`chip ${r.status === "success" ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-700"}`}>
                     {r.status}
                   </span>
                 </span>
@@ -106,20 +108,28 @@ export default function AdminPage() {
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
         {/* Unmatched queue */}
         <div className="card p-5">
-          <div className="mb-3 flex items-center gap-2 font-bold text-ink">
-            <Tags size={18} className="text-amber-500" /> Очередь ручной разметки
-            <span className="chip bg-amber-100 text-amber-700">{unmatched.length}</span>
+          <div className="mb-3 flex items-center gap-2.5 font-bold text-ink">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-50 text-amber-600">
+              <Tags size={18} strokeWidth={1.75} />
+            </span>
+            Очередь ручной разметки
+            <span className="chip bg-amber-50 text-amber-700">{unmatched.length}</span>
           </div>
           {unmatched.length === 0 ? (
-            <p className="py-6 text-center text-sm text-slate-400">Очередь пуста 🎉</p>
+            <div className="flex flex-col items-center gap-2 py-8 text-center">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                <CheckCircle2 size={20} strokeWidth={1.75} />
+              </span>
+              <p className="text-sm text-slate-500">Очередь пуста</p>
+            </div>
           ) : (
             <ul className="space-y-3">
               {unmatched.map((u) => (
-                <li key={u.id} className="rounded-xl border border-slate-100 p-3">
+                <li key={u.id} className="rounded-xl border border-slate-200 p-3.5">
                   <div className="flex items-start justify-between gap-2">
                     <div>
                       <div className="font-medium text-ink">{u.service_name_raw}</div>
-                      <div className="text-xs text-slate-400">
+                      <div className="mt-0.5 text-xs text-slate-500">
                         {u.source} · встречается {u.occurrences}×
                         {u.suggested_service_name && ` · похоже на «${u.suggested_service_name}» (${Math.round(u.suggested_score)}%)`}
                       </div>
@@ -158,16 +168,16 @@ export default function AdminPage() {
           <div className="mb-3 font-bold text-ink">Журнал парсинга</div>
           <div className="max-h-[420px] space-y-2 overflow-y-auto">
             {logs.map((l) => (
-              <div key={l.id} className="flex items-center justify-between rounded-lg bg-slate-50 px-3 py-2 text-sm">
+              <div key={l.id} className="flex items-center justify-between rounded-xl bg-slate-50 px-3 py-2 text-sm">
                 <span className="font-medium text-ink">
                   {l.source}{" "}
                   <span
                     className={`chip ${
                       l.status === "success"
-                        ? "bg-emerald-100 text-emerald-700"
+                        ? "bg-emerald-50 text-emerald-700"
                         : l.status === "error"
-                        ? "bg-red-100 text-red-700"
-                        : "bg-amber-100 text-amber-700"
+                        ? "bg-red-50 text-red-700"
+                        : "bg-amber-50 text-amber-700"
                     }`}
                   >
                     {l.status}
@@ -197,8 +207,8 @@ function StatCard({ label, value, accent }: { label: string; value: number | und
   const color = accent === "emerald" ? "text-emerald-600" : accent === "amber" ? "text-amber-600" : "text-ink";
   return (
     <div className="card p-4">
-      <div className={`text-2xl font-extrabold ${color}`}>{value ?? "—"}</div>
-      <div className="text-xs text-slate-500">{label}</div>
+      <div className={`text-2xl font-bold tracking-tight ${color}`}>{value ?? "—"}</div>
+      <div className="mt-0.5 text-xs text-slate-500">{label}</div>
     </div>
   );
 }

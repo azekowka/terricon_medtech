@@ -23,14 +23,14 @@ export function OfferCard({
   const cheapest = isCheapest;
   return (
     <div
-      className={`card relative flex flex-col gap-4 p-5 transition hover:shadow-hover sm:flex-row sm:items-center sm:justify-between ${
-        cheapest ? "ring-2 ring-teal-400" : ""
+      className={`card relative flex flex-col gap-4 p-5 transition duration-200 hover:-translate-y-0.5 hover:shadow-hover sm:flex-row sm:items-center sm:justify-between ${
+        cheapest ? "ring-2 ring-teal-400/70" : ""
       }`}
     >
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-2">
           {cheapest && (
-            <span className="chip bg-teal-100 text-teal-700">★ Лучшая цена</span>
+            <span className="chip bg-teal-500 font-semibold text-white">Лучшая цена</span>
           )}
           <Link
             href={`/clinics/${offer.clinic_id}`}
@@ -64,17 +64,18 @@ export function OfferCard({
           )}
         </div>
 
-        <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
+        <div className="mt-2.5 flex flex-wrap items-center gap-1.5 text-xs">
           <span className="rounded-md bg-slate-100 px-2 py-0.5 font-medium text-slate-500">
-            источник: {offer.source}
+            {offer.source}
           </span>
           <span
-            className={`rounded-md px-2 py-0.5 font-medium ${
-              offer.is_stale ? "bg-red-50 text-red-600" : "bg-emerald-50 text-emerald-600"
+            className={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 font-medium ${
+              offer.is_stale ? "bg-red-50 text-red-600" : "bg-emerald-50 text-emerald-700"
             }`}
             title={`Спарсено: ${offer.parsed_at}`}
           >
-            {offer.is_stale ? "⚠ устарело" : "обновлено"} {relativeDays(offer.parsed_at)}
+            <span className={`h-1.5 w-1.5 rounded-full ${offer.is_stale ? "bg-red-500" : "bg-emerald-500"}`} />
+            {offer.is_stale ? "устарело" : "обновлено"} {relativeDays(offer.parsed_at)}
           </span>
           {offer.duration_days != null && (
             <span className="rounded-md bg-slate-100 px-2 py-0.5 font-medium text-slate-500">
@@ -89,7 +90,7 @@ export function OfferCard({
 
       <div className="flex shrink-0 items-center gap-4 sm:flex-col sm:items-end">
         <div className="text-right">
-          <div className="text-2xl font-extrabold text-ink">{formatKzt(offer.price_kzt)}</div>
+          <div className="text-2xl font-bold tracking-tight text-ink">{formatKzt(offer.price_kzt)}</div>
         </div>
         <div className="flex items-center gap-2">
           {subscribable && (

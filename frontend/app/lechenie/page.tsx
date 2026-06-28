@@ -33,11 +33,11 @@ export default function LecheniePage() {
 
   return (
     <div className="container-page pt-6">
-      <div className="mb-1 flex items-center gap-2">
-        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-rose-100 text-rose-600">
-          <HeartPulse size={20} />
+      <div className="mb-1 flex items-center gap-2.5">
+        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-100 text-rose-600">
+          <HeartPulse size={20} strokeWidth={1.75} />
         </span>
-        <h1 className="text-2xl font-extrabold text-ink sm:text-3xl">{t("lech.title")}</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">{t("lech.title")}</h1>
       </div>
       <p className="mb-5 text-sm text-slate-500">
         {t("lech.subtitle")} {data ? `${data.total_diseases} ${t("lech.diseases")}.` : ""}
@@ -68,11 +68,11 @@ export default function LecheniePage() {
             <button
               key={c.alias}
               onClick={() => setOpenCat(c)}
-              className="card group flex items-center justify-between gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-hover"
+              className="card group flex items-center justify-between gap-3 p-4 text-left transition duration-200 hover:-translate-y-0.5 hover:shadow-hover"
             >
               <span className="flex min-w-0 items-center gap-3">
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
-                  <Stethoscope size={20} />
+                  <Stethoscope size={20} strokeWidth={1.75} />
                 </span>
                 <span className="min-w-0">
                   <span className="block truncate font-semibold text-ink group-hover:text-brand-700">{c.name}</span>
@@ -88,19 +88,23 @@ export default function LecheniePage() {
       {/* diseases in a category (picture 2) */}
       {openCat && (
         <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-ink/40 p-4 py-12" onClick={() => setOpenCat(null)}>
-          <div className="card w-full max-w-2xl p-6" onClick={(e) => e.stopPropagation()}>
+          <div className="card w-full max-w-2xl p-6 shadow-pop" onClick={(e) => e.stopPropagation()}>
             <div className="mb-4 flex items-start justify-between">
               <div className="flex items-center gap-2.5">
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
-                  <Stethoscope size={20} />
+                  <Stethoscope size={20} strokeWidth={1.75} />
                 </span>
                 <div>
                   <h2 className="text-lg font-bold text-ink">{openCat.name}</h2>
                   <p className="text-xs text-slate-400">{openCat.count} {t("lech.diseases")}</p>
                 </div>
               </div>
-              <button onClick={() => setOpenCat(null)} className="text-slate-400 hover:text-slate-700">
-                <X size={22} />
+              <button
+                onClick={() => setOpenCat(null)}
+                aria-label="Закрыть"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-slate-400 transition hover:bg-slate-100 hover:text-slate-700"
+              >
+                <X size={20} strokeWidth={1.75} />
               </button>
             </div>
             <div className="grid max-h-[60vh] gap-2 overflow-y-auto pr-1 sm:grid-cols-2">
@@ -120,10 +124,10 @@ function DiseaseLink({ d, onClick }: { d: DiseaseRef; onClick?: () => void }) {
     <Link
       href={`/lechenie/${d.alias}`}
       onClick={onClick}
-      className="flex items-center justify-between gap-2 rounded-xl border border-slate-100 bg-white px-3.5 py-2.5 text-sm transition hover:border-brand-300 hover:bg-brand-50/40"
+      className="group flex items-center justify-between gap-2 rounded-xl border border-slate-200/70 bg-white px-3.5 py-2.5 text-sm transition duration-200 hover:border-brand-300 hover:bg-brand-50/40"
     >
-      <span className="truncate font-medium text-ink">{d.name}</span>
-      <ChevronRight size={15} className="shrink-0 text-slate-300" />
+      <span className="truncate font-medium text-ink group-hover:text-brand-700">{d.name}</span>
+      <ChevronRight size={15} className="shrink-0 text-slate-300 group-hover:text-brand-500" />
     </Link>
   );
 }
