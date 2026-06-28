@@ -89,9 +89,12 @@ def load_dictionary(db: Session) -> int:
 def seed_database(db: Session, include_live: bool = False) -> dict:
     """Full seed: load dictionary, then run the seed source (and optionally live)."""
     n_services = load_dictionary(db)
-    # seed = curated realistic data; fixtures = sample PDF/XLSX/DOCX (TZ 3.1);
-    # real = actual clinic price lists supplied for the hackathon
-    sources = ["seed", "fixtures", "real"]
+    # Build the dataset from OUR OWN services dictionary:
+    #   seed     = deterministic prices generated from services_dictionary.json
+    #   fixtures = sample public clinic documents (PDF/XLSX/DOCX, exercises TZ 3.1)
+    # The `real` adapter (direct ingest of supplied clinic price files) stays in the
+    # registry but is intentionally NOT part of the default dataset.
+    sources = ["seed", "fixtures"]
     if include_live:
         from .parsers.registry import LIVE_SOURCES
 

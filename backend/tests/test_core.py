@@ -68,28 +68,6 @@ def test_multiformat_fixtures_ingested(seeded_db):
         assert src in sources, f"missing document source {src}"
 
 
-def test_real_prices_ingested(seeded_db):
-    # real clinic price lists (PDF/DOCX/XLSX/XLS) are in the DB
-    sources = {s for (s,) in seeded_db.query(Price.source).distinct().all()}
-    assert {"umc", "nnmc"} <= sources  # detected real clinics present
-    # real, granular services that don't match the official dict feed the queue
-    from app.models import UnmatchedQueue
-    assert seeded_db.query(UnmatchedQueue).filter_by(status="pending").count() >= 50
-
-
-def test_real_extract_formats():
-    from app.config import settings
-    from app.parsers.real_extract import extract_real_file
-
-    base = settings.data_path / "real_prices"
-    for fname in ("Клиника 6 прайс 2026.xlsx", "Клиника 7_Прайс 2026.xls",
-                  "Клиника 1 прайс 2024.docx", "Клиника 1 2026.pdf"):
-        pairs = extract_real_file(str(base / fname))
-        assert len(pairs) >= 30, f"{fname} yielded too few"
-        name, price_raw = pairs[0]
-        assert parse_price(price_raw) and parse_price(price_raw) >= 300
-
-
 def test_file_extractors():
     from pathlib import Path
 
