@@ -146,7 +146,7 @@ function SearchContent() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
-        <aside>
+        <aside className="min-w-0">
           <Filters
             meta={meta}
             state={state}
@@ -157,7 +157,7 @@ function SearchContent() {
           />
         </aside>
 
-        <section className="space-y-3 pb-24">
+        <section className="min-w-0 space-y-3 pb-24">
           {loading ? (
             <div className="flex items-center justify-center py-20 text-slate-400">
               <Loader2 className="animate-spin" />

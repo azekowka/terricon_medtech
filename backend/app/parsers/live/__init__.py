@@ -1,13 +1,23 @@
-"""Best-effort live scrapers for real Kazakhstani clinic/lab sites.
+"""Best-effort live scrapers for real Kazakhstani clinic/lab sites (TZ §2.1).
 
-These run against the real public websites. Because the sites are JS-heavy and
+They run against the real public websites. Because the sites are JS-heavy and
 occasionally geo-restricted, the scrapers fail gracefully (return whatever they
-could extract; the pipeline logs partial/empty runs and keeps going). The bulk
-of demo data is provided by the deterministic `seed` source, which exercises the
-exact same normalization pipeline.
+could extract; the pipeline logs partial/empty runs and keeps going, TZ 4). They
+are bonus coverage on top of the always-available real files + idoctor sources.
 """
-from .helix import HelixParser
-from .invitro import InvitroParser
-from .kdl import KdlParser
+from .sites import (
+    AksaiParser,
+    DoqParser,
+    HelixParser,
+    InvitroParser,
+    KdlParser,
+    LIVE_PARSERS,
+    MckParser,
+    MedelParser,
+    OlympParser,
+)
 
-__all__ = ["KdlParser", "InvitroParser", "HelixParser"]
+__all__ = [
+    "KdlParser", "InvitroParser", "HelixParser", "OlympParser",
+    "MedelParser", "MckParser", "AksaiParser", "DoqParser", "LIVE_PARSERS",
+]

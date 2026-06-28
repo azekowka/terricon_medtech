@@ -51,14 +51,19 @@ export default async function ClinicPage({ params }: { params: { id: string } })
             </div>
             <div className="mt-3 grid gap-2 text-sm text-slate-600 sm:grid-cols-2">
               <span className="inline-flex items-center gap-2">
-                <MapPin size={16} className="text-brand-500" /> {clinic!.city}, {clinic!.address}
+                <MapPin size={16} className="text-brand-500" /> {clinic!.city}
+                {clinic!.address ? `, ${clinic!.address}` : ""}
               </span>
-              <span className="inline-flex items-center gap-2">
-                <Clock size={16} className="text-brand-500" /> {clinic!.working_hours}
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <Phone size={16} className="text-brand-500" /> {clinic!.phone}
-              </span>
+              {clinic!.working_hours && (
+                <span className="inline-flex items-center gap-2">
+                  <Clock size={16} className="text-brand-500" /> {clinic!.working_hours}
+                </span>
+              )}
+              {clinic!.phone && (
+                <span className="inline-flex items-center gap-2">
+                  <Phone size={16} className="text-brand-500" /> {clinic!.phone}
+                </span>
+              )}
               {clinic!.website && (
                 <a
                   href={clinic!.website}

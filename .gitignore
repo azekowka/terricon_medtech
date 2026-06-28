@@ -5,6 +5,9 @@ __pycache__/
 .venv/
 venv/
 *.db
+*.db-wal
+*.db-shm
+*.db-journal
 *.sqlite3
 .env
 
@@ -13,6 +16,7 @@ node_modules/
 .next/
 out/
 .env.local
+.env.env
 npm-debug.log*
 pnpm-debug.log*
 

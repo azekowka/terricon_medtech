@@ -19,7 +19,7 @@ _NUM = re.compile(r"\d[\d\s .,]*\d|\d")
 _LEADING_CODE = re.compile(r"^\s*[A-Za-zА-Яа-я]?\d[\d.\-/]*\.?\s+")
 _CYR = re.compile(r"[А-Яа-яЁё]")
 _STARTS_OK = re.compile(r"^[A-ZА-ЯЁ0-9]")
-MIN_PRICE, MAX_PRICE = 300, 1_500_000
+MIN_PRICE, MAX_PRICE = 300, 900_000
 
 
 def _clean(s) -> str:

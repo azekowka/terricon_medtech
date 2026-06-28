@@ -24,6 +24,14 @@ PRICE_RE = re.compile(
 BARE_NUM_RE = re.compile(r"\b(\d[\d\s ]{2,6}\d)\b")
 
 _NAME_OK = re.compile(r"[А-Яа-яЁё]{3,}")
+# UI/navigation/marketing noise that price pages mix in with real services.
+_JUNK_RE = re.compile(
+    r"viber|telegram|whatsapp|instagram|facebook|скачайте|скачать|откройте|"
+    r"чат|приложение|подпис|cookie|политик|согласи|войти|регистрац|корзин|"
+    r"меню|поиск|©|версия сайта|обратн|колл-?центр|call-?center|адрес|режим работы|"
+    r"подробнее|записаться|оставить заявк|акци|новост",
+    re.IGNORECASE,
+)
 
 
 def _clean(text: str) -> str:
@@ -36,7 +44,11 @@ def _is_price_text(text: str) -> bool:
 
 def _looks_like_name(text: str) -> bool:
     text = _clean(text)
-    return len(text) >= 4 and bool(_NAME_OK.search(text)) and not _is_price_text(text)
+    if not (4 <= len(text) <= 160) or not _NAME_OK.search(text):
+        return False
+    if _is_price_text(text) or _JUNK_RE.search(text):
+        return False
+    return True
 
 
 def extract_from_tables(soup: BeautifulSoup) -> list[tuple[str, str, str]]:

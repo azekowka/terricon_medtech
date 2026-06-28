@@ -55,6 +55,10 @@ class Service(Base):
     synonyms: Mapped[list] = mapped_column(JSON, default=list)
     base_price_kzt: Mapped[float | None] = mapped_column(Float, nullable=True)
     duration_days: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    # How many raw scraped mentions this canonical service was built from
+    # (TZ 3.2: the dictionary is derived from collected data, not a fixed file).
+    raw_count: Mapped[int] = mapped_column(Integer, default=0)
+    source_count: Mapped[int] = mapped_column(Integer, default=0)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_now)
 
     prices: Mapped[list[Price]] = relationship(back_populates="service")

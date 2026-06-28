@@ -7,7 +7,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 from .config import settings
 from .db import SessionLocal
-from .parsers.pipeline import mark_stale_inactive, purge_old_raw, run_sources
+from .parsers.pipeline import mark_stale_inactive, purge_old_raw, run_full
+from .parsers.registry import LOCAL_SOURCES
 
 logger = logging.getLogger("medservice.scheduler")
 scheduler = BackgroundScheduler(timezone="UTC")
@@ -16,12 +17,12 @@ scheduler = BackgroundScheduler(timezone="UTC")
 def _daily_job() -> None:
     db = SessionLocal()
     try:
-        logs = run_sources(db, ["seed"])
+        result = run_full(db, list(LOCAL_SOURCES))
         stale = mark_stale_inactive(db)
         purged = purge_old_raw(db)
         logger.info(
             "daily reparse done: runs=%s stale_marked=%s raw_purged=%s",
-            [(l.source, l.status) for l in logs],
+            [(r["source"], r["status"]) for r in result.get("runs", [])],
             stale,
             purged,
         )

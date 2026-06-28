@@ -1,26 +1,38 @@
-"""Admin endpoints: manual parse trigger, logs, unmatched queue, stats (TZ 3.1/3.2)."""
+"""Admin endpoints: live async parse, dictionary rebuild, AI assist, queue, stats.
+
+The dictionary is built FROM the collected data (TZ 3.2), so the admin exposes
+three actions: run the full pipeline (collect → build dictionary → normalize),
+rebuild the dictionary only, and AI-assist the unmatched queue. Parsing runs in a
+background thread with live progress the UI polls.
+"""
 from __future__ import annotations
 
 from datetime import timezone
 
-from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
-from ..db import SessionLocal, get_db
-from ..models import (
-    Clinic,
-    ParseLog,
-    Price,
-    RawPrice,
-    Service,
-    UnmatchedQueue,
-)
-from ..parsers.registry import LIVE_SOURCES, PARSERS
-from ..parsers.pipeline import mark_stale_inactive, run_sources
+from .. import parse_jobs
+from ..db import get_db
+from ..models import Clinic, ParseLog, Price, RawPrice, Service, UnmatchedQueue
+from ..parsers.registry import LIVE_SOURCES, LOCAL_SOURCES, PARSERS
 from ..schemas import ParseRequest, ResolveUnmatched
 
 router = APIRouter(prefix="/api/admin", tags=["admin"])
+
+SOURCE_LABELS = {
+    "real": "Реальные прайс-файлы клиник (PDF/DOCX/XLSX)",
+    "idoctor": "Клиники и приёмы врачей (idoctor, 18 регионов)",
+    "kdl": "KDL / Olymp (kdlolymp.kz)",
+    "invitro": "INVITRO (invitro.kz)",
+    "helix": "Helix (helix.kz)",
+    "olymp": "Олимп (olymp.kz)",
+    "medel": "МЕДЭЛ (medel.kz)",
+    "mck": "МЦК (mck.kz)",
+    "aksai": "Аксай (aksai-clinic.kz)",
+    "doq": "doq.kz (агрегатор)",
+}
 
 
 def _iso(dt):
@@ -29,53 +41,73 @@ def _iso(dt):
     return (dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)).isoformat()
 
 
-def _run_parse_bg(sources: list[str]) -> None:
-    db = SessionLocal()
-    try:
-        run_sources(db, sources)
-    finally:
-        db.close()
+@router.get("/sources")
+def sources():
+    """Available parse sources for the admin source picker."""
+    return [
+        {
+            "key": k,
+            "label": SOURCE_LABELS.get(k, k),
+            "kind": "local" if k in LOCAL_SOURCES else "live",
+        }
+        for k in PARSERS
+    ]
 
 
 @router.post("/parse")
-def trigger_parse(
-    req: ParseRequest,
-    background: bool = Query(False, description="Run asynchronously"),
-    bg: BackgroundTasks = None,  # type: ignore[assignment]
-    db: Session = Depends(get_db),
-):
-    """Manually trigger parsing (TZ 3.1: ручной запуск)."""
-    sources = req.sources or ["seed"]
+def trigger_parse(req: ParseRequest):
+    """Start the full real pipeline (collect → build dictionary → normalize)
+    asynchronously. Returns the job id; poll /api/admin/job for live progress."""
+    if parse_jobs.is_running():
+        return {"status": "already_running", "job": _job_view(parse_jobs.get_job())}
+    sources = req.sources or list(LOCAL_SOURCES)
     if req.include_live:
         sources = list(dict.fromkeys(sources + LIVE_SOURCES))
     unknown = [s for s in sources if s not in PARSERS]
     if unknown:
         raise HTTPException(400, f"Unknown sources: {', '.join(unknown)}")
+    job = parse_jobs.start_parse(sources)
+    return {"status": "started", "job": _job_view(job)}
 
-    if background and bg is not None:
-        bg.add_task(_run_parse_bg, sources)
-        return {"status": "scheduled", "sources": sources}
 
-    logs = run_sources(db, sources)
-    mark_stale_inactive(db)  # maintain the 30-day freshness flag (TZ 4)
+@router.post("/rebuild-dict")
+def rebuild_dict():
+    """Rebuild the dictionary from existing raw data + re-normalize (no re-collect)."""
+    if parse_jobs.is_running():
+        return {"status": "already_running", "job": _job_view(parse_jobs.get_job())}
+    job = parse_jobs.start_rebuild()
+    return {"status": "started", "job": _job_view(job)}
+
+
+def _job_view(job: dict | None) -> dict | None:
+    if not job:
+        return None
     return {
-        "status": "completed",
-        "runs": [
-            {
-                "id": l.id,
-                "source": l.source,
-                "status": l.status,
-                "records_found": l.records_found,
-                "records_new": l.records_new,
-                "records_updated": l.records_updated,
-                "errors_count": l.errors_count,
-                "message": l.message,
-                "started_at": _iso(l.started_at),
-                "finished_at": _iso(l.finished_at),
-            }
-            for l in logs
-        ],
+        "id": job["id"],
+        "kind": job["kind"],
+        "sources": job["sources"],
+        "status": job["status"],
+        "phase": job["phase"],
+        "messages": job["messages"][-40:],
+        "result": job["result"],
+        "error": job["error"],
+        "started_at": job["started_at"],
+        "finished_at": job["finished_at"],
     }
+
+
+@router.get("/job")
+def job_status():
+    """Current/last parse job state for live progress polling."""
+    return {"running": parse_jobs.is_running(), "job": _job_view(parse_jobs.get_job())}
+
+
+@router.post("/ai-assist")
+def ai_assist(limit: int = Query(40, ge=1, le=200), db: Session = Depends(get_db)):
+    """AI-assisted resolution of the unmatched queue (TZ 3.2 — AI optional)."""
+    from ..ai_assist import assist_unmatched
+
+    return assist_unmatched(db, limit=limit)
 
 
 @router.get("/parse-logs")
@@ -83,16 +115,10 @@ def parse_logs(limit: int = Query(30, ge=1, le=200), db: Session = Depends(get_d
     logs = db.query(ParseLog).order_by(ParseLog.started_at.desc()).limit(limit).all()
     return [
         {
-            "id": l.id,
-            "source": l.source,
-            "status": l.status,
-            "records_found": l.records_found,
-            "records_new": l.records_new,
-            "records_updated": l.records_updated,
-            "errors_count": l.errors_count,
-            "message": l.message,
-            "started_at": _iso(l.started_at),
-            "finished_at": _iso(l.finished_at),
+            "id": l.id, "source": l.source, "status": l.status,
+            "records_found": l.records_found, "records_new": l.records_new,
+            "records_updated": l.records_updated, "errors_count": l.errors_count,
+            "message": l.message, "started_at": _iso(l.started_at), "finished_at": _iso(l.finished_at),
         }
         for l in logs
     ]
@@ -111,14 +137,10 @@ def unmatched(
     svc_names = dict(db.query(Service.id, Service.name).all())
     return [
         {
-            "id": it.id,
-            "service_name_raw": it.service_name_raw,
-            "source": it.source,
-            "occurrences": it.occurrences,
-            "suggested_service_id": it.suggested_service_id,
+            "id": it.id, "service_name_raw": it.service_name_raw, "source": it.source,
+            "occurrences": it.occurrences, "suggested_service_id": it.suggested_service_id,
             "suggested_service_name": svc_names.get(it.suggested_service_id),
-            "suggested_score": it.suggested_score,
-            "status": it.status,
+            "suggested_score": it.suggested_score, "status": it.status,
             "created_at": _iso(it.created_at),
         }
         for it in items
@@ -126,11 +148,9 @@ def unmatched(
 
 
 @router.post("/unmatched/{item_id}/resolve")
-def resolve_unmatched(
-    item_id: str, body: ResolveUnmatched, db: Session = Depends(get_db)
-):
-    """Map a queued raw name to a dictionary service, learn the synonym, and
-    re-link existing prices (closes the manual-labelling loop, TZ 3.2)."""
+def resolve_unmatched(item_id: str, body: ResolveUnmatched, db: Session = Depends(get_db)):
+    """Map a queued raw name to a dictionary service, learn the synonym, re-link
+    existing prices (closes the manual-labelling loop, TZ 3.2)."""
     item = db.query(UnmatchedQueue).filter_by(id=item_id).first()
     if not item:
         raise HTTPException(404, "Queue item not found")
@@ -144,7 +164,6 @@ def resolve_unmatched(
             syns.append(item.service_name_raw)
             service.synonyms = syns
 
-    # re-link existing prices that carried this raw name
     relinked = 0
     rows = (
         db.query(Price)
@@ -165,26 +184,22 @@ def resolve_unmatched(
 
 @router.get("/stats")
 def stats(db: Session = Depends(get_db)):
-    by_city = dict(
-        db.query(Clinic.city, func.count(Clinic.id)).group_by(Clinic.city).all()
-    )
+    by_city = dict(db.query(Clinic.city, func.count(Clinic.id)).group_by(Clinic.city).all())
     by_source = dict(
         db.query(Price.source, func.count(Price.id))
-        .filter(Price.is_active.is_(True))
-        .group_by(Price.source)
-        .all()
+        .filter(Price.is_active.is_(True)).group_by(Price.source).all()
     )
     by_category = dict(
         db.query(Price.category, func.count(Price.id))
-        .filter(Price.is_active.is_(True))
-        .group_by(Price.category)
-        .all()
+        .filter(Price.is_active.is_(True)).group_by(Price.category).all()
     )
     return {
         "clinics": db.query(func.count(Clinic.id)).scalar() or 0,
+        "cities": db.query(func.count(func.distinct(Clinic.city))).scalar() or 0,
         "services": db.query(func.count(Service.id)).scalar() or 0,
         "active_prices": db.query(func.count(Price.id)).filter(Price.is_active.is_(True)).scalar() or 0,
         "raw_rows": db.query(func.count(RawPrice.id)).scalar() or 0,
+        "sources": db.query(func.count(func.distinct(Price.source))).filter(Price.is_active.is_(True)).scalar() or 0,
         "matched_prices": db.query(func.count(Price.id)).filter(Price.service_id.isnot(None)).scalar() or 0,
         "unmatched_pending": db.query(func.count(UnmatchedQueue.id)).filter(UnmatchedQueue.status == "pending").scalar() or 0,
         "clinics_by_city": by_city,

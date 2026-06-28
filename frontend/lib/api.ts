@@ -52,8 +52,12 @@ export const api = {
   stats: () => get<any>("/api/admin/stats"),
   parseLogs: () => get<any[]>("/api/admin/parse-logs"),
   unmatched: (status = "pending") => get<any[]>("/api/admin/unmatched", { status }),
+  adminSources: () => get<{ key: string; label: string; kind: string }[]>("/api/admin/sources"),
   triggerParse: (body: { sources?: string[]; include_live?: boolean }) =>
     post<any>("/api/admin/parse", body),
+  parseJob: () => get<any>("/api/admin/job"),
+  rebuildDict: () => post<any>("/api/admin/rebuild-dict", {}),
+  aiAssist: () => post<any>("/api/admin/ai-assist", {}),
   resolveUnmatched: (id: string, body: { service_id: string; add_synonym: boolean }) =>
     post<any>(`/api/admin/unmatched/${id}/resolve`, body),
   subscribe: (body: { email: string; service_id: string; clinic_id?: string; target_price_kzt?: number }) =>

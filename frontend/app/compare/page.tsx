@@ -3,7 +3,7 @@
 import { Fragment, Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { CalendarCheck, ChevronDown, ChevronRight, ExternalLink, Search, Star } from "lucide-react";
+import { ArrowRight, CalendarCheck, ChevronDown, ChevronRight, ExternalLink, Search, Star } from "lucide-react";
 import { api } from "@/lib/api";
 import type { HistorySeries, Offer, SearchResult, ServiceItem } from "@/lib/types";
 import { SearchBar } from "@/components/SearchBar";
@@ -430,6 +430,9 @@ function branchName(name: string) {
 
 /** The 7 per-offer data cells (price → source link), shared by single & branch rows. */
 function OfferCells({ o }: { o: Offer }) {
+  const extSite = [o.source_url, o.website].find(
+    (u) => u && /^https?:\/\//i.test(u) && !/idoctor\.kz/i.test(u),
+  );
   return (
     <>
       <td className="px-3 py-2.5 text-base font-bold text-ink">{formatKzt(o.price_kzt)}</td>
@@ -453,9 +456,15 @@ function OfferCells({ o }: { o: Offer }) {
       <td className="px-3 py-2.5 text-slate-500">{relativeDays(o.parsed_at)}</td>
       <td className="px-3 py-2.5 text-slate-500">{o.source}</td>
       <td className="px-3 py-2.5">
-        <a href={o.source_url || o.website} target="_blank" rel="noopener noreferrer" className="btn-outline px-2.5 py-1.5">
-          <ExternalLink size={14} />
-        </a>
+        {extSite ? (
+          <a href={extSite} target="_blank" rel="noopener noreferrer" className="btn-outline px-2.5 py-1.5" title="На сайт клиники">
+            <ExternalLink size={14} />
+          </a>
+        ) : (
+          <Link href={`/clinics/${o.clinic_id}`} className="btn-outline px-2.5 py-1.5" title="Страница клиники на нашем сайте">
+            <ArrowRight size={14} />
+          </Link>
+        )}
       </td>
     </>
   );

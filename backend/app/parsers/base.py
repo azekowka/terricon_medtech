@@ -127,6 +127,24 @@ class BaseParser:
             self._last_request = time.monotonic()
             return None
 
+    def get_html(self, url: str, render: bool = False, wait_selector: str | None = None) -> str | None:
+        """Polite fetch returning HTML text. With render=True, falls back to a
+        headless browser (Playwright) for JS/anti-bot sites; if that is missing or
+        fails, returns the httpx body (or None). Robots + delay always honored."""
+        full = url if urlparse(url).netloc else urljoin(self.base_url, url)
+        if not self.robots_allows(full):
+            return None
+        resp = self.get(url)
+        html = resp.text if (resp is not None and resp.status_code == 200) else None
+        # Heuristic: a JS shell returns very little real markup -> try rendering.
+        if render and (html is None or len(html) < 30000):
+            from .render import fetch_rendered
+
+            rendered = fetch_rendered(full, wait_selector=wait_selector)
+            if rendered:
+                return rendered
+        return html
+
     # ---- to be implemented by subclasses ----------------------------------
     def collect(self) -> list[RawRecord]:
         raise NotImplementedError

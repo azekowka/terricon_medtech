@@ -1,7 +1,7 @@
 """Database engine / session setup (cross-DB: SQLite for dev, PostgreSQL for prod)."""
 from collections.abc import Generator
 
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, event
 from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
 
 from .config import settings
@@ -15,6 +15,17 @@ engine = create_engine(
     pool_pre_ping=True,
     future=True,
 )
+
+if _is_sqlite:
+    # WAL + a busy timeout let the API keep reading while a background parse job
+    # writes, so the admin "run parsing" never blocks the live UI.
+    @event.listens_for(engine, "connect")
+    def _sqlite_pragmas(dbapi_conn, _rec):  # pragma: no cover
+        cur = dbapi_conn.cursor()
+        cur.execute("PRAGMA journal_mode=WAL")
+        cur.execute("PRAGMA busy_timeout=8000")
+        cur.execute("PRAGMA synchronous=NORMAL")
+        cur.close()
 
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False, future=True)
 

@@ -25,7 +25,7 @@ export function Header() {
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white">
             <Activity size={20} />
           </span>
-          <span className="text-lg font-extrabold tracking-tight text-ink">
+          <span className="hidden text-lg font-extrabold tracking-tight text-ink sm:inline">
             MedService<span className="text-brand-600">Price</span>
             <span className="text-slate-400">.kz</span>
           </span>
@@ -37,12 +37,12 @@ export function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`flex items-center gap-1.5 rounded-xl px-2.5 py-2 text-sm font-medium transition ${
+                className={`flex items-center gap-1.5 rounded-xl px-2 py-2 text-sm font-medium transition sm:px-2.5 ${
                   active ? "bg-brand-50 text-brand-700" : "text-slate-600 hover:bg-slate-100"
                 }`}
               >
                 <Icon size={16} />
-                <span className="hidden md:inline">{t(key)}</span>
+                <span className="hidden lg:inline">{t(key)}</span>
               </Link>
             );
           })}

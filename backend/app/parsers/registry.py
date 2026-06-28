@@ -1,26 +1,33 @@
 """Registry mapping source keys to parser implementations.
 
 Adding a new source = add one entry here (TZ 4: extensibility without touching
-the core pipeline)."""
+the core pipeline). NO synthetic/seed sources — every source is real:
+
+  * real     — real clinic price files (PDF/DOCX/XLSX/XLS) we parse
+  * idoctor  — real clinics + "приём врача" prices derived from the idoctor dataset
+  * live web — real public clinic/lab sites
+"""
 from __future__ import annotations
 
 from .base import BaseParser
-from .fixtures import FixtureParser
-from .live import HelixParser, InvitroParser, KdlParser
+from .doctors_source import DoctorsClinicsParser
+from .live import LIVE_PARSERS
 from .real_prices import RealPricesParser
-from .seed_source import SeedParser
 
 PARSERS: dict[str, type[BaseParser]] = {
-    "seed": SeedParser,
-    "fixtures": FixtureParser,  # PDF/XLSX/DOCX sample price lists (TZ 3.1 formats)
-    "real": RealPricesParser,   # REAL clinic price lists (PDF/DOCX/XLSX/XLS)
-    "kdl": KdlParser,
-    "invitro": InvitroParser,
-    "helix": HelixParser,
+    "real": RealPricesParser,        # real clinic price lists (files)
+    "idoctor": DoctorsClinicsParser,  # real clinics + visit prices, 18 regions
+    **{p.source: p for p in LIVE_PARSERS},  # kdl, invitro, helix, olymp, medel, mck, aksai, doq
 }
 
-# Sources that hit the network (vs. the local curated "seed" source).
-LIVE_SOURCES = ["kdl", "invitro", "helix"]
+# Always-available local sources (no network) — the reliable demo backbone.
+LOCAL_SOURCES = ["real", "idoctor"]
+
+# Sources that hit the network (best-effort, fault tolerant).
+LIVE_SOURCES = [p.source for p in LIVE_PARSERS]
+
+# Default when the admin/CLI does not specify: everything we can reach.
+DEFAULT_SOURCES = LOCAL_SOURCES + LIVE_SOURCES
 
 
 def get_parser(source: str) -> BaseParser:

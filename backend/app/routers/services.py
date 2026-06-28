@@ -53,6 +53,8 @@ def list_services(
             "synonyms": s.synonyms or [],
             "duration_days": s.duration_days,
             "offers_count": counts.get(s.id, 0),
+            "raw_count": s.raw_count,
+            "source_count": s.source_count,
         }
         for s in services
     ]
