@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Building2, Clock, MapPin, TrendingDown } from "lucide-react";
+import { Building2, Check, Clock, GitCompareArrows, MapPin, RefreshCcw, ShieldCheck, TrendingDown } from "lucide-react";
 import { SearchBar } from "@/components/SearchBar";
 import { categoryMeta, formatDate } from "@/lib/format";
 import type { Meta, ServiceItem } from "@/lib/types";
@@ -27,6 +27,9 @@ export function HomeView({ meta, popular }: { meta: Meta | null; popular: Servic
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">{t("home.subtitle")}</p>
           <div className="mt-8 max-w-2xl">
             <SearchBar size="lg" />
+            <p className="mt-3 flex items-center gap-1.5 text-[13px] text-white/70">
+              <Check size={14} className="shrink-0 text-white/80" /> {t("home.trust")}
+            </p>
           </div>
           {meta && (
             <div className="mt-7 flex flex-wrap gap-2.5">
@@ -98,7 +101,27 @@ export function HomeView({ meta, popular }: { meta: Meta | null; popular: Servic
             })}
           </div>
         </section>
+
+        {/* Value props */}
+        <section className="mt-14 mb-2">
+          <h2 className="mb-4 text-xl font-bold tracking-tight text-ink">{t("home.feat.title")}</h2>
+          <div className="grid gap-4 sm:grid-cols-3">
+            <Feature icon={<GitCompareArrows size={20} strokeWidth={1.75} />} title={t("home.feat.compare.t")} desc={t("home.feat.compare.d")} />
+            <Feature icon={<ShieldCheck size={20} strokeWidth={1.75} />} title={t("home.feat.open.t")} desc={t("home.feat.open.d")} />
+            <Feature icon={<RefreshCcw size={20} strokeWidth={1.75} />} title={t("home.feat.fresh.t")} desc={t("home.feat.fresh.d")} />
+          </div>
+        </section>
       </div>
+    </div>
+  );
+}
+
+function Feature({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
+  return (
+    <div className="card p-5">
+      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-600">{icon}</span>
+      <h3 className="mt-3.5 font-bold text-ink">{title}</h3>
+      <p className="mt-1 text-sm leading-relaxed text-slate-500">{desc}</p>
     </div>
   );
 }

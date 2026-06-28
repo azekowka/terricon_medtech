@@ -8,17 +8,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // bright, friendly "Aviasales blue"
         brand: {
-          50: "#eff6ff",
-          100: "#dbeafe",
-          200: "#bfdbfe",
-          300: "#93c5fd",
-          400: "#60a5fa",
-          500: "#3b82f6",
-          600: "#2563eb",
-          700: "#1d4ed8",
-          800: "#1e40af",
-          900: "#1e3a8a",
+          50: "#eef5ff",
+          100: "#d9e9ff",
+          200: "#bcd8ff",
+          300: "#8ebfff",
+          400: "#589dff",
+          500: "#2f80fb",
+          600: "#1a73f0",
+          700: "#155cd0",
+          800: "#164aa6",
+          900: "#173f82",
         },
         teal: {
           500: "#14b8a6",
