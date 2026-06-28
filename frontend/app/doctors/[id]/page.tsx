@@ -46,7 +46,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
   if (!d) {
     return (
       <div className="container-page py-28 text-center">
-        <p className="text-xl font-bold text-ink">{t("profile.notFound")}</p>
+        <p className="text-xl font-bold tracking-tight text-ink">{t("profile.notFound")}</p>
         <Link href="/doctors" className="btn-primary mt-6">{t("profile.toList")}</Link>
       </div>
     );
@@ -77,17 +77,17 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-2">
-                  {d.top && <span className="chip bg-amber-100 text-amber-700">ТОП</span>}
+                  {d.top && <span className="chip bg-amber-50 text-amber-700">ТОП</span>}
                   {d.verified && <span className="chip bg-brand-50 text-brand-700"><BadgeCheck size={12} /> {t("profile.verified")}</span>}
-                  <h1 className="text-2xl font-extrabold text-ink">{d.name}</h1>
+                  <h1 className="w-full text-2xl font-bold tracking-tight text-ink">{d.name}</h1>
                 </div>
                 <p className="mt-1 font-semibold text-brand-700">{specs.join(" · ") || "Врач"}</p>
                 <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-slate-500">
                   {d.experience_years != null && (
                     <span>{t("doc.experience")} {d.experience_years} {yearsLabel(d.experience_years, locale)}</span>
                   )}
-                  {d.category && <span>• {d.category}</span>}
-                  <span className="chip bg-emerald-50 text-emerald-700">
+                  {d.category && <span>· {d.category}</span>}
+                  <span className="chip bg-slate-100 text-slate-600">
                     {d.accepts_children ? t("doc.acceptsKids") : t("doc.acceptsAdults")}
                   </span>
                 </div>
@@ -147,7 +147,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
           <Section title={`${t("profile.whereReceives")} (${d.clinics?.length || 0})`}>
             <div className="space-y-3">
               {(d.clinics || []).map((c, i) => (
-                <div key={i} className="rounded-xl border border-slate-100 p-3">
+                <div key={i} className="rounded-xl border border-slate-200/70 p-4">
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <div className="font-semibold text-ink">{c.name}</div>
@@ -166,7 +166,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
                       )}
                     </div>
                   </div>
-                  <div className="mt-1.5 flex flex-wrap items-center gap-2">
+                  <div className="mt-2 flex flex-wrap items-center gap-2">
                     {c.online_booking && <span className="chip bg-emerald-50 text-emerald-700"><CalendarCheck size={12} /> Онлайн-запись</span>}
                     {c.lat && c.lng && (
                       <a href={`https://2gis.kz/geo/${c.lng},${c.lat}`} target="_blank" rel="noopener noreferrer" className="chip bg-slate-100 text-slate-600">
@@ -179,7 +179,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
                       <Clock size={13} className="mt-0.5 shrink-0 text-slate-400" />
                       <div className="flex flex-wrap gap-1.5">
                         {c.schedule.map((s, j) => (
-                          <span key={j} className={`rounded px-1.5 py-0.5 ${s.work ? "bg-emerald-50 text-emerald-700" : "bg-slate-50 text-slate-300"}`}>
+                          <span key={j} className={`rounded-md px-1.5 py-0.5 ${s.work ? "bg-emerald-50 text-emerald-700" : "bg-slate-50 text-slate-400"}`}>
                             {DAYS[j] || s.day}{s.work ? ` ${s.h24 ? "24ч" : `${s.start}–${s.end}`}` : " —"}
                           </span>
                         ))}
@@ -198,7 +198,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
                 {reviews.map((r, i) => {
                   const rn = ratingNum(r.rating);
                   return (
-                    <div key={i} className="rounded-xl border border-slate-100 p-4">
+                    <div key={i} className="rounded-xl border border-slate-200/70 p-4">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-50 font-bold text-brand-700">
@@ -242,7 +242,7 @@ export default function DoctorProfilePage({ params }: { params: { id: string } }
         <aside>
           <div className="card sticky top-20 p-5">
             <div className="text-sm text-slate-500">{t("profile.price")}</div>
-            <div className="mt-1 text-3xl font-extrabold text-ink">
+            <div className="mt-1 text-3xl font-bold tracking-tight text-ink">
               {d.clinic?.price_discount || d.clinic?.price || d.min_price
                 ? formatKzt(d.clinic?.price_discount || d.clinic?.price || d.min_price)
                 : t("profile.byRequest")}

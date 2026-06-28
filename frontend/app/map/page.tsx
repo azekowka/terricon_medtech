@@ -43,8 +43,8 @@ export default function MapPage() {
     <div className="container-page pt-6">
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-2xl font-extrabold text-ink">{t("map.title")}</h1>
-          <p className="text-sm text-slate-500">
+          <h1 className="text-2xl font-bold tracking-tight text-ink">{t("map.title")}</h1>
+          <p className="mt-1 text-sm text-slate-500">
             {selCity
               ? `${selCity.name} · ${clinicsInSel} ${t("home.clinicsCount")}`
               : t("map.subtitle")}
@@ -52,11 +52,11 @@ export default function MapPage() {
         </div>
         <div className="flex items-center gap-2">
           {!selCity && cheapestCity && (
-            <div className="hidden rounded-xl bg-teal-50 px-3 py-2 text-sm sm:block">
-              <span className="text-slate-500">{t("map.cheapestIn")} </span>
-              <b className="text-teal-700">{cheapestCity.name}</b>
-              <span className="text-slate-500"> — {t("common.from")} </span>
-              <b className="text-teal-700">{new Intl.NumberFormat("ru-RU").format(cheapest)} ₸</b>
+            <div className="hidden items-center rounded-full bg-teal-50 px-3.5 py-2 text-sm text-teal-700 sm:flex">
+              <span className="text-teal-600/80">{t("map.cheapestIn")}&nbsp;</span>
+              <b className="font-semibold">{cheapestCity.name}</b>
+              <span className="text-teal-600/80">&nbsp;·&nbsp;{t("common.from")}&nbsp;</span>
+              <b className="font-semibold">{new Intl.NumberFormat("ru-RU").format(cheapest)} ₸</b>
             </div>
           )}
           <CitySelect
@@ -76,13 +76,13 @@ export default function MapPage() {
       <div className="card relative h-[72vh] overflow-hidden p-0">
         <CityPriceMap cities={cities} clinics={clinics} selected={selected} onSelect={(s) => setSelected(s)} />
       </div>
-      <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-xs text-slate-500">
-        <span className="inline-flex items-center gap-1.5">
-          <span className="inline-block rounded bg-white px-1.5 py-0.5 text-[10px] font-bold shadow">{t("common.from")} ₸</span>
+      <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1.5 text-xs text-slate-500">
+        <span className="inline-flex items-center gap-2">
+          <span className="inline-flex items-center rounded-md border border-slate-200 bg-white px-1.5 py-0.5 text-[10px] font-semibold text-ink shadow-sm">{t("common.from")} ₸</span>
           {t("map.bubbleHint")}
         </span>
-        <span className="inline-flex items-center gap-1.5">
-          <span className="inline-block h-3 w-3 rounded-full border-2 border-white bg-brand-600 shadow" />
+        <span className="inline-flex items-center gap-2">
+          <span className="inline-block h-3 w-3 rounded-full border-2 border-white bg-brand-600 shadow-sm" />
           {t("map.clinicHint")}
         </span>
       </div>

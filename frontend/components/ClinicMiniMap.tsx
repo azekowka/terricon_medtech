@@ -26,7 +26,7 @@ export function ClinicMiniMap({ lat, lng, name }: { lat: number; lng: number; na
     const el = document.createElement("div");
     el.style.cssText =
       "width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);" +
-      "background:#2563eb;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3)";
+      "background:#1a73f0;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3)";
     new maplibregl.Marker({ element: el, anchor: "bottom" }).setLngLat([lng, lat]).addTo(map);
     return () => {
       map.remove();

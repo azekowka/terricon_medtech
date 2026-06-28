@@ -46,12 +46,19 @@ export function SubscribeModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/40 p-4" onClick={onClose}>
-      <div className="card w-full max-w-md p-6" onClick={(e) => e.stopPropagation()}>
+      <div className="card w-full max-w-md p-6 shadow-pop" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-start justify-between">
-          <div className="flex items-center gap-2 text-lg font-bold text-ink">
-            <Bell size={20} className="text-brand-600" /> Подписка на цену
+          <div className="flex items-center gap-2.5 text-lg font-bold text-ink">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+              <Bell size={18} strokeWidth={1.75} />
+            </span>
+            Подписка на цену
           </div>
-          <button onClick={onClose} className="text-slate-400 hover:text-slate-700">
+          <button
+            onClick={onClose}
+            className="rounded-lg p-1 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700"
+            aria-label="Закрыть"
+          >
             <X size={20} />
           </button>
         </div>

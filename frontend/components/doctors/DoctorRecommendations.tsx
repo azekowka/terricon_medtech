@@ -2,19 +2,19 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Sparkles, Star, TrendingDown, Award, Flame, Gem } from "lucide-react";
+import { Sparkles, Star, TrendingDown, Award, Flame, Gem, Lightbulb } from "lucide-react";
 import { api } from "@/lib/api";
 import type { DoctorRecommendation, DoctorRecommendations as Recs } from "@/lib/types";
 import { formatKzt } from "@/lib/format";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { DoctorAvatar } from "@/components/DoctorAvatar";
 
-const STYLE: Record<string, { icon: any; chip: string; ring: string }> = {
-  bestValue: { icon: Gem, chip: "bg-teal-100 text-teal-700", ring: "ring-teal-300" },
-  cheapest: { icon: TrendingDown, chip: "bg-emerald-100 text-emerald-700", ring: "ring-emerald-300" },
-  topRated: { icon: Award, chip: "bg-amber-100 text-amber-700", ring: "ring-amber-300" },
-  popular: { icon: Flame, chip: "bg-rose-100 text-rose-700", ring: "ring-rose-300" },
-  experienced: { icon: Award, chip: "bg-violet-100 text-violet-700", ring: "ring-violet-300" },
+const STYLE: Record<string, { icon: any; chip: string }> = {
+  bestValue: { icon: Gem, chip: "bg-teal-50 text-teal-700" },
+  cheapest: { icon: TrendingDown, chip: "bg-emerald-50 text-emerald-700" },
+  topRated: { icon: Award, chip: "bg-amber-50 text-amber-700" },
+  popular: { icon: Flame, chip: "bg-slate-100 text-slate-600" },
+  experienced: { icon: Award, chip: "bg-violet-50 text-violet-700" },
 };
 
 export function DoctorRecommendations({ region, specialty }: { region: string; specialty: string }) {
@@ -32,10 +32,10 @@ export function DoctorRecommendations({ region, specialty }: { region: string; s
   if (!recs || recs.items.length === 0) return null;
 
   return (
-    <div className="rounded-2xl border border-teal-100 bg-gradient-to-br from-teal-50/70 to-brand-50/40 p-4">
-      <div className="mb-3 flex items-center gap-2">
-        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-600 text-white">
-          <Sparkles size={17} />
+    <div className="rounded-2xl border border-teal-100 bg-teal-50/50 p-4">
+      <div className="mb-3 flex items-center gap-2.5">
+        <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-100 text-teal-700">
+          <Sparkles size={18} strokeWidth={1.75} />
         </span>
         <div>
           <h3 className="font-bold text-ink">{t("rec.title")}</h3>
@@ -74,9 +74,9 @@ function RecCard({ r, t }: { r: DoctorRecommendation; t: (k: string, v?: any) =>
   return (
     <Link
       href={`/doctors/${d.id}`}
-      className={`card flex flex-col gap-2 p-3 transition hover:-translate-y-0.5 hover:shadow-hover ring-1 ${st.ring}`}
+      className="card flex flex-col gap-2 p-3 transition duration-200 hover:-translate-y-0.5 hover:shadow-hover"
     >
-      <span className={`chip self-start ${st.chip}`}><Icon size={12} /> {t(`rec.${r.type}`)}</span>
+      <span className={`chip self-start ${st.chip}`}><Icon size={12} strokeWidth={1.75} /> {t(`rec.${r.type}`)}</span>
       <div className="flex items-center gap-2">
         <DoctorAvatar src={d.avatar} name={d.name} className="h-11 w-11 shrink-0 rounded-xl" iconSize={18} />
         <div className="min-w-0">
@@ -85,14 +85,16 @@ function RecCard({ r, t }: { r: DoctorRecommendation; t: (k: string, v?: any) =>
         </div>
       </div>
       <div className="flex items-center justify-between">
-        <div className="text-lg font-extrabold text-ink">{price ? formatKzt(price) : "—"}</div>
+        <div className="text-lg font-bold tracking-tight text-ink">{price ? formatKzt(price) : "—"}</div>
         {rating != null && (
           <span className="inline-flex items-center gap-0.5 text-sm font-semibold text-amber-600">
             <Star size={13} className="fill-amber-400 text-amber-400" /> {Number(rating).toFixed(2)}
           </span>
         )}
       </div>
-      <div className="rounded-lg bg-white/70 px-2 py-1 text-xs font-medium text-teal-700">💡 {reason}</div>
+      <div className="flex items-center gap-1.5 rounded-lg bg-slate-50 px-2 py-1 text-xs font-medium text-slate-600">
+        <Lightbulb size={13} strokeWidth={1.75} className="shrink-0 text-teal-600" /> {reason}
+      </div>
     </Link>
   );
 }

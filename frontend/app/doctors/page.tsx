@@ -98,7 +98,7 @@ export default function DoctorsPage() {
       {/* header */}
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-2xl font-extrabold text-ink sm:text-3xl">{t("doctors.title", { city: regionName })}</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">{t("doctors.title", { city: regionName })}</h1>
           <p className="mt-1 text-sm text-slate-500">
             {loading ? t("common.loading") : (
               <>
@@ -109,7 +109,7 @@ export default function DoctorsPage() {
           </p>
         </div>
         <button onClick={() => setShowPopup(true)} className="btn-outline self-start">
-          <MapPin size={16} /> {regionName} <span className="text-slate-400">· {t("common.change")}</span>
+          <MapPin size={16} /> {regionName}
         </button>
       </div>
 
@@ -189,8 +189,8 @@ function PageBtn({ n, page, onPage }: { n: number; page: number; onPage: (p: num
   return (
     <button
       onClick={() => onPage(n)}
-      className={`h-10 min-w-10 rounded-xl px-3 text-sm font-semibold transition ${
-        n === page ? "bg-brand-600 text-white" : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
+      className={`h-10 min-w-10 rounded-xl px-3 text-sm font-semibold transition duration-200 ${
+        n === page ? "bg-brand-600 text-white" : "border border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
       }`}
     >
       {n}

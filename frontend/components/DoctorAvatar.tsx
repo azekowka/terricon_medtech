@@ -31,7 +31,7 @@ export function DoctorAvatar({
         />
       ) : (
         <div className="flex h-full w-full items-center justify-center text-slate-300">
-          <Stethoscope size={iconSize} />
+          <Stethoscope size={iconSize} strokeWidth={1.75} />
         </div>
       )}
     </div>

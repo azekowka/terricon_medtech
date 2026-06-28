@@ -111,7 +111,7 @@ export function SearchBar({
           onFocus={() => suggestions.length && setOpen(true)}
           onKeyDown={onKeyDown}
           placeholder={t("home.searchPlaceholder")}
-          className={`w-full rounded-2xl border border-slate-200 bg-white pl-12 pr-28 ${pad} font-medium shadow-card outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-100`}
+          className={`w-full rounded-2xl border border-slate-200 bg-white pl-12 pr-28 ${pad} font-medium shadow-card outline-none transition focus:border-brand-500 focus:ring-4 focus:ring-brand-500/12`}
         />
         <button onClick={submitFree} className="btn-primary absolute right-2 top-1/2 -translate-y-1/2">
           {loading ? <Loader2 className="animate-spin" size={16} /> : t("common.find")}
@@ -119,25 +119,28 @@ export function SearchBar({
       </div>
 
       {open && suggestions.length > 0 && (
-        <div className="absolute z-40 mt-2 w-full overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-hover">
+        <div className="absolute z-40 mt-2 w-full overflow-hidden rounded-2xl border border-slate-200/70 bg-white p-1 shadow-pop">
           {suggestions.map((s, i) => {
             const cm = categoryMeta(s.category);
+            const Icon = cm.icon;
             return (
               <button
                 key={s.id}
                 onMouseEnter={() => setActive(i)}
                 onClick={() => goService(s)}
-                className={`flex w-full items-center justify-between gap-3 px-4 py-3 text-left transition ${
+                className={`flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-left transition ${
                   active === i ? "bg-brand-50" : "hover:bg-slate-50"
                 }`}
               >
-                <span className="flex items-center gap-3">
-                  <span className="text-lg">{cm.emoji}</span>
-                  <span>
-                    <span className="block font-semibold text-ink">{s.name}</span>
+                <span className="flex min-w-0 items-center gap-3">
+                  <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${cm.color}`}>
+                    <Icon size={16} strokeWidth={1.75} />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block truncate font-semibold text-ink">{s.name}</span>
                     <span className="mt-0.5 flex items-center gap-1.5">
-                      <span className={`chip ${cm.color}`}>{cm.label}</span>
-                      {s.specialty && <span className="text-xs text-slate-400">{s.specialty}</span>}
+                      <span className={`chip ${cm.chip}`}>{cm.label}</span>
+                      {s.specialty && <span className="truncate text-xs text-slate-400">{s.specialty}</span>}
                     </span>
                   </span>
                 </span>

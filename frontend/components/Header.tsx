@@ -8,10 +8,10 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const NAV = [
   { href: "/", key: "nav.search", icon: Activity },
-  { href: "/doctors", key: "nav.doctors", icon: Stethoscope },
-  { href: "/lechenie", key: "nav.lechenie", icon: HeartPulse },
   { href: "/compare", key: "nav.compare", icon: GitCompareArrows },
   { href: "/map", key: "nav.map", icon: Map },
+  { href: "/doctors", key: "nav.doctors", icon: Stethoscope },
+  { href: "/lechenie", key: "nav.lechenie", icon: HeartPulse },
   { href: "/admin", key: "nav.admin", icon: Settings },
 ];
 
@@ -21,13 +21,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/90 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white">
-            <Activity size={20} />
-          </span>
-          <span className="hidden text-lg font-extrabold tracking-tight text-ink sm:inline">
-            MedService<span className="text-brand-600">Price</span>
-            <span className="text-slate-400">.kz</span>
+        <Link href="/" className="flex items-center gap-2.5">
+          <span className="text-[1.0625rem] font-bold tracking-tight text-ink">
+            MedService<span className="text-brand-600">Price</span>.kz
           </span>
         </Link>
         <nav className="flex items-center gap-1">

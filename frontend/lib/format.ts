@@ -49,13 +49,17 @@ export function relativeDays(iso: string | null | undefined): string {
   return `${days} ${pluralRu(days, ["день", "дня", "дней"])} назад`;
 }
 
-export const CATEGORY_META: Record<string, { label: string; color: string; emoji: string }> = {
-  laboratory: { label: "Лаборатория", color: "bg-violet-100 text-violet-700", emoji: "🧪" },
-  doctor: { label: "Приём врача", color: "bg-emerald-100 text-emerald-700", emoji: "👨‍⚕️" },
-  diagnostic: { label: "Диагностика", color: "bg-amber-100 text-amber-700", emoji: "🩻" },
-  procedure: { label: "Процедура", color: "bg-sky-100 text-sky-700", emoji: "💉" },
+import { FlaskConical, Stethoscope, ScanLine, Syringe, ClipboardList, type LucideIcon } from "lucide-react";
+
+type CatMeta = { label: string; color: string; chip: string; icon: LucideIcon };
+
+export const CATEGORY_META: Record<string, CatMeta> = {
+  laboratory: { label: "Лаборатория", color: "bg-violet-50 text-violet-600", chip: "bg-violet-50 text-violet-700", icon: FlaskConical },
+  doctor: { label: "Приём врача", color: "bg-emerald-50 text-emerald-600", chip: "bg-emerald-50 text-emerald-700", icon: Stethoscope },
+  diagnostic: { label: "Диагностика", color: "bg-amber-50 text-amber-600", chip: "bg-amber-50 text-amber-700", icon: ScanLine },
+  procedure: { label: "Процедура", color: "bg-sky-50 text-sky-600", chip: "bg-sky-50 text-sky-700", icon: Syringe },
 };
 
-export function categoryMeta(key: string) {
-  return CATEGORY_META[key] || { label: key || "Прочее", color: "bg-slate-100 text-slate-600", emoji: "📋" };
+export function categoryMeta(key: string): CatMeta {
+  return CATEGORY_META[key] || { label: key || "Прочее", color: "bg-slate-100 text-slate-500", chip: "bg-slate-100 text-slate-600", icon: ClipboardList };
 }

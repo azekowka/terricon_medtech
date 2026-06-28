@@ -12,7 +12,7 @@ import {
 } from "recharts";
 import type { HistorySeries } from "@/lib/types";
 
-const COLORS = ["#2563eb", "#0d9488", "#f59e0b", "#db2777", "#7c3aed", "#0891b2", "#65a30d", "#e11d48"];
+const COLORS = ["#1a73f0", "#0d9488", "#f59e0b", "#db2777", "#7c3aed", "#0891b2", "#65a30d", "#e11d48"];
 
 export function PriceHistoryChart({ data }: { data: HistorySeries }) {
   // build a merged time-axis dataset
