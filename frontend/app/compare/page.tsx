@@ -1,14 +1,14 @@
 "use client";
 
-import { Suspense, useEffect, useMemo, useState } from "react";
+import { Fragment, Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { CalendarCheck, ExternalLink, Search, Star } from "lucide-react";
+import { CalendarCheck, ChevronDown, ChevronRight, ExternalLink, Search, Star } from "lucide-react";
 import { api } from "@/lib/api";
-import type { HistorySeries, SearchResult, ServiceItem } from "@/lib/types";
+import type { HistorySeries, Offer, SearchResult, ServiceItem } from "@/lib/types";
 import { SearchBar } from "@/components/SearchBar";
 import { PriceHistoryChart } from "@/components/PriceHistoryChart";
-import { formatKzt, relativeDays, categoryMeta } from "@/lib/format";
+import { formatKzt, relativeDays, categoryMeta, pluralRu } from "@/lib/format";
 
 function CompareContent() {
   const params = useSearchParams();
@@ -87,6 +87,44 @@ function CompareContent() {
       setSortDir(field === "rating" || field === "updated" ? "desc" : "asc");
     }
   }
+
+  // ---- group offers into clinic chains; branches collapse under the brand ----
+  const cheapest = displayOffers.length ? Math.min(...displayOffers.map((o) => o.price_kzt)) : null;
+  const chainGroups = useMemo(() => {
+    const map = new Map<string, { key: string; chain: string; offers: Offer[] }>();
+    for (const o of displayOffers) {
+      const k = o.source || o.clinic_name;
+      if (!map.has(k)) map.set(k, { key: k, chain: chainName(o.clinic_name), offers: [] });
+      map.get(k)!.offers.push(o);
+    }
+    // Map preserves first-occurrence order, so groups inherit the active global sort.
+    return [...map.values()];
+  }, [displayOffers]);
+
+  const [openChains, setOpenChains] = useState<Set<string>>(new Set());
+  useEffect(() => {
+    // default-open the cheapest MULTI-branch chain (so something useful is shown)
+    const offers = result?.offers || [];
+    if (!offers.length) return setOpenChains(new Set());
+    const bySrc = new Map<string, Offer[]>();
+    for (const o of offers) {
+      const k = o.source || o.clinic_name;
+      if (!bySrc.has(k)) bySrc.set(k, []);
+      bySrc.get(k)!.push(o);
+    }
+    const multi = [...bySrc.entries()].filter(([, v]) => v.length > 1);
+    if (!multi.length) return setOpenChains(new Set());
+    multi.sort(
+      (a, b) => Math.min(...a[1].map((o) => o.price_kzt)) - Math.min(...b[1].map((o) => o.price_kzt)),
+    );
+    setOpenChains(new Set([multi[0][0]]));
+  }, [serviceId, result]);
+  const toggleChain = (k: string) =>
+    setOpenChains((s) => {
+      const n = new Set(s);
+      n.has(k) ? n.delete(k) : n.add(k);
+      return n;
+    });
 
   useEffect(() => {
     if (!serviceId) return;
@@ -179,7 +217,6 @@ function CompareContent() {
     );
   }
 
-  const cheapest = displayOffers.length ? Math.min(...displayOffers.map((o) => o.price_kzt)) : null;
   const hasFilters = fCity || fSource || fPriceMax || fRatingMin || fOnline;
   const arrow = (f: typeof sortField) => (sortField === f ? (sortDir === "asc" ? " ↑" : " ↓") : "");
 
@@ -265,45 +302,101 @@ function CompareContent() {
             </tr>
           </thead>
           <tbody>
-            {displayOffers.map((o) => {
-              const isCheapest = o.price_kzt === cheapest;
-              return (
-                <tr key={o.price_id} className={`bg-white ${isCheapest ? "ring-2 ring-teal-300" : ""}`}>
-                  <td className="sticky left-0 bg-white px-3 py-3 font-semibold text-ink">
-                    <Link href={`/clinics/${o.clinic_id}`} className="hover:text-brand-700">
-                      {o.clinic_name}
-                    </Link>
-                    {isCheapest && <span className="ml-2 chip bg-teal-100 text-teal-700">дешевле всех</span>}
-                  </td>
-                  <td className="px-3 py-3 text-lg font-bold text-ink">{formatKzt(o.price_kzt)}</td>
-                  <td className="px-3 py-3 text-slate-600">{o.city}</td>
-                  <td className="px-3 py-3">
-                    {o.rating != null ? (
-                      <span className="inline-flex items-center gap-1 text-amber-600">
-                        <Star size={13} className="fill-amber-400 text-amber-400" /> {o.rating.toFixed(1)}
+            {chainGroups.map((g) => {
+              // standalone clinic (single offer) -> plain row, no accordion
+              if (g.offers.length === 1) {
+                const o = g.offers[0];
+                const isCheapest = o.price_kzt === cheapest;
+                return (
+                  <tr key={g.key} className={`bg-white ${isCheapest ? "ring-2 ring-teal-300" : ""}`}>
+                    <td className="sticky left-0 bg-white px-3 py-3 font-semibold text-ink">
+                      <span className="inline-flex items-center gap-2">
+                        <span className="inline-block w-4 shrink-0" />
+                        <Link href={`/clinics/${o.clinic_id}`} className="hover:text-brand-700">{o.clinic_name}</Link>
+                        {isCheapest && <span className="chip bg-teal-100 text-teal-700">дешевле всех</span>}
                       </span>
-                    ) : (
-                      "—"
-                    )}
-                  </td>
-                  <td className="px-3 py-3">
-                    {o.has_online_booking ? (
-                      <CalendarCheck size={16} className="text-emerald-600" />
-                    ) : (
-                      <span className="text-slate-300">—</span>
-                    )}
-                  </td>
-                  <td className="px-3 py-3 text-slate-500">{relativeDays(o.parsed_at)}</td>
-                  <td className="px-3 py-3 text-slate-500">{o.source}</td>
-                  <td className="px-3 py-3">
-                    <a href={o.source_url || o.website} target="_blank" rel="noopener noreferrer" className="btn-outline px-2.5 py-1.5">
-                      <ExternalLink size={14} />
-                    </a>
-                  </td>
-                </tr>
+                    </td>
+                    <OfferCells o={o} />
+                  </tr>
+                );
+              }
+              // clinic chain with several branches -> collapsible parent
+              const open = openChains.has(g.key);
+              const prices = g.offers.map((o) => o.price_kzt);
+              const gMin = Math.min(...prices);
+              const cities = [...new Set(g.offers.map((o) => o.city))];
+              const bestRating = Math.max(...g.offers.map((o) => o.rating ?? -1));
+              const anyOnline = g.offers.some((o) => o.has_online_booking);
+              const latest = g.offers.reduce((a, b) =>
+                new Date(b.parsed_at) > new Date(a.parsed_at) ? b : a,
+              ).parsed_at;
+              const groupHasCheapest = cheapest != null && prices.includes(cheapest);
+              return (
+                <Fragment key={g.key}>
+                  <tr
+                    onClick={() => toggleChain(g.key)}
+                    className={`cursor-pointer bg-slate-50 hover:bg-slate-100 ${
+                      groupHasCheapest && !open ? "ring-2 ring-teal-300" : ""
+                    }`}
+                  >
+                    <td className="sticky left-0 bg-slate-50 px-3 py-3 font-bold text-ink">
+                      <span className="inline-flex items-center gap-2">
+                        <span className="text-slate-400">
+                          {open ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
+                        </span>
+                        <span>{g.chain}</span>
+                        <span className="chip bg-slate-200 text-[11px] text-slate-600">
+                          {g.offers.length} {pluralRu(g.offers.length, ["филиал", "филиала", "филиалов"])}
+                        </span>
+                      </span>
+                    </td>
+                    <td className="px-3 py-3 text-lg font-bold text-ink">от {formatKzt(gMin)}</td>
+                    <td className="px-3 py-3 text-slate-600">
+                      {cities.length === 1
+                        ? cities[0]
+                        : `${cities.length} ${pluralRu(cities.length, ["город", "города", "городов"])}`}
+                    </td>
+                    <td className="px-3 py-3">
+                      {bestRating >= 0 ? (
+                        <span className="inline-flex items-center gap-1 text-amber-600">
+                          <Star size={13} className="fill-amber-400 text-amber-400" /> {bestRating.toFixed(1)}
+                        </span>
+                      ) : (
+                        "—"
+                      )}
+                    </td>
+                    <td className="px-3 py-3">
+                      {anyOnline ? (
+                        <CalendarCheck size={16} className="text-emerald-600" />
+                      ) : (
+                        <span className="text-slate-300">—</span>
+                      )}
+                    </td>
+                    <td className="px-3 py-3 text-slate-500">{relativeDays(latest)}</td>
+                    <td className="px-3 py-3 text-slate-500">{g.key}</td>
+                    <td className="px-3 py-3 text-right text-xs font-medium text-brand-600">
+                      {open ? "Свернуть" : "Развернуть"}
+                    </td>
+                  </tr>
+                  {open &&
+                    g.offers.map((o) => {
+                      const isCheapest = o.price_kzt === cheapest;
+                      return (
+                        <tr key={o.price_id} className={`bg-white ${isCheapest ? "ring-2 ring-teal-300" : ""}`}>
+                          <td className="sticky left-0 bg-white py-2.5 pl-10 pr-3 text-slate-700">
+                            <Link href={`/clinics/${o.clinic_id}`} className="font-medium hover:text-brand-700">
+                              {branchName(o.clinic_name)}
+                            </Link>
+                            {isCheapest && <span className="ml-2 chip bg-teal-100 text-teal-700">дешевле всех</span>}
+                          </td>
+                          <OfferCells o={o} />
+                        </tr>
+                      );
+                    })}
+                </Fragment>
               );
             })}
-            {displayOffers.length === 0 && (
+            {chainGroups.length === 0 && (
               <tr>
                 <td colSpan={8} className="px-3 py-10 text-center text-slate-400">
                   Нет предложений по выбранным фильтрам
@@ -320,6 +413,51 @@ function CompareContent() {
         {history ? <PriceHistoryChart data={history} /> : <p className="text-slate-400">Загрузка…</p>}
       </div>
     </div>
+  );
+}
+
+// "Медцентр Olymp — Гагарина" -> chain "Медцентр Olymp", branch "Гагарина"
+function splitChain(name: string): [string, string] {
+  const parts = name.split(/\s+[—–-]\s+/);
+  return parts.length > 1 ? [parts[0].trim(), parts.slice(1).join(" — ").trim()] : [name.trim(), name.trim()];
+}
+function chainName(name: string) {
+  return splitChain(name)[0];
+}
+function branchName(name: string) {
+  return splitChain(name)[1];
+}
+
+/** The 7 per-offer data cells (price → source link), shared by single & branch rows. */
+function OfferCells({ o }: { o: Offer }) {
+  return (
+    <>
+      <td className="px-3 py-2.5 text-base font-bold text-ink">{formatKzt(o.price_kzt)}</td>
+      <td className="px-3 py-2.5 text-slate-600">{o.city}</td>
+      <td className="px-3 py-2.5">
+        {o.rating != null ? (
+          <span className="inline-flex items-center gap-1 text-amber-600">
+            <Star size={13} className="fill-amber-400 text-amber-400" /> {o.rating.toFixed(1)}
+          </span>
+        ) : (
+          "—"
+        )}
+      </td>
+      <td className="px-3 py-2.5">
+        {o.has_online_booking ? (
+          <CalendarCheck size={16} className="text-emerald-600" />
+        ) : (
+          <span className="text-slate-300">—</span>
+        )}
+      </td>
+      <td className="px-3 py-2.5 text-slate-500">{relativeDays(o.parsed_at)}</td>
+      <td className="px-3 py-2.5 text-slate-500">{o.source}</td>
+      <td className="px-3 py-2.5">
+        <a href={o.source_url || o.website} target="_blank" rel="noopener noreferrer" className="btn-outline px-2.5 py-1.5">
+          <ExternalLink size={14} />
+        </a>
+      </td>
+    </>
   );
 }
 
